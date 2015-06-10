@@ -1,0 +1,855 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+lang="en"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+				<meta name="keywords" content="GMF GenModel Hints,GMF Diagram 
+Navigator Use Cases,GMF GenModel,GMF MapModel,GMF Propsheet 
+Customization,Graphical Modeling Framework">
+		<link rel="shortcut icon" 
+href="http://wiki.eclipse.org/index.php/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" 
+href="http://wiki.eclipse.org/opensearch_desc.php" title="Eclipsepedia 
+(English)">
+<link rel="alternate" type="application/rss+xml" title="Eclipsepedia RSS
+ Feed" 
+href="http://wiki.eclipse.org/index.php?title=Special:Recentchanges&amp;feed=rss">
+<link rel="alternate" type="application/atom+xml" title="Eclipsepedia 
+Atom Feed" 
+href="http://wiki.eclipse.org/index.php?title=Special:Recentchanges&amp;feed=atom">
+	
+		
+		<title>GMF GenModel Hints - Eclipsepedia</title>
+
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/skins/eclipsenova/novaWide.css?116"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" 
+href="GMF_GenModel_Hints_fichiers/eclipsenovaPrint.css">
+		<link rel="stylesheet" type="text/css" media="handheld" 
+href="GMF_GenModel_Hints_fichiers/handheld.css">
+		<link rel="stylesheet" type="text/css" 
+href="GMF_GenModel_Hints_fichiers/header.css" media="screen">
+		<link rel="stylesheet" type="text/css" 
+href="GMF_GenModel_Hints_fichiers/tabs.css" media="screen">
+		<link rel="stylesheet" type="text/css" 
+href="GMF_GenModel_Hints_fichiers/visual.css" media="screen">
+		<link rel="stylesheet" type="text/css" 
+href="GMF_GenModel_Hints_fichiers/layout.css" media="screen">
+		<link rel="stylesheet" type="text/css" 
+href="GMF_GenModel_Hints_fichiers/footer.css" media="screen">
+	        <!--[if IE]><link rel="stylesheet" type="text/css" href="/skins/eclipsenova/IEpngfix.css" media="screen" /><![endif]-->
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/eclipsenova/IE50Fixes.css?116";</style> <![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/skins/eclipsenova/IE55Fixes.css?116";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/skins/eclipsenova/IE60Fixes.css?116";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/skins/eclipsenova/IE70Fixes.css?116";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?116"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "eclipsenova";
+var stylepath = "/skins";
+var wgArticlePath = "/$1";
+var wgScriptPath = "";
+var wgScript = "/index.php";
+var wgServer = "http://wiki.eclipse.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "GMF_GenModel_Hints";
+var wgTitle = "GMF GenModel Hints";
+var wgAction = "view";
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgArticleId = "2526";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "38923";
+var wgVersion = "1.12.0";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="GMF_GenModel_Hints_fichiers/wikibits.js"><!-- wikibits js --></script>
+
+<!-- Performance mods similar to those for bug 166401 -->
+		<script type="text/javascript" src="GMF_GenModel_Hints_fichiers/index.js"><!-- site js --></script>
+
+		<!-- Head Scripts -->
+				<script type="text/javascript" src="GMF_GenModel_Hints_fichiers/ajax.js"></script>
+<link rel="stylesheet" type="text/css" href="">	</head><body 
+class="mediawiki ns-0 ltr page-GMF_GenModel_Hints">
+	<div id="globalWrapper">
+
+
+		<div id="column-one">
+<!-- Eclipse Additions for the Top Nav start here M. Ward-->
+
+		      <div id="header">
+               <div id="header-graphic">
+                 <img src="GMF_GenModel_Hints_fichiers/eclipse.png" 
+alt="Eclipse Wiki">
+               </div>
+<!-- Pulled 101409 Mward	   -->
+            
+            <div class="portlet" id="p-personal">
+              <div class="pBody">
+              <ul>
+                <li id="pt-login"><a 
+href="http://wiki.eclipse.org/index.php?title=Special:Userlogin&amp;returnto=GMF_GenModel_Hints">Log
+ in</a></li>
+                      </ul>
+              </div>
+            </div>
+
+            <div id="header-icons">
+	      <div id="sites">
+              <ul id="sitesUL">
+                <li><a href="http://www.eclipse.org/"><img 
+src="GMF_GenModel_Hints_fichiers/eclipseIcon.png" alt="Eclipse 
+Foundation" title="Eclipse Foundation" height="28" width="28"><div>Eclipse
+ Foundation</div></a></li>
+                <li><a href="http://marketplace.eclipse.org/"><img 
+src="GMF_GenModel_Hints_fichiers/marketplace.png" alt="Eclipse 
+Marketplace" title="Eclipse Marketplace" height="28" width="28"><div>Eclipse
+ Marketplace</div></a></li>
+                <li><a href="https://bugs.eclipse.org/bugs"><img 
+src="GMF_GenModel_Hints_fichiers/system-search-bw.png" alt="Bugzilla" 
+title="Bugzilla" height="28" width="28"><div>Bugzilla</div></a></li>
+                <li><a href="http://live.eclipse.org/"><img 
+src="GMF_GenModel_Hints_fichiers/audio-input-microphone-bw.png" 
+alt="Live" title="Live" height="28" width="28"><div>Eclipse Live</div></a></li>
+                <li><a href="http://planeteclipse.org/"><img 
+src="GMF_GenModel_Hints_fichiers/audio-card.png" alt="PlanetEclipse" 
+title="Planet" height="28" width="28"><div>Planet Eclipse</div></a></li>
+                <li><a href="http://portal.eclipse.org/"><img 
+src="GMF_GenModel_Hints_fichiers/preferences-system-network-proxy-bw.png"
+ alt="Portal" title="Portal" height="28" width="28"><div>My Foundation 
+Portal</div></a></li>
+              </ul>
+              </div>
+            </div>
+        </div> 
+<!-- NEW HEADER STUFF HERE -->
+       <div id="header-menu">
+         <div id="header-nav">
+               <ul> 		 <li><a class="first_one" 
+href="http://wiki.eclipse.org/" target="_self">Home</a></li>            
+      <li><a href="http://www.eclipse.org/downloads/" target="_self">Downloads</a></li>
+ 
+                 <li><a href="http://www.eclipse.org/users/" 
+target="_self">Users</a></li> 
+                 <li><a href="http://www.eclipse.org/membership/" 
+target="_self">Members</a></li> 
+                 <li><a 
+href="http://wiki.eclipse.org/index.php/Development_Resources" 
+target="_self">Committers</a></li> 
+                 <li><a href="http://www.eclipse.org/resources/" 
+target="_self">Resources</a></li> 
+                 <li><a href="http://www.eclipse.org/projects/" 
+target="_self">Projects</a></li> 
+                 <li><a href="http://www.eclipse.org/org/" 
+target="_self">About Us</a></li> 
+                </ul>
+         </div>
+         <div id="header-utils">
+<!-- moved the search window here -->
+                           <form action="/Special:Search">
+                  <input class="input" name="search" accesskey="f" 
+type="text">
+                    <input onclick="this.submit();" name="go" 
+id="searchGoButton" class="button" title="Go to a page with this exact 
+name if one exists" value="Go" type="submit">&nbsp;
+                    <input onclick="this.submit();" name="fulltext" 
+class="button" id="mw-searchButton" title="Search Eclipsepedia for this 
+text" value="Search" type="submit">
+                </form>
+		 </div>
+      </div>
+
+
+<!-- Eclipse Additions for the Header stop here -->
+<!-- Additions and mods for leftside nav Start here -->
+
+<!--Started nav  rip here-->
+<!-- these are the nav controls main page, changes etc -->
+    <div id="novaContent" class="faux">
+            <div id="leftcol">
+          <ul id="leftnav">
+<!-- these are the page controls, edit history etc -->
+            	  <li class="separator"><a class="separator">Navigation 
+&nbsp;&nbsp;</a></li>
+<a class="separator">                                </a><li 
+id="n-mainpage"><a href="http://wiki.eclipse.org/Main_Page">Main Page</a></li>
+	                                <li id="n-portal"><a 
+href="http://wiki.eclipse.org/Eclipsepedia:Community_Portal">Community 
+portal</a></li>
+	                                <li id="n-currentevents"><a 
+href="http://wiki.eclipse.org/Eclipsepedia:Current_events">Current 
+events</a></li>
+	                                <li id="n-recentchanges"><a 
+href="http://wiki.eclipse.org/Special:Recentchanges">Recent changes</a></li>
+	                                <li id="n-randompage"><a 
+href="http://wiki.eclipse.org/Special:Random">Random page</a></li>
+	                                <li id="n-help"><a 
+href="http://wiki.eclipse.org/Help:Contents">Help</a></li>
+		  <li class="separator"><a class="separator">Toolbox &nbsp;&nbsp;</a></li>
+
+				<li id="t-whatlinkshere"><a 
+href="http://wiki.eclipse.org/Special:Whatlinkshere/GMF_GenModel_Hints">What
+ links here</a></li>
+				<li id="t-recentchangeslinked"><a 
+href="http://wiki.eclipse.org/Special:Recentchangeslinked/GMF_GenModel_Hints">Related
+ changes</a></li>
+                <!-- This is the toolbox section -->
+<li id="t-upload"><a href="http://wiki.eclipse.org/Special:Upload">Upload
+ file</a></li>
+<li id="t-specialpages"><a 
+href="http://wiki.eclipse.org/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a 
+href="http://wiki.eclipse.org/index.php?title=GMF_GenModel_Hints&amp;printable=yes">Printable
+ version</a></li>				<li id="t-permalink"><a 
+href="http://wiki.eclipse.org/index.php?title=GMF_GenModel_Hints&amp;oldid=38923">Permanent
+ link</a></li>	  </ul>
+        </div>
+
+
+<!-- Additions and mods for leftside nav End here -->
+
+
+  <div id="column-content">
+    <div id="content">
+      <a name="top" id="top"></a>
+
+              <div id="tabs">
+         <ul class="primary">
+                                         <li class="active"><a 
+href="http://wiki.eclipse.org/GMF_GenModel_Hints"><span class="tab">Page</span></a></li>
+                                                         <li><a 
+href="http://wiki.eclipse.org/index.php?title=Talk:GMF_GenModel_Hints&amp;action=edit"><span
+ class="tab">Discussion</span></a></li>
+                                         <li><a 
+href="http://wiki.eclipse.org/index.php?title=GMF_GenModel_Hints&amp;action=edit"><span
+ class="tab">View source</span></a></li>
+                                         <li><a 
+href="http://wiki.eclipse.org/index.php?title=GMF_GenModel_Hints&amp;action=history"><span
+ class="tab">History</span></a></li>
+                                         <li><a 
+href="http://wiki.eclipse.org/index.php?title=Special:Userlogin&amp;returnto=GMF%20GenModel%20Hints"><span
+ class="tab">Edit</span></a></li>
+                  </ul>
+        </div>
+
+
+          <script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+            <h1 class="firstHeading">GMF GenModel Hints</h1>
+      <div id="bodyContent">
+        <h3 id="siteSub">From Eclipsepedia</h3>
+        <div id="contentSub"></div>
+                              <div id="jump-to-nav">Jump to: <a 
+href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+          <!-- start content -->
+          <p><a href="http://wiki.eclipse.org/GMF_GenModel" title="GMF 
+GenModel">GMF GenModel</a> is a data model used by <a 
+href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> to generate diagramming 
+code. The intention of this model is pretty similar to the EMF GenModel.
+ <a href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF
+ GenModel</a> could be treated as a set of parameters for Xpand/JET 
+templates used to generate code.
+</p><p>This page contains a list of <a 
+href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF 
+GenModel</a> parameters designed to be changed by the toolsmith. 
+Generated code could be fine-tuned by adjusting corresponding values. If
+ any of these parameters is modified by the toolsmith and stored in a <a
+ href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF 
+GenModel</a>, the new value should be preserved on next transformation 
+from <a href="http://wiki.eclipse.org/GMF_MapModel" title="GMF MapModel">GMF
+ MapModel</a> to <a href="http://wiki.eclipse.org/GMF_GenModel" 
+title="GMF GenModel">GMF GenModel</a>.
+</p>
+<table id="toc" class="toc" summary="Contents"><tbody><tr><td><div 
+id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a 
+href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="#GenEditorGenerator"><span 
+class="tocnumber">1</span> <span class="toctext">GenEditorGenerator</span></a></li>
+<li class="toclevel-1"><a href="#GenDiagram"><span class="tocnumber">2</span>
+ <span class="toctext">GenDiagram</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Diagram_group"><span class="tocnumber">2.1</span>
+ <span class="toctext">Diagram group</span></a></li>
+<li class="toclevel-2"><a href="#Editor_group"><span class="tocnumber">2.2</span>
+ <span class="toctext">Editor group</span></a></li>
+<li class="toclevel-2"><a href="#Providers_group"><span 
+class="tocnumber">2.3</span> <span class="toctext">Providers group</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#GenPlugin"><span class="tocnumber">3</span>
+ <span class="toctext">GenPlugin</span></a></li>
+<li class="toclevel-1"><a href="#GenEditorView"><span class="tocnumber">4</span>
+ <span class="toctext">GenEditorView</span></a></li>
+<li class="toclevel-1"><a href="#GenPropertySheet"><span 
+class="tocnumber">5</span> <span class="toctext">GenPropertySheet</span></a>
+<ul>
+<li class="toclevel-2"><a href="#GenStandardPropertyTab"><span 
+class="tocnumber">5.1</span> <span class="toctext">GenStandardPropertyTab</span></a></li>
+<li class="toclevel-2"><a href="#GenCustomPropertyTab"><span 
+class="tocnumber">5.2</span> <span class="toctext">GenCustomPropertyTab</span></a></li>
+<li class="toclevel-2"><a href="#Tuning_property_sheet"><span 
+class="tocnumber">5.3</span> <span class="toctext">Tuning property sheet</span></a>
+<ul>
+<li class="toclevel-3"><a href="#I_don.27t_need_property_sheet_at_all"><span
+ class="tocnumber">5.3.1</span> <span class="toctext">I don't need 
+property sheet at all</span></a></li>
+<li class="toclevel-3"><a href="#Add_new_page"><span class="tocnumber">5.3.2</span>
+ <span class="toctext">Add new page</span></a></li>
+<li class="toclevel-3"><a href="#Remove_predefined_page"><span 
+class="tocnumber">5.3.3</span> <span class="toctext">Remove predefined 
+page</span></a></li>
+<li class="toclevel-3"><a href="#Adding_section_to_predefined_page"><span
+ class="tocnumber">5.3.4</span> <span class="toctext">Adding section to 
+predefined page</span></a></li>
+<li class="toclevel-3"><a href="#Another_tab_name_for_standard_page"><span
+ class="tocnumber">5.3.5</span> <span class="toctext">Another tab name 
+for standard page</span></a></li>
+<li class="toclevel-3"><a href="#Prohibit_properties_editing"><span 
+class="tocnumber">5.3.6</span> <span class="toctext">Prohibit properties
+ editing</span></a></li>
+<li class="toclevel-3"><a href="#Property_sheet_title"><span 
+class="tocnumber">5.3.7</span> <span class="toctext">Property sheet 
+title</span></a></li>
+<li class="toclevel-3"><a 
+href="#Adding_a_column_to_the_standard_properties_view"><span 
+class="tocnumber">5.3.8</span> <span class="toctext">Adding a column to 
+the standard properties view</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Customizing_Property_Sheet"><span 
+class="tocnumber">5.4</span> <span class="toctext">Customizing Property 
+Sheet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#GenNavigator"><span class="tocnumber">6</span>
+ <span class="toctext">GenNavigator</span></a>
+<ul>
+<li class="toclevel-2"><a href="#GenNavigatorChildReference"><span 
+class="tocnumber">6.1</span> <span class="toctext">GenNavigatorChildReference</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Custom_Behaviour"><span 
+class="tocnumber">7</span> <span class="toctext">Custom Behaviour</span></a></li>
+</ul>
+
+
+</td></tr></tbody></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="GenEditorGenerator"></a><h2> <span class="mw-headline"> 
+GenEditorGenerator </span></h2>
+<p><b>Copyright Text</b> - multi-line text property. Specified text will
+ be included as a top-level comment in the generated .java and 
+plugin.xml files. Be careful – due to the current Java merge settings, 
+top-level comments will not be changed for existing files - only newly 
+generated .java files will be adorned with this comment. To change 
+copyright text in existing .java files, we suggest removing all source 
+files and re-generating code from <a 
+href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF 
+GenModel</a>.
+</p><p><b>Diagram File Extension</b> - string property used for the 
+extension of the diagram file. This property should be unique among the 
+generated diagram editors.
+</p><p><b>Domain File Extension</b> - string property used for the 
+extension of the domain model file. 
+</p><p><b>Dynamic Templates</b> - boolean property used to enable 
+user-defined templates for generating code from this model (see <b>Template
+ Directory</b> property).
+</p><p><b>Model ID</b> – string property identifying generated diagram. 
+Value of this property will be derived from EMF meta-model name by 
+default. This value should be unique among the generated diagramming 
+plug-ins existing in any Eclipse installation. To create several <a 
+href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF 
+GenModels</a> (diagrams) for the same meta-model, this string should be 
+changed to make it unique for each <a 
+href="http://wiki.eclipse.org/GMF_GenModel" title="GMF GenModel">GMF 
+GenModel</a> instance.
+</p><p><b>Package Name Prefix</b> – string property representing valid 
+Java package. This is a common super-package for all the generated Java 
+classes.
+</p><p><b>Same File For Diagram And Model</b> – boolean property 
+indicating that model elements should be stored in a diagram file, 
+default value == <i>false</i>. <a 
+href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> allows for generated code 
+to store model elements in two ways:
+</p><p>1.    Single file keeping diagram visual information together 
+with model structure (value == <i>true</i>)
+</p><p>2.    Two different files - first for model contents and second 
+for diagram-specific visual information (value == <i>false</i>). The 
+structure of model file in this situation will correspond to the file 
+structure created by standard generated EMF editor for this domain 
+model.
+</p><p>It is recommended to use separate file for storing diagram 
+information (default value of this option) to utilize most of the <a 
+href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> features, for example - 
+creating several diagrams for the same domain model.
+</p><p><b>Template Directory</b> – string property indicating the path 
+to the root directory with user-defined code generation templates. This 
+property will be used only if <b>Dynamic Templates</b> property was set 
+to true. Value of this property could be either valid EMF URI specifying
+ location of the folder with templates or platform-relative path written
+ in a form: <i>/project-name/path</i>.
+</p><p><a href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> is using JET templates for 
+code generation. Original templates are located in a <i>template</i> 
+directory inside <i>org.eclipse.gmf.codegen</i> plug-in. To customize 
+generated code user can copy necessary template file(s) from this 
+plug-in into the folder specified as <b>Template Directory</b> and 
+change template(s) content. Modified template(s) will be used on next 
+code generation; a project named <i>.JETEmitter</i> is generated in your
+ workspace to hold the Java sources and classes generated from the 
+templates. Keep in mind that the templates use instructions that are 
+only available in Java 5.0 and later versions. If your default workspace
+ setting for the Java compiler compliance level isn't set to 5.0, you'll
+ have to adjust the project specific setting to 5.0, otherwise the code 
+generation will abort.
+</p><p><i><b>Note</b></i>: do not mix up template files with .java 
+classes generated by JET while compiling these files. Templates are 
+located in <i>org.eclipse.gmf.codegen/templates</i> directory and 
+usually has .javajet or .jetinc extensions.
+</p>
+<a name="GenDiagram"></a><h2> <span class="mw-headline"> GenDiagram </span></h2>
+<a name="Diagram_group"></a><h3> <span class="mw-headline"> Diagram 
+group </span></h3>
+<p><b>Contains Shortcuts To</b> – multi-value string property specifying
+ a set of domain model file extensions. Generated code will show 
+corresponding files while browsing workspace in dialog available via <i>Create
+ Shortcut…</i> diagram popup menu action. This dialog allows for 
+expanding the visible model files to browse model contents, selecting 
+model element and creating shortcut to it on diagram. 
+</p><p>It is necessary to specify at least one file extension in this 
+property to get <i>Create Shortcut…</i> action generated. 
+</p><p>It will be possible to create shortcut on a diagram of this type 
+to the model elements from another model during runtime only if:
+</p><p>1. Executed Eclipse instance contains generated <a 
+href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> diagramming plug-in able to
+ visualize this element as a top-level diagram element.
+</p><p>2. That diagramming plug-in was generated with <b>Shortcuts 
+Provided For</b> property set to allow shortcuts creation on the diagram
+ of this type (see <b>Shortcuts Provided For</b>).
+</p><p><i><b>Example1</b></i>: If two diagrams for two different domain 
+models (<i>domain1</i> and <i>domain2</i>) should be generated and <i>domain1</i>
+ diagram should allows shortcutting elements from the <i>domain2</i> 
+models, then <b>Contains Shortcuts To</b> of the <i>domain1</i> diagram 
+should contains <i>domain2ModelFileExtension</i> string.
+</p><p><i><b>Example2</b></i>: If diagram should be generated for the <i>domain1</i>
+ domain model and this diagram should allows shortcutting elements from 
+other <i>domain1</i> models, then <b>Contains Shortcuts To</b> property 
+of this diagram should contains <i>domain1ModelFileExtension</i> string.
+</p><p><b>Shortcuts Provided For</b> – multi-value string property 
+specifying a set of <b>Model ID</b> properties of <i>GenDiagrams</i>. 
+Generated code will supply shortcuts for model element if:
+</p><p>1. It is an element of this diagram domain model.
+</p><p>2. <b>Model ID</b> of the diagram asking for a shortcut for this 
+element present in Shortcuts Provided For values (see <b>Model ID</b>).
+</p><p><i><b>Example1</b></i>: If two diagrams for two different domain 
+models (<i>domain1</i> and <i>domain2</i>) should be generated and <i>domain1</i>
+ diagram should allows shortcutting elements from the <i>domain2</i> 
+models, then <b>Shortcuts Provided For</b> property of the <i>domain2</i>
+ diagram should contains <i>domain1</i> diagram <b>Model ID</b>. 
+</p><p><i><b>Example2</b></i>: If diagram should be generated for the <i>domain1</i>
+ domain model and this diagram should allows shortcutting elements from 
+other <i>domain1</i> models, then <b>Shortcuts Provided For</b> property
+ of this diagram should contains its Model ID.
+</p><p><br>
+<b>Synchronized</b> – boolean property indicating that <b>synchronized</b>
+ diagram code should be generated (another option is <b>non-synchronized</b>
+ diagram).
+</p><p>Content of the <b>synchronized</b> diagram will always reflect 
+actual state of the model. For example, if the diagram visualizes some 
+part of the model (package), then content of this diagram should be 
+updated on adding/removing element to/from this package. 
+</p><p><b>non-synchronized</b> diagram contains only those elements 
+which were explicitly created on this diagram by user. Synchronization 
+with the model will be performed for such a diagram only once - on 
+creation time if <i>Initialize Diagram File Action</i> was used. This 
+means, <i>Initialize Diagram File Action</i> will populate a diagram 
+with all valid model elements below the model element selected as 
+diagram root on creation time. Due to the specification, UML diagrams 
+are views to the shared model, so could be implemented as <b>non-synchronized</b>
+ diagrams in this case diagram content will not be updated on 
+adding/removing any elements to/from the model, but user will be able to
+ add/remove some elements to these diagrams manually. 
+</p><p><i><b>Known issue</b></i>: For <b>synchronized</b> diagrams <a 
+href="http://wiki.eclipse.org/Graphical_Modeling_Framework" 
+title="Graphical Modeling Framework">GMF</a> does not generate the code 
+handling external changes.  So, if the model was changed outside of the 
+diagram <i>EditingDomain</i>, then user should take care of triggering 
+the update process for this diagram. The easiest way is to reopen it. 
+</p><p><b>Units</b> – string property holding the name of the constant 
+from <i>MeasurementUnit</i> class described in <i>notation.ecore</i> 
+model (see <i>org.eclipse.gmf.runtime.notation. MeasurementUnit</i>). 
+Valid values: <b>Himetric</b>, <b>Pixel</b>. Default value is <b>Pixel</b>
+ – size of the diagram nodes will be measured in pixels.
+</p><p>In case of <b>Himetric</b> units, diagram element dimensions will
+ be measured in some logical coordinates. One Himetric unit is equal to 
+1/100 mm on any screen, so diagram elements will have equal visible 
+bounds on different kind of monitors with different resolution. Usually,
+ one display pixel is equal to several logical units, but actual 
+coefficient depends on screen resolution, i.e. for my display this 
+coefficient is about 20 logical unit = 1 pixel.
+</p><p><b>Validation Decorators</b> – boolean property indicating that <i>ValidationDecoratorProvider</i>
+ should be generated for this diagram. Generated provider will handle 
+the creation of validation violation decorators for diagram elements. 
+(see <b>Validation Enabled</b>)
+</p><p><b>Validation Enabled</b> – boolean property indicating that <i>ValidationProvider</i>
+ and <i>MarkerNavigationProvider</i> should be generated. These classes 
+are responsible for the execution of EMFT validation process for an 
+instance of user domain model and collecting all the validation rules 
+violations. Violations are represented as diagram resource problem 
+markers.
+</p>
+<a name="Editor_group"></a><h3> <span class="mw-headline"> Editor group </span></h3>
+<p><b>Creation Wizard Category ID</b> – string property holding the 
+identifier of the category where the generated <i>NewDiagramFileWizard</i>
+ will be registered. Default value is <i>org.eclipse.ui.Examples</i>. 
+</p><p><i><b>Note</b></i>: the generator assumes that the specified 
+category is already registered from some other plugin.xml, so take care 
+when registering a category from another plug-in, or patch the generated
+ plugin.xml by adding the category registration.
+</p><p><b>Creation Wizard Icon Path</b> – string representing the 
+relative path to the icon for <i>NewDiargamFileWizard</i>. An icon for 
+diagram domain model file from EMF editor will be used if <i>{reuseEMFIcon}</i>
+ was specified as a value.
+</p><p><b>Editing Domain ID</b> – string identifier of an <i>EditingDomain</i>
+ attached to this type of the diagram. To make a generated diagram work 
+properly, <b>Editing Domain ID</b> should be unique – i.e. there should 
+be no other diagramming plug-ins working with an editing domain with the
+ same ID.
+</p>
+<a name="Providers_group"></a><h3> <span class="mw-headline"> Providers 
+group </span></h3>
+<p><b>Edit Part Provider Priority</b>,
+<b>Icon Provider Priority</b>,
+<b>Marker Navigation Provider Priority</b>,
+<b>Metric Provider Priority</b>,
+<b>Modeling Assistant Provider Priority</b>,
+<b>Notation View Provider Priority</b>,
+<b>Palette Provider Priority</b>,
+<b>Parser Provider Priority</b>,
+<b>Property Provider Priority</b>,
+<b>Shortcuts Decorator Provider Priority</b>,
+<b>Validation Decorator Provider Priority</b>,
+<b>Validation Provider Priority</b>. 
+</p><p>These properties hold provider priorities for the corresponding 
+type of the generated providers. Priority could be one of the following 
+enumeration literals: Lowest, Low, Medium, High, Highest. By specifying 
+the correct provider priority, a user can override the generated 
+provider functionality by providing a hand-written one with a higher 
+priority.
+</p>
+<a name="GenPlugin"></a><h2> <span class="mw-headline"> GenPlugin </span></h2>
+<p><b>ID</b> - string id of the generated plug-in.  The same string will
+ be used as a name of the corresponding plug-in project created in the 
+workspace with all the generated code, so this string should be valid 
+Eclipse plugin project name (unique among the rest of plugins).
+</p><p><b>Name</b> – string name of the generated plug-in, and can 
+contain any character.
+</p><p><b>Printing Enabled</b> – boolean property reflecting the fact 
+that Print and Print Preview actions should be generated for this 
+diagram.
+</p><p><b>Provider</b> – string description of the generated plug-in 
+manufacturer.
+</p><p><b>Version</b> - string property reflecting the version of 
+generated plugin.
+</p>
+<a name="GenEditorView"></a><h2> <span class="mw-headline"> 
+GenEditorView </span></h2>
+<p><b>Icon Path</b> - string representing relative path to the icons for
+ the generated <i>DiagramEditor</i>. An icon for diagram domain model 
+file from EMF editor will be used if <i>{reuseEMFIcon}</i> is specified 
+as the value.
+</p><p><b>ID</b> - generated <i>DiagramEditor</i> id.
+</p>
+<a name="GenPropertySheet"></a><h2> <span class="mw-headline"> <a 
+href="http://wiki.eclipse.org/Image:New-small.gif" class="image" 
+title="image:new-small.gif"><img alt="image:new-small.gif" 
+src="GMF_GenModel_Hints_fichiers/New-small.gif" border="0" height="14" 
+width="31"></a> GenPropertySheet </span></h2>
+<p><i><b>GenEditorGenerator</b></i> may optionally specify <i><b>GenPropertySheet</b></i>.
+ <i>TBD categories, tabs and sections of original extension-point and 
+related to the elements of genmodel</i>
+</p><p><b>Package name</b> - all property sheet generated classes target
+ this package.
+</p><p><b>Label Provider Class Name</b> - name of the label provider 
+class to show the property sheet's title (not generated unless <b>needsCaption</b>
+ attribute set to <b>true</b>). Generated code shows the name of the 
+underlaying domain element, if any, by default.
+</p><p><b>Needs Caption</b> - whether or not you'd like to have a 
+caption in the property sheet.
+</p><p><b>Read Only</b> - whether properties presented in the property 
+sheet should be modifiable or not.
+</p><p><i><b>GenPropertySheet</b></i> owns tabs, each tab has the 
+following properties:
+</p>
+<ul><li> <b>id</b> - identifier, non-visible in UI. There are few 
+predefined values that are processed in a specific way.
+</li><li> <b>label</b> - visual name of the tab.
+</li></ul>
+<a name="GenStandardPropertyTab"></a><h3> <span class="mw-headline"> 
+GenStandardPropertyTab </span></h3>
+<p>Indicates use of predefined tab in the property sheet. There are a 
+few at the moment, with ids <i>diagram</i>, <i>advanced</i> and <i>appearance</i>.
+</p>
+<a name="GenCustomPropertyTab"></a><h3> <span class="mw-headline"> 
+GenCustomPropertyTab </span></h3>
+<p>Generates a skeleton property tab you are free to modify. There's a 
+special case if the ID of a custom tab is <i>domain</i>, which leads to 
+generating code that tries to get the property source for a domain 
+element associated with the selection. You can have as many tabs as you 
+like.
+</p>
+<a name="Tuning_property_sheet"></a><h3> <span class="mw-headline"> 
+Tuning property sheet </span></h3>
+<p>Note, not all changes to <i><b>GenPropertySheet</b></i> and 
+sub-elements are being reconciled. Sorry. We do reconcile <b>label</b>, <b>isReadOnly</b>,
+ <b>needsCaption</b>, class and package names.
+</p>
+<a name="I_don.27t_need_property_sheet_at_all"></a><h4> <span 
+class="mw-headline"> I don't need property sheet at all </span></h4>
+<p>Just don't add <i><b>GenPropertySheet</b></i> to <i><b>GenEditorGenerator</b></i>,
+ and that's it. Generated editor class will adapt to <i><b>IPropertySheetPage</b></i>
+ and return <b>null</b>. Unfortunately, we don't keep this change 
+between transformations.
+</p>
+<a name="Add_new_page"></a><h4> <span class="mw-headline"> Add new page </span></h4>
+<p>Create new <i><b>GenCustomPropertyTab</b></i> and you'll get a 
+subclass of <i><b>PropertySection</b></i> class generated and 
+registered. You'll need to modify it because we have no idea how your 
+properties should appear. Read <a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ class="external text" 
+title="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ rel="nofollow">article</a> with general guidelines on working with 
+tabbed property pages.
+</p>
+<a name="Remove_predefined_page"></a><h4> <span class="mw-headline"> 
+Remove predefined page </span></h4>
+<p>Look for the page among <i><b>GenPropertySheet</b></i> descendants, 
+remove it and regenerate the code. You may need to remove class for old 
+page (unless the page removed was of <i><b>GenStandardPropertyTab</b></i>
+ kind) Note, this change is not preserved during gmfmap to gmfgen 
+transformation.
+</p>
+<a name="Adding_section_to_predefined_page"></a><h4> <span 
+class="mw-headline"> Adding section to predefined page </span></h4>
+<p>There's no explicit support for several sections at the same tab in 
+GMF. You could define <i><b>GenCustomPropertyTab</b></i> as usuall and 
+the only thing you'll need to change in the generated code is a section 
+registration in the plugin.xml (<i>//propertySections/propertySection/@tab</i>).
+ Refer to the tabbed property sheet <a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ class="external text" 
+title="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ rel="nofollow">article</a> 
+</p><p>Alternatively, in case you'd like to add a section to your own <i><b>GenCustomPropertyTab</b></i>,
+ you may try to keep the <b>ID</b> of all the tabs the same. In this 
+case section registration code will use the same IDs automatically. 
+However, using same <b>ID</b>s is generally a bad idea.
+</p>
+<a name="Another_tab_name_for_standard_page"></a><h4> <span 
+class="mw-headline"> Another tab name for standard page </span></h4>
+<p>It's easy, just change <b>label</b> of <i><b>GenStandardPropertyTab</b></i>
+ to whatever title you like and regenerate. Note, you might need to 
+remove tab.&lt;tab id&gt; key from plugin.properties first.
+</p>
+<a name="Prohibit_properties_editing"></a><h4> <span class="mw-headline">
+ Prohibit properties editing </span></h4>
+<p>Piece of cake! Just set <b>read only</b> of <i><b>GenPropertySheet</b></i>
+ to <b>true</b>. It's possible to have individual pages protected, 
+although unless you <a 
+href="https://bugs.eclipse.org/bugs/enter_bug.cgi" class="external text"
+ title="https://bugs.eclipse.org/bugs/enter_bug.cgi" rel="nofollow">file
+ a bugzilla</a> you'll need to do it manually (using generated code as 
+an example). BTW, there's a known <a 
+href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157188" 
+class="external text" 
+title="https://bugs.eclipse.org/bugs/show_bug.cgi?id=157188" 
+rel="nofollow">bug</a> about the appearance page ignoring the read-only 
+setting. 
+</p>
+<a name="Property_sheet_title"></a><h4> <span class="mw-headline"> 
+Property sheet title </span></h4>
+<p>If <b>Need Caption</b> attribute is set to <b>true</b>, a <b>LabelProvider</b>
+ gets generated and registered. Generated code shows plain name of 
+selected element by default. You can modify it as you see fit for your 
+needs
+</p>
+<a name="Adding_a_column_to_the_standard_properties_view"></a><h4> <span
+ class="mw-headline"> Adding a column to the standard properties view </span></h4>
+<p>Actually, this is not GMF question. Start with PropertySheetPage and 
+PropertySheetViewer. You'll need to provide your own viewer 
+implementation with Tree or Table control (or any other you find 
+suitable). Take a look at <b>PropertySheetViewer#addColumns()</b> 
+method. <b>AdvancedPropertySection#createControls()</b> hints how to 
+install your own PropertySheetPage. For each <i><b>GenCustomPropertyTab</b></i>
+ there's a sub-class of <i><b>AdvancedPropertySection</b></i> generated,
+ which is the class to modify.
+</p>
+<a name="Customizing_Property_Sheet"></a><h3> <span class="mw-headline">
+ Customizing Property Sheet </span></h3>
+<p>In org.eclipse.gmf.gmfgraph.editor we have customized the property 
+sheet supplied by this editor by customizing gmf.genmodel templates to 
+work with our joint propsheet.ecore metamodel. This actually provided a 
+framework to customize your property sheets. So customizing templates 
+together with providing a joint metamodel for the gmfgen is actually a 
+good example of customizing gmf for making frameworks for it! See our 
+tutorial for  <a 
+href="http://wiki.eclipse.org/GMF_Propsheet_Customization" title="GMF 
+Propsheet Customization">How To Customize Property Sheet For Your GMF 
+Editor</a> if you want to know more.
+</p>
+<a name="GenNavigator"></a><h2> <span class="mw-headline"> <a 
+href="http://wiki.eclipse.org/Image:New-small.gif" class="image" 
+title="image:new-small.gif"><img alt="image:new-small.gif" 
+src="GMF_GenModel_Hints_fichiers/New-small.gif" border="0" height="14" 
+width="31"></a> GenNavigator </span></h2>
+<p><i><b>GenEditorGenerator</b></i> may optionally contain <i><b><a 
+href="http://wiki.eclipse.org/GMF_Diagram_Navigator_Use_Cases" 
+title="GMF Diagram Navigator Use Cases">GenNavigator</a></b></i>.
+</p><p><b>Content Extension ID</b>, <b>Content Extension Name</b>, <b>Content
+ Extension Priority</b> - string properties specifying <i>id</i>, <i>name</i>
+ and <i>priority</i> for generated navigatorContent extension, 
+respectively.
+</p><p><b>Abstract Navigator Item Class Name</b>, <b>Content Provider 
+Class Name</b>, <b>Label Provider Class Name</b>, <b>Navigator Group 
+Class Name</b>, <b>Navigator Item Class Name</b> - properties for 
+customizing generated class names.
+</p><p><b>Package Name</b> - string property holding the name of the 
+package for generated navigator functionality.
+</p>
+<a name="GenNavigatorChildReference"></a><h3> <span class="mw-headline">
+ GenNavigatorChildReference </span></h3>
+<p><b>Group Icon</b> - string representing relative path to the icon for
+ associated logical group. 
+</p><p><b>Group Name</b> - string name of associated logical group. If 
+empty then all child elements will be visible directly below parent 
+element without any additional grouping. See <a 
+href="http://wiki.eclipse.org/GMF_Diagram_Navigator_Use_Cases#GMF_GenModel_modifications"
+ title="GMF Diagram Navigator Use Cases">GMF Diagram Navigator Use Cases</a>
+ for a details.
+</p><p><b>Hide If Empty</b> - boolean property. Associated logical group
+ should not be visible in corresponding place of Project Explorer if 
+empty.
+</p><p><b>Reference Type</b> - see <a 
+href="http://wiki.eclipse.org/GMF_Diagram_Navigator_Use_Cases#GMF_GenModel_modifications"
+ title="GMF Diagram Navigator Use Cases">GMF Diagram Navigator Use Cases</a>
+ for a details.
+</p>
+<a name="Custom_Behaviour"></a><h2> <span class="mw-headline"> Custom 
+Behaviour </span></h2>
+<p><b>GenCommonBase</b> (parent of <b>GenDiagram</b>, <b>GenNode</b> and
+ <b>GenLink</b>) owns <i>behaviors</i>. The concept of behavior is 
+basically a representation of GEF's EditPolicy. There are few at the 
+moment, though we might add more in the future. The one I'd like to draw
+ your attention to is <b>CustomBehaviour</b>, which is the way for <i>toolsmith</i>
+ to plug any arbitrary editing behavior in. Just put key and 
+fully-qualified class name of your EditPolicy and generator makes sure 
+it gets installed withou any additional typing/@generated NOT from your 
+side. Though, it's not the full story of <b>CustomBehaviour</b>. It's 
+capable not only of adding behaviour, but also may be handy if you 
+decide to remove already installed editpolicy. Put editpolicy's key and 
+leave class name blank, and generator uninstalls that editpolicy. As an 
+example, if you're among those frustrated with (<strike>hard to hit</strike>)
+ connection handles that pop up while mouse travels through your 
+diagram, it's easy to turn them off - all you need is <b>CustomBehaviour</b>
+ with <i>key = 
+org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE</i>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 25/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+#ifexist count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:2526-0!1!0!!en!2!edit=0 and timestamp 20100827203952 -->
+<div class="printfooter">
+Retrieved from "<a href="http://wiki.eclipse.org/GMF_GenModel_Hints">http://wiki.eclipse.org/GMF_GenModel_Hints</a>"</div>
+          <div id="catlinks"><p class="catlinks"><a 
+href="http://wiki.eclipse.org/Special:Categories" 
+title="Special:Categories">Category</a>: <span dir="ltr"><a 
+href="http://wiki.eclipse.org/Category:GMF" title="Category:GMF">GMF</a></span></p></div>
+          <!-- end content -->
+          <div class="visualClear"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+	<!-- Yoink of toolbox for phoenix moved up -->
+
+
+  </div>
+  </div>
+              <div id="clearFooter">
+            <div id="footer">  
+	      <ul id="footernav">
+                <li class="first"><a href="http://www.eclipse.org/">Home</a></li>
+               	<li><a href="http://www.eclipse.org/legal/privacy.php">Privacy
+ Policy</a></li>
+	        <li><a href="http://www.eclipse.org/legal/termsofuse.php">Terms
+ of Use</a></li>
+		<li><a href="http://www.eclipse.org/legal/copyright.php">Copyright 
+Agent</a></li>
+                <li><a 
+href="http://www.eclipse.org/org/foundation/contact.php">Contact</a></li>
+               	<li><a href="http://wiki.eclipse.org/Eclipsepedia:About"
+ title="Eclipsepedia:About">About Eclipsepedia</a></li>
+	      </ul>
+              <span id="copyright">Copyright © 2010 The Eclipse 
+Foundation. All Rights Reserved</span>
+	      <p id="footercredit">This page was last modified 18:03, 12 June 
+2007 by <a 
+href="http://wiki.eclipse.org/index.php?title=User:Artem.tikhomirov.borland.com&amp;action=edit"
+ class="new" title="User:Artem.tikhomirov.borland.com">Artem Tikhomirov</a>.
+ Based on work by <a 
+href="http://wiki.eclipse.org/index.php?title=User:Akarjakina.borland.com&amp;action=edit"
+ class="new" title="User:Akarjakina.borland.com">Anna Karjakina</a>, <a 
+href="http://wiki.eclipse.org/index.php?title=User:Alexander.shatalin.borland.com&amp;action=edit"
+ class="new" title="User:Alexander.shatalin.borland.com">Alex Shatalin</a>
+ and <a 
+href="http://wiki.eclipse.org/index.php?title=User:Eclipse.volker-wegert.de&amp;action=edit"
+ class="new" title="User:Eclipse.volker-wegert.de">Volker Wegert</a> and
+ <a 
+href="http://wiki.eclipse.org/index.php?title=GMF_GenModel_Hints&amp;action=credits"
+ title="GMF GenModel Hints">others</a>.</p>
+	      <p id="footerviews">This page has been accessed 20,826 times.</p>
+	    </div>
+
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="GMF_GenModel_Hints_fichiers/ga.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              var pageTracker = _gat._getTracker("UA-910670-4");
+              pageTracker._trackPageview();
+            </script>
+ 
+ 	
+
+
+
+		
+
+<!-- 			<div class="visualClear"></div> -->
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+
+<!-- Served in 0.062 secs. --></div></body></html>

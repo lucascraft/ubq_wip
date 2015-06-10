@@ -1,0 +1,7 @@
+# Tracing options for the net.sf.smbt.sequencer.diagram plug-in
+
+# Common issues
+net.sf.smbt.sequencer.diagram/debug=false
+
+# Visual IDs
+net.sf.smbt.sequencer.diagram/debug/visualID=false

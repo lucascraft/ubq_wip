@@ -1,0 +1,2020 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <title>EclipseZone - Custom property tab
+ ...</title>
+    <meta http-equiv="content-type" content="text/html; 
+charset=ISO-8859-1">
+    <link href="t107057_fichiers/jl.css" rel="stylesheet" 
+type="text/css">
+    <link href="t107057_fichiers/jlJive.css" rel="stylesheet" 
+type="text/css">
+    <link href="t107057_fichiers/navmenu.css" rel="stylesheet" 
+type="text/css">
+    <link rel="shortcut icon" 
+href="http://www.eclipsezone.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" 
+href="t107057_fichiers/style.css">
+
+    
+    <script language="JavaScript" type="text/javascript" src="t107057_fichiers/global.js"></script>
+
+    <link rel="top" href="http://www.eclipsezone.com/" 
+title="EclipseZone Home Page">
+		<link rel="up" 
+href="http://www.eclipsezone.com/eclipse/forums/f18156.html" title="Up 
+to thread list">
+
+		
+		
+
+		
+		
+
+    
+        <link rel="alternate" type="application/rss+xml" title="RSS" 
+href="http://www.eclipsezone.com/rss/rssmessages.jspa?threadID=107057">
+    
+    <meta name="keywords" content="Java,SWT,Eclipse,Java 2 Standard 
+Edition,Web Start,tutorial,news,help,downloads,free 
+books,reviews,presentations,articles,rich internet 
+applications,ria,rcp,plugins,eclipse plugins">
+
+    <script type="text/javascript"><!--//--><![CDATA[//><!--
+    sfHover = function() {
+        var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+        for (var i = 0; i < sfEls.length; i++) {
+            sfEls[i].onmouseover = function() {
+                this.className += " sfhover";
+            }
+            sfEls[i].onmouseout = function() {
+                this.className = this.className.replace(new RegExp(" sfhover\\b"), "");
+            }
+        }
+    }
+    if (document.all) { //MS IE
+        if (window.attachEvent) window.attachEvent("onload", sfHover);
+        else { //IE 5.2 Mac does not support attachEvent
+            var old = window.onload;
+            window.onload = function() {
+                if (old) old();
+                sfHover();
+            }
+        }
+    }
+    //--><!]]></script>
+<script src="t107057_fichiers/common.html" language="JavaScript" type="text/javascript"></script>
+
+</head><body>
+
+
+<div id="wrap_outer">
+<!-- TOP LEADERBOARD GOES HERE -->
+
+<div id="wrap_inner">
+<div id="header">
+    <div class="netbar">
+        <a href="http://www.javalobby.org/" title="Java &amp; J2EE 
+Programming community with Java forums, Java blogs, Java news &amp; Java
+ tutorials">Javalobby</a>
+        |
+        <a href="http://www.javaforge.com/" title="Subversion-based Java
+ collaboration environment">JavaForge</a>
+        |
+        <a href="http://www.javacrawl.com/" title="RSS Portal for Java 
+news &amp; J2EE news">Javacrawl</a> |
+        <a href="http://www.jdocs.com/" title="Javadoc API docs for over
+ 130 Java &amp; J2EE libraries">JDocs</a> |
+        <a href="http://www.jroller.com/" title="Free Java Blogging 
+community for Java &amp; J2EE Developer blogs">JRoller</a> |
+        <a href="http://www.jugcentral.com/" title="Java User Group 
+hosting &amp; services for JUGs">JUGCentral</a> |
+        <a href="http://www.myjavaserver.com/" title="Free Java JSP 
+&amp; J2EE hosting for developers learning Java">MyJavaServer</a>
+        |
+        <a href="http://www.dzone.com/advertise.jsp" title="Promote your
+ products &amp; services to Java developers"><b>ADVERTISE</b></a>
+    </div>
+
+    <div class="welcomebar">
+        
+        <form action="/forums/login.jspa" method="post" name="loginform">
+            Username/Email: <input name="username" size="20" 
+maxlength="150" tabindex="1" id="username01" type="text">
+            Password: <input name="password" size="20" maxlength="150" 
+value="" tabindex="2" id="password01" type="password">
+            <input name="autoLogin" id="autoLogin01" value="true" 
+type="hidden">
+            <input name="successURL" id="successURL01" 
+value="http://www.eclipsezone.com/eclipse/forums/t107057.html" 
+type="hidden">
+            
+            <a href="javascript:document.loginform.submit()">SIGN IN</a>
+        </form>
+        
+    </div>
+</div>
+
+<div id="navcontainer">
+	<ul id="nav">
+		<li><a href="http://www.eclipsezone.com/">Home</a></li>
+		<li><a href="http://www.eclipsezone.com/spotlights.jsp">Features</a></li>
+		<li><a href="http://www.eclipsezone.com/eclipse/forums/c5605.html">Forums</a></li>
+		<li><a href="http://www.eclipsezone.com/eclipse/forums/f18112.html">Announcements</a></li>
+		<li><a href="http://www.eclipsezone.com/nl/index.jsp">Newsletter</a></li>
+        <li><a href="http://www.eclipsezone.com/podcasts.jsp">Podcasts</a></li>
+        
+        <li><a href="http://www.javalobby.org/about.jsp">About</a></li>
+		<li><a href="http://www.eclipsezone.com/writers.jsp">Write for us</a></li>
+	</ul>
+	<div style="clear: both;"> </div>
+</div>
+
+<div id="topLeaderboard">
+    <!-- BEGIN ADVERTPRO ADVANCED CODE BLOCK -->
+    
+    <script language="JavaScript" src="t107057_fichiers/zone.js" type="text/javascript"></script><iframe
+ src="t107057_fichiers/zone.html" marginwidth="0" marginheight="0" 
+hspace="0" vspace="0" bordercolor="#000000" frameborder="0" height="90" 
+scrolling="no" width="728">
+&lt;script language="JavaScript1.1" 
+src="http://ad.doubleclick.net/adj/N5072.130331.DZONE/B4681435.3;abr=!ie;sz=728x90;click=http://avpa.javalobby.org/servlet/click/zone?zid=56&amp;cid=1121&amp;mid=1907&amp;pid=0&amp;default=false&amp;random=79296616&amp;timestamp=20100828055003&amp;test=false&amp;referrer=http%3A%2F%2Fwww.eclipsezone.com%2Feclipse%2Fforums%2Ft107057.html&amp;redirect=;ord=20100828055003?"&gt;
+&lt;/script&gt;
+&lt;noscript&gt;
+&lt;a
+ 
+href="http://avpa.javalobby.org/servlet/click/zone?zid=56&amp;cid=1121&amp;mid=1907&amp;pid=0&amp;default=false&amp;random=79296616&amp;timestamp=20100828055003&amp;test=false&amp;referrer=http%3A%2F%2Fwww.eclipsezone.com%2Feclipse%2Fforums%2Ft107057.html&amp;redirect=http://ad.doubleclick.net/jump/N5072.130331.DZONE/B4681435.3;abr=!ie4;abr=!ie5;sz=728x90;ord=20100828055003?"&gt;
+&lt;img
+ 
+src="http://ad.doubleclick.net/ad/N5072.130331.DZONE/B4681435.3;abr=!ie4;abr=!ie5;sz=728x90;ord=20100828055003?"
+ border="0" width="728" height="90" alt="Click Here"&gt;&lt;/a&gt;
+&lt;/noscript&gt;
+</iframe>
+
+<noscript>
+<IFRAME src="http://avpa.javalobby.org/servlet/view/html/zone?zid=56&pid=0&random=79296616" height="90" width="728" hspace="0" vspace="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+<A href="http://avpa.javalobby.org/servlet/click/zone?zid=56&pid=0&lookup=true&random=79296616" target="_top">
+<IMG src="http://avpa.javalobby.org/servlet/view/image/zone?zid=56&pid=0&random=79296616" height="90" width="728" hspace="0" vspace="0" border="0" alt="Click Here!">
+</A>
+</IFRAME>
+</noscript>
+
+    <!-- END ADVERTPRO ADVANCED CODE BLOCK -->
+</div>
+
+<div id="rightColumn">
+
+<div class="jljive-portlet">
+  <div class="header">
+
+    <h1>Latest @ <a href="http://www.dzone.com/">
+      <img src="t107057_fichiers/dzone_130x24.gif" alt="dzone.com: fresh
+ links for developers" title="dzone.com: fresh links for developers" 
+style="border: medium none; vertical-align: text-top; padding-top: 2px;"></a></h1></div>
+  <ul class="dzone">
+    
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/Eu68SrBDEQo/svgedit_vector_graphics_editing.html"
+ title="svg-edit - Vector Graphics Editing">
+        svg-edit - Vector Graphics Editing</a>
+        </li>
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/_5fY4Mt8QgA/daily_dose_google_boycotts_javaone.html"
+ title="Daily Dose - Google Boycotts JavaOne">
+        Daily Dose - Google Boycotts JavaOne</a>
+        </li>
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/3gCN8xYaOIs/php_what_is_more_powerful_than_list.html"
+ title="PHP: What is More Powerful Than list()">
+        PHP: What is More Powerful Than list()</a>
+        </li>
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/0w8lCqyHCeY/netbeans_ide_610_m1_is_now_available.html"
+ title="NetBeans IDE 6.10 M1 is now available!">
+        NetBeans IDE 6.10 M1 is now available!</a>
+        </li>
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/A496DATHY3A/think_global_act_local_the_bigger_pattern.html"
+ title="Think global, act local - the bigger pattern">
+        Think global, act local - the bigger...</a>
+        </li>
+    
+      <li>
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/yxgannC8QYs/nbd_benchmark_cubrid_performance_test_results.html"
+ title="NBD Benchmark: CUBRID Performance Test Results">
+        NBD Benchmark: CUBRID Performance Test...</a>
+        </li>
+    
+      <li class="last">
+        <a 
+href="http://feeds.dzone.com/%7Er/dzone/frontpage/%7E3/ObnH_g3JRxM/i_thought_that_a_small_project_does_not_need_test.html"
+ title="I thought that a small project does not need testing...">
+        I thought that a small project does not...</a>
+        </li>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+  <div class="footer">
+    <img src="t107057_fichiers/write_16x16.gif" align="texttop" 
+hspace="0" vspace="0">
+    <a href="http://www.dzone.com/links/add.html" class="post">Submit a 
+story</a>
+    &nbsp;<img src="t107057_fichiers/check_16x16.gif" align="texttop" 
+hspace="0" vspace="0">
+    <a href="http://www.dzone.com/links/queue.html" class="post">Vote on
+ new stories</a>
+  </div>
+</div>
+
+    
+	
+
+
+<div id="mpu">
+<!-- BEGIN ADVERTPRO ADVANCED CODE BLOCK -->
+ <script language="JavaScript" src="t107057_fichiers/zone_002.js" type="text/javascript"></script><script language="JavaScript1.1" src="t107057_fichiers/B4536580.js">
+</script>
+ 
+              
+          
+                <script src="t107057_fichiers/plcr_1323207_225327464_1274815925360.js" language="JavaScript"></script><script src="t107057_fichiers/inpageGlobalTemplate_v2_56_03.js" language="JavaScript"></script><div
+ id="DIV_0_1_1282989379144" 
+onmouseover="dartCreativeDisplayManagers['GlobalTemplate_12748159205761282989379142'].onMouseOver('0_1_1282989379144');"
+ 
+onmouseout="dartCreativeDisplayManagers['GlobalTemplate_12748159205761282989379142'].onMouseOut('0_1_1282989379144');"
+ style="position: static; width: 300px; visibility: visible; z-index: 
+999;"><embed alt="" id="FLASH_0_1_1282989379144" 
+src="t107057_fichiers/PID_1323207_Adobe_FlashBuilder_flashcube_300x250_RM_polite.swf"
+ quality="high" bgcolor="#" wmode="opaque" 
+name="FLASH_0_1_1282989379144" swliveconnect="TRUE" 
+flashvars="ct=FR&amp;st=&amp;ac=1&amp;zp=&amp;bw=2&amp;dma=1&amp;city=4984&amp;src=1295336&amp;rv=1&amp;rid=36941041&amp;=300x250&amp;&amp;click=http%3A//ad.doubleclick.net/click%253Bh%253Dv8/3a04/3/0/%252a/b%253B225327464%253B0-0%253B0%253B49110971%253B4307-300/250%253B36923163/36941041/1%253B%253B%257Esscs%253D%253f&amp;clickN=&amp;rid=36941041&amp;assets=Adobe_FlashBuilder_flashcube_300x250_RM_main.swf%3Dhttp%253A//s0.2mdn.net/1295336/PID_1323207_Adobe_FlashBuilder_flashcube_300x250_RM_main.swf%26low_video_preload_video%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_100.flv%26mid_video_preload_video%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_200.flv%26high_video_preload_video%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_200.flv%26low_video_Deepa%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_100.flv%26mid_video_Deepa%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_200.flv%26high_video_Deepa%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Deepa_200.flv%26low_video_Kevin%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Kevin_200.flv%26mid_video_Kevin%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Kevin_200.flv%26high_video_Kevin%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Kevin_200.flv%26low_video_Chet%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Chet_100.flv%26mid_video_Chet%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Chet_200.flv%26high_video_Chet%3Dhttp%253A//gcdn.2mdn.net/MotifFiles/html/GTS/Aqua_pod/ADO003/videos/Chet_200.flv&amp;vcData=name%3Apreload_video%2CstartMuted%3Afalse%2CautoBuffer%3Atrue%2CloopCount%3A0%2CisStreaming%3Afalse%2Cvfp_low%3Alow_video_preload_video%2Cvfp_mid%3Amid_video_preload_video%2Cvfp_high%3Ahigh_video_preload_video%2Cpfp_low%3A%2Cpfp_mid%3A%2Cpfp_high%3A%7BDELIM%7Dname%3ADeepa%2CstartMuted%3Afalse%2CautoBuffer%3Atrue%2CloopCount%3A0%2CisStreaming%3Afalse%2Cvfp_low%3Alow_video_Deepa%2Cvfp_mid%3Amid_video_Deepa%2Cvfp_high%3Ahigh_video_Deepa%2Cpfp_low%3A%2Cpfp_mid%3A%2Cpfp_high%3A%7BDELIM%7Dname%3AKevin%2CstartMuted%3Afalse%2CautoBuffer%3Afalse%2CloopCount%3A0%2CisStreaming%3Afalse%2Cvfp_low%3Alow_video_Kevin%2Cvfp_mid%3Amid_video_Kevin%2Cvfp_high%3Ahigh_video_Kevin%2Cpfp_low%3A%2Cpfp_mid%3A%2Cpfp_high%3A%7BDELIM%7Dname%3AChet%2CstartMuted%3Afalse%2CautoBuffer%3Afalse%2CloopCount%3A0%2CisStreaming%3Afalse%2Cvfp_low%3Alow_video_Chet%2Cvfp_mid%3Amid_video_Chet%2Cvfp_high%3Ahigh_video_Chet%2Cpfp_low%3A%2Cpfp_mid%3A%2Cpfp_high%3A&amp;exitEvents=name%3AGet%2520Started_exit%2Curl%3Ahttp%253A//www.adobe.com/devnet/flex/videotraining/%253Fsdid%253DGXWFB%2Ctarget%3A_blank%7BDELIM%7Dname%3AAdobe%2520Logo_exit%2Curl%3Ahttp%253A//www.adobe.com/devnet/flex/videotraining/%253Fsdid%253DGXWFB%2Ctarget%3A_blank&amp;googleDiscoveryUrl=http%3A//pagead2.googlesyndication.com/pagead/ads%3Fclient%3Ddclk-3pas-query%26output%3Dxml%26geo%3Dtrue&amp;adSiteUrl=http%3A//www.eclipsezone.com/eclipse/forums/t107057.html&amp;isGCNAd=false&amp;varName=0_1_1282989379144&amp;td=www.eclipsezone.com&amp;assetType=Inpage&amp;br=ff&amp;os=mac&amp;isFlashFullScreenEnabled=false"
+ type="application/x-shockwave-flash" allowscriptaccess="always" 
+height="250" width="300"></div>
+                <noscript>
+                    <A TARGET="_blank" HREF="http://ad.doubleclick.net/activity;src%3D1295336%3Bmet%3D1%3Bv%3D1%3Bpid%3D49110971%3Baid%3D225327464%3Bko%3D0%3Bcid%3D36923163%3Brid%3D36941041%3Brv%3D1%3Bcs%3Dq%3Beid1%3D288767%3Becn1%3D1%3Betm1%3D0%3B_dc_redir%3Durl%3fhttp://ad.doubleclick.net/click%3Bh%3Dv8/3a04/3/0/%2a/b%3B225327464%3B0-0%3B0%3B49110971%3B4307-300/250%3B36923163/36941041/1%3B%3B%7Esscs%3D%3fhttp://www.adobe.com/devnet/flex/videotraining/?sdid=GXWFB">
+                    <IMG SRC="http://s0.2mdn.net/1295336/PID_1323207_Adobe_Flashbuilder_Trade_300x250_img.gif" width="300" height="250" BORDER="0" alt="">
+                    </A>
+                    <IMG SRC="http://ad.doubleclick.net/activity;src=1295336;met=1;v=1;pid=49110971;aid=225327464;ko=0;cid=36923163;rid=36941041;rv=1;&timestamp=2485194;eid1=9;ecn1=1;etm1=0;" width="0px" height="0px" style="visibility:hidden" BORDER="0"/>
+                    <IMG SRC="" width="0px" height="0px" style="visibility:hidden" BORDER="0"/>
+                    <IMG SRC="" width="0px" height="0px" style="visibility:hidden" BORDER="0"/>
+                </noscript>
+                
+
+<noscript>
+<a href="http://ad.doubleclick.net/jump/N4270.Dzone/B4536580;sz=300x250;ord=20100828055003?">
+<img src="http://ad.doubleclick.net/ad/N4270.Dzone/B4536580;sz=300x250;ord=20100828055003?" border="0" width="300" height="250" alt="Click Here"></a>
+</noscript>
+
+
+<noscript>
+<IFRAME src="http://avpa.javalobby.org/servlet/view/html/zone?zid=54&pid=0&random=21408261" height="250" width="300" hspace="4" vspace="4" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+<A href="http://avpa.javalobby.org/servlet/click/zone?zid=54&pid=0&lookup=true&random=21408261" target="_top">
+<IMG src="http://avpa.javalobby.org/servlet/view/image/zone?zid=54&pid=0&random=21408261" height="250" width="300" hspace="4" vspace="4" border="0" alt="Support Javalobby, visit our sponsors">
+</A>
+</IFRAME>
+</noscript>
+
+ <!-- END ADVERTPRO ADVANCED CODE BLOCK -->
+</div> <!-- end mpu DIV -->
+
+<div class="jljive-portlet">
+
+	<div class="header">Forum Controls</div>
+		
+		
+
+		
+		
+
+		
+			
+		
+	<ul>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?threadID=107057"
+ class="noborder"><img src="t107057_fichiers/write_16x16.gif" alt="Reply
+ to this Thread" border="0" height="16" width="16"></a> 
+<a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?threadID=107057">Reply
+ to this Thread</a></li>
+
+
+  
+
+<li><a 
+href="http://www.eclipsezone.com/forums/search%21default.jspa?objID=f18156"
+ class="noborder"><img src="t107057_fichiers/search-16x16.gif" 
+alt="Search Forum" border="0" height="16" width="16"></a>
+ <a 
+href="http://www.eclipsezone.com/forums/search%21default.jspa?objID=f18156">Search
+ Forum</a></li>
+
+
+
+
+
+
+
+        <li>
+            <a 
+href="http://www.eclipsezone.com/eclipse/forums/f18156.html" 
+class="noborder"><img src="t107057_fichiers/arrow-left-16x16.gif" 
+alt="Back to Thread List" border="0" height="16" width="16"></a>
+            
+            <a 
+href="http://www.eclipsezone.com/eclipse/forums/f18156.html">Back to 
+Thread List</a></li>
+
+
+
+	</ul>
+              <div class="footer">
+                
+                Whos Online:
+
+                
+
+                
+                
+                        
+                        
+                162 guest(s), 0 user(s).
+
+                
+                <a href="http://www.eclipsezone.com/forums/online.jspa">More
+ info »</a>
+            </div>
+
+</div>
+
+		<div class="jljive-portlet">
+		<div class="header">Spotlight Features</div>
+		
+
+
+
+
+<div class="spotlight">
+
+
+</div>
+
+
+        <div class="footer"><a 
+href="http://www.eclipsezone.com/spotlights.jsp">Read the Spotlight 
+Archives</a></div>
+		</div>
+
+<!-- end rightColumn div --></div>
+
+<div id="leftColumn">
+	
+		<span class="jljive-paginator">
+		
+		Replies:
+		7 -
+		
+		Pages:
+		1 &nbsp;
+
+		
+		</span>
+	
+	<br>
+	
+		<span class="jljive-paginator">
+			
+		</span>
+	
+
+	<div id="comments">
+	<dl>
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<div class="rootmsg">
+			<div class="rm_header">
+				<a name="92226486"></a>
+				<div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226486"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226486"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><h1>Custom property tab
+</h1>
+			
+				<h4>At 4:32 AM
+				on Feb 13, 2008, 
+						DI Florian Hackenberger
+  wrote:</h4>
+			</div>
+			 Hi!
+<br><br>I would like to add a custom properties tab to the properties 
+view of an EMF
+<br>editor. Unlike [1] however, I do not want to completely replace the
+<br>property editor of EMF. I just want to have an additional tab for 
+certain
+<br>model classes. Is that possible with EMF?
+<br><br>Cheers,
+<br>        Florian
+<br><br>[1] <a 
+href="http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes" 
+target="_blank">http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes</a>
+<br>
+			<div class="rm_footer">
+				         <!-- BEGIN ADVERTPRO ADVANCED CODE BLOCK -->
+<a 
+href="http://avpa.javalobby.org/servlet/click/zone?zid=72&amp;pid=0&amp;lookup=true&amp;position=1"
+ target="_top">
+<img src="t107057_fichiers/zone.gif" alt="Click Here!" align="right" 
+border="0" height="60" hspace="0" vspace="4" width="234">
+</a>   <!-- END ADVERTPRO ADVANCED CODE BLOCK -->
+				
+				<h3>7 replies
+					
+							 so far
+							
+							<span class="postYours">(<a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?threadID=107057"
+ style="border: medium none;"><img 
+src="t107057_fichiers/write_16x16.gif" title="Reply to this Thread" 
+height="16" width="16"></a>
+							<a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?threadID=107057">Post
+ your own</a>)</span>
+					
+				</h3>
+				
+		</div>
+		</div>
+
+        	
+	
+
+        
+            
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226517"></a>
+    <dt id="reply1" class="alt"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226517"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226517"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226517" class="postno" title="Permlink to this
+ reply">1.</a>
+		<span class="replyInfo">At 9:18 AM
+		on Feb 13, 2008, <a 
+href="http://www.eclipsezone.com/forums/profile.jspa?userID=232966" 
+class="author">Cyril Faucher</a>
+                <img src="t107057_fichiers/2yellowstars.gif" 
+alt="Blooming Javalobby Member" title="Blooming Javalobby Member">
+                 wrote:</span>
+	</dt>
+	<dd class="alt">
+		<h3>Re: Custom property tab
+</h3>
+		Hi Florian,
+<br><br>You can use this: 
+<br><a 
+href="http://topcased-mm.gforge.enseeiht.fr/website/modeling/tutorials/generatePropertiesView.html"
+ target="_blank">http://topcased-mm.gforge.enseeiht.fr/website/modeling/tutorials/generatePropertiesView.html</a>
+<br><br>Maybe this generator has been ever added into the Ecore Tools 
+component 
+<br>(subproject of EMFT).
+<br><br>Best regards,
+<br>Cyril.
+<br><br>DI Florian Hackenberger a écrit :
+<br><font color="#660066">&gt; Hi!</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; I would like to add a custom properties 
+tab to the properties view of an EMF</font>
+<br><font color="#660066">&gt; editor. Unlike [1] however, I do not want
+ to completely replace the</font>
+<br><font color="#660066">&gt; property editor of EMF. I just want to 
+have an additional tab for certain</font>
+<br><font color="#660066">&gt; model classes. Is that possible with EMF?</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Cheers,</font>
+<br><font color="#660066">&gt;         Florian</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; [1] <a 
+href="http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes" 
+target="_blank">http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes</a></font>
+<br><br><br>-- 
+<br>Cyril Faucher
+<br>IRISA-INRIA - Rennes, France
+<br>[Breathe life into your metamodels www.kermeta.org]
+<br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226520"></a>
+    <dt id="reply2" class="alt2"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226520"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226520"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226520" class="postno" title="Permlink to this
+ reply">2.</a>
+		<span class="replyInfo">At 9:32 AM
+		on Feb 13, 2008, 
+        <i>Marcelo Paternostro
+</i> wrote:</span>
+	</dt>
+	<dd class="alt2">
+		<h3>Re: Custom property tab
+</h3>
+		Hi,
+<br><br>I am not sure if you can/should (like in "respecting the Eclipse
+ UI 
+<br>conventions") add a tab to the classical properties view (the one 
+with 
+<br>the "ugly" table look).  If you notice what we do, we categorize the
+ 
+<br>properties using a tree table approach.  Anyways, the following 
+posts 
+<br>may help you.
+<br><br>"about property sheet" from 12/26/2007 10:46 AM
+<br>"problem with added property descriptors" from 7/11/2005 3:15 AM
+<br>"Extending generated PropertySheet entries" from 10/1/2003 4:12 AM
+<br><br>If you are working with the "new" tabbed properties (the ones 
+you can 
+<br>use any type of widget), then, unfortunately, you are a bit on your 
+own 
+<br>because we don't generate then.  You can see what GMF does for 
+example, 
+<br>since their editor is backed by such properties pages.  Here's 
+another post:
+<br><br>"How to add a new tab to the Properties view in a GMF editor" 
+from 
+<br>8/22/2007 9:48 AM
+<br><br>Cheers,
+<br>Marcelo
+<br><br><br>DI Florian Hackenberger wrote:
+<br><font color="#660066">&gt; Hi!</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; I would like to add a custom properties 
+tab to the properties view of an EMF</font>
+<br><font color="#660066">&gt; editor. Unlike [1] however, I do not want
+ to completely replace the</font>
+<br><font color="#660066">&gt; property editor of EMF. I just want to 
+have an additional tab for certain</font>
+<br><font color="#660066">&gt; model classes. Is that possible with EMF?</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Cheers,</font>
+<br><font color="#660066">&gt;         Florian</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; [1] <a 
+href="http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes" 
+target="_blank">http://wiki.eclipse.org/EMF/Recipes#Properties_Recipes</a></font>
+<br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226542"></a>
+    <dt id="reply1" class="alt"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226542"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226542"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226542" class="postno" title="Permlink to this
+ reply">1.</a>
+		<span class="replyInfo">At 11:02 AM
+		on Feb 13, 2008, 
+        <i>DI Florian Hackenberger
+</i> wrote:</span>
+	</dt>
+	<dd class="alt">
+		<h3>Re: Custom property tab
+</h3>
+		Marcelo Paternostro wrote:
+<br><font color="#660066">&gt; I am not sure if you can/should (like in 
+"respecting the Eclipse UI</font>
+<br><font color="#660066">&gt; conventions") add a tab to the classical 
+properties view (the one with</font>
+<br><font color="#660066">&gt; the "ugly" table look).  If you notice 
+what we do, we categorize the</font>
+<br><font color="#660066">&gt; properties using a tree table approach.  
+Anyways, the following posts</font>
+<br><font color="#660066">&gt; may help you.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; "about property sheet" from 12/26/2007 
+10:46 AM</font>
+<br><font color="#660066">&gt; "problem with added property descriptors"
+ from 7/11/2005 3:15 AM</font>
+<br><font color="#660066">&gt; "Extending generated PropertySheet 
+entries" from 10/1/2003 4:12 AM</font>
+<br>Thanks for the references! I meant the tabbed properties approach 
+and
+<br>finally succeded, after some struggeling.
+<br><br><font color="#660066">&gt; If you are working with the "new" 
+tabbed properties (the ones you can</font>
+<br><font color="#660066">&gt; use any type of widget), then, 
+unfortunately, you are a bit on your own</font>
+<br><font color="#660066">&gt; because we don't generate then.</font>
+<br>After reading quite a bit, I found out that the only thing 
+preventing me
+<br>from using the tabbed properties view, is the fact that EMF requires
+ an
+<br>adapter factory for the model objects (that is the model objects do 
+not
+<br>implement the IPropertySource interface, not adapt to it). This 
+factory is
+<br>created and set in:
+<br><br>public IPropertySheetPage XXXEditor::getPropertySheetPage():
+<br>        ExtendedPropertySheetPage page = ...
+<br>        ...
+<br>        propertySheetPage.setPropertySourceProvider(new
+<br>AdapterFactoryContentProvider(adapterFactory));
+<br><br>The AdvancedPropertySection (part of the tabbed properties 
+package), which
+<br>is a wrapper for the standard PropertySheetPage, however does not 
+expose
+<br>the setPropertySourceProvider method of the property page it 
+creates.
+<br>Therefore the AdvancedPropertySection cannot be used to display the
+<br>properties of EMF objects. I'm not yet convinced it is the correct
+<br>approach, but I simply created a new class EMFPropertySection 
+(mostly
+<br>copy/pasted from AdvancedPropertySection), which sets the property 
+ource
+<br>provider.
+<br><br>public class EMFPropertySection extends AbstractPropertySection {
+<br>        protected PropertySheetPage page;
+<br><br>        public void createControls(Composite parent,
+<br>                        TabbedPropertySheetPage 
+tabbedPropertySheetPage) {
+<br>                super.createControls(parent, 
+tabbedPropertySheetPage);
+<br>                Composite composite = 
+getWidgetFactory().createFlatFormComposite(parent);
+<br>                page = new PropertySheetPage();
+<br>                page.setPropertySourceProvider(new 
+AdapterFactoryContentProvider(new
+<br>XXXItemProviderAdapterFactory()));
+<br><br>                page.createControl(composite);
+<br>                FormData data = new FormData();
+<br>                data.left = new FormAttachment(0, 0);
+<br>                data.right = new FormAttachment(100, 0);
+<br>                data.top = new FormAttachment(0, 0);
+<br>                data.bottom = new FormAttachment(100, 0);
+<br>                page.getControl().setLayoutData(data);
+<br>        }
+<br><br>        public void setInput(IWorkbenchPart part, ISelection 
+selection) {
+<br>                super.setInput(part, selection);
+<br>                page.selectionChanged(part, selection);
+<br>        }
+<br><br>        public void dispose() {
+<br>                super.dispose();
+<br><br>                if (page != null) {
+<br>                        page.dispose();
+<br>                        page = null;
+<br>                }
+<br><br>        }
+<br><br>        public void refresh() {
+<br>                page.refresh();
+<br>        }
+<br><br>        public boolean shouldUseExtraSpace() {
+<br>                return true;
+<br>        }
+<br>}
+<br><br>Then I added the following extensions to my plugin.xml:
+<br><br>  
+        
+point="org.eclipse.ui.views.properties.tabbed.propertyContributor"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+              category="sample"&gt;
+<br>     
+<br>  
+<br>  
+        point="org.eclipse.ui.views.properties.tabbed.propertyTabs"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+              category="sample"
+<br>              
+id="org.acoveo.callcenter.masterData.editor.propertyTab1"
+<br>              label="propertyTab"&gt;
+<br>        
+<br>        
+              category="sample"
+<br>             
+<br>id="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"
+<br>              label="Advanced"&gt;
+<br>        
+<br>     
+<br>  
+<br>  
+        
+point="org.eclipse.ui.views.properties.tabbed.propertySections"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+             
+<br>class="org.acoveo.callcenter.masterdata.presentation.PropertySection1"
+<br>              
+id="org.acoveo.callcenter.masterData.editor.propertySection1"
+<br>              
+tab="org.acoveo.callcenter.masterData.editor.propertyTab1"&gt;
+<br>           
+                 type="org.eclipse.emf.ecore.EObject"&gt;
+<br>           
+<br>        
+<br>        
+             
+<br>class="org.acoveo.callcenter.masterdata.presentation.EMFPropertySection"
+<br>             
+<br>id="org.acoveo.callcenter.masterData.editor.advancedPropertySection1"
+<br>             
+<br>tab="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"&gt;
+<br>           
+                 type="org.eclipse.emf.ecore.EObject"&gt;
+<br>           
+<br>        
+<br>     
+<br>  
+<br><br>And tatata, it worked. Apart from the EMFPropertySection, I also
+ added
+<br>another "custom" section, following [1]. On a first glance, the 
+approach
+<br>seems to work, although I'm not yet sure what I should do with the 
+methods
+<br>public void setSelectionToViewer(List
+ selection)
+<br>public void setActionBars(IActionBars actionBars)
+<br>and the remaining functionality of the ExtendedPropertySheetPage. I 
+cannot
+<br>use the ExtendedPropertySheetPage in EMFPropertySection, as I do not
+ have
+<br>access to the editing domain, do I? Any suggestions/tips for 
+improvement on
+<br>that approach?
+<br><br>Cheers,
+<br>        Florian
+<br><br>[1]
+<br><a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ target="_blank">http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html</a>
+<br><br>-- 
+<br>Florian Hackenberger
+<br><br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226537"></a>
+    <dt id="reply3" class="alt2"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226537"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226537"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226537" class="postno" title="Permlink to this
+ reply">3.</a>
+		<span class="replyInfo">At 11:02 AM
+		on Feb 13, 2008, 
+        <i>DI Florian Hackenberger
+</i> wrote:</span>
+	</dt>
+	<dd class="alt2">
+		<h3>Re: Custom property tab
+</h3>
+		Marcelo Paternostro wrote:
+<br><font color="#660066">&gt; I am not sure if you can/should (like in 
+"respecting the Eclipse UI</font>
+<br><font color="#660066">&gt; conventions") add a tab to the classical 
+properties view (the one with</font>
+<br><font color="#660066">&gt; the "ugly" table look).  If you notice 
+what we do, we categorize the</font>
+<br><font color="#660066">&gt; properties using a tree table approach.  
+Anyways, the following posts</font>
+<br><font color="#660066">&gt; may help you.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; "about property sheet" from 12/26/2007 
+10:46 AM</font>
+<br><font color="#660066">&gt; "problem with added property descriptors"
+ from 7/11/2005 3:15 AM</font>
+<br><font color="#660066">&gt; "Extending generated PropertySheet 
+entries" from 10/1/2003 4:12 AM</font>
+<br>Thanks for the references! I meant the tabbed properties approach 
+and
+<br>finally succeded, after some struggeling.
+<br><br><font color="#660066">&gt; If you are working with the "new" 
+tabbed properties (the ones you can</font>
+<br><font color="#660066">&gt; use any type of widget), then, 
+unfortunately, you are a bit on your own</font>
+<br><font color="#660066">&gt; because we don't generate then.</font>
+<br>After reading quite a bit, I found out that the only thing 
+preventing me
+<br>from using the tabbed properties view, is the fact that EMF requires
+ an
+<br>adapter factory for the model objects (that is the model objects do 
+not
+<br>implement the IPropertySource interface, not adapt to it). This 
+factory is
+<br>created and set in:
+<br><br>public IPropertySheetPage XXXEditor::getPropertySheetPage():
+<br>        ExtendedPropertySheetPage page = ...
+<br>        ...
+<br>        propertySheetPage.setPropertySourceProvider(new
+<br>AdapterFactoryContentProvider(adapterFactory));
+<br><br>The AdvancedPropertySection (part of the tabbed properties 
+package), which
+<br>is a wrapper for the standard PropertySheetPage, however does not 
+expose
+<br>the setPropertySourceProvider method of the property page it 
+creates.
+<br>Therefore the AdvancedPropertySection cannot be used to display the
+<br>properties of EMF objects. I'm not yet convinced it is the correct
+<br>approach, but I simply created a new class EMFPropertySection 
+(mostly
+<br>copy/pasted from AdvancedPropertySection), which sets the property 
+ource
+<br>provider.
+<br><br>public class EMFPropertySection extends AbstractPropertySection {
+<br>        protected PropertySheetPage page;
+<br><br>        public void createControls(Composite parent,
+<br>                        TabbedPropertySheetPage 
+tabbedPropertySheetPage) {
+<br>                super.createControls(parent, 
+tabbedPropertySheetPage);
+<br>                Composite composite = 
+getWidgetFactory().createFlatFormComposite(parent);
+<br>                page = new PropertySheetPage();
+<br>                page.setPropertySourceProvider(new 
+AdapterFactoryContentProvider(new
+<br>XXXItemProviderAdapterFactory()));
+<br><br>                page.createControl(composite);
+<br>                FormData data = new FormData();
+<br>                data.left = new FormAttachment(0, 0);
+<br>                data.right = new FormAttachment(100, 0);
+<br>                data.top = new FormAttachment(0, 0);
+<br>                data.bottom = new FormAttachment(100, 0);
+<br>                page.getControl().setLayoutData(data);
+<br>        }
+<br><br>        public void setInput(IWorkbenchPart part, ISelection 
+selection) {
+<br>                super.setInput(part, selection);
+<br>                page.selectionChanged(part, selection);
+<br>        }
+<br><br>        public void dispose() {
+<br>                super.dispose();
+<br><br>                if (page != null) {
+<br>                        page.dispose();
+<br>                        page = null;
+<br>                }
+<br><br>        }
+<br><br>        public void refresh() {
+<br>                page.refresh();
+<br>        }
+<br><br>        public boolean shouldUseExtraSpace() {
+<br>                return true;
+<br>        }
+<br>}
+<br><br>Then I added the following extensions to my plugin.xml:
+<br><br>  
+        
+point="org.eclipse.ui.views.properties.tabbed.propertyContributor"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+              category="sample"&gt;
+<br>     
+<br>  
+<br>  
+        point="org.eclipse.ui.views.properties.tabbed.propertyTabs"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+              category="sample"
+<br>              
+id="org.acoveo.callcenter.masterData.editor.propertyTab1"
+<br>              label="propertyTab"&gt;
+<br>        
+<br>        
+              category="sample"
+<br>             
+<br>id="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"
+<br>              label="Advanced"&gt;
+<br>        
+<br>     
+<br>  
+<br>  
+        
+point="org.eclipse.ui.views.properties.tabbed.propertySections"&gt;
+<br>     
+          
+<br>contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;
+<br>        
+             
+<br>class="org.acoveo.callcenter.masterdata.presentation.PropertySection1"
+<br>              
+id="org.acoveo.callcenter.masterData.editor.propertySection1"
+<br>              
+tab="org.acoveo.callcenter.masterData.editor.propertyTab1"&gt;
+<br>           
+                 type="org.eclipse.emf.ecore.EObject"&gt;
+<br>           
+<br>        
+<br>        
+             
+<br>class="org.acoveo.callcenter.masterdata.presentation.EMFPropertySection"
+<br>             
+<br>id="org.acoveo.callcenter.masterData.editor.advancedPropertySection1"
+<br>             
+<br>tab="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"&gt;
+<br>           
+                 type="org.eclipse.emf.ecore.EObject"&gt;
+<br>           
+<br>        
+<br>     
+<br>  
+<br><br>And tatata, it worked. Apart from the EMFPropertySection, I also
+ added
+<br>another "custom" section, following [1]. On a first glance, the 
+approach
+<br>seems to work, although I'm not yet sure what I should do with the 
+methods
+<br>public void setSelectionToViewer(List
+ selection)
+<br>public void setActionBars(IActionBars actionBars)
+<br>and the remaining functionality of the ExtendedPropertySheetPage. I 
+cannot
+<br>use the ExtendedPropertySheetPage in EMFPropertySection, as I do not
+ have
+<br>access to the editing domain, do I? Any suggestions/tips for 
+improvement on
+<br>that approach?
+<br><br>Cheers,
+<br>        Florian
+<br><br>[1]
+<br><a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ target="_blank">http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html</a>
+<br><br>-- 
+<br>Florian Hackenberger
+<br><br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226564"></a>
+    <dt id="reply1" class="alt"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226564"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226564"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226564" class="postno" title="Permlink to this
+ reply">1.</a>
+		<span class="replyInfo">At 1:17 PM
+		on Feb 13, 2008, 
+        <i>lucas bigeardel
+</i> wrote:</span>
+	</dt>
+	<dd class="alt">
+		<h3>Re: Custom property tab
+</h3>
+		Topcased tabbed properties has been largely reused in ecoretools :
+<br><br>see CVS repository :pserver:anonymous at dev dot eclipse dot 
+org:/cvsroot/modeling
+<br><br>/plugins/
+<br><br>org.eclipse.emf.ecoretools.properties
+<br>org.eclipse.emf.tabbedproperties
+<br><br>regards,
+<br><br>DI Florian Hackenberger a écrit :
+<br><font color="#660066">&gt; Marcelo Paternostro wrote:</font>
+<br><font color="#007777">&gt;&gt; I am not sure if you can/should (like
+ in "respecting the Eclipse UI</font>
+<br><font color="#007777">&gt;&gt; conventions") add a tab to the 
+classical properties view (the one with</font>
+<br><font color="#007777">&gt;&gt; the "ugly" table look).  If you 
+notice what we do, we categorize the</font>
+<br><font color="#007777">&gt;&gt; properties using a tree table 
+approach.  Anyways, the following posts</font>
+<br><font color="#007777">&gt;&gt; may help you.</font>
+<br><font color="#007777">&gt;&gt;</font>
+<br><font color="#007777">&gt;&gt; "about property sheet" from 
+12/26/2007 10:46 AM</font>
+<br><font color="#007777">&gt;&gt; "problem with added property 
+descriptors" from 7/11/2005 3:15 AM</font>
+<br><font color="#007777">&gt;&gt; "Extending generated PropertySheet 
+entries" from 10/1/2003 4:12 AM</font>
+<br><font color="#660066">&gt; Thanks for the references! I meant the 
+tabbed properties approach and</font>
+<br><font color="#660066">&gt; finally succeded, after some struggeling.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#007777">&gt;&gt; If you are working with the "new" 
+tabbed properties (the ones you can</font>
+<br><font color="#007777">&gt;&gt; use any type of widget), then, 
+unfortunately, you are a bit on your own</font>
+<br><font color="#007777">&gt;&gt; because we don't generate then.</font>
+<br><font color="#660066">&gt; After reading quite a bit, I found out 
+that the only thing preventing me</font>
+<br><font color="#660066">&gt; from using the tabbed properties view, is
+ the fact that EMF requires an</font>
+<br><font color="#660066">&gt; adapter factory for the model objects 
+(that is the model objects do not</font>
+<br><font color="#660066">&gt; implement the IPropertySource interface, 
+not adapt to it). This factory is</font>
+<br><font color="#660066">&gt; created and set in:</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; public IPropertySheetPage 
+XXXEditor::getPropertySheetPage():</font>
+<br><font color="#660066">&gt;         ExtendedPropertySheetPage page = 
+...</font>
+<br><font color="#660066">&gt;         ...</font>
+<br><font color="#660066">&gt;         
+propertySheetPage.setPropertySourceProvider(new</font>
+<br><font color="#660066">&gt; 
+AdapterFactoryContentProvider(adapterFactory));</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; The AdvancedPropertySection (part of the 
+tabbed properties package), which</font>
+<br><font color="#660066">&gt; is a wrapper for the standard 
+PropertySheetPage, however does not expose</font>
+<br><font color="#660066">&gt; the setPropertySourceProvider method of 
+the property page it creates.</font>
+<br><font color="#660066">&gt; Therefore the AdvancedPropertySection 
+cannot be used to display the</font>
+<br><font color="#660066">&gt; properties of EMF objects. I'm not yet 
+convinced it is the correct</font>
+<br><font color="#660066">&gt; approach, but I simply created a new 
+class EMFPropertySection (mostly</font>
+<br><font color="#660066">&gt; copy/pasted from 
+AdvancedPropertySection), which sets the property ource</font>
+<br><font color="#660066">&gt; provider.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; public class EMFPropertySection extends 
+AbstractPropertySection {</font>
+<br><font color="#660066">&gt;         protected PropertySheetPage page;</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void 
+createControls(Composite parent,</font>
+<br><font color="#660066">&gt;                         
+TabbedPropertySheetPage tabbedPropertySheetPage) {</font>
+<br><font color="#660066">&gt;                 
+super.createControls(parent, tabbedPropertySheetPage);</font>
+<br><font color="#660066">&gt;                 Composite composite = 
+getWidgetFactory().createFlatFormComposite(parent);</font>
+<br><font color="#660066">&gt;                 page = new 
+PropertySheetPage();</font>
+<br><font color="#660066">&gt;                 
+page.setPropertySourceProvider(new AdapterFactoryContentProvider(new</font>
+<br><font color="#660066">&gt; XXXItemProviderAdapterFactory()));</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;                 
+page.createControl(composite);</font>
+<br><font color="#660066">&gt;                 FormData data = new 
+FormData();</font>
+<br><font color="#660066">&gt;                 data.left = new 
+FormAttachment(0, 0);</font>
+<br><font color="#660066">&gt;                 data.right = new 
+FormAttachment(100, 0);</font>
+<br><font color="#660066">&gt;                 data.top = new 
+FormAttachment(0, 0);</font>
+<br><font color="#660066">&gt;                 data.bottom = new 
+FormAttachment(100, 0);</font>
+<br><font color="#660066">&gt;                 
+page.getControl().setLayoutData(data);</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void 
+setInput(IWorkbenchPart part, ISelection selection) {</font>
+<br><font color="#660066">&gt;                 super.setInput(part, 
+selection);</font>
+<br><font color="#660066">&gt;                 
+page.selectionChanged(part, selection);</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void dispose() {</font>
+<br><font color="#660066">&gt;                 super.dispose();</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;                 if (page != null) {</font>
+<br><font color="#660066">&gt;                         page.dispose();</font>
+<br><font color="#660066">&gt;                         page = null;</font>
+<br><font color="#660066">&gt;                 }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void refresh() {</font>
+<br><font color="#660066">&gt;                 page.refresh();</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public boolean 
+shouldUseExtraSpace() {</font>
+<br><font color="#660066">&gt;                 return true;</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Then I added the following extensions to 
+my plugin.xml:</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertyContributor"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertyTabs"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"</font>
+<br><font color="#660066">&gt;               
+id="org.acoveo.callcenter.masterData.editor.propertyTab1"</font>
+<br><font color="#660066">&gt;               label="propertyTab"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+id="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"</font>
+<br><font color="#660066">&gt;               label="Advanced"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertySections"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+class="org.acoveo.callcenter.masterdata.presentation.PropertySection1"</font>
+<br><font color="#660066">&gt;               
+id="org.acoveo.callcenter.masterData.editor.propertySection1"</font>
+<br><font color="#660066">&gt;               
+tab="org.acoveo.callcenter.masterData.editor.propertyTab1"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<font color="#660066">&gt;                  
+type="org.eclipse.emf.ecore.EObject"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+class="org.acoveo.callcenter.masterdata.presentation.EMFPropertySection"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+id="org.acoveo.callcenter.masterData.editor.advancedPropertySection1"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+tab="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<font color="#660066">&gt;                  
+type="org.eclipse.emf.ecore.EObject"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; And tatata, it worked. Apart from the 
+EMFPropertySection, I also added</font>
+<br><font color="#660066">&gt; another "custom" section, following [1]. 
+On a first glance, the approach</font>
+<br><font color="#660066">&gt; seems to work, although I'm not yet sure 
+what I should do with the methods</font>
+<br><font color="#660066">&gt; public void setSelectionToViewer(List</font>
+ selection)
+<br><font color="#660066">&gt; public void setActionBars(IActionBars 
+actionBars)</font>
+<br><font color="#660066">&gt; and the remaining functionality of the 
+ExtendedPropertySheetPage. I cannot</font>
+<br><font color="#660066">&gt; use the ExtendedPropertySheetPage in 
+EMFPropertySection, as I do not have</font>
+<br><font color="#660066">&gt; access to the editing domain, do I? Any 
+suggestions/tips for improvement on</font>
+<br><font color="#660066">&gt; that approach?</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Cheers,</font>
+<br><font color="#660066">&gt;         Florian</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; [1]</font>
+<br><font color="#660066">&gt; <a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ target="_blank">http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html</a></font>
+<br><font color="#660066">&gt; </font>
+<br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226570"></a>
+    <dt id="reply1" class="alt2"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226570"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226570"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226570" class="postno" title="Permlink to this
+ reply">1.</a>
+		<span class="replyInfo">At 2:03 PM
+		on Feb 13, 2008, 
+        <i>Marcelo Paternostro
+</i> wrote:</span>
+	</dt>
+	<dd class="alt2">
+		<h3>Re: Custom property tab
+</h3>
+		Hi Florian,
+<br><br>You are way ahead of me on this subject. I played with tabbed 
+properties 
+<br>a long time ago just to see how it worked.
+<br><br>Perhaps you can post your questions on the GMF newsgroup 
+(apologizing 
+<br>for the "off topic" <img class="jive-emoticon" 
+src="t107057_fichiers/wink.gif" alt=";-)" border="0"> ) and see if 
+someone with more experience on 
+<br>this can give you some good advice.  Also, you may look at the 
+Tocased 
+<br>tabbed properties indicated by lucas.
+<br><br>Sorry for not being more helpful.
+<br><br>Cheers,
+<br>Marcelo
+<br><br>DI Florian Hackenberger wrote:
+<br><font color="#660066">&gt; Marcelo Paternostro wrote:</font>
+<br><font color="#007777">&gt;&gt; I am not sure if you can/should (like
+ in "respecting the Eclipse UI</font>
+<br><font color="#007777">&gt;&gt; conventions") add a tab to the 
+classical properties view (the one with</font>
+<br><font color="#007777">&gt;&gt; the "ugly" table look).  If you 
+notice what we do, we categorize the</font>
+<br><font color="#007777">&gt;&gt; properties using a tree table 
+approach.  Anyways, the following posts</font>
+<br><font color="#007777">&gt;&gt; may help you.</font>
+<br><font color="#007777">&gt;&gt;</font>
+<br><font color="#007777">&gt;&gt; "about property sheet" from 
+12/26/2007 10:46 AM</font>
+<br><font color="#007777">&gt;&gt; "problem with added property 
+descriptors" from 7/11/2005 3:15 AM</font>
+<br><font color="#007777">&gt;&gt; "Extending generated PropertySheet 
+entries" from 10/1/2003 4:12 AM</font>
+<br><font color="#660066">&gt; Thanks for the references! I meant the 
+tabbed properties approach and</font>
+<br><font color="#660066">&gt; finally succeded, after some struggeling.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#007777">&gt;&gt; If you are working with the "new" 
+tabbed properties (the ones you can</font>
+<br><font color="#007777">&gt;&gt; use any type of widget), then, 
+unfortunately, you are a bit on your own</font>
+<br><font color="#007777">&gt;&gt; because we don't generate then.</font>
+<br><font color="#660066">&gt; After reading quite a bit, I found out 
+that the only thing preventing me</font>
+<br><font color="#660066">&gt; from using the tabbed properties view, is
+ the fact that EMF requires an</font>
+<br><font color="#660066">&gt; adapter factory for the model objects 
+(that is the model objects do not</font>
+<br><font color="#660066">&gt; implement the IPropertySource interface, 
+not adapt to it). This factory is</font>
+<br><font color="#660066">&gt; created and set in:</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; public IPropertySheetPage 
+XXXEditor::getPropertySheetPage():</font>
+<br><font color="#660066">&gt;         ExtendedPropertySheetPage page = 
+...</font>
+<br><font color="#660066">&gt;         ...</font>
+<br><font color="#660066">&gt;         
+propertySheetPage.setPropertySourceProvider(new</font>
+<br><font color="#660066">&gt; 
+AdapterFactoryContentProvider(adapterFactory));</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; The AdvancedPropertySection (part of the 
+tabbed properties package), which</font>
+<br><font color="#660066">&gt; is a wrapper for the standard 
+PropertySheetPage, however does not expose</font>
+<br><font color="#660066">&gt; the setPropertySourceProvider method of 
+the property page it creates.</font>
+<br><font color="#660066">&gt; Therefore the AdvancedPropertySection 
+cannot be used to display the</font>
+<br><font color="#660066">&gt; properties of EMF objects. I'm not yet 
+convinced it is the correct</font>
+<br><font color="#660066">&gt; approach, but I simply created a new 
+class EMFPropertySection (mostly</font>
+<br><font color="#660066">&gt; copy/pasted from 
+AdvancedPropertySection), which sets the property ource</font>
+<br><font color="#660066">&gt; provider.</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; public class EMFPropertySection extends 
+AbstractPropertySection {</font>
+<br><font color="#660066">&gt;         protected PropertySheetPage page;</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void 
+createControls(Composite parent,</font>
+<br><font color="#660066">&gt;                         
+TabbedPropertySheetPage tabbedPropertySheetPage) {</font>
+<br><font color="#660066">&gt;                 
+super.createControls(parent, tabbedPropertySheetPage);</font>
+<br><font color="#660066">&gt;                 Composite composite = 
+getWidgetFactory().createFlatFormComposite(parent);</font>
+<br><font color="#660066">&gt;                 page = new 
+PropertySheetPage();</font>
+<br><font color="#660066">&gt;                 
+page.setPropertySourceProvider(new AdapterFactoryContentProvider(new</font>
+<br><font color="#660066">&gt; XXXItemProviderAdapterFactory()));</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;                 
+page.createControl(composite);</font>
+<br><font color="#660066">&gt;                 FormData data = new 
+FormData();</font>
+<br><font color="#660066">&gt;                 data.left = new 
+FormAttachment(0, 0);</font>
+<br><font color="#660066">&gt;                 data.right = new 
+FormAttachment(100, 0);</font>
+<br><font color="#660066">&gt;                 data.top = new 
+FormAttachment(0, 0);</font>
+<br><font color="#660066">&gt;                 data.bottom = new 
+FormAttachment(100, 0);</font>
+<br><font color="#660066">&gt;                 
+page.getControl().setLayoutData(data);</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void 
+setInput(IWorkbenchPart part, ISelection selection) {</font>
+<br><font color="#660066">&gt;                 super.setInput(part, 
+selection);</font>
+<br><font color="#660066">&gt;                 
+page.selectionChanged(part, selection);</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void dispose() {</font>
+<br><font color="#660066">&gt;                 super.dispose();</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;                 if (page != null) {</font>
+<br><font color="#660066">&gt;                         page.dispose();</font>
+<br><font color="#660066">&gt;                         page = null;</font>
+<br><font color="#660066">&gt;                 }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public void refresh() {</font>
+<br><font color="#660066">&gt;                 page.refresh();</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;         public boolean 
+shouldUseExtraSpace() {</font>
+<br><font color="#660066">&gt;                 return true;</font>
+<br><font color="#660066">&gt;         }</font>
+<br><font color="#660066">&gt; }</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Then I added the following extensions to 
+my plugin.xml:</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertyContributor"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertyTabs"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"</font>
+<br><font color="#660066">&gt;               
+id="org.acoveo.callcenter.masterData.editor.propertyTab1"</font>
+<br><font color="#660066">&gt;               label="propertyTab"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;               category="sample"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+id="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"</font>
+<br><font color="#660066">&gt;               label="Advanced"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt;   </font>
+<font color="#660066">&gt;         
+point="org.eclipse.ui.views.properties.tabbed.propertySections"&gt;</font>
+<br><font color="#660066">&gt;      </font>
+<font color="#660066">&gt;           </font>
+<br><font color="#660066">&gt; 
+contributorId="org.acoveo.callcenter.masterdata.presentation.XXXEditorID"&gt;</font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+class="org.acoveo.callcenter.masterdata.presentation.PropertySection1"</font>
+<br><font color="#660066">&gt;               
+id="org.acoveo.callcenter.masterData.editor.propertySection1"</font>
+<br><font color="#660066">&gt;               
+tab="org.acoveo.callcenter.masterData.editor.propertyTab1"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<font color="#660066">&gt;                  
+type="org.eclipse.emf.ecore.EObject"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;         </font>
+<font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+class="org.acoveo.callcenter.masterdata.presentation.EMFPropertySection"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+id="org.acoveo.callcenter.masterData.editor.advancedPropertySection1"</font>
+<br><font color="#660066">&gt;              </font>
+<br><font color="#660066">&gt; 
+tab="org.acoveo.callcenter.masterData.editor.advancedPropertyTab"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<font color="#660066">&gt;                  
+type="org.eclipse.emf.ecore.EObject"&gt;</font>
+<br><font color="#660066">&gt;            </font>
+<br><font color="#660066">&gt;         </font>
+<br><font color="#660066">&gt;      </font>
+<br><font color="#660066">&gt;   </font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; And tatata, it worked. Apart from the 
+EMFPropertySection, I also added</font>
+<br><font color="#660066">&gt; another "custom" section, following [1]. 
+On a first glance, the approach</font>
+<br><font color="#660066">&gt; seems to work, although I'm not yet sure 
+what I should do with the methods</font>
+<br><font color="#660066">&gt; public void setSelectionToViewer(List</font>
+ selection)
+<br><font color="#660066">&gt; public void setActionBars(IActionBars 
+actionBars)</font>
+<br><font color="#660066">&gt; and the remaining functionality of the 
+ExtendedPropertySheetPage. I cannot</font>
+<br><font color="#660066">&gt; use the ExtendedPropertySheetPage in 
+EMFPropertySection, as I do not have</font>
+<br><font color="#660066">&gt; access to the editing domain, do I? Any 
+suggestions/tips for improvement on</font>
+<br><font color="#660066">&gt; that approach?</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; Cheers,</font>
+<br><font color="#660066">&gt;         Florian</font>
+<br><font color="#660066">&gt; </font>
+<br><font color="#660066">&gt; [1]</font>
+<br><font color="#660066">&gt; <a 
+href="http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html"
+ target="_blank">http://www.eclipse.org/articles/Article-Tabbed-Properties/tabbed_properties_view.html</a></font>
+<br><font color="#660066">&gt; </font>
+<br>
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+
+			
+				
+
+
+
+
+
+
+
+    
+
+		<a name="92226571"></a>
+    <dt id="reply1" class="alt"><div class="msgControls">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        
+
+                        
+                        
+                        
+                        
+
+                            <td>&nbsp;</td>
+                            <td class="jive-icon">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226571"
+ class="noBorder" title="Click to reply to this thread"><img 
+src="t107057_fichiers/write_16x16.gif" alt="Click to reply to this 
+thread" border="0" height="16" width="16"></a>
+                            </td>
+                            <td class="jive-icon-label">
+                                <a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?messageID=92226571"
+ title="Click to reply to this thread">Reply</a>
+                            </td>
+
+                        
+                    </tr>
+                    </tbody></table>
+        </div><a href="#92226571" class="postno" title="Permlink to this
+ reply">1.</a>
+		<span class="replyInfo">At 2:06 PM
+		on Feb 13, 2008, 
+        Unregistered Guest  wrote:</span>
+	</dt>
+	<dd class="alt">
+		<h3>Re: Custom property tab
+</h3>
+		 
+
+		
+        
+	</dd>
+	
+		
+	
+
+
+			
+
+		
+	</dl>
+	</div>
+
+</div>
+
+<div class="jive-message-list-footer">
+	
+		<span class="jljive-paginator">
+		
+		Replies:
+		7 -
+		
+		Pages:
+		1 &nbsp;
+
+		
+		</span>
+	
+	
+		<span class="jljive-paginator">
+			
+		</span>
+	
+</div>
+
+
+    <br>
+    <a 
+href="http://www.eclipsezone.com/rss/rssmessages.jspa?threadID=107057" 
+title="Point your RSS reader here for a feed of the latest messages in 
+this thread"><img src="t107057_fichiers/rss-24x16.gif" 
+alt="thread.rss_message" border="0" height="14" width="24"></a>
+
+
+<!-- layers that slide go here.
+		 Be sure to include id for each layer in style sheet in head -->
+<div id="glideDiv0">
+	
+			
+			<a 
+href="http://www.eclipsezone.com/forums/post%21reply.jspa?threadID=107057"><img
+ src="t107057_fichiers/write.gif" title="Reply to this Thread" 
+align="right" height="24" width="24"></a>
+	
+
+	
+	<a href="http://www.eclipsezone.com/"><img 
+src="t107057_fichiers/home.gif" title="Home" align="right" height="24" 
+width="24"></a>
+
+	
+	<a href="http://www.eclipsezone.com/eclipse/forums/f18156.html"><img 
+src="t107057_fichiers/folder_up.gif" title="Up to Thread List" 
+align="right" height="24" width="24"></a>
+
+	
+	
+			<img src="t107057_fichiers/next_thread_off.gif" title="No Next 
+Thread" align="right" height="24" width="24">
+	
+
+	
+	
+			<img src="t107057_fichiers/next_messages_off.gif" title="No 
+Additional Replies" align="right" height="24" width="24">
+	
+
+	
+	
+			<img src="t107057_fichiers/prev_messages_off.gif" title="No Previous 
+Replies" align="right" height="24" width="24">
+	
+
+	
+	
+			<img src="t107057_fichiers/prev_thread_off.gif" title="No Previous 
+Thread" align="right" height="24" width="24">
+	
+
+	
+	
+			<img src="t107057_fichiers/write_off.gif" title="No Email this thread
+ to a friend" align="right" height="24" width="24">
+	
+	
+</div>
+<br><br>
+
+<div id="footer">
+    <!-- BEGIN ADVERTPRO ADVANCED CODE BLOCK -->
+    
+    <!-- END ADVERTPRO ADVANCED CODE BLOCK -->
+    <a 
+href="http://www.spreadfirefox.com/?q=affiliates&amp;id=29092&amp;t=64" 
+class="noborder"><img alt="Get Firefox!" title="Get Firefox!" 
+src="t107057_fichiers/firefox.gif" border="0"></a>
+    &nbsp;<a href="http://www.jivesoftware.com/poweredby?src=javalobby" 
+style="font-size: 11px;">Powered by Jive
+    Software</a> &nbsp; <a href="http://www.caucho.com/"><img 
+alt="Powered by Caucho Resin!" title="Powed by Caucho Resin!" 
+src="t107057_fichiers/resin-powered.gif" border="0"></a>
+	
+<br>
+<span style="font-size: 50%;">Eclipse(TM) is a registered trademark of 
+the Eclipse Foundation</span>
+    <!-- end footer div--></div>
+
+<!-- end wrap_inner div--></div>
+<!-- end wrap_outer div--></div>
+<script src="t107057_fichiers/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-410289-5";
+urchinTracker();
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="t107057_fichiers/quant.js"></script>
+<script type="text/javascript">
+_qacct="p-ebK_XdQH1HeLo";quantserve();</script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-ebK_XdQH1HeLo.gif" style="display: none" height="1" width="1" alt="Quantcast"/></noscript>
+<!-- End Quantcast tag -->
+
+</body></html>
