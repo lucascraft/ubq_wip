@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!--
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="net.sf.smbt.ui.dmx.views.DmxView"
+            icon="icons/control_wheel.png"
+            id="net.sf.smbt.ui.dmx.DMXView"
+            name="DMX"
+            restorable="true">
+         <description>
+            Open DMX View enbale to connect and control DMX 512+ equipements w/ possibly a most complete possible synchronization of its state for ubiquitous cross domain usages. (works w/ compatible USB trough FTDI Enttec OpenDMX compatible devices)
+         </description>
+      </view>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.dmx.perspective">
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.dmx.DMXView"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="net.sf.smbt.quantic.targetConfig">
+      <target
+            addr="/dev/tty.usbserial-EN084592"
+            desc="Mac OSX Enttec Pro DMX connection sample"
+            protocol="dmx"
+            speed="115200"
+            transport="usb">
+      </target>
+      <target
+            addr="COM7"
+            desc="Mac OSX Enttec Pro DMX connection sample"
+            protocol="dmx"
+            speed="115200"
+            transport="usb">
+      </target>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.sf.smbt.ui.dmx.editors.DMXMultiPageEditor"
+            contributorClass="net.sf.smbt.ui.dmx.editors.DMXMultiPageEditorContributor"
+            extensions="dmx"
+            icon="icons/control_wheel.png"
+            id="net.sf.smbt.ui.dmx.editors.DMXMultiPageEditor"
+            name="DMX">
+      </editor>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.dmx.views.DMXPerspective"
+            icon="icons/dmx.gif"
+            id="net.sf.smbt.ui.dmx.perspective"
+            name="DMX">
+      </perspective>
+   </extension>
+   -->
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-dmx-contrib">
+      <propertyContributor
+            contributorId="net.sf.smbt.ui.dmx"
+            labelProvider="net.sf.smbt.ui.dmx.properties.DMXSheetLabelProvider">
+         <propertyCategory category="fixture"/>
+      </propertyContributor>
+   </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-dmx">
+      <propertyTabs contributorId="net.sf.smbt.ui.dmx">
+		  <propertyTab
+             category="fixture"
+             id="property.tab.fixture"
+             label="Fixture"/>
+     </propertyTabs>
+  </extension>
+  
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-cues">
+      <propertyTabs contributorId="net.sf.smbt.ui.dmx">
+		  <propertyTab
+             category="fixture"
+             id="property.tab.cues"
+             label="cues"/>
+     </propertyTabs>
+  </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections-dmx">
+      <propertySections contributorId="net.sf.smbt.ui.dmx">
+
+       <!-- FIXTURE PROPERTIES -->
+
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.dmx" 
+            tab="property.tab.fixture"
+            class="net.sf.smbt.ui.dmx.properties.DMXFixturePropertySection"
+        >
+            <input type="net.sf.smbt.dmx.model.qxf.FixtureDefinition"/>
+       </propertySection>
+       
+     <!-- CUES PROPERTIES -->
+
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.dmx" 
+            tab="property.tab.cues"
+            class="net.sf.smbt.ui.dmx.properties.DMXCuePropertySection"
+        >
+            <input type="net.sf.smbt.dmx.ezdmxctrl.DMXProject"/>
+       </propertySection>
+
+      </propertySections>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+   
+   
+</plugin>

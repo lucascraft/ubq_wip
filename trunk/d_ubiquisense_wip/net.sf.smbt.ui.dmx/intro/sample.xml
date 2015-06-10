@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuidmx-introExtension" style="css/sample.css" name="" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuidmx-introLink-group">
+       		<link label="DMX" url="http://ubiquisense.com/index.php?option=com_content&view=category&layout=blog&id=39&Itemid=38" id="netsfsmbtuidmx-introLink" style-id="content-link">
+          		<text>Ubiquisense For DMX</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>
