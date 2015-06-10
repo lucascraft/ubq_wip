@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+             description="Lemur Jzml File Utils"
+            id="net.sf.smbt.ui.lemur.actionSet"
+            label="Lemur Action Set"
+            visible="true">
+         <menu
+               id="sampleMenu"
+               label="Sample &amp;Menu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.smbt.ui.lemur.ui.actions.ImportLemurJzmlAction"
+               icon="icons/lemur.gif"
+               id="net.sf.smbt.ui.lemur.ui.actions.SampleAction"
+               label="Import Lemur &amp;Jzml Action"
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               tooltip="Import Lemur Jzml File">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="net.sf.smbt.ui.lemur.ui.views.LemurView"
+            icon="icons/lemur.gif"
+            id="net.sf.smbt.ui.lemur.lemurView"
+            name="Lemur"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.rcp.proximisense.perspective">
+         <view
+               id="net.sf.smbt.ui.lemur.lemurView"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView"
+               visible="true">
+         </view>
+         <actionSet
+               id="net.sf.smbt.ui.lemur.actionSet">
+         </actionSet>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sf.smbt.ui.lemur.ui.prefs.JZMUIPreferencePage"
+            id="net.sf.smbt.ui.lemur.ui.prefs.JZMUIPreferencePage"
+            name="Lemur Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+<!--     <initializer
+            class="net.sf.smbt.jazzmutant.prefs.JZMUIPreferenceInitializer">
+      </initializer>
+-->
+      <initializer
+            class="net.sf.smbt.ui.lemur.ui.prefs.JZMUIPreferenceInitializer">
+      </initializer>
+      <modifier
+            class="net.sf.smbt.ui.lemur.ui.prefs.PreferenceModifyListener">
+      </modifier>
+   </extension>
+
+</plugin>

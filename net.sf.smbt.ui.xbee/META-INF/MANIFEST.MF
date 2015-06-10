@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - Xbee Utilities
+Bundle-SymbolicName: net.sf.smbt.ui.xbee;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.xbee.Activator
+Bundle-Vendor: ubiquisense.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.smbt.quantic;bundle-version="0.5.0",
+ net.sf.smbt.comm.xbee;bundle-version="0.5.0",
+ net.sf.smbt.comm.xbee.edit;bundle-version="0.5.0",
+ net.sf.smbt.at;bundle-version="0.5.0",
+ net.sf.smbt.ui;bundle-version="0.5.0",
+ org.eclipse.draw2d;bundle-version="3.7.1",
+ org.eclipse.jface.text;bundle-version="3.7.1",
+ org.eclipse.ui.intro,
+ org.eclipse.ui.intro.universal
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.smbt.ui.xbee,
+ net.sf.smbt.ui.xbee.modem,
+ net.sf.smbt.ui.xbee.views

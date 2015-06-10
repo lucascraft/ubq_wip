@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuisequencer-introExtension" style="css/sample.css" name="Ubiquisense For OSC" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuisequencer-introLink-group">
+       		<link label="Sequencer" url="http://www.ubiquisense.com" id="netsfsmbtuisequencer-introLink" style-id="content-link">
+          		<text>Ubiquisense For OSC</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

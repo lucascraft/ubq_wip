@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.rcp.proximisense.perspective">
+         <actionSet
+               id="net.sf.smbt.ui.wiimote.actionSet">
+         </actionSet>
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.wiimote.view"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="Wiimote Connectivity"
+            id="net.sf.smbt.ui.wiimote.actionSet"
+            label="WiiMote Action Set"
+            visible="true">
+         <menu
+               id="wiimoteMenu"
+               label="wiimoteMenu">
+            <separator
+                  name="wiimoteGroup">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.smbt.ui.wiimote.actions.WiimoteConfigAction"
+               icon="icons/wiimote.png"
+               id="net.sf.smbt.ui.wiimote.actions.WiimoteConfigAction"
+               label="Configure Wiimote Connection"
+               toolbarPath="wiimoteGroup"
+               tooltip="Configure Wiimote Connection">
+         </action>
+      </actionSet>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.wiimote.views.WiimotePerspective"
+            icon="icons/wiimote.png"
+            id="net.sf.smbt.ui.wiimote.perspective"
+            name="Wii">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.wiimote.perspective">
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.wiimote.view"
+               minimized="false"
+               relationship="stack"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.wiimote.views.WiimoteView"
+            icon="icons/wiimote.png"
+            id="net.sf.smbt.ui.wiimote.view"
+            name="Wiimote"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+
+</plugin>

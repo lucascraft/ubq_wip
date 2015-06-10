@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.sf.smbt.ui.sequencer.groovix.GroovixEditor"
+            contributorClass="net.sf.smbt.ui.sequencer.groovix.GroovixActionBarContributor"
+            default="false"
+            extensions="gvx"
+            icon="icons/loop2.gif"
+            id="net.sf.smbt.ui.sequencer.groovixEditor"
+            name="Groovix">
+      </editor>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="net.sf.smbt.ui.sequencer.actionSet"
+            label="Groovix Action Set"
+            visible="true">
+         <menu
+               id="groovixMenu"
+               label="Groovix &amp;Menu">
+            <separator
+                  name="groovixGroup">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.smbt.ui.sequencer.actions.AddCircleAction"
+               icon="icons/ubiquisense.png"
+               id="net.sf.smbt.ui.sequencer.actions.AddCircleAction"
+               label="&amp;Add Circle Action"
+               menubarPath="groovixMenu/groovixGroup"
+               retarget="true"
+               toolbarPath="groovixGroup"
+               tooltip="Add Circle Path To Sequencer">
+         </action>
+         <action
+               class="net.sf.smbt.ui.sequencer.actions.AddPathAction"
+               icon="icons/ubiquisense.png"
+               id="net.sf.smbt.ui.sequencer.actions.AddPathAction"
+               label="&amp;Add Path Action"
+               menubarPath="groovixMenu/groovixGroup"
+               retarget="true"
+               toolbarPath="groovixGroup"
+               tooltip="Add Generic Path To Sequencer">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.sequencer.groovix.GroovixPerspective"
+            fixed="true"
+            icon="icons/wave.jpg"
+            id="net.sf.smbt.ui.sequencer.groovix"
+            name="GrooVX">
+      </perspective>
+   </extension>
+   -->
+
+
+
+
+	<!--
+		
+		Properties
+	
+	-->
+
+
+
+
+
+
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <propertyContributor
+            contributorId="net.sf.smbt.ui.sequencer"
+            labelProvider="net.sf.smbt.ui.sequencer.groovix.GroovixSheetLabelProvider">
+         <!--
+         <propertyCategory category="domain"/>
+         -->
+         <propertyCategory category="sequencer"/>
+      </propertyContributor>
+   </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <propertyTabs contributorId="net.sf.smbt.ui.sequencer">
+      <!--
+          <propertyTab
+             category="domain"
+             id="property.tab.properties"
+             label="Properties"/>
+      -->
+		  <propertyTab
+             category="sequencer"
+             id="property.tab.sequencer"
+             label="Sequencer"/>
+     </propertyTabs>
+  </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <propertySections contributorId="net.sf.smbt.ui.sequencer">
+
+       <!-- SEQUENCER PROPERTIES -->
+
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.groovix" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.SequencerPropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.Sequencer"/>
+       </propertySection>
+
+		<!--
+        <propertySection
+            id="property.section.ubiquisense.sequencer.properties.groovix" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.ui.sequencer.properties.GroovixPropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.Sequencer"/>
+         </propertySection>
+        -->
+  
+  
+       <!-- GENERIC UI ELEMENTS -->
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.groovix.enable" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.UIElemEnablePropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.UIElem"/>
+       </propertySection>
+       
+       <!-- CUE -->
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.cue.details" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.CuePropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.EventCue"/>
+       </propertySection>
+       
+       <!--
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.cue.jump" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.CueJumpPropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.EventCue"/>
+       </propertySection>
+       -->
+
+       <!-- TRIGGER -->
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.trigger.targets" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.TriggerTargetsPropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.EventTrigger"/>
+       </propertySection>
+       
+       <!-- TIMEBAR -->
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.timebar.details" 
+            tab="property.tab.sequencer"
+            class="net.sf.smbt.ui.sequencer.properties.TrackDetailsPropertySection"
+        >
+            <input type="net.sf.smbt.ezsequence.TimeBar"/>
+       </propertySection>
+         
+      </propertySections>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.sequencer.groovix">
+         <view
+               closeable="false"
+               id="org.eclipse.ui.console.ConsoleView"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="net.sf.smbt.ui.view.ez"
+               showTitle="true"
+               visible="true">
+         </view>
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.view.ez"
+               minimized="false"
+               moveable="true"
+               ratio="0.5"
+               relationship="bottom"
+               relative="net.sf.smbt.ui.navigator"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+
+
+</plugin>

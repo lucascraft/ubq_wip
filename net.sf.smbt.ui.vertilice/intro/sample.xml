@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuivertilice-introExtension" style="css/sample.css" name="Ubiquisense For Wind Turbine" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuivertilice-introLink-group">
+       		<link label="Wind Turbine" url="http://ubiquisense.com/index.php?option=com_content&view=section&layout=blog&id=12&Itemid=32" id="netsfsmbtuivertilice-introLink" style-id="content-link">
+          		<text>Ubiquisense For Wind Turbine</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

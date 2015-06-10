@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="net.sf.smbt.ui.dxxp"
+            name="Ubqt Category">
+      </category>
+      <view
+            category="net.sf.smbt.ui.dxxp"
+            class="net.sf.smbt.ui.dxxp.views.DxxpView"
+            icon="icons/sample.gif"
+            id="net.sf.smbt.ui.dxxp.views.DxxpView"
+            name="Dxxp View">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

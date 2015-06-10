@@ -1,0 +1,1 @@
+/vertilice/status,iff (rpm, vols, amp)

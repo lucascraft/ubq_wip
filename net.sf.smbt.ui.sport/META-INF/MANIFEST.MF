@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sport UI
+Bundle-SymbolicName: net.sf.smbt.ui.sport;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.sport.Activator
+Bundle-Vendor: ubiquisense.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.smbt.nikeplus;bundle-version="0.5.0",
+ net.sf.smbt.quantic;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.smbt.ui.sport,
+ net.sf.smbt.ui.sport.view

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuixbee-introExtension" style="css/sample.css" name="Ubiquisense For XBee" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuixbee-introLink-group">
+       		<link label="XBee" url="http://www.ubiquisense.com" id="netsfsmbtuixbee-introLink" style-id="content-link">
+          		<text>Ubiquisense For XBee</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

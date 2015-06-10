@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<!--
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+            ID="net.sf.smbt.vertilice.engine"
+            alias="vertilice"
+            cmdInterpreterID="net.sf.smbt.vertilice.cmdInterpreter"
+            desc="Vertilice wind turbine communication protocol"
+            eventHandler="net.sf.smbt.vertilice.evtHandler"
+            frameInterpreter="net.sf.smbt.vertilice.frameInterpreter"
+            instance="0"
+            transports="USB, UDP, TCP, HTTP, XBEE">
+      </engine>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.vertilice.cmdInterpreter"
+            interpreter="net.sf.smbt.vertilice.cmd.VertiliceCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.vertilice.frameInterpreter"
+            interpreter="net.sf.xqz.model.engine.impl.AbstractFrameInterpreterImpl">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.vertilice.evtHandler"
+            handler="net.sf.smbt.vertilice.cmd.VertiliceEventHandler">
+      </cmdHandler>
+   </extension>
+-->
+</plugin>
