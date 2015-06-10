@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<touchosc:TOP xmlns:touchosc="http:///net.sf.smbt.touchosc/src/net/sf/smbt/touchosc/model/touchosc.xsd">
+<layout version="5" orientation="vertical">
+<tabpage name="1">
+<control name="push2" x="210" y="120" w="70" h="120" color="blue" type="push" />
+<control name="push3" x="210" y="240" w="70" h="120" color="blue" type="push" />
+<control name="push4" x="210" y="360" w="70" h="120" color="blue" type="push" />
+<control name="push7" x="140" y="240" w="70" h="120" color="blue" type="push" />
+<control name="push8" x="140" y="360" w="70" h="120" color="blue" type="push" />
+<control name="push11" x="70" y="240" w="70" h="120" color="blue" type="push" />
+<control name="push12" x="70" y="360" w="70" h="120" color="blue" type="push" />
+<control name="push6" x="140" y="120" w="70" h="120" color="blue" type="push" />
+<control name="push10" x="70" y="120" w="70" h="120" color="blue" type="push" />
+<control name="push15" x="0" y="240" w="70" h="120" color="blue" type="push" />
+<control name="push16" x="0" y="360" w="70" h="120" color="blue" type="push" />
+<control name="push14" x="0" y="120" w="70" h="120" color="blue" type="push" />
+<control name="push13" x="0" y="0" w="70" h="120" color="blue" type="push" />
+<control name="push5" x="140" y="0" w="70" h="120" color="blue" type="push" />
+<control name="push1" x="210" y="0" w="70" h="120" color="blue" type="push" />
+<control name="push9" x="70" y="0" w="70" h="120" color="blue" type="push" />
+<control name="label2" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label3" x="0" y="0" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label4" x="70" y="0" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label5" x="140" y="0" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label6" x="210" y="0" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label7" x="0" y="120" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label8" x="70" y="120" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label9" x="140" y="120" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label11" x="0" y="240" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label10" x="70" y="240" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label12" x="70" y="240" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label13" x="140" y="240" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label10" x="210" y="120" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label15" x="0" y="360" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label14" x="210" y="240" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label18" x="210" y="360" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label17" x="140" y="360" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label19" x="70" y="360" w="70" h="120" color="blue" type="labelv" text="" size="14" background="false" outline="true" />
+<control name="label26" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label41" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label64" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label65" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="label70" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+</tabpage>
+<tabpage name="2">
+<control name="fader19" x="55" y="5" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader20" x="55" y="65" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader21" x="55" y="125" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader22" x="55" y="185" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader23" x="55" y="245" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader24" x="55" y="305" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader25" x="55" y="365" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="fader26" x="55" y="425" w="200" h="50" color="yellow" type="faderh" inverted="false" centered="false" />
+<control name="push25" x="5" y="7" w="45" h="45" color="yellow" type="push" />
+<control name="push26" x="5" y="67" w="45" h="45" color="yellow" type="push" />
+<control name="push27" x="5" y="127" w="45" h="45" color="yellow" type="push" />
+<control name="push28" x="5" y="187" w="45" h="45" color="yellow" type="push" />
+<control name="push29" x="5" y="247" w="45" h="45" color="yellow" type="push" />
+<control name="push30" x="5" y="307" w="45" h="45" color="yellow" type="push" />
+<control name="push31" x="5" y="367" w="45" h="45" color="yellow" type="push" />
+<control name="push32" x="5" y="427" w="45" h="45" color="yellow" type="push" />
+<control name="label10" x="255" y="7" w="20" h="45" color="blue" type="labelv" text="MQ==" size="14" background="true" outline="false" />
+<control name="label11" x="255" y="67" w="20" h="45" color="blue" type="labelv" text="Mg==" size="14" background="true" outline="false" />
+<control name="label12" x="255" y="127" w="20" h="45" color="blue" type="labelv" text="Mw==" size="14" background="true" outline="false" />
+<control name="label13" x="255" y="187" w="20" h="45" color="blue" type="labelv" text="NA==" size="14" background="true" outline="false" />
+<control name="label14" x="255" y="247" w="20" h="45" color="blue" type="labelv" text="NQ==" size="14" background="true" outline="false" />
+<control name="label15" x="255" y="307" w="20" h="45" color="blue" type="labelv" text="Ng==" size="14" background="true" outline="false" />
+<control name="label16" x="255" y="367" w="20" h="45" color="blue" type="labelv" text="Nw==" size="14" background="true" outline="false" />
+<control name="label17" x="255" y="427" w="20" h="45" color="blue" type="labelv" text="OA==" size="14" background="true" outline="false" />
+<control name="label20" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label25" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label31" x="5" y="7" w="45" h="45" color="yellow" type="labelv" text="Ym5rMQ==" size="14" background="false" outline="true" />
+<control name="label32" x="5" y="67" w="45" h="45" color="yellow" type="labelv" text="Ym5rMg==" size="14" background="false" outline="true" />
+<control name="label33" x="5" y="128" w="45" h="45" color="yellow" type="labelv" text="Ym5rMw==" size="14" background="false" outline="true" />
+<control name="label34" x="5" y="188" w="45" h="45" color="yellow" type="labelv" text="Ym5rNA==" size="14" background="false" outline="true" />
+<control name="label35" x="5" y="247" w="45" h="45" color="yellow" type="labelv" text="Ym5rNQ==" size="14" background="false" outline="true" />
+<control name="label36" x="5" y="307" w="45" h="45" color="yellow" type="labelv" text="Ym5rNg==" size="14" background="false" outline="true" />
+<control name="label37" x="5" y="367" w="45" h="45" color="yellow" type="labelv" text="Ym5rNw==" size="14" background="false" outline="true" />
+<control name="label38" x="5" y="427" w="45" h="45" color="yellow" type="labelv" text="Ym5rOA==" size="14" background="false" outline="true" />
+<control name="label40" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label62" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label63" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="label69" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+</tabpage>
+<tabpage name="3">
+<control name="fader1" x="55" y="10" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader3" x="55" y="110" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader4" x="55" y="160" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader5" x="55" y="210" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader6" x="55" y="260" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader7" x="55" y="310" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="fader8" x="55" y="360" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="toggle1" x="5" y="12" w="45" h="45" color="red" type="toggle" />
+<control name="toggle2" x="5" y="62" w="45" h="45" color="red" type="toggle" />
+<control name="toggle3" x="5" y="112" w="45" h="45" color="red" type="toggle" />
+<control name="toggle5" x="5" y="212" w="45" h="45" color="red" type="toggle" />
+<control name="toggle6" x="5" y="262" w="45" h="45" color="red" type="toggle" />
+<control name="toggle7" x="5" y="312" w="45" h="45" color="red" type="toggle" />
+<control name="toggle8" x="5" y="362" w="45" h="45" color="red" type="toggle" />
+<control name="toggle4" x="5" y="162" w="45" h="45" color="red" type="toggle" />
+<control name="fader2" x="55" y="60" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+<control name="label1" x="255" y="12" w="20" h="45" color="blue" type="labelv" text="MQ==" size="14" background="true" outline="false" />
+<control name="label2" x="255" y="62" w="20" h="45" color="blue" type="labelv" text="Mg==" size="14" background="true" outline="false" />
+<control name="label3" x="255" y="112" w="20" h="45" color="blue" type="labelv" text="Mw==" size="14" background="true" outline="false" />
+<control name="label4" x="255" y="161" w="20" h="45" color="blue" type="labelv" text="NA==" size="14" background="true" outline="false" />
+<control name="label5" x="255" y="212" w="20" h="45" color="blue" type="labelv" text="NQ==" size="14" background="true" outline="false" />
+<control name="label6" x="255" y="262" w="20" h="45" color="blue" type="labelv" text="Ng==" size="14" background="true" outline="false" />
+<control name="label7" x="255" y="312" w="20" h="45" color="blue" type="labelv" text="Nw==" size="14" background="true" outline="false" />
+<control name="label8" x="255" y="362" w="20" h="45" color="blue" type="labelv" text="OA==" size="14" background="true" outline="false" />
+<control name="fader9" x="5" y="420" w="250" h="50" color="blue" type="faderh" inverted="false" centered="false" />
+<control name="label9" x="255" y="417" w="20" h="55" color="blue" type="labelv" text="bWFzdGVy" size="14" background="false" outline="false" />
+<control name="label21" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label27" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label39" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label60" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label61" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="label68" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+</tabpage>
+<tabpage name="4">
+<control name="fader27" x="40" y="5" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader28" x="40" y="65" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader29" x="40" y="125" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader30" x="40" y="185" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader31" x="40" y="245" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader32" x="40" y="305" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader33" x="40" y="365" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="fader34" x="40" y="425" w="200" h="50" color="green" type="faderh" inverted="false" centered="false" />
+<control name="label18" x="248" y="7" w="20" h="45" color="blue" type="labelv" text="MQ==" size="14" background="true" outline="false" />
+<control name="label19" x="248" y="67" w="20" h="45" color="blue" type="labelv" text="Mg==" size="14" background="true" outline="false" />
+<control name="label20" x="248" y="127" w="20" h="45" color="blue" type="labelv" text="Mw==" size="14" background="true" outline="false" />
+<control name="label21" x="248" y="187" w="20" h="45" color="blue" type="labelv" text="NA==" size="14" background="true" outline="false" />
+<control name="label22" x="248" y="247" w="20" h="45" color="blue" type="labelv" text="NQ==" size="14" background="true" outline="false" />
+<control name="label23" x="248" y="307" w="20" h="45" color="blue" type="labelv" text="Ng==" size="14" background="true" outline="false" />
+<control name="label24" x="248" y="367" w="20" h="45" color="blue" type="labelv" text="Nw==" size="14" background="true" outline="false" />
+<control name="label25" x="248" y="427" w="20" h="45" color="blue" type="labelv" text="OA==" size="14" background="true" outline="false" />
+<control name="label22" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label28" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label42" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label34" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label51" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="label67" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+</tabpage>
+<tabpage name="5">
+<control name="fader35" x="40" y="5" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader36" x="40" y="65" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader37" x="40" y="125" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader38" x="40" y="185" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader39" x="40" y="245" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader40" x="40" y="305" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader41" x="40" y="365" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="fader42" x="40" y="425" w="200" h="50" color="purple" type="faderh" inverted="false" centered="false" />
+<control name="label26" x="248" y="7" w="20" h="45" color="blue" type="labelv" text="MQ==" size="14" background="true" outline="false" />
+<control name="label27" x="248" y="67" w="20" h="45" color="blue" type="labelv" text="Mg==" size="14" background="true" outline="false" />
+<control name="label28" x="248" y="127" w="20" h="45" color="blue" type="labelv" text="Mw==" size="14" background="true" outline="false" />
+<control name="label29" x="248" y="187" w="20" h="45" color="blue" type="labelv" text="NA==" size="14" background="true" outline="false" />
+<control name="label30" x="248" y="247" w="20" h="45" color="blue" type="labelv" text="NQ==" size="14" background="true" outline="false" />
+<control name="label31" x="248" y="307" w="20" h="45" color="blue" type="labelv" text="Ng==" size="14" background="true" outline="false" />
+<control name="label32" x="248" y="367" w="20" h="45" color="blue" type="labelv" text="Nw==" size="14" background="true" outline="false" />
+<control name="label33" x="248" y="427" w="20" h="45" color="blue" type="labelv" text="OA==" size="14" background="true" outline="false" />
+<control name="label23" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label29" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label43" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label58" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label59" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="label66" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+</tabpage>
+<tabpage name="6">
+<control name="label24" x="280" y="1" w="40" h="71" color="blue" type="labelv" text="ZHJ1bXo=" size="14" background="false" outline="true" />
+<control name="label30" x="280" y="72" w="40" h="71" color="yellow" type="labelv" text="ZGV2aWNl" size="14" background="false" outline="true" />
+<control name="label44" x="280" y="143" w="40" h="71" color="red" type="labelv" text="dm9sdW1l" size="14" background="false" outline="true" />
+<control name="label55" x="280" y="356" w="40" h="71" color="gray" type="labelv" text="dHJhbnNwb3J0" size="14" background="false" outline="true" />
+<control name="label56" x="280" y="214" w="40" h="71" color="green" type="labelv" text="c2VuZCAx" size="14" background="false" outline="true" />
+<control name="label57" x="280" y="285" w="40" h="71" color="purple" type="labelv" text="c2VuZCAy" size="14" background="false" outline="true" />
+<control name="push4" x="158" y="402" w="60" h="70" color="gray" type="push" />
+<control name="push6" x="50" y="252" w="60" h="70" color="yellow" type="push" />
+<control name="push2" x="50" y="327" w="60" h="70" color="green" type="push" />
+<control name="push1" x="50" y="402" w="60" h="70" color="red" type="push" />
+<control name="push5" x="158" y="252" w="60" h="70" color="purple" type="push" />
+<control name="push3" x="158" y="327" w="60" h="70" color="gray" type="push" />
+<control name="label10" x="50" y="252" w="60" h="70" color="yellow" type="labelv" text="WA==" size="14" background="false" outline="true" />
+<control name="label9" x="50" y="327" w="60" h="70" color="green" type="labelv" text="Pg==" size="14" background="false" outline="true" />
+<control name="label11" x="50" y="402" w="60" h="70" color="red" type="labelv" text="Tw==" size="14" background="false" outline="true" />
+<control name="label8" x="158" y="402" w="60" h="70" color="gray" type="labelv" text="Pj4=" size="14" background="false" outline="true" />
+<control name="label7" x="158" y="327" w="60" h="70" color="gray" type="labelv" text="PDw=" size="14" background="false" outline="true" />
+<control name="label12" x="158" y="252" w="60" h="70" color="purple" type="labelh" text="OA==" size="14" background="false" outline="true" />
+<control name="push10" x="135" y="10" w="70" h="50" color="gray" type="push" />
+<control name="push11" x="135" y="130" w="70" h="50" color="gray" type="push" />
+<control name="push8" x="205" y="60" w="50" h="70" color="gray" type="push" />
+<control name="push9" x="85" y="60" w="50" h="70" color="gray" type="push" />
+<control name="push7" x="6" y="10" w="60" h="70" color="yellow" type="push" />
+<control name="push12" x="6" y="110" w="60" h="70" color="green" type="push" />
+<control name="label78" x="16" y="321" w="25" h="80" color="blue" type="labelv" text="Z2xvYmFs" size="14" background="false" outline="false" />
+<control name="label79" x="139" y="65" w="60" h="60" color="blue" type="labelv" text="c2NlbmU=" size="14" background="false" outline="false" />
+<control name="label72" x="6" y="110" w="60" h="70" color="green" type="labelv" text="Pg==" size="14" background="false" outline="true" />
+<control name="label71" x="6" y="10" w="60" h="70" color="yellow" type="labelv" text="WA==" size="14" background="false" outline="true" />
+<control name="label74" x="135" y="10" w="70" h="50" color="gray" type="labelv" text="PC0t" size="14" background="false" outline="true" />
+<control name="label77" x="205" y="60" w="50" h="70" color="gray" type="labelh" text="LS0+" size="14" background="false" outline="true" />
+<control name="label73" x="135" y="130" w="70" h="50" color="gray" type="labelv" text="LS0+" size="14" background="false" outline="true" />
+<control name="label76" x="85" y="60" w="50" h="70" color="gray" type="labelh" text="PC0t" size="14" background="false" outline="true" />
+<control name="fader1" x="3" y="192" w="274" h="50" color="blue" type="faderh" inverted="true" centered="false" />
+</tabpage>
+</layout>
+</touchosc:TOP>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<touchosc:TOP xmlns:touchosc="http:///net.sf.smbt.touchosc/src/net/sf/smbt/touchosc/model/touchosc.xsd">
+<layout version="6" mode="0" orientation="horizontal">
+<tabpage name="1">
+<control name="xy1" x="35" y="41" w="150" h="150" color="red" osc_cs="/touchosc/demo1/coord1" type="xy" />
+<control name="rotary1" x="53" y="249" w="100" h="100" color="red" osc_cs="/touchosc/master/volume" type="rotaryv" centered="false" />
+<control name="fader1" x="227" y="36" w="50" h="200" color="red" osc_cs="/touchosc/demo1/master/pan" type="faderv" inverted="false" centered="false" />
+</tabpage>
+</layout>
+</touchosc:TOP>

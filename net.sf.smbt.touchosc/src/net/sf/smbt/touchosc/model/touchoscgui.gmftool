@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="Widgets"
+      description="TouchOsc Widgets">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Containers"
+        description="Tab Page"
+        collapsible="true"
+        stack="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Tab"
+          description="Tab Page Container">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscTab.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Widgets"
+        collapsible="true"
+        stack="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="XY Pad"
+          description="2 Axis XY Pad Widget">
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscXYPad.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Rotary H"
+          description="Horizontal Rotary Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscRotaryH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Rotary V"
+          description="Vertical Rotary Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscRotaryV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Fader H"
+          description="Horizontal Fader Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscFaderH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Fader V"
+          description="Vertical Fader Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscFaderV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Label H"
+          description="Horizontal Label Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscLabelH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Label V"
+          description="Vertical Label Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscLabelV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="LED"
+          description="LED  Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscLED.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MultiFader H"
+          description="Horizontal Multi Fader Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscMultiFaderH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MultiFader V"
+          description="Vertical Multi Fader Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscMultiFaderV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MultiToggle"
+          description="Multi Toggle Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscMultiToggle.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Push"
+          description="Push Button Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscPush.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Toggle"
+          description="Toggle Button Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscToggle.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Encoder"
+          description="Encoder Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscEncoder.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="MultiPush"
+          description="Multi Push Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscMultiPush.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Battery H"
+          description="Horizontal Battery Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscBatteryH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Battery V"
+          description="Vertical Battery Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscBatteryV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Time H"
+          description="Horizontal Time Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscTimeH.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Time V"
+          description="Vertical Time Widget">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="icons/full/obj32/TouchOscTimeV.gif"
+            bundle="net.sf.smbt.touchosc.edit"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

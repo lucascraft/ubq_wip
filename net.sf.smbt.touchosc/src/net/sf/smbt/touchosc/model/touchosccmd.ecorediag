@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_kTSPwEGyEeCI5ov6E4xqcw" type="EcoreTools" name="touchosccmd" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_qf9NYEGyEeCI5ov6E4xqcw" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qgZ5UEGyEeCI5ov6E4xqcw" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qgZ5UUGyEeCI5ov6E4xqcw" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_qf_poEGyEeCI5ov6E4xqcw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_qf_poUGyEeCI5ov6E4xqcw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_qf_pokGyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_qf_po0GyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_qf_ppEGyEeCI5ov6E4xqcw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_qf_ppUGyEeCI5ov6E4xqcw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_qgAQsEGyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_qgAQsUGyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_qgAQskGyEeCI5ov6E4xqcw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_qf9NYUGyEeCI5ov6E4xqcw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/net.sf.smbt.osc/model/osccmd.ecore#//OscCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qf9NYkGyEeCI5ov6E4xqcw" x="164" y="116"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rdvEQEGyEeCI5ov6E4xqcw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_rdvrUEGyEeCI5ov6E4xqcw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_rdvrUUGyEeCI5ov6E4xqcw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_rdvrUkGyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rdvrU0GyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rdvrVEGyEeCI5ov6E4xqcw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_rdvrVUGyEeCI5ov6E4xqcw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_rdvrVkGyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rdvrV0GyEeCI5ov6E4xqcw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rdvrWEGyEeCI5ov6E4xqcw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_rdvEQUGyEeCI5ov6E4xqcw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="touchosccmd.ecore#//TouchOscCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rdvEQkGyEeCI5ov6E4xqcw" x="188" y="293"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_kTSPwUGyEeCI5ov6E4xqcw"/>
+  <element xmi:type="ecore:EPackage" href="touchosccmd.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_sqtNsEGyEeCI5ov6E4xqcw" type="3003" source="_rdvEQEGyEeCI5ov6E4xqcw" target="_qf9NYEGyEeCI5ov6E4xqcw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_sqtNsUGyEeCI5ov6E4xqcw" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_sqtNskGyEeCI5ov6E4xqcw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sqt0wEGyEeCI5ov6E4xqcw" points="[0, -4, -1, 163]$[3, -181, 2, -14]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sqvC4EGyEeCI5ov6E4xqcw" id="(0.5,0.11904761904761904)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sqvC4UGyEeCI5ov6E4xqcw" id="(0.6814159292035398,0.2459016393442623)"/>
+  </edges>
+</notation:Diagram>

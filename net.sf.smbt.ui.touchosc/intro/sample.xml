@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuitouchosc-introExtension" style="css/sample.css" name="Ubiquisense For Touch OSC" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuitouchosc-introLink-group">
+       		<link label="Touch OSC" url="http://ubiquisense.com/index.php?option=com_content&view=category&layout=blog&id=39&Itemid=38" id="netsfsmbtuitouchosc-introLink" style-id="content-link">
+          		<text>Ubiquisense For Touch OSC</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

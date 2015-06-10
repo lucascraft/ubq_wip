@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="6" mode="0" orientation="horizontal">
+<tabpage name="1">
+<control name="multifader1" x="3" y="3" w="200" h="200" color="red" type="multifaderh" inverted="false" centered="false" number="5" />
+<control name="multifader3" x="2" y="203" w="200" h="200" color="red" type="multifaderv" inverted="false" centered="false" number="5" />
+<control name="rotary1" x="208" y="11" w="100" h="100" color="red" type="rotaryv" centered="false" />
+<control name="rotary2" x="207" y="111" w="100" h="100" color="red" type="rotaryh" centered="false" />
+<control name="fader1" x="268" y="207" w="50" h="200" color="red" type="faderv" inverted="false" centered="false" />
+<control name="fader2" x="58" y="390" w="200" h="50" color="red" type="faderh" inverted="false" centered="false" />
+</tabpage>
+</layout>

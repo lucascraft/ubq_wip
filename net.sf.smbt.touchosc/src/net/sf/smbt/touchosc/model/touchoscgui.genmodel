@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.touchosc/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.touchosc" modelName="Touchoscgui"
+    testsDirectory="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>touchoscgui.ecore</foreignModel>
+  <genPackages prefix="Touchoscgui" basePackage="net.sf.smbt.touchosc.ui" disposableProviderFactory="true"
+      ecorePackage="touchoscgui.ecore#/">
+    <genDataTypes ecoreDataType="touchoscgui.ecore#//Color"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TOP">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TOP/layouts"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscLayout">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscLayout/tabs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscLayout/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscLayout/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscLayout/version"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscLayout/widgets"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscTabPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/fadersH"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscTabPage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/xyPads"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/fadersV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/labelsH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/pushes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/labelsV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/multiToggles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/leds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/rotariesV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/rotariesH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/toggles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/encoders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/batteriesH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/batteriesV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/timesV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/timesH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/multiPushes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/multiFadersH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscgui.ecore#//TouchOscTabPage/multiFadersV"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscControl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/fg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/centered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/h"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/w"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/inverted"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/osc_cs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/outline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/number_x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/number_y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/scalef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/scalet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/response"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/inverted_x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/inverted_y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/seconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscgui.ecore#//TouchOscControl/background"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscFaderH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscFaderV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscPush"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscXYPad"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscLabelH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscLabelV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscLED"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscMultiFaderH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscMultiFaderV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscMultiToggle"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscRotaryH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscRotaryV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscToggle"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscEncoder"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscBatteryV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscBatteryH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscTimeH"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscTimeV"/>
+    <genClasses ecoreClass="touchoscgui.ecore#//TouchOscMultiPush"/>
+  </genPackages>
+</genmodel:GenModel>
