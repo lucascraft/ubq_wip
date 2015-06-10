@@ -1,0 +1,18 @@
+import "o.orchestror";
+
+listener listenerUSB0 : "net.sf.smbt.comm.script.config.cmdHandler";
+
+interpreter interpreterUSB0 : "net.sf.smbt.i2c.thingm.cmdInterpreter";
+interpreter interpreterUDP0 : "net.sf.smbt.i2c.thingm.cmdInterpreter";
+
+decoder decoderUSB0 : "net.sf.smbt.i2c.wii.nunchuk.frameInterpreter";
+decoder decoderUDP0 : "net.sf.smbt.i2c.wii.nunchuk.frameInterpreter";
+
+port usb0 : "/dev/tty.usbserial-A7006022" as USB at 19200;
+port udp0 : "localhost:3000" as UDP;
+
+scope orchestror1 {
+	bind engineUSB0 => interpreterUSB0 <= decoderUSB0 to usb0 with listenerUSB0;
+	bind engineUDP0 => interpreterUDP0 <= decoderUDP0 to udp0;
+}
+

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - Communication Topology DSL
+Bundle-Vendor: ubiquisense.com
+Bundle-Version: 0.5.0.qualifier
+Bundle-SymbolicName: net.sf.smbt.comm.script.config; singleton:=true
+Eclipse-RegisterBuddy: org.eclipse.xtext.log4j
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.google.inject,
+ net.sf.xqz.script;bundle-version="0.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.8.0",
+ org.eclipse.emf.common;bundle-version="2.8.0",
+ org.antlr.runtime,
+ net.sf.xqz.engine;bundle-version="0.5.0",
+ org.eclipse.core.runtime,
+ net.sf.smbt.comm;bundle-version="0.5.0";visibility:=reexport,
+ net.sf.smbt.comm.xbee;bundle-version="0.5.0";visibility:=reexport,
+ net.sf.smbt.comm.http;bundle-version="0.5.0",
+ net.sf.smbt.midi;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.smbt.comm.script,
+ net.sf.smbt.comm.script.config.utils,
+ net.sf.smbt.comm.script.netConf,
+ net.sf.smbt.comm.script.netConf.impl,
+ net.sf.smbt.comm.script.netConf.util
+Bundle-Activator: net.sf.smbt.comm.script.Activator
+Import-Package: org.apache.log4j
+Bundle-ClassPath: .antlr-generator-3.0.1.jar,
+ .

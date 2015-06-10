@@ -1,0 +1,11 @@
+ orchestror orchestror1 {
+	engine engineUSB0;
+	engine engineUDP;
+	
+	client client1 { engineUSB0 engineUDP };
+	
+	timeline timelineUSB0 : engineUSB0 ;
+	timeline timelineUDP0 : engineUDP0 ;
+	
+	application application1 { client1 };
+}

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: net.sf.smbt.comm.script.config.edit;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: net.sf.smbt.comm.script.netConf.provider.NetConfEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.sf.smbt.comm.script.netConf.provider
+Require-Bundle: org.eclipse.core.runtime,
+ net.sf.smbt.comm.script.config;bundle-version="0.5.0";visibility:=reexport,
+ org.eclipse.emf.edit;bundle-version="2.8.0";visibility:=reexport,
+ net.sf.xqz.script;visibility:=reexport,
+ net.sf.xqz.script.edit;bundle-version="0.5.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,121 @@
+<!--
+/***********************************************************************************
+ * Ubiquisense - A smart ambient utilities framework 
+ * 
+ * Copyright (c) 2008 - 2010, Lucas Bigeardel
+ * 
+ * The library is released under:
+ * 
+ * A) LGPL
+ * 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General
+ * Public License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA
+ * 
+ * B) EPL
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Lucas Bigeardel <lucas.bigeardel@gmail.com> - Initial API and implementation
+ ***********************************************************************************/
+-->
+
+<workflow>
+	<property file="net/sf/smbt/comm/script/GenerateNetConf.properties"/>
+	
+	<property name="runtimeProject" value="../${projectName}"/>
+	
+	<bean class="org.eclipse.emf.mwe.utils.StandaloneSetup" platformUri="${runtimeProject}/.."/>
+	
+	<component class="org.eclipse.emf.mwe.utils.DirectoryCleaner" directory="${runtimeProject}/src-gen"/>
+	<component class="org.eclipse.emf.mwe.utils.DirectoryCleaner" directory="${runtimeProject}.ui/src-gen"/>
+	
+	
+	<bean class="org.eclipse.emf.mwe.utils.StandaloneSetup" 
+	  platformUri="../net.sf.xqz.script/src-gen">
+	  <registerGeneratedEPackage value="net.sf.xqz.engine.script.orchestror.OrchestrorPackage"/>
+	</bean>
+	
+	
+	<component class="org.eclipse.xtext.generator.Generator">
+		<pathRtProject value="${runtimeProject}"/>
+		<pathUiProject value="${runtimeProject}.ui"/>
+		<projectNameRt value="${projectName}"/>
+		<projectNameUi value="${projectName}.ui"/>
+		
+		<language uri="${grammarURI}" fileExtensions="${file.extensions}">
+			<!-- Java API to access grammar elements (required by several other fragments) -->
+			<fragment class="org.eclipse.xtext.generator.grammarAccess.GrammarAccessFragment"
+			/>
+			
+
+			<fragment class="org.eclipse.xtext.generator.ecore.EcoreGeneratorFragment"
+				genModels="platform:/resource/net.sf.xqz.script/src-gen/net/sf/xqz/engine/script/Orchestror.genmodel"
+			/>
+
+			<!-- the serialization component -->
+			<fragment class="org.eclipse.xtext.generator.parseTreeConstructor.ParseTreeConstructorFragment"/>
+			
+			<!-- a custom ResourceFactory for use with EMF -->
+			<fragment class="org.eclipse.xtext.generator.resourceFactory.ResourceFactoryFragment" 
+				fileExtensions="${file.extensions}"/>
+				
+			<!-- the following fragment tries to use the Antlr Generator fragment which can be installed via update manager from http://download.itemis.com/updates -->
+			<fragment class="org.eclipse.xtext.generator.AntlrDelegatingFragment" />
+			
+			<!-- If you don't want to use the Antlr fragment for some reason, remove the antlr fragment and uncomment the packrat parser fragment below.
+			<fragment class="org.eclipse.xtext.generator.parser.PackratParserFragment"/>
+			 -->
+	
+			
+			<!-- java-based API for validation -->
+			<fragment class="org.eclipse.xtext.generator.validation.JavaValidatorFragment">
+                <composedCheck value="org.eclipse.xtext.validation.ImportUriValidator"/>
+            </fragment>
+			
+            
+			<!-- scoping API -->
+			<fragment 
+    			class="org.eclipse.xtext.generator.scoping.ImportURIScopingFragment"/>
+			<fragment 
+    			class="org.eclipse.xtext.generator.exporting.SimpleNamesFragment"/>			
+			<!-- formatter API -->
+			<fragment class="org.eclipse.xtext.generator.formatting.FormatterFragment"/>
+
+			<!-- labeling API -->
+			<fragment class="org.eclipse.xtext.ui.generator.labeling.LabelProviderFragment"/>
+
+			<!-- outline API -->
+			<!-- 
+			<fragment class="org.eclipse.xtext.ui.generator.outline.TransformerFragment"/>
+			<fragment class="org.eclipse.xtext.ui.generator.outline.OutlineNodeAdapterFactoryFragment"/>
+			-->
+			
+			<!-- java-based API for content assistance -->
+			<fragment class="org.eclipse.xtext.ui.generator.contentAssist.JavaBasedContentAssistFragment"/>
+			<!-- the following fragment tries to use the Antlr based content assist fragment which can be downloaded from http://www.itemis.com 
+			     and will be ignored if it's not available. -->
+			<fragment class="org.eclipse.xtext.generator.DelegatingGeneratorFragment" 
+				delegate="de.itemis.xtext.antlr.XtextAntlrUiGeneratorFragment"
+				message="You are generating without ANTLR. It is highly recommended to download and use the plugin 'de.itemis.xtext.antlr' \n\t using the update site http://download.itemis.com/updates/milestones.">
+			</fragment>
+			<!-- <fragment class="de.itemis.xtext.antlr.XtextAntlrUiGeneratorFragment"/> --> 
+			
+		</language>
+	</component>
+</workflow>
