@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - OSC DSL Generator
+Bundle-Vendor: ubiquisense.com
+Bundle-Version: 0.5.0.qualifier
+Bundle-SymbolicName: net.sf.smbt.osc.script.generator; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: net.sf.smbt.osc.script;visibility:=reexport,
+ org.eclipse.xpand;visibility:=reexport,
+ org.eclipse.xtend;visibility:=reexport,
+ org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.emf.mwe.utils;visibility:=reexport,
+ org.eclipse.xtend.typesystem.emf;visibility:=reexport
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

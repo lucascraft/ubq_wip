@@ -1,0 +1,481 @@
+#
+# OSC Key Mapping : Modul8 V261 build 1105
+#
+
+app modul8_V261_1105 {
+
+	msg "Master Cross Fader" (
+		SEND ['/md8key/ctrl_master_crossfader_slider/0', ',f', [0.0..1.0]]
+	)
+	
+	msg "focus position in vj loop groups" (
+		SEND ['/md8key/ctrl_layerStack_focusPosition/%loopID%', ',i', %position% in [0..10]]
+	) 
+	
+	msg "set given loo alpha" (
+		SEND ['/md8key/ctrl_layer_alpha/%loopID%', ',f', %newAlphaFactor% in [0.0..1.0]]
+	)
+	msg "Set speed of focused vj loop" (
+		SEND ['/md8key/ctrl_layer_movie_speedFactor/%loopID%', ',f', %speedFactor% in [0.0..1.0]]
+	)
+	
+	msg "set loop mode to LOOP" (
+		SEND ['/md8key/ctrl_layer_movie_loopMode/%loopID%', ',i', %newMode% in enum{LOOP=0, FWD_RWD=1, NORMAL=2}]
+	)
+	
+	msg "scale x2" (
+		SEND ['/md8key/ctrl_layer_scale_uniform/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+	)
+	
+	msg "scale x10 on X" (
+		SEND ['/md8key/ctrl_layer_scale_x/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+	)
+	
+	msg "scale x10 on Y" (
+		SEND ['/md8key/ctrl_layer_scale_y/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+	)
+	
+	msg "scale x10 on Z" (
+		SEND ['/md8key/ctrl_layer_scale_z/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+	)
+	
+	msg "rotate on X" (
+		SEND ['/md8key/ctrl_layer_rotation_x/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+	)
+	
+	msg "rotate on Y" (
+		SEND ['/md8key/ctrl_layer_rotation_y/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+	)
+	
+	msg "rotate on Z" (
+		SEND ['/md8key/ctrl_layer_rotation_z/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+	)
+	
+	msg "rotate field of view" (
+		SEND ['/md8key/ctrl_layer_fieldOfView/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+	)
+	
+	msg "set RGB R" (
+		SEND ['/md8key/ctrl_layer_color_modulateR/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	msg "set RGB G" (
+		SEND ['/md8key/ctrl_layer_color_modulateG/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	msg "set RGB B" (
+		SEND ['/md8key/ctrl_layer_color_modulateB/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	
+	msg "set RGB additive B" (
+		SEND ['/md8key/ctrl_layer_color_additiveR/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	
+	msg "set RGB additive G" (
+		SEND ['/md8key/ctrl_layer_color_additiveG/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	
+	msg "set RGB additive B" (
+		SEND ['/md8key/ctrl_layer_color_additiveB/%loopID%', ',f', %factor% in [0.0..1.0]]
+	)
+	
+	# SATURATION
+	msg "toggle saturation layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_saturationOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle saturation boost option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_saturationBoost/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle saturation inverse option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_saturationInverse/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set saturation level factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_saturationLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# LIGHTNESS
+	msg "toggle lightness layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lightnessOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set lightness type option : bright/light" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lightnessType/%loopID%', ',i', %status% in enum{BRIGHT=0, LIGHT=1}]
+	)
+	
+	msg "set lightness level factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# CONTRAST
+	msg "toggle contrast layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_contrastOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle contrast boost option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_contrastBoost/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle contrast inverse option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_contrastInverse/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set contrast factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_contrastLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# LUMA KEY
+	msg "toggle luma key layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lumaOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set luma type option : luma k/luma k inverse/Red/Green/Blue" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lumaType/%loopID%', ',i', %status% in enum{LUMA_K=0, LUMA_K_INVERSE=1, RED=2, GREEN=3, BLUE=4}]
+	)
+	msg "toggle luma option : preserve alpha" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lumaPreserveAlpha/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	# NOISE
+	msg "toggle noise layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_noiseOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle noise colored option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_noiseColored/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle noise to RGB option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_noiseRGBOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle noise ALPHA option : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_noiseAlpha/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set noise level factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_noiseLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# BLUR
+	msg "toggle blur layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_pixelFX_blurOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set blur type option : bright/light" (
+		SEND ['/md8key/ctrl_layer_pixelFX_blurType/%loopID%', ',i', %status% in enum{FAST_X=0, BOX=1}]
+	)
+	
+	msg "set blur factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set blur level factor" (
+		SEND ['/md8key/ctrl_layer_pixelFX_blurLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	##### Animation FX
+	
+	# AUTO MOVE
+	
+	msg "toggle blur layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_auto_moveOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set automove curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+		SEND ['/md8key/ctrl_layer_auto_moveCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+	)
+	
+	msg "set automove directions option : W_E/N_S/N_W_S_E" (
+		SEND ['/md8key/ctrl_layer_auto_moveXY/%loopID%', ',i', %newDirections% in enum{W_E=0,N_S=1,N_W_S_E=2}]
+	)
+	
+	msg "set automove speed" (
+		SEND ['/md8key/ctrl_layer_auto_moveSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set automove size" (
+		SEND ['/md8key/ctrl_layer_auto_moveSize/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set automove strob" (
+		SEND ['/md8key/ctrl_layer_auto_moveStrob/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# AUTO SCALE
+	
+	msg "toggle auto scale layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_auto_scaleOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set autoscale curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+		SEND ['/md8key/ctrl_layer_auto_scaleCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+	)
+	
+	msg "set autoscale speed" (
+		SEND ['/md8key/ctrl_layer_auto_scaleSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set autoscale size" (
+		SEND ['/md8key/ctrl_layer_auto_scaleSize/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set automove strob" (
+		SEND ['/md8key/ctrl_layer_auto_scaleStrob/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	# AUTO COLOR
+	
+	msg "toggle autocolor layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_auto_colorOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set autocolor curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+		SEND ['/md8key/ctrl_layer_auto_colorCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+	)
+	
+	msg "set autocolor RED speed" (
+		SEND ['/md8key/ctrl_layer_auto_colorRSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set autocolor GREEN size" (
+		SEND ['/md8key/ctrl_layer_auto_colorGSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set autocolor BLUE " (
+		SEND ['/md8key/ctrl_layer_auto_colorGSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set autocolor ALPHA " (
+		SEND ['/md8key/ctrl_layer_auto_colorASpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set autocolor ADDITIVE " (
+		SEND ['/md8key/ctrl_layer_auto_colorAdditiveOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set autocolor MODULATE " (
+		SEND ['/md8key/ctrl_layer_auto_colorModulateOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+
+	# TRANSFORMERS
+	
+	msg "toggle transformers layer : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_on/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle transformers mode MATRIX/PATCH/PARTICLES" (
+		SEND ['/md8key/ctrl_layer_transformer_type/%loopID%', ',i', %status% in enum{MATRIX=0, PATCH=1, PARTICLES=2}]
+	)
+
+	msg "set transformer MATRIX X Value" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_xValue/%loopID%', ',i', %newValue% in [0..10]]
+	)
+	
+	msg "set transformer MATRIX Y Value" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_yValue/%loopID%', ',i', %newValue% in [0..10]]
+	)
+	
+	msg "set transformer MATRIX Z Value" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_zValue/%loopID%', ',i', %newValue% in [0..10]]
+	)
+	
+	msg "set transformer MATRIX PLANAR SPACE factor" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_planarSpace/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer MATRIX DEEP SPACE factor" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_deepSpace/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer MATRIX EXTRUSION LEVEL factor" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_extrusionLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+		
+	msg "set transformer MATRIX FLIP XeYu : 0/1/2/3" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_flipXeYu/%loopID%', ',i', %newValue% in [0..4]]
+	)
+		
+	msg "set transformer MATRIX FLIP XeYu : 0/1/2/3" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_flipXeYe/%loopID%', ',i', %newValue% in [0..4]]
+	)
+		
+	msg "set transformer MATRIX FLIP XeYu : 0/1/2/3" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_flipXuYu/%loopID%', ',i', %newValue% in [0..4]]
+	)
+		
+	msg "set transformer MATRIX FLIP XeYu : 0/1/2/3" (
+		SEND ['/md8key/ctrl_layer_transformer_matrix_flipXuYe/%loopID%', ',i', %newValue% in [0..4]]
+	)
+		
+	msg "set transformer PATCH SHAPE : PLAN/CYCLINDER_1/CYLINDER_2/SPHERE" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_shapeType/%loopID%', ',i', %type% in enum{PLAN=0, CYCLINDER_1=1, CYLINDER_2=2, SPHERE=3}]
+	)
+		
+	msg "set transformer PATCH FILL : GRID/EDGES/PLAN" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_fillMode/%loopID%', ',i', %type% in enum{GRID=0, EDGES=1, PLAN=2}]
+	)
+		
+	msg "set transformer PATCH THICKNESS" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_thickness/%loopID%', ',i', %newValue% in [0..20]]
+	)
+		
+	msg "set transformer PATCH DIV X" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_subdivX/%loopID%', ',i', %newValue% in [0..200]]
+	)
+		
+	msg "set transformer PATCH DIV Y" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_subdivY/%loopID%', ',i', %newValue% in [0..200]]
+	)
+		
+	msg "set transformers DISP MAPPING COLOR" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_colorOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set transformers DISP MAPPING ALPHA" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_dmapingAlphaOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "set transformers DISP MAPPING LEVEL factor" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_dmappingLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformers SOUND INPUT Value factor" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_soundInputValue/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformers SOUND NOISE LEVEL Value factor" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_noiseLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformers SOUND INPUT V DELAY" (
+		SEND ['/md8key/ctrl_layer_transformer_patch_soundInputVdelayOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	
+	msg "set transformer GRAVITY factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_gravity/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer SIZE factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_localScale/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer APERTURE X factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_cutOffAngleX/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer APERTURE Y factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_cutOffAngleY/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer SPEED factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_speed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer RADIUS factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_radiusSource/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer LIFE factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_life/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer APERTURE Y factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_particlesPerSec/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "set transformer PARTICLES PER SEC factor" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_cutOffAngleY/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "toggle transformers ALPHA FADE IN : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_alphaFadeIn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle transformers ALPHA FADE OUT : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_alphaFadeOut/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle transformers SCALE FADE OUT : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_scaleFadeIn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle transformers SCALE FADE OUT : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_scaleFadeOut/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	msg "toggle transformers SCALE FADE OUT : ON/OFF" (
+		SEND ['/md8key/ctrl_layer_transformer_particle_applyLocalAngleOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+	)
+	
+	
+	# STOP/PLAY/REC
+	msg "toggle transformers mode STOP/PLAY/REC" (
+		SEND ['/md8key/ctrl_layer_transformer_type/%loopID%', ',i', %status% in enum{STOP=0, PLAY=1, REC=2}]
+	)
+	
+	# MASTER CONTROLS
+	
+	msg "Set MASTER speed factor" (
+		SEND ['/md8key/ctrl_master_speed/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER scale factor" (
+		SEND ['/md8key/ctrl_master_scale/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER alpha factor" (
+		SEND ['/md8key/ctrl_layer_alpha/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Baground RED color factor" (
+		SEND ['/md8key/ctrl_master_backgroundColorR/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Baground GREEN color factor" (
+		SEND ['/md8key/ctrl_master_backgroundColorG/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Baground BLUE color factor" (
+		SEND ['/md8key/ctrl_master_backgroundColorB/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Invert RED color factor" (
+		SEND ['/md8key/ctrl_master_invColorR/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Invert GREEN color factor" (
+		SEND ['/md8key/ctrl_master_invColorG/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Invert BLUE color factor" (
+		SEND ['/md8key/ctrl_master_invColorB/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Output Add RED color factor" (
+		SEND ['/md8key/ctrl_master_addColorR/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Output Add GREEN color factor" (
+		SEND ['/md8key/ctrl_master_addColorG/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Output Add BLUE color factor" (
+		SEND ['/md8key/ctrl_master_addColorB/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Trace factor" (
+		SEND ['/md8key/ctrl_master_traceLevel/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Sound Level IN factor" (
+		SEND ['/md8key/ctrl_master_soundLevelCapture/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+	msg "Set MASTER Sound Level OUT factor" (
+		SEND ['/md8key/ctrl_master_soundOutLevel/0', ',f', %newFactor% in [0.0..1.0]]
+	)
+	
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.sf.net/smbt/osc/ofx3nity/1.0"
+            class="net.sf.smbt.osc.ofx3nity.Ofx3nityPackage"
+            genModel="model/ofx3nity.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdSetProvider">
+      <CmdSet
+            ID="net.sf.smbt.osc.ofx3nity.CmdSet7"
+            provider="net.sf.smbt.osc.ofx3nity.cmd.provider.X3nityCmdSetProvider">
+      </CmdSet>
+   </extension>
+
+</plugin>
