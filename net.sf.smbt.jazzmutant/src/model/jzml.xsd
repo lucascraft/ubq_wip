@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http:///net.sf.smbt.jazzmutant/model/jzml.xsd" targetNamespace="http:///net.sf.smbt.jazzmutant/model/jzml.xsd">
+  <complexType name="TOP">
+    <sequence>
+      <element maxOccurs="1" name="JZML" type="tns:JZML"/>
+    </sequence>
+  </complexType>
+	
+  <complexType name="JZML">
+    <sequence>
+      <element maxOccurs="1" name="PROJECT" type="tns:PROJECT"/>
+      <element maxOccurs="unbounded" name="WINDOW" type="tns:WINDOW"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="PROJECT">
+      <attribute name="version" type="string"/>
+      <attribute name="osc_target" type="IDREF"/>
+      <attribute name="midi_target" type="IDREF"/>
+      <attribute name="kbmouse_target" type="IDREF"/>
+      <attribute name="startpage" type="IDREF"/>
+      <attribute name="name" type="string"/>
+      <attribute name="welcometext" type="string"/>
+      <attribute name="title" type="string"/>
+      <attribute name="width" type="string"/>
+      <attribute name="height" type="string"/>
+    <attribute name="id" type="ID"/>
+  </complexType>
+  
+  <complexType name="WINDOW">
+    <sequence>
+      <element maxOccurs="unbounded" name="WINDOW" type="tns:WINDOW"/>
+      <element maxOccurs="unbounded" name="PARAM" type="tns:PARAM"/>
+      <element maxOccurs="unbounded" name="VARIABLE" type="tns:VARIABLE"/>
+    </sequence>
+    <attribute name="id" type="ID"/>
+      <attribute name="class" type="string"/>
+      <attribute name="text" type="string"/>
+      <attribute name="x" type="string"/>
+      <attribute name="y" type="string"/>
+      <attribute name="z" type="string"/>
+      <attribute name="width" type="string"/>
+      <attribute name="height" type="string"/>
+      <attribute name="state" type="string"/>
+      <attribute name="group" type="string"/>
+      <attribute name="font" type="string"/>
+      <attribute name="send" type="string"/>
+      <attribute name="osc_target" type="string"/>
+      <attribute name="midi_target" type="string"/>
+      <attribute name="kbmouse_target" type="string"/>
+      <attribute name="color" type="string"/>
+      <attribute name="tabbar" type="string"/>
+      <attribute name="meta" type="string"/>
+      <attribute name="display" type="string"/>
+      <attribute name="target" type="string"/>
+      <attribute name="attraction" type="string"/>
+      <attribute name="attraction_x" type="string"/>
+      <attribute name="attraction_y" type="string"/>
+      <attribute name="coordinates" type="string"/>
+      <attribute name="editable" type="string"/>
+      <attribute name="free" type="string"/>
+      <attribute name="grid" type="string"/>
+      <attribute name="grid_steps" type="string"/>
+      <attribute name="label" type="string"/>
+      <attribute name="nbr" type="string"/>
+      <attribute name="physic" type="string"/>
+      <attribute name="precision" type="string"/>
+      <attribute name="cursor" type="string"/>
+      <attribute name="unit" type="string"/>
+      <attribute name="value" type="string"/>
+      <attribute name="edit" type="string"/>
+      <attribute name="balls" type="string"/>
+      <attribute name="angle" type="string"/>
+      <attribute name="pan" type="string"/>
+      <attribute name="pinch" type="string"/>
+      <attribute name="rest" type="string"/>
+      <attribute name="mode" type="string"/>
+      <attribute name="acceleration" type="string"/>
+      <attribute name="axis" type="string"/>
+      <attribute name="boundaries" type="string"/>
+      <attribute name="constrained" type="string"/>
+      <attribute name="capture" type="string"/>
+      <attribute name="ephemere" type="string"/>
+      <attribute name="zoom" type="string"/>
+      <attribute name="multicolor" type="string"/>
+      <attribute name="multilabel" type="string"/>
+      <attribute name="bipolar" type="string"/>
+      <attribute name="gradient" type="string"/>
+      <attribute name="horizontal" type="string"/>
+      <attribute name="polyphony" type="string"/>
+      <attribute name="column" type="string"/>
+      <attribute name="row" type="string"/>
+      <attribute name="paint" type="string"/>
+      <attribute name="radio" type="string"/>
+      <attribute name="behavior" type="string"/>
+      <attribute name="bitmap" type="string"/>
+      <attribute name="label_on" type="string"/>
+      <attribute name="label_off" type="string"/>
+      <attribute name="bargraph" type="string"/>
+      <attribute name="outline" type="string"/>
+      <attribute name="content" type="string"/>
+      <attribute name="scale" type="string"/>
+      <attribute name="attack" type="string"/>
+      <attribute name="decay" type="string"/>
+      <attribute name="sustain" type="string"/>
+      <attribute name="release" type="string"/>
+      <attribute name="speed" type="string"/>
+      <attribute name="friction" type="string"/>
+      <attribute name="tension" type="string"/>
+      <attribute name="light" type="string"/>
+      <attribute name="hold" type="string"/>
+      <attribute name="holdX" type="string"/>
+      <attribute name="holdY" type="string"/>
+  </complexType>
+
+  <complexType name="PARAM">
+      <attribute name="name" type="string"/>
+      <attribute name="value" type="string"/>
+      <attribute name="send" type="string"/>
+      <attribute name="osc_target" type="string"/>
+      <attribute name="osc_trigger" type="string"/>
+      <attribute name="osc_message" type="string"/>
+      <attribute name="osc_scale" type="string"/>
+      <attribute name="midi_target" type="string"/>
+      <attribute name="midi_trigger" type="string"/>
+      <attribute name="midi_message" type="string"/>
+      <attribute name="midi_scale" type="string"/>
+      <attribute name="kbmouse_target" type="string"/>
+      <attribute name="kbmouse_trigger" type="string"/>
+      <attribute name="kbmouse_message" type="string"/>
+      <attribute name="kbmouse_scale" type="string"/>
+      <attribute name="color" type="string"/>
+      <attribute name="label" type="string"/>
+      <attribute name="tabbar" type="string"/>
+      <attribute name="meta" type="string"/>
+    <attribute name="id" type="ID"/>
+  </complexType>
+
+  <complexType name="VARIABLE">
+      <attribute name="name" type="string"/>
+      <attribute name="value" type="string"/>
+      <attribute name="send" type="string"/>
+      <attribute name="osc_target" type="string"/>
+      <attribute name="osc_trigger" type="string"/>
+      <attribute name="osc_message" type="string"/>
+      <attribute name="osc_scale" type="string"/>
+      <attribute name="midi_target" type="string"/>
+      <attribute name="midi_trigger" type="string"/>
+      <attribute name="midi_message" type="string"/>
+      <attribute name="midi_scale" type="string"/>
+      <attribute name="kbmouse_trigger" type="string"/>
+      <attribute name="kbmouse_message" type="string"/>
+      <attribute name="kbmouse_target" type="string"/>
+      <attribute name="kbmouse_scale" type="string"/>
+      <attribute name="color" type="string"/>
+      <attribute name="label" type="string"/>
+      <attribute name="tabbar" type="string"/>
+      <attribute name="meta" type="string"/>
+    <attribute name="id" type="ID"/>
+  </complexType>
+
+
+</schema>

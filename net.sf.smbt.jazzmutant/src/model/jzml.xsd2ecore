@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="jzml.xsd#/"
+    outputs="jzml.ecore#/" topToBottom="true">
+  <nested inputs="bundleentry://417.fwk479450812/cache/www.w3.org/2001/XMLSchema.xsd#//ID;XSDSimpleTypeDefinition=37"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//ID"/>
+  <nested inputs="bundleentry://417.fwk479450812/cache/www.w3.org/2001/XMLSchema.xsd#//IDREF;XSDSimpleTypeDefinition=38"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//IDREF"/>
+  <nested inputs="bundleentry://417.fwk479450812/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2" outputs="jzml.ecore#//PROJECT">
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=8"
+        outputs="jzml.ecore#//PROJECT/id"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=3"
+        outputs="jzml.ecore#//PROJECT/kbmouseTarget"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=2"
+        outputs="jzml.ecore#//PROJECT/midiTarget"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=5"
+        outputs="jzml.ecore#//PROJECT/name"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=1"
+        outputs="jzml.ecore#//PROJECT/oscTarget"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=4"
+        outputs="jzml.ecore#//PROJECT/startpage"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=7"
+        outputs="jzml.ecore#//PROJECT/title"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="jzml.ecore#//PROJECT/version"/>
+    <nested inputs="jzml.xsd#//PROJECT;XSDComplexTypeDefinition=2/XSDAttributeUse=6"
+        outputs="jzml.ecore#//PROJECT/welcometext"/>
+  </nested>
+  <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4" outputs="jzml.ecore#//PARAM">
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=15"
+        outputs="jzml.ecore#//PARAM/color"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=19"
+        outputs="jzml.ecore#//PARAM/id"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=13"
+        outputs="jzml.ecore#//PARAM/kbmouseMessage"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=14"
+        outputs="jzml.ecore#//PARAM/kbmouseScale"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=11"
+        outputs="jzml.ecore#//PARAM/kbmouseTarget"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=12"
+        outputs="jzml.ecore#//PARAM/kbmouseTrigger"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=16"
+        outputs="jzml.ecore#//PARAM/label"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=18"
+        outputs="jzml.ecore#//PARAM/meta"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=9"
+        outputs="jzml.ecore#//PARAM/midiMessage"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=10"
+        outputs="jzml.ecore#//PARAM/midiScale"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=7"
+        outputs="jzml.ecore#//PARAM/midiTarget"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=8"
+        outputs="jzml.ecore#//PARAM/midiTrigger"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse" outputs="jzml.ecore#//PARAM/name"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=5"
+        outputs="jzml.ecore#//PARAM/oscMessage"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=6"
+        outputs="jzml.ecore#//PARAM/oscScale"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=3"
+        outputs="jzml.ecore#//PARAM/oscTarget"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=4"
+        outputs="jzml.ecore#//PARAM/oscTrigger"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=2"
+        outputs="jzml.ecore#//PARAM/send"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=17"
+        outputs="jzml.ecore#//PARAM/tabbar"/>
+    <nested inputs="jzml.xsd#//PARAM;XSDComplexTypeDefinition=4/XSDAttributeUse=1"
+        outputs="jzml.ecore#//PARAM/value"/>
+  </nested>
+  <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5" outputs="jzml.ecore#//VARIABLE">
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=15"
+        outputs="jzml.ecore#//VARIABLE/color"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=19"
+        outputs="jzml.ecore#//VARIABLE/id"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=12"
+        outputs="jzml.ecore#//VARIABLE/kbmouseMessage"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=14"
+        outputs="jzml.ecore#//VARIABLE/kbmouseScale"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=13"
+        outputs="jzml.ecore#//VARIABLE/kbmouseTarget"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=11"
+        outputs="jzml.ecore#//VARIABLE/kbmouseTrigger"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=16"
+        outputs="jzml.ecore#//VARIABLE/label"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=18"
+        outputs="jzml.ecore#//VARIABLE/meta"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=9"
+        outputs="jzml.ecore#//VARIABLE/midiMessage"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=10"
+        outputs="jzml.ecore#//VARIABLE/midiScale"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=7"
+        outputs="jzml.ecore#//VARIABLE/midiTarget"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=8"
+        outputs="jzml.ecore#//VARIABLE/midiTrigger"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse"
+        outputs="jzml.ecore#//VARIABLE/name"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=5"
+        outputs="jzml.ecore#//VARIABLE/oscMessage"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=6"
+        outputs="jzml.ecore#//VARIABLE/oscScale"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=3"
+        outputs="jzml.ecore#//VARIABLE/oscTarget"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=4"
+        outputs="jzml.ecore#//VARIABLE/oscTrigger"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=2"
+        outputs="jzml.ecore#//VARIABLE/send"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=17"
+        outputs="jzml.ecore#//VARIABLE/tabbar"/>
+    <nested inputs="jzml.xsd#//VARIABLE;XSDComplexTypeDefinition=5/XSDAttributeUse=1"
+        outputs="jzml.ecore#//VARIABLE/value"/>
+  </nested>
+  <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3" outputs="jzml.ecore#//WINDOW">
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="jzml.ecore#//WINDOW/wINDOW"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="jzml.ecore#//WINDOW/pARAM"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="jzml.ecore#//WINDOW/vARIABLE"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=42"
+        outputs="jzml.ecore#//WINDOW/acceleration"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=37"
+        outputs="jzml.ecore#//WINDOW/angle"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=67"
+        outputs="jzml.ecore#//WINDOW/attack"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=20"
+        outputs="jzml.ecore#//WINDOW/attraction"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=21"
+        outputs="jzml.ecore#//WINDOW/attractionX"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=22"
+        outputs="jzml.ecore#//WINDOW/attractionY"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=43"
+        outputs="jzml.ecore#//WINDOW/axis"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=36"
+        outputs="jzml.ecore#//WINDOW/balls"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=63"
+        outputs="jzml.ecore#//WINDOW/bargraph"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=59"
+        outputs="jzml.ecore#//WINDOW/behavior"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=51"
+        outputs="jzml.ecore#//WINDOW/bipolar"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=60"
+        outputs="jzml.ecore#//WINDOW/bitmap"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=44"
+        outputs="jzml.ecore#//WINDOW/boundaries"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=46"
+        outputs="jzml.ecore#//WINDOW/capture"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=1"
+        outputs="jzml.ecore#//WINDOW/class"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=15"
+        outputs="jzml.ecore#//WINDOW/color"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=55"
+        outputs="jzml.ecore#//WINDOW/column"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=45"
+        outputs="jzml.ecore#//WINDOW/constrained"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=65"
+        outputs="jzml.ecore#//WINDOW/content"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=23"
+        outputs="jzml.ecore#//WINDOW/coordinates"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=32"
+        outputs="jzml.ecore#//WINDOW/cursor"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=68"
+        outputs="jzml.ecore#//WINDOW/decay"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=18"
+        outputs="jzml.ecore#//WINDOW/display"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=35"
+        outputs="jzml.ecore#//WINDOW/edit"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=24"
+        outputs="jzml.ecore#//WINDOW/editable"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=47"
+        outputs="jzml.ecore#//WINDOW/ephemere"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=10"
+        outputs="jzml.ecore#//WINDOW/font"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=25"
+        outputs="jzml.ecore#//WINDOW/free"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=72"
+        outputs="jzml.ecore#//WINDOW/friction"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=52"
+        outputs="jzml.ecore#//WINDOW/gradient"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=26"
+        outputs="jzml.ecore#//WINDOW/grid"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=27"
+        outputs="jzml.ecore#//WINDOW/gridSteps"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=9"
+        outputs="jzml.ecore#//WINDOW/group"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=7"
+        outputs="jzml.ecore#//WINDOW/height"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=75"
+        outputs="jzml.ecore#//WINDOW/hold"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=76"
+        outputs="jzml.ecore#//WINDOW/holdX"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=77"
+        outputs="jzml.ecore#//WINDOW/holdY"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=53"
+        outputs="jzml.ecore#//WINDOW/horizontal"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="jzml.ecore#//WINDOW/id"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=14"
+        outputs="jzml.ecore#//WINDOW/kbmouseTarget"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=28"
+        outputs="jzml.ecore#//WINDOW/label"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=62"
+        outputs="jzml.ecore#//WINDOW/labelOff"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=61"
+        outputs="jzml.ecore#//WINDOW/labelOn"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=74"
+        outputs="jzml.ecore#//WINDOW/light"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=17"
+        outputs="jzml.ecore#//WINDOW/meta"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=13"
+        outputs="jzml.ecore#//WINDOW/midiTarget"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=41"
+        outputs="jzml.ecore#//WINDOW/mode"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=49"
+        outputs="jzml.ecore#//WINDOW/multicolor"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=50"
+        outputs="jzml.ecore#//WINDOW/multilabel"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=29"
+        outputs="jzml.ecore#//WINDOW/nbr"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=12"
+        outputs="jzml.ecore#//WINDOW/oscTarget"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=64"
+        outputs="jzml.ecore#//WINDOW/outline"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=57"
+        outputs="jzml.ecore#//WINDOW/paint"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=38"
+        outputs="jzml.ecore#//WINDOW/pan"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=30"
+        outputs="jzml.ecore#//WINDOW/physic"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=39"
+        outputs="jzml.ecore#//WINDOW/pinch"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=54"
+        outputs="jzml.ecore#//WINDOW/polyphony"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=31"
+        outputs="jzml.ecore#//WINDOW/precision"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=58"
+        outputs="jzml.ecore#//WINDOW/radio"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=70"
+        outputs="jzml.ecore#//WINDOW/release"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=40"
+        outputs="jzml.ecore#//WINDOW/rest"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=56"
+        outputs="jzml.ecore#//WINDOW/row"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=66"
+        outputs="jzml.ecore#//WINDOW/scale"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=11"
+        outputs="jzml.ecore#//WINDOW/send"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=71"
+        outputs="jzml.ecore#//WINDOW/speed"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=8"
+        outputs="jzml.ecore#//WINDOW/state"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=69"
+        outputs="jzml.ecore#//WINDOW/sustain"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=16"
+        outputs="jzml.ecore#//WINDOW/tabbar"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=19"
+        outputs="jzml.ecore#//WINDOW/target"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=73"
+        outputs="jzml.ecore#//WINDOW/tension"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=2"
+        outputs="jzml.ecore#//WINDOW/text"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=33"
+        outputs="jzml.ecore#//WINDOW/unit"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=34"
+        outputs="jzml.ecore#//WINDOW/value"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=6"
+        outputs="jzml.ecore#//WINDOW/width"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=3"
+        outputs="jzml.ecore#//WINDOW/x"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=4"
+        outputs="jzml.ecore#//WINDOW/y"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=5"
+        outputs="jzml.ecore#//WINDOW/z"/>
+    <nested inputs="jzml.xsd#//WINDOW;XSDComplexTypeDefinition=3/XSDAttributeUse=48"
+        outputs="jzml.ecore#//WINDOW/zoom"/>
+  </nested>
+  <nested inputs="jzml.xsd#//JZML;XSDComplexTypeDefinition=1" outputs="jzml.ecore#//JZML">
+    <nested inputs="jzml.xsd#//JZML;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="jzml.ecore#//JZML/pROJECT"/>
+    <nested inputs="jzml.xsd#//JZML;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="jzml.ecore#//JZML/wINDOW"/>
+  </nested>
+  <nested inputs="jzml.xsd#//TOP;XSDComplexTypeDefinition" outputs="jzml.ecore#//TOP">
+    <nested inputs="jzml.xsd#//TOP;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="jzml.ecore#//TOP/jZML"/>
+  </nested>
+</xsd2ecore:XSD2EcoreMappingRoot>

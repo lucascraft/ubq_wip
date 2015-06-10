@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.jazzmutant/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.jazzmutant" modelName="Jzmui" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../../net.sf.smbt.dmx/model/ezdmx.genmodel#//ezdmx ../../../net.sf.smbt.midi/model/ezmidi.genmodel#//ezmidi ../../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd ../../../net.sf.xqz.engine/model/temporal.genmodel#//cmd ../../../net.sf.xqz.engine/model/temporal.genmodel#//engine">
+  <foreignModel>jzmui.ecore</foreignModel>
+  <genPackages prefix="Jzmui" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="jzmui.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LemurTrigger">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/ANY"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/PASSES_OVER_ZERO"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/PASSES_UNDER_ZERO"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/CROSS_ZERO"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/INCREASE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/DECREASE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurTrigger/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LemurPreferences">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC0_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC1_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC2_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC3_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC4_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC5_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC6_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC7_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC8_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/LEMUR_OSC9_TARGET_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurPreferences/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LemurIncomingPorts">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC0_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC1_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC2_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC3_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC4_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC5_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC6_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC7_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC8_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/LEMUR_OSC9_PORT_IN_PREF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LemurIncomingPorts/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//MIDI_MESSAGES">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/_80_NOTE_OF"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/_90_NOTE_ON"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/A0_KEY_PRESSURE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/B0_CONTROL_CHANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/C0_PROGRAM_CHANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/D0_CHANNEL_PRESSURE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/E0_PITCH_BEND"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F0_SYSTEM_EXCLUSIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F2_SONG_POSITION"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F3_SONG_SELECT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F5_BUS_SELECT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F6_TUNE_REQUEST"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/F8_TIMING_TICK"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/FA_START_SONG"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/FB_CONTINUE_SONG"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/FC_STOP_SONG"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/FE_ACTIVE_SENSING"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/FF_SYSTEM_RESET"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//MIDI_MESSAGES/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//KNOB_STYLE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_STYLE/STANDARD"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_STYLE/BIPOLAR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_STYLE/ENDLESS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LEMUR_STYLE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/TEXT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/FILL_RECT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/CIRCLE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/CIRCLE_BOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/PREV_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/NEXT_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/UP_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/DOWN_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/RWD_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/FWD_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/END_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/BEGINING_CURSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/QUIT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/DELETE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/NORTH_SOUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/EAST_WEST"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/RAISE_UP"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/RAISE_DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/DECREASE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/INCREASE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/BANG"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/MINUS"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/REFRESH"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/SIN"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/TRI"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/SAW"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/SQR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/SAW_INV"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/PATH"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_STYLE/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//FONT_SIZE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_8_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_9_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_10_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_11_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_12_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_13_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_14_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_15_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_16_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_17_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_18_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_19_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_20_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_21_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_22_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_23_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/FONT_24_PT"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//FONT_SIZE/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//TEXT_ALIGN">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/N"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/S"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/E"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/W"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/NE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/NW"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/SE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/SW"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//TEXT_ALIGN/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//JZML_MODE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//JZML_MODE/IPHONE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//JZML_MODE/IPAD"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//JZML_MODE/LEGACY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//BREAK_POINT_PHYSICS">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//BREAK_POINT_PHYSICS/INTERPOLATE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//BREAK_POINT_PHYSICS/MASS_SPRING"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//BREAK_POINT_PHYSICS/SUPER_SPRING"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//BREAK_POINT_PHYSICS/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LEMUR_OSC_TARGET">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_1"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_2"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_3"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_4"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_5"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_6"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_7"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_8"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/OSC_9"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_OSC_TARGET/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//LEMUR_MIDI_TARGET">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_1"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_2"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_3"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_4"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_5"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_6"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_7"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_8"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/MIDI_9"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//LEMUR_MIDI_TARGET/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//CUSTOM_BUTTON_MODE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//CUSTOM_BUTTON_MODE/SWITCH"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//CUSTOM_BUTTON_MODE/PAD"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//CUSTOM_BUTTON_MODE/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//KNOB_CURSOR_MODE">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CURSOR_MODE/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CURSOR_MODE/LIMITED"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CURSOR_MODE/BARYCENTRIC"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CURSOR_MODE/GET_NEWER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//KNOB_CONTROL">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CONTROL/LINEAR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CONTROL/POLAR"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_CONTROL/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jzmui.ecore#//KNOB_PHYSICS">
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_PHYSICS/INTERPOLATE"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_PHYSICS/MASS_SPRING"/>
+      <genEnumLiterals ecoreEnumLiteral="jzmui.ecore#//KNOB_PHYSICS/NONE"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="jzmui.ecore#//Rectangle"/>
+    <genDataTypes ecoreDataType="jzmui.ecore#//Point"/>
+    <genDataTypes ecoreDataType="jzmui.ecore#//PathData"/>
+    <genDataTypes ecoreDataType="jzmui.ecore#//Color"/>
+    <genClasses ecoreClass="jzmui.ecore#//LemurLiveApp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//LemurLiveApp/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//LemurLiveApp/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//LemurLiveApp/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//LemurLiveApp/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//LemurLiveApp/configurations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="jzmui.ecore#//JZUIElem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZUIElem/fontStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZUIElem/bounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZUIElem/fontName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZUIElem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/oscProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/dmxProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/midiProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/kbProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/oscProps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/midiProps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZUIElem/parentTarget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/scripts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZUIElem/targetFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZContainer/children"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="jzmui.ecore#//JZWidget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZWidget/primaryOscTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZWidget/primaryMidiTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZBreakPoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/liveEditing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/points"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/coordinates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/firstPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/hold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/holdX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/holdY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/attraction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/edit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/rest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/pathData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/grid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/gridX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/gridY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/freeForm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZBreakPoint/physics"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZFader">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/drag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/tension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/valueActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZFader/label"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZGesture">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZGesture/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZGesture/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZGesture/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZGesture/pan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZGesture/pinch"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZKnob">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/endlessKnob"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/backgroud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/foreground"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/attack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/sustain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/decay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/release"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/hold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/valueActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/grid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/cursorMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/controlMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/physics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/attraction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZKnob/speed"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZLed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/multicolor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/bargraph"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/colorOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/colorOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLed/light"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZLemurMenu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMenu/scaleOutput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMenu/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMenu/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMenu/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZLemurMenu/items"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZLemurMonitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZLemurMonitor/color"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZPads">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/numbers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/multilabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/multicolor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/colorOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/colorOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/attack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/decay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/hold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/release"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZPads/sustain"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZSurfaceLCD">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/display"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/top"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSurfaceLCD/bottom"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZSwitches">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/numbers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/radio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/multilabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/multicolor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/colorOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/colorOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSwitches/light"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZText/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZText/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZText/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZText/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZText/light"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZCustomButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/outline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/colorOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/colorOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/styleOffText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/textAlign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/styleOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/styleOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/styleOnText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/fontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/capture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZCustomButton/mode"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZSignalScope">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/modeXY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZSignalScope/tension"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRange/horizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRange/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRange/light"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZMultiBalls">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/numbers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/multilabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/multiColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/z"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/attack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/decay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/hold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/holdX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/holdY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/release"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/sustain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/gridStepX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/gridStepY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/tension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMultiBalls/data"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZTrack">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTrack/modeXY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTrack/transparent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTrack/color"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZmultiSlider">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/horizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/bipolar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/slider"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/gradient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/multicolor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/tension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZmultiSlider/height"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZMenuItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZMenuItem/label"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZRingArea">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRingArea/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRingArea/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRingArea/attraction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRingArea/attraction_x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZRingArea/attraction_y"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//OSCDynaProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//OSCDynaProperties/customOscMsg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//OSCDynaProperties/lemurTrigger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//OSCDynaProperties/eStructuralFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//OSCDynaProperties/oscMsg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute jzmui.ecore#//OSCDynaProperties/target"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//MidiDynaProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//MidiDynaProperties/customMidiMsg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//MidiDynaProperties/lemurTrigger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//MidiDynaProperties/midiMsg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//MidiDynaProperties/eStructuralFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute jzmui.ecore#//MidiDynaProperties/target"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//DMXDynaProperties">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//DMXDynaProperties/dmxMsg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//DMXDynaProperties/eStructuralFeature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//DMXDynaProperties/customDmxMsg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//DMXDynaProperties/lemurTrigger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute jzmui.ecore#//DMXDynaProperties/target"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZJazzInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZJazzInterface/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZJazzInterface/height"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTarget/incomingPorts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZTarget/id"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JzOscTarget"/>
+    <genClasses ecoreClass="jzmui.ecore#//JzMidiTarget"/>
+    <genClasses ecoreClass="jzmui.ecore#//JzKBTarget"/>
+    <genClasses ecoreClass="jzmui.ecore#//KBDynaProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//KBDynaProperties/lemurTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//KBDynaProperties/target"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZConfigurationManager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZConfigurationManager/kbTargets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZConfigurationManager/oscTargets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZConfigurationManager/midiTargets"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JzOscVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JzOscVar/customAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JzOscVar/customMsg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JzOscVar/oscTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JZVar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jzmui.ecore#//JZVar/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JZVar/trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//JzMidiVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JzMidiVar/midiMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//JzMidiVar/midiTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="jzmui.ecore#//Script">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzmui.ecore#//Script/expr"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Ezlemur" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezlemur.ecore#/">
+    <genClasses ecoreClass="ezlemur.ecore#//LemurOscCmd"/>
+    <genClasses ecoreClass="ezlemur.ecore#//LemurMidiCmd"/>
+    <genClasses ecoreClass="ezlemur.ecore#//LemurDmxCmd"/>
+    <genClasses ecoreClass="ezlemur.ecore#//AbstractLemurOscCmd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezlemur.ecore#//AbstractLemurOscCmd/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

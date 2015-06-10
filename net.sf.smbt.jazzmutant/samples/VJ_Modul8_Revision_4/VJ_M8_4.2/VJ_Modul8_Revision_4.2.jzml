@@ -1,0 +1,1138 @@
+<JZML>
+<PROJECT version="1650"/>
+<WINDOW class="JAZZINTERFACE" text="A2B_fade" x="0" y="0" width="800" height="600" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Set_A" x="62" y="0" width="390" height="295" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="100">
+<WINDOW class="MultiSlider" text="AlphaSlidersA" x="41" y="35" width="340" height="248" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="1" label="0" nbr="5" color="132" capture="1" physic="0">
+<PARAM name="x=" value="1.000000,1.000000,1.000000,1.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Set_A/AlphaSlidersA/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_A/AlphaSlidersA/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_A/AlphaSlidersA/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_A/AlphaSlidersA/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=x-0.75" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_A/AlphaSlidersA/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/2" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer3=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/3" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer4=x[3]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/4" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer5=x[4]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/5" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Hidden_A" x="2" y="40" width="46" height="240" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="5" color="132,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000" send="21" osc_target="0" osc_trigger="1" osc_message="/Set_A/Hidden_A/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,5.000000"/>
+<VARIABLE name="light=0.5-x" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_A/Hidden_A/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/2" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer3=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/3" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer4=x[3]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/4" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer5=x[4]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/5" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="LayerSetA" x="2" y="0" width="372" height="35" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="8" row="1" color="132,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Set_A/LayerSetA/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="8" osc_target="0" osc_trigger="1" osc_message="/LayerSetA.light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_layerSetGroupA/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Set_B" x="62" y="297" width="390" height="295" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="182">
+<WINDOW class="MultiSlider" text="AlphaSlidersB" x="41" y="-4" width="340" height="248" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="1" label="0" nbr="5" color="190" capture="1" physic="0">
+<PARAM name="x=" value="1.000000,1.000000,1.000000,1.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Set_B/AlphaSlidersB/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_B/AlphaSlidersB/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_B/AlphaSlidersB/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_B/AlphaSlidersB/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=x-0.75" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_B/AlphaSlidersB/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/6" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/7" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer3=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/8" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer4=x[3]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/9" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer5=x[4]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/10" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Hidden_B" x="2" y="1" width="46" height="240" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="5" color="190,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000" send="21" osc_target="0" osc_trigger="1" osc_message="/Set_B/Hidden_B/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="1.000000,5.000000"/>
+<VARIABLE name="light=0.5-x" send="0" osc_target="0" osc_trigger="1" osc_message="/Set_B/Hidden_B/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/6" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/7" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer3=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/8" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer4=x[3]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/9" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer5=x[4]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_hidden/10" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="LayerSetB" x="2" y="245" width="372" height="35" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="8" row="1" color="190,28" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Set_B/LayerSetB/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="8" osc_target="0" osc_trigger="1" osc_message="/LayerSetB.light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_layerSetGroupB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="CrossFader" x="454" y="75" width="346" height="167" id="5" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="140">
+<WINDOW class="Switches" text="Fading_A" x="0" y="0" width="40" height="40" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="144,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_crossfader_alphaGroupAOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Fading_A/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Fading_B" x="250" y="0" width="40" height="40" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="144,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_crossfader_alphaGroupBOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Fading_B/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Scaling_B" x="290" y="0" width="40" height="40" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="144,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_crossfader_scaleGroupBOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Scaling_B/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Crossfade" x="-2" y="46" width="332" height="105" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="33" label="0" value="0" unit="" precision="3" color="144" capture="1" cursor="2" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_crossfader_slider/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Crossfade/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Crossfade/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1.5" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Crossfade/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Crossfade/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Crossfade/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Scaling_A" x="40" y="0" width="40" height="40" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="144,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_crossfader_scaleGroupAOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/Scaling_A/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="fader_l" x="80" y="0" width="170" height="40" id="5" state="241" group="0" font="tahoma,14,0" send="0" content="<A    crossfader     B>" color="144">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CrossFader/fader_l/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Layers2" x="0" y="39" width="62" height="489" id="6" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="496" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers2/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers2/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Media_Select2" x="454" y="244" width="346" height="323" id="7" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="MediaSelect" x="0" y="20" width="330" height="330" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="8" row="8" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Media_Select2/MediaSelect/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Media_Select2/MediaSelect/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_media/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="mediaselect" x="0" y="0" width="330" height="20" id="5" state="209" group="0" font="tahoma,14,0" send="0" content="media selector" color="144">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Media_Select2/mediaselect/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds4" x="604" y="8" width="189" height="40" id="12" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="-14" y="-4" width="200" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="8" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/2)%8)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds4/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="Media" x="0" y="0" width="800" height="600" id="1" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Layers3" x="0" y="39" width="62" height="496" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="480" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers3/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers3/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Scale2" x="441" y="206" width="347" height="385" id="8" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="206">
+<WINDOW class="Fader" text="UniformScale" x="0" y="20" width="331" height="58" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="1" value="0" unit="" precision="1" color="204" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.300000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_uniform/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScale/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x*UniformScaleFactor.scaled" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScale/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScale/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScale/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScale/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="UniformScaleFactor" x="0" y="78" width="331" height="58" id="1" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="1" value="0" unit="" precision="3" color="204" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.300000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/UniformScaleFactor/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled=floor(19*x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_factorUniform/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="XYZScale" x="0" y="136" width="331" height="175" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="1" label="0" nbr="3" color="204" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScale/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScale/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScale/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScale/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScale/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="XScale=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_x/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="YScale=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_y/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="ZScale=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_z/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="XYZScaleFactor" x="0" y="311" width="331" height="58" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="204" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/XYZScaleFactor/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled=floor(9*x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_scale_factorXYZ/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="scaling_l" x="0" y="0" width="331" height="20" id="4" state="209" group="0" font="tahoma,14,0" send="1" content="scaling X Y Z" color="206">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Scale2/scaling_l/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Clip_Speed_IO2" x="92" y="0" width="689" height="186" id="9" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="116">
+<WINDOW class="Range" text="Range" x="0" y="75" width="673" height="95" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="1" label="0" color="130" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.998459" send="17" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/min_height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/max_height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="drag=" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Range/drag" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="in=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_movie_positionIn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="out=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_movie_positionOut/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Spped_Clip" x="0" y="20" width="472" height="52" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" horizontal="1" label="0" nbr="1" color="130" capture="1" physic="0">
+<PARAM name="x=" value="0.250000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_movie_speedFactor/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Spped_Clip/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Spped_Clip/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Spped_Clip/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Spped_Clip/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Loop_Mode" x="472" y="20" width="201" height="55" id="5" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="2" row="1" color="130,216" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Loop_Mode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Loop_Mode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="mode1=x[0]" send="8" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_movie_loopMode/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="mode2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_movie_loopMode/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Leds" text="Unity" x="107" y="6" width="32" height="70" id="6" state="5" group="0" font="tahoma,10,0" send="1" label="1" bargraph="1" column="1" row="5" color="130,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Unity/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=.75" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/Unity/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="clip_l" x="0" y="0" width="673" height="20" id="7" state="209" group="0" font="tahoma,14,0" send="1" content="clip speed & in out" color="148">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Clip_Speed_IO2/clip_l/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Media_Select" x="62" y="193" width="366" height="368" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="MediaSelect" x="0" y="0" width="350" height="350" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="8" row="8" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Media_Select/MediaSelect/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Media_Select/MediaSelect/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_media/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Position" x="62" y="289" width="365" height="286" id="6" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="142">
+<WINDOW class="Multiball" text="Position" x="0" y="0" width="300" height="225" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1, 1" label="1" nbr="1" color="154" capture="1" ephemere="0" cursor="1" polyphony="0" physic="1">
+<PARAM name="x=" value="0.471774" send="17" osc_target="0" osc_trigger="1" osc_message="/Position/Position/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="y=" value="0.531792" send="17" osc_target="0" osc_trigger="1" osc_message="/Position/Position/y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Position/Position/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.6" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="holdX=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/holdX" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="holdY=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/Position/holdY" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled_x=range(x, -range(width.x, 0, 800), range(width.x, 0, 800))" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_position_x/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled_y=range(y, -range(height.x, 0, 600), range(height.x, 0, 600))" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_position_y/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="width" x="0" y="225" width="300" height="45" id="2" state="1" group="0" font="tahoma,10,0" send="0" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="154" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.500000" send="16" osc_target="0" osc_trigger="1" osc_message="/Position/width/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Position/width/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/width/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/width/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/width/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/width/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="height" x="300" y="0" width="48" height="270" id="1" state="1" group="0" font="tahoma,10,0" send="0" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="154" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.550000" send="17" osc_target="0" osc_trigger="1" osc_message="/Position/height/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Position/height/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/height/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/height/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/height/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Position/height/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds5" x="611" y="0" width="189" height="40" id="12" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="-14" y="-4" width="200" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="8" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/2)%8)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds5/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="misc" x="0" y="0" width="800" height="600" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Fader" text="Trace_lvl" x="70" y="17" width="97" height="435" id="1" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="15" label="1" value="0" unit="" precision="3" color="46" capture="1" cursor="0" physic="2">
+<PARAM name="x=" value="0.000000" send="29" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_traceLevel/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Trace_lvl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Trace_lvl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Trace_lvl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Trace_lvl/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Trace_lvl/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="SoundIn_lvl" x="180" y="252" width="75" height="200" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="15" label="1" value="0" unit="" precision="3" color="46" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_soundLevelCapture/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/SoundIn_lvl/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/SoundIn_lvl/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SoundIn_lvl/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/SoundIn_lvl/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SoundIn_lvl/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="AutoMove" x="267" y="17" width="490" height="535" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="140">
+<WINDOW class="MultiSlider" text="AutoMoveSliders" x="246" y="133" width="230" height="395" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="0" label="0" nbr="3" color="24" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMoveSliders/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMoveSliders/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMoveSliders/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMoveSliders/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=AutoMove.x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMoveSliders/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveSpeed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="size=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveSize/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="strob=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveStrob/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="AutoMove" x="246" y="0" width="228" height="72" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="24,104" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoMove/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="AutoScale" x="0" y="0" width="228" height="72" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="22,154" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_scaleOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScale/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="AutoScaleSliders" x="-2" y="133" width="230" height="395" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="15" horizontal="0" label="0" nbr="3" color="22" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScaleSliders/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScaleSliders/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScaleSliders/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScaleSliders/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=AutoScale.x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/AutoScaleSliders/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_scaleSpeed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="size=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_scaleSize/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="strob=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_scaleStrob/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Auto_Scl_Mode" x="2" y="73" width="226" height="69" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="7" row="1" color="22,154" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Scl_Mode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Scl_Mode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="type=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_scaleCurve/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Auto_Move_Mode" x="246" y="72" width="228" height="35" id="5" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="7" row="1" color="24,140" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Move_Mode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Move_Mode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="type=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveCurve/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Auto_Move_Dir" x="246" y="107" width="228" height="35" id="6" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="3" row="1" color="24,140" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,1.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Move_Dir/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/AutoMove/Auto_Move_Dir/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="type=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_moveXY/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Layers4" x="0" y="39" width="62" height="496" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="480" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers4/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers4/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Switches" text="LumaKey" x="84" y="463" width="157" height="72" id="6" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="58,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_pixelFX_lumaOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/LumaKey/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="RESET" x="0" y="0" width="800" height="600" id="9" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Color_Mod_Add" x="84" y="67" width="668" height="461" id="7" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="132">
+<WINDOW class="Fader" text="ModulateG" x="70" y="0" width="70" height="445" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="108" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateG/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateG/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateG/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateG/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateG/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="ModulateB" x="140" y="0" width="70" height="445" id="1" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="160" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateB/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateB/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateB/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateB/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateB/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="ModulateR" x="0" y="0" width="70" height="445" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="254" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateR/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateR/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateR/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateR/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/ModulateR/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveR" x="442" y="0" width="70" height="445" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="254" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveR/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveR/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveR/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveR/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveR/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveG" x="512" y="0" width="70" height="445" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="108" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveG/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveG/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveG/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveG/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveG/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveB" x="582" y="0" width="70" height="445" id="5" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" label="0" value="0" unit="" precision="3" color="160" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveB/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveB/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveB/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveB/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/AdditiveB/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Modulate" x="210" y="0" width="232" height="20" id="6" state="209" group="0" font="tahoma,14,0" send="1" content="< modulate" color="140">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/Modulate/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Additive" x="210" y="425" width="232" height="20" id="7" state="225" group="0" font="tahoma,14,0" send="1" content="additive >" color="168">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Color_Mod_Add/Additive/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Layers7" x="14" y="67" width="62" height="461" id="8" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="445" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers7/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers7/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="master_color" x="307" y="102" width="222" height="389" id="9" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="140">
+<WINDOW class="MultiSlider" text="master_invert_output" x="-2" y="-4" width="206" height="180" id="10" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="0" label="1" nbr="3" color="144" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/master_color/master_invert_output/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_invert_output/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_invert_output/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_invert_output/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_invert_output/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invertR=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invertG=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invertB=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="master_output_add" x="-2" y="197" width="206" height="180" id="9" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="0" label="1" nbr="3" color="170" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/master_color/master_output_add/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_output_add/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_output_add/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_output_add/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_output_add/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="addR=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="addG=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="addB=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="master_color_l" x="0" y="178" width="206" height="20" state="241" group="0" font="tahoma,14,0" send="0" content="master color control" color="232">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/master_color/master_color_l/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="StepSeq" x="0" y="0" width="800" height="600" state="1" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Track1" x="150" y="8" width="632" height="231" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="206">
+<WINDOW class="MultiSlider" text="track" x="-4" y="23" width="456" height="202" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="0" label="0" nbr="16" color="208" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track1/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.35" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch.x?Seq.smooth:Seq.tick" send="1" osc_target="0" osc_trigger="1" osc_message="/Track1/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotX=target.num==0?val:rotX" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_x/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotY=target.num==1?val:rotY" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_y/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotZ=target.num==2?val:rotZ" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_z/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch" x="452" y="78" width="164" height="35" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="216,216" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track1/SmoothSwitch/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/SmoothSwitch/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="452" y="33" width="164" height="45" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="3" row="1" color="206,204" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track1/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Flash" x="448" y="123" width="85" height="92" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="164,218" capture="1">
+<PARAM name="x=" value="0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Flash/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="8" osc_target="0" osc_trigger="1" osc_message="/md8/ctrl/master/addColorG" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="r=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="g=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="b=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="current_layer_rotation" x="0" y="0" width="616" height="33" id="5" state="81" group="0" font="tahoma,14,0" send="0" content="current layer rotation" color="148">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/current_layer_rotation/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Invert" x="533" y="123" width="85" height="92" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="164,218" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Invert/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="8" osc_target="0" osc_trigger="1" osc_message="/md8/ctrl/master/addColorG" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="r=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="g=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="b=x" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Text_xyz" x="452" y="33" width="164" height="45" id="6" state="245" group="0" font="tahoma,18,0" send="1" content="X      Y      Z" color="234">
+<VARIABLE name="light=-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track1/Text_xyz/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track2" x="151" y="247" width="633" height="80" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="206">
+<WINDOW class="Switches" text="target" x="447" y="0" width="170" height="32" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="2" row="1" color="198,28" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,1.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track2/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Track" x="0" y="0" width="447" height="64" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="16" row="1" color="58,148" radio="0" paint="1" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track2/Track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-.55" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/Track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch.x?Seq.smooth:Seq.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/Track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/Track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashR=target.num==0?val:flashR" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashG=target.num==0?val:flashG" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashB=target.num==0?val:flashB" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invR=target.num==1?val:invR" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invG=target.num==1?val:invG" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invB=target.num==1?val:invB" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch" x="447" y="32" width="170" height="32" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="60,124" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track2/SmoothSwitch/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.45" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/SmoothSwitch/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="flash_inv" x="447" y="0" width="170" height="32" id="1" state="245" group="0" font="tahoma,14,0" send="1" content="FLASH       INVERT" color="104">
+<VARIABLE name="light=-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track2/flash_inv/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track3" x="151" y="335" width="633" height="80" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="0">
+<WINDOW class="Switches" text="SmoothSwitch" x="447" y="32" width="170" height="32" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="254,124" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track3/SmoothSwitch/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/SmoothSwitch/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="447" y="0" width="170" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="2" row="1" color="198,28" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,1.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track3/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Track" x="0" y="0" width="447" height="64" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="16" row="1" color="32,254" radio="0" paint="1" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track3/Track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-.55" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/Track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch.x?Seq.smooth:Seq.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/Track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/Track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashR=target.num==0?val:flashR" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invR=target.num==1?val:invR" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="flash_inv" x="447" y="0" width="170" height="32" id="4" state="245" group="0" font="tahoma,14,0" send="1" content="FLASH       INVERT" color="104">
+<VARIABLE name="light=-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track3/flash_inv/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track4" x="151" y="423" width="633" height="80" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="104">
+<WINDOW class="Switches" text="SmoothSwitch" x="447" y="32" width="170" height="32" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="122,124" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track4/SmoothSwitch/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.45" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/SmoothSwitch/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="447" y="0" width="170" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="2" row="1" color="198,28" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,1.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track4/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Track" x="0" y="0" width="447" height="64" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="16" row="1" color="76,114" radio="0" paint="1" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track4/Track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-.55" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/Track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch.x?Seq.smooth:Seq.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/Track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/Track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashG=target.num==0?val:flashG" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invG=target.num==1?val:invG" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="flash_inv" x="447" y="0" width="170" height="32" id="4" state="245" group="0" font="tahoma,14,0" send="1" content="FLASH       INVERT" color="104">
+<VARIABLE name="light=-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track4/flash_inv/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track5" x="151" y="511" width="633" height="80" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="180">
+<WINDOW class="Switches" text="target" x="447" y="0" width="170" height="32" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="2" row="1" color="198,28" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,1.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track5/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Track" x="0" y="0" width="447" height="64" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="16" row="1" color="194,214" radio="0" paint="1" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track5/Track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-.75" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/Track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch.x?Seq.smooth:Seq.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/Track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/Track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="flashB=target.num==0?val:flashB" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_addColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="invB=target.num==1?val:invB" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_master_invColorB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch" x="447" y="32" width="170" height="32" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="184,124" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track5/SmoothSwitch/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.45" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/SmoothSwitch/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="flash_inv" x="447" y="0" width="170" height="32" id="3" state="245" group="0" font="tahoma,14,0" send="1" content="FLASH       INVERT" color="104">
+<VARIABLE name="light=-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track5/flash_inv/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Switches" text="Seq" x="8" y="0" width="109" height="103" id="4" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,84" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Seq/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=floor(smooth)" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled_time=(tempo.bpm/240)*time%(240/(tempo.bpm))" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq/scaled_time" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="smooth=x==1?(Reverse.x?(16-16*scaled_time):16*scaled_time):smooth" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq/smooth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds" x="8" y="0" width="121" height="110" id="5" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="0" column="10" row="8" color="206,84">
+<VARIABLE name="value=Seq.x" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Reverse" x="8" y="529" width="110" height="62" id="6" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,156" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Reverse/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="tempo" x="8" y="103" width="110" height="420" id="7" state="1" group="0" font="tahoma,10,0" send="0" grid="0" grid_steps="1" label="0" value="1" unit=" BPM" precision="0" color="206" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.314121" send="17" osc_target="0" osc_trigger="1" osc_message="/tempo/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/tempo/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=bpm" send="0" osc_target="0" osc_trigger="1" osc_message="/tempo/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/tempo/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/tempo/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/tempo/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="bpm=floor(range(x, 60, 240))" send="0" osc_target="0" osc_trigger="1" osc_message="/tempo/bpm" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds" x="585" y="16" width="189" height="33" id="8" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="-14" y="-8" width="200" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="8" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/2)%8)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="StepSeq2_Mod" x="0" y="0" width="800" height="600" id="8" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Track6" x="161" y="46" width="632" height="175" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="0">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="0" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track6/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch2.x?Seq2.smooth:Seq2.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotX=target.num==0?val:rotX" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch2" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track6/SmoothSwitch2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/SmoothSwitch2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track6/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track6/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Switches" text="Seq2" x="23" y="46" width="98" height="103" id="5" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,84" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Seq2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=floor(smooth)" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq2/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled_time=(tempo.bpm/240)*time%(240/(tempo.bpm))" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq2/scaled_time" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="smooth=x==1?(Reverse.x?(16-16*scaled_time):16*scaled_time):smooth" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq2/smooth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds2" x="10" y="46" width="138" height="113" id="6" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="0" column="10" row="10" color="206,84">
+<VARIABLE name="value=Seq2.x" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Reverse2" x="23" y="491" width="110" height="62" id="7" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,156" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Reverse2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="Track7" x="161" y="231" width="632" height="175" id="8" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="100">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="108" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track7/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch2.x?Seq2.smooth:Seq2.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotX=target.num==0?val:rotX" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch2" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track7/SmoothSwitch2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/SmoothSwitch2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track7/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track7/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track8" x="161" y="416" width="632" height="175" id="9" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="150">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="182" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track8/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch2.x?Seq2.smooth:Seq2.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="rotX=target.num==0?val:rotX" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch2" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track8/SmoothSwitch2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/SmoothSwitch2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track8/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track8/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Text" text="colormodulationsequencer" x="10" y="0" width="780" height="40" id="10" state="209" group="0" font="tahoma,20,0" send="1" content="  color modulation sequencer" color="146">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/colormodulationsequencer/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="mod_feedback" x="0" y="159" width="160" height="316" id="11" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="206">
+<WINDOW class="Text" text="oscfeedback" x="0" y="0" width="144" height="20" state="209" group="0" font="tahoma,14,0" send="0" content="OSC mod feedback" color="206">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/oscfeedback/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="ModulateR" x="48" y="20" width="48" height="280" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="254" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateR/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateR/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateR/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateR/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateR/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="ModulateG" x="0" y="20" width="48" height="280" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="108" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateG/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateG/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateG/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateG/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateG/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="ModulateB" x="96" y="20" width="48" height="280" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="160" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_modulateB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateB/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateB/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateB/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateB/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback/ModulateB/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds2" x="605" y="0" width="189" height="40" id="12" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="-14" y="-4" width="200" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="8" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/2)%8)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds2/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="StepSeq3_Add" x="0" y="0" width="800" height="600" id="12" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Track9" x="161" y="46" width="632" height="175" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="0">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="0" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track9/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch3.x?Seq3.smooth:Seq3.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="r_add=target.num==0?val:r_add" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch3" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track9/SmoothSwitch3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/SmoothSwitch3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track9/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track9/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Switches" text="Seq3" x="23" y="46" width="98" height="103" id="5" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,84" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Seq3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=floor(smooth)" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq3/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scaled_time=(tempo.bpm/240)*time%(240/(tempo.bpm))" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq3/scaled_time" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="smooth=x==1?(Reverse.x?(16-16*scaled_time):16*scaled_time):smooth" send="0" osc_target="0" osc_trigger="1" osc_message="/Seq3/smooth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Leds" text="Leds3" x="10" y="46" width="138" height="113" id="6" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="0" column="10" row="10" color="206,84">
+<VARIABLE name="value=Seq3.x" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds3/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Leds3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Reverse3" x="23" y="491" width="110" height="62" id="7" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="206,156" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Reverse3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Reverse3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="Track10" x="161" y="231" width="632" height="175" id="8" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="100">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="108" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track10/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch3.x?Seq3.smooth:Seq3.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="g_add=target.num==0?val:g_add" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch3" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track10/SmoothSwitch3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/SmoothSwitch3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track10/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track10/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Track11" x="161" y="416" width="632" height="175" id="9" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="150">
+<WINDOW class="MultiSlider" text="track" x="0" y="0" width="578" height="159" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" horizontal="0" label="0" nbr="16" color="182" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Track11/track/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch({0}, 16), 1, tick)-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=x[tick]" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/val" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=SmoothSwitch3.x?Seq3.smooth:Seq3.tick" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/track/tick" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="b_add=target.num==0?val:b_add" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SmoothSwitch3" x="578" y="24" width="38" height="135" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track11/SmoothSwitch3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/SmoothSwitch3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="target" x="578" y="0" width="38" height="24" id="2" state="1" group="0" font="tahoma,10,0" send="0" label="0" column="1" row="1" color="0,0" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Track11/target/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/target/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)" send="0" osc_target="0" osc_trigger="1" osc_message="/Track11/target/num" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Text" text="colormodulationsequencer2" x="10" y="0" width="780" height="40" id="10" state="209" group="0" font="tahoma,20,0" send="1" content="  color additive sequencer" color="28">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/colormodulationsequencer2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="mod_feedback2" x="0" y="159" width="160" height="316" id="11" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="206">
+<WINDOW class="Text" text="oscfeedback" x="0" y="0" width="144" height="20" state="209" group="0" font="tahoma,14,0" send="1" content="OSC add feedback" color="206">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/oscfeedback/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveR" x="0" y="20" width="48" height="280" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="254" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveR/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveR/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveR/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveR/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveR/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveR/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveG" x="48" y="20" width="48" height="280" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="108" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveG/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveG/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveG/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveG/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveG/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveG/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="AdditiveB" x="96" y="20" width="48" height="280" id="5" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" label="0" value="0" unit="" precision="3" color="160" capture="0" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_color_additiveB/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveB/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveB/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveB/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveB/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/mod_feedback2/AdditiveB/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds3" x="605" y="0" width="189" height="40" id="12" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="-14" y="-4" width="200" height="32" id="1" state="1" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="8" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/2)%8)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds3/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="Transformation" x="0" y="0" width="800" height="600" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Switches" text="Transformer" x="4" y="7" width="792" height="35" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="4" row="1" color="36,188" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Transformer/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=set({-0.5, -0.5, -0.5, -0.5}, 0.5, firstof(x))" send="0" osc_target="0" osc_trigger="1" osc_message="/Transformer/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="onOff=x[0]!=1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_on/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="type=firstof(x)-1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_type/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="MatrixTransform" x="42" y="49" width="754" height="147" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="140">
+<WINDOW class="MultiSlider" text="MatrixValues" x="0" y="3" width="250" height="125" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="11" horizontal="1" label="0" nbr="3" color="0" capture="1" physic="0">
+<PARAM name="x=" value="0.200000,0.200000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixValues/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixValues/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixValues/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixValues/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[1]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixValues/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="x_val=floor(9*x[0])+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_xValue/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="y_val=floor(9*x[1])+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_yValue/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="z_val=floor(9*x[2])+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_zValue/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MatrixCtrls" x="250" y="3" width="250" height="125" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="15" horizontal="1" label="0" nbr="3" color="0" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixCtrls/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixCtrls/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixCtrls/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixCtrls/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[1]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixCtrls/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="x1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_planarSpace/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="x2=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_deepSpace/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="x3=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_extrusionLevel/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="MatrixResize" x="508" y="10" width="80" height="110" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="0,174" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_resize/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-(1-Transformer.x[1])" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/MatrixResize/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="XeYu" x="603" y="3" width="32" height="128" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="4" color="0,174" radio="1" paint="1" capture="0">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XeYu/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-(1-Transformer.x[1])" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XeYu/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_flipXeYu/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="XeYe" x="635" y="3" width="32" height="128" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="4" color="0,174" radio="1" paint="1" capture="0">
+<PARAM name="x=" value="0.000000,0.000000,1.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XeYe/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-(1-Transformer.x[1])" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XeYe/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_flipXeYe/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="XuYu" x="667" y="3" width="32" height="128" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="4" color="0,174" radio="1" paint="1" capture="0">
+<PARAM name="x=" value="0.000000,1.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XuYu/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-(1-Transformer.x[1])" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XuYu/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_flipXuYu/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="XuYe" x="699" y="3" width="32" height="128" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="4" color="0,174" radio="1" paint="1" capture="0">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XuYe/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-(1-Transformer.x[1])" send="0" osc_target="0" osc_trigger="1" osc_message="/MatrixTransform/XuYe/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_matrix_flipXuYe/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Particles" x="108" y="396" width="579" height="172" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="92">
+<WINDOW class="MultiSlider" text="ParticlesSliders" x="-4" y="-12" width="569" height="179" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" horizontal="0" label="0" nbr="8" color="82" capture="1" physic="0">
+<PARAM name="x=" value="0.000000,0.767742,0.000000,0.000000,0.000000,0.000000,0.264516,0.806452" send="17" osc_target="0" osc_trigger="1" osc_message="/Particles/ParticlesSliders/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/ParticlesSliders/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/ParticlesSliders/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/ParticlesSliders/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[3]-1" send="8" osc_target="0" osc_trigger="1" osc_message="/md8/ctrl/layer/0/transformer/particle/localScale" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="gravity=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_gravity/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="scale=x[1]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_localScale/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="X=x[2]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_cutOffAngleX/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="Y=x[3]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_cutOffAngleY/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=x[4]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_speed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="radius=x[5]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_radiusSource/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="life=x[6]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_life/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="PartSec=x[7]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_particle_particlesPerSec/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Gravity" x="3" y="-16" width="70" height="40" id="1" state="245" group="0" font="tahoma,10,0" send="0" content="Gravity" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/Gravity/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Size" x="73" y="-16" width="70" height="40" id="2" state="245" group="0" font="tahoma,10,0" send="0" content="Size" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/Size/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="ApertX" x="143" y="-16" width="70" height="40" id="3" state="245" group="0" font="tahoma,10,0" send="0" content="Apert X" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/ApertX/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="ApertY" x="213" y="-16" width="70" height="40" id="4" state="245" group="0" font="tahoma,10,0" send="0" content="Apert Y" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/ApertY/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Speed" x="283" y="-16" width="70" height="40" id="5" state="245" group="0" font="tahoma,10,0" send="0" content="Speed" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/Speed/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Radius" x="353" y="-16" width="70" height="40" id="6" state="245" group="0" font="tahoma,10,0" send="0" content="Radius" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/Radius/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Life" x="423" y="-16" width="70" height="40" id="7" state="245" group="0" font="tahoma,10,0" send="0" content="Life" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/Life/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="PartSec" x="493" y="-16" width="70" height="40" id="8" state="245" group="0" font="tahoma,10,0" send="0" content="Part Sec" color="94">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Particles/PartSec/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Patch" x="128" y="211" width="546" height="160" id="2" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="50">
+<WINDOW class="Switches" text="Shapes" x="0" y="0" width="128" height="37" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="4" row="1" color="158,54" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Patch/Shapes/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Shapes/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_shapeType/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="FillMode" x="0" y="37" width="128" height="39" id="1" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="3" row="1" color="158,54" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Patch/FillMode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/FillMode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=firstof(x)" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_fillMode/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Thickness" x="288" y="83" width="242" height="55" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="21" horizontal="1" label="0" nbr="1" color="158" capture="1" physic="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Patch/Thickness/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Thickness/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Thickness/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Thickness/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Thickness/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=floor(19*x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_thickness/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Div_X" x="135" y="0" width="395" height="39" id="3" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" horizontal="1" label="1" nbr="1" color="158" capture="1" physic="0">
+<PARAM name="x=" value="0.229110" send="17" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_X/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_X/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_X/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_X/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_X/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=floor(199*x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_subdivX/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Div_Y" x="135" y="41" width="395" height="40" id="4" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="21" horizontal="1" label="1" nbr="1" color="158" capture="1" physic="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_Y/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_Y/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_Y/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_Y/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/Div_Y/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="val=floor(199*x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_subdivY/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="InputSound" x="71" y="80" width="64" height="64" id="5" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="0" value="0" unit="" precision="3" mode="1" color="158,54" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_soundInputValue/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/InputSound/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/InputSound/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/InputSound/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/InputSound/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="MinMax" x="0" y="80" width="64" height="64" id="6" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="0" value="0" unit="" precision="3" mode="1" color="158,54" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_dmappingLevel/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/MinMax/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/MinMax/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/MinMax/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/MinMax/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="SoundDelay" x="146" y="85" width="142" height="55" id="7" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="158,58" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_transformer_patch_soundInputVdelayOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=Transformer.x[2]-1" send="0" osc_target="0" osc_trigger="1" osc_message="/Patch/SoundDelay/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Layers6" x="20" y="229" width="62" height="308" id="4" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="292" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers6/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers6/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+</WINDOW>
+<WINDOW class="JAZZINTERFACE" text="Vroom" x="0" y="0" width="800" height="600" id="2" state="0" group="0" font="tahoma,11,0" >
+<WINDOW class="Container" text="Modes_RingArea" x="153" y="19" width="552" height="384" id="52" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="170">
+<WINDOW class="RingArea" text="RingArea3" x="261" y="184" width="184" height="184" id="46" state="1" group="0" font="tahoma,10,0" send="1" label="0" color="200" capture="1">
+<PARAM name="x=" value="0.999944" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="y=" value="0.492537" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.8" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_x=attract_x" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/attraction_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_y=attract_y" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/attraction_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_y=Mode.x[1]||Save.x?y:(Mode.x[0]==1?.5:attract_y)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/attract_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_x=Mode.x[1]||Save.x?x:(Mode.x[0]==1?.5:attract_x)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea3/attract_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_z/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="Mode" x="0" y="0" width="160" height="173" id="47" state="1" group="1" font="tahoma,10,0" send="1" label="1" column="1" row="3" color="200,54" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Mode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=stretch({-0.5, 0.05}, sizeof(x))" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Mode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="RingArea" text="RingArea" x="168" y="0" width="184" height="184" id="48" state="1" group="0" font="tahoma,10,0" send="1" label="0" color="200" capture="1">
+<PARAM name="x=" value="0.999988" send="25" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="y=" value="0.503433" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.8" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_x=attract_x" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/attraction_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_y=attract_y" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/attraction_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_y=Mode.x[1]||Save.x?y:(Mode.x[0]==1?.5:attract_y)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/attract_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_x=Mode.x[1]||Save.x?x:(Mode.x[0]==1?.5:attract_x)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea/attract_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_x/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="Normal" x="0" y="13" width="160" height="48" id="49" state="245" group="1" font="tahoma,14,0" send="0" content="Normal" color="200">
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Normal/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="MoveFreely" x="1" y="68" width="160" height="48" id="50" state="245" group="1" font="tahoma,14,0" send="0" content="Move Freely" color="200">
+<VARIABLE name="light=.2" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/MoveFreely/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Text" text="SetNewCoord" x="1" y="123" width="160" height="48" id="51" state="245" group="1" font="tahoma,14,0" send="0" content="Set Att Coordinates" color="200">
+<VARIABLE name="light=.3" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/SetNewCoord/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Save" x="92" y="184" width="68" height="60" id="52" state="1" group="0" font="tahoma,10,0" send="1" label="1" column="1" row="1" color="200,56" capture="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/Save/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="RingArea" text="RingArea2" x="352" y="0" width="184" height="184" id="53" state="1" group="0" font="tahoma,10,0" send="1" label="0" color="200" capture="1">
+<PARAM name="x=" value="0.999864" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="y=" value="0.488320" send="17" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.8" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_x=attract_x" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/attraction_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction_y=attract_y" send="0" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/attraction_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_y=Mode.x[1]||Save.x?y:(Mode.x[0]==1?.5:attract_y)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/attract_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attract_x=Mode.x[1]||Save.x?x:(Mode.x[0]==1?.5:attract_x)" send="1" osc_target="0" osc_trigger="1" osc_message="/Modes_RingArea/RingArea2/attract_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_rotation_y/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="Layers5" x="41" y="53" width="62" height="496" id="51" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="30">
+<WINDOW class="Switches" text="LayerSelection" x="0" y="0" width="46" height="480" state="1" group="0" font="tahoma,10,0" send="1" label="2" column="1" row="10" color="170,142" radio="1" paint="0" capture="1">
+<PARAM name="x=" value="1.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="16" osc_target="0" osc_trigger="1" osc_message="/Layers5/LayerSelection/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x-.5" send="0" osc_target="0" osc_trigger="1" osc_message="/Layers5/LayerSelection/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="num=firstof(x)+1" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layerStack_focusPosition/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+<WINDOW class="Container" text="RotSliders" x="165" y="360" width="266" height="216" id="50" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="56">
+<WINDOW class="Fader" text="SpeedX" x="0" y="35" width="250" height="55" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="15" label="0" value="0" unit="" precision="3" color="46" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_rotateXSpeed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedX/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedX/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedX/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedX/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedX/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="SpeedY" x="0" y="90" width="250" height="55" id="1" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="15" label="0" value="0" unit="" precision="3" color="60" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_rotateYSpeed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedY/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedY/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedY/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedY/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedY/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="SpeedZ" x="0" y="145" width="250" height="55" id="2" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="15" label="0" value="0" unit="" precision="3" color="74" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_rotateZSpeed/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedZ/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedZ/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedZ/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedZ/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/SpeedZ/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Switches" text="AutoRotate" x="0" y="0" width="250" height="35" id="3" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="1" color="54,62" radio="0" paint="0" capture="1">
+<PARAM name="x=" value="0.000000" send="25" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_auto_rotateOn/0" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=x" send="0" osc_target="0" osc_trigger="1" osc_message="/RotSliders/AutoRotate/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+</WINDOW>
+<VARIABLE name="sent=0" send="1" osc_target="0" osc_trigger="1" osc_message="/sent" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+<VARIABLE name="layer1=x[0]" send="9" osc_target="0" osc_trigger="1" osc_message="/md8key/ctrl_layer_alpha/1" midi_target="-1" midi_trigger="1" midi_message="0x90,0x0,0,0" midi_scale="0,16383"/>
+</JZML>

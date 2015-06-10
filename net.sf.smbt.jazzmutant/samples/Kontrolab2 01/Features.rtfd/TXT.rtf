@@ -1,0 +1,212 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red218\green230\blue239;\red12\green61\blue120;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14960\viewh10140\viewkind0
+\deftab720
+\pard\pardeftab720\sl460\ql\qnatural
+
+\f0\fs40 \cf2 \cb3 KONTRO
+\b LAB
+\b0\fs26  
+\fs52 2\
+
+\fs26 \
+\pard\pardeftab720\sl360\ql\qnatural
+
+\b \cf2 \
+
+\b0 Note: more info at this forum {\field{\*\fldinst{HYPERLINK "http://liine.net/forum/viewtopic.php?f=26&t=901&sid=ae8d8ca3f4ed7060ad69869ad9ab3fbb&start=0"}}{\fldrslt thread}}\
+\
+Current version: 
+\b 2 01 //UPDATED:  02/26/2012\
+\
+|||||||||||||||||||||||||||||||\
+NEW MUTATE FEATURE:\
+\
+How it works?\
+
+\b0 Mutate allows  to create a transition from the current multiball values \uc0\u8203 \u8203 to others generated randomly in a time and amount adjustable, As in the modulator Table, You can start the function mutate with your MIDI keyboard or a MIDI track in your DAW.\
+\
+Mutate Controls:\
+\
+- MODE: sets how the transition between the values \uc0\u8203 \u8203 is produced, there are two modes, linear and exponential.\
+- TIME: sets the transition time.\
+- AMOUNT %: sets the amount of randomness applied to current values\uc0\u8203 \u8203 , low values \u8203 \u8203 of amount will create more subtle variations, while high values \u8203 \u8203 will do the opposite.\
+- 8 White Leds: it allows you to include / exclude the balls being affected by the mutate function. If a ball is off, you can use it manually while mutate is working.\
+- NOTE SYNC: activates the function with an incoming MIDI NOTE ON message.\
+- NOTE RESTART: if note sync is on, every new Note ON message received will restarts the process.\
+- TRIGGER: trigs the function manually.\
+\
+Some Mutate 
+\b tips
+\b0 :\
+- Use long transition times for evolving, ambients, pads, drones type sounds.\
+- Try quick time with sounds like impact, percussive stuff.\
+- Use Note Sync to activate it from your MIDI keyboard or MIDI Track.\
+- Sets an audio track to record, or enable your DAW to record MIDI controller data, it might be interesting to save these sound-variations to use later, for instance, creating multilayer sounds , velocity layers, or just new single sounds, \
+
+\b \
+Key Features
+\b0 :\
+- It may be added to any of your favorite lemur templates, just importing it as jzlib (included).\
+- You can use it with any device (Hardware/Audio Plugins/Instrument Plugins,DAW, also like Video apps) that supports MIDI Control Change and MIDI Note messages.\
+- It offers creative functions to manipulate your sounds.\
+- It's more a studio tool, but I personally think it could be used in live situations too, just check this out with your favorite devices.\
+\
+Features:\
+\
+
+\b MIDI Page
+\b0 \
+- MIDI Target selection (to dynamicaly routing MIDI messages to other connected devices)\
+- 8 Configurable control changes (one per ball)\
+- 1 Configurable control change for Table Modulator.\
+- 1 Configurable note message to trig samples (featured created to trig several samples at the same time and work with multilayered sounds)\
+- Individual MIDI Channel to ball, Note and Table Modulator.\
+- Individual Enable/Disable controller alias.\
+- Initalize controllers button.\
+\
+
+\b Controller Output Range
+\b0 \
+- Min Range.\
+- Max Range.\
+- Drag Range.\
+- Normal.\
+- Invert.\
+- Init.\
+\
+
+\b Color Page
+\b0 \
+- RGB Color Setup.\
+- Color Gradient Switch: Enables/Disables a color gradient for primary objects like Multiball, Range and Mass Spring controls.\
+\
+
+\b Multiball Settings
+\b0 \
+- Interpolate.\
+- Mass-Spring.\
+- Adjustable Speed/Friction (Mass Spring only).\
+- Speed Reset.\
+- Grid with adjustable steps (from 2 to 16 steps).\
+\
+
+\b Multiball Presets
+\b0  Store two different snapshots for Multiball.\
+- Load A.\
+- Load B.\
+- Save.\
+- Data Led (turns on indicating changes from stored settings).\
+- Copy.\
+- Paste.\
+- Invert.\
+- Randomize.\
+- Init.\
+\
+
+\b Preset Morph
+\b0  Interpolates between the two stored presets using a vertical fader.\
+\
+- Control \
+* Linear.\
+* Exponential 2.\
+* Exponential 4.\
+* Square Root.\
+\
+- Auto Fade\
+* Fade Length.\
+* Fade Time.\
+\
+- Physics\
+* Interpolate.\
+* Grid Steps (Interpolate only).\
+* Mass-Spring with adjustable speed.\
+\
+
+\b Morph Modulators
+\b0 \
+\
+
+\b 1 - ADSR Envelope
+\b0  Preset Morphing is driven from an ADSR signal with:\
+- Adjustable Time (Seconds).\
+- Envelope Amplitude.\
+- Envelope Invert.\
+- Envelope Trigger.\
+- Note Trigger.\
+- Note Hold.\
+\
+
+\b 2 - Table
+\b0  Preset Morphing is driven from a step sequencer with:\
+- Adjustable play range (Start/End).\
+- Range Reset.\
+- Drag Range.\
+- Run Modes: \
+* 
+\b One shot
+\b0 : Trigs the sequence once.\
+* 
+\b Cycle
+\b0  : Runs the sequence in loop mode.\
+* 
+\b MIDI IN NOTE
+\b0  (runs it with note ON and stops it with note OFF).\
+- Restart: allows you to re-trig the table via MIDI IN Note messages .\
+- Rate: Sets the speed of the table.\
+- Smooth: Determines the amount of smoothness applied to the controller output and morph modulation.\
+- MIDI CC: Enables/Disables (Alias) sending a control change (configurable from MIDI Settings window).\
+- Enable: Turns ON/OFF Moprh's modulation.\
+- 
+\b Edit Table Window
+\b0 : it allows you to shape some useful waveforms for smooth preset transitions.\
+* LIN: Sets a Ramp Up.\
+* TRI: Sets a Ramp Up/Down.\
+* INV: Inverts the current table content.\
+* REV: Reverses the current table content.\
+* EXP: Applies an exponential function to the current table content.\
+* SQR: Applies the square root to current table content.\
+
+\b Next three functions only works inside of the range selected.
+\b0 \
+* Minus Symbol: current table content increment.\
+* Plus Symbol: current table content decrease.\
+* RND: Randomizes the current table content.\
+\
+
+\b TEMPLATE MIDI SETUP:
+\b0 \
+To work with this the template you need Lemur Daemon running in your computer, sure you're familiarized with that at this point, but if you don't, please check this good Liine video tutorials:\
+\
+
+\b How to use Wi-Fi MIDI with a Mac
+\b0 . {\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=g69iVWxJZuQ&list=UUU5e7H-UvA6NvTsMoy5K9Cw&index=12&feature=plcp"}}{\fldrslt \cf4 \uc0\u8234 http://www.youtube.com/watch?v=g69iVWxJ ... ature=plcp}}\
+\
+
+\b How to use Wi-Fi MIDI with a PC
+\b0  {\field{\*\fldinst{HYPERLINK "http://www.youtube.com/watch?v=w5iY2mHUqaQ&list=UUU5e7H-UvA6NvTsMoy5K9Cw&index=5&feature=plcp"}}{\fldrslt \cf4 \uc0\u8234 http://www.youtube.com/watch?v=w5iY2mHU ... ature=plcp}}\
+\
+
+\b SENDING MIDI NOTES TO iPAD
+\b0 \
+\
+Additionally the new module "Morph Table Modulator" can to receive MIDI Note information to re-start/run the modulator, here a simple example with a screenshot attached, my midi Keyboard "USB Keystation 49e" is connected to my computer via USB, so I am using directly the out port that goes to Lemur IN, so as soon I press any key it trigs the sound and the modulator at the same time while parameters morphs. Also you could to use any MIDI track in your daw to send the notes.\
+\
+\pard\pardeftab720\sl360\ql\qnatural
+{\field{\*\fldinst{HYPERLINK "http://img848.imageshack.us/i/lemurin.png/"}}{\fldrslt 
+\f1\fs24 \cf0 \uc0\u8234 {{\NeXTGraphic lemurin.png \width10000 \height2040 \noorient
+}¬}}}\pard\pardeftab720\sl360\ql\qnatural
+\cf2 \
+\
+If you still have any question about of the template, please feel free to ask. \
+\
+* 
+\b LICENSE
+\b0  This project is licensed under Creative Commons Attribution-NoComercial-ShareAlike 3.0 Unported. So taking parts from this template with commercial purposes is not possible. \
+\
+Hope you have fun!\
+\
+More templates at  {\field{\*\fldinst{HYPERLINK "http://www.antonioblanca.com/"}}{\fldrslt http://www.antonioblanca.com/}}\
+}

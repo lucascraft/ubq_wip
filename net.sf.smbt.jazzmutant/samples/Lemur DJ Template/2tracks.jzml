@@ -1,0 +1,246 @@
+<JZML>
+<PROJECT version="1650"/>
+<WINDOW class="JAZZINTERFACE" text="2tracks" x="0" y="0" width="800" height="600" state="1" group="0" font="tahoma,11,0" >
+<WINDOW class="Pads" text="Pads" x="0" y="0" width="95" height="399" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="6" color="98,122" capture="1">
+<PARAM name="x=" value="0.000000,0.007874,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Pads/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,1,6" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0.1" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="Container" x="0" y="399" width="345" height="201" id="5" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="150">
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton" x="9" y="409" width="165" height="90" id="6" state="241" group="0" font="tahoma,20,0" send="1" outline="1" label_on="Repeating" label_off="Repeat Toggle" color="160,36" bitmap="0,2" capture="1" behavior="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,21,21" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton2" x="9" y="499" width="165" height="90" id="7" state="241" group="0" font="tahoma,20,0" send="1" outline="1" label_on="Repeating" label_off="Repeat Hold" color="160,36" bitmap="0,3" capture="1" behavior="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton2/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,24,24" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="PitchDecayHold" x="263" y="499" width="64" height="90" id="8" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="1" unit="%" precision="1" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,26,26" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x*100" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="GridHold" x="189" y="499" width="64" height="90" id="9" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="16" label="1" value="1" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.400000" send="17" osc_target="0" osc_trigger="1" osc_message="/GridHold/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,25,25" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="PitchDecayTog" x="263" y="409" width="64" height="90" id="10" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="1" unit="%" precision="1" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.827088" send="17" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,23,23" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x*100" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="GridTog" x="189" y="409" width="64" height="90" id="11" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="16" label="1" value="1" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.666667" send="17" osc_target="0" osc_trigger="1" osc_message="/GridTog/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,22,22" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="EQ" x="95" y="0" width="178" height="303" id="12" state="1" group="1" font="tahoma,10,0" send="1" label="1" color="162">
+</WINDOW>
+<WINDOW class="Fader" text="Lows" x="103" y="7" width="53" height="234" id="13" state="1" group="1" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="164" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.552795" send="17" osc_target="0" osc_trigger="1" osc_message="/Lows/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,11,11" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Lows/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Mids" x="156" y="7" width="53" height="234" id="14" state="1" group="1" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="166" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.254658" send="17" osc_target="0" osc_trigger="1" osc_message="/Mids/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,12,12" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Mids/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Highs" x="209" y="7" width="53" height="234" id="15" state="1" group="1" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="168" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.273292" send="17" osc_target="0" osc_trigger="1" osc_message="/Highs/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,13,13" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Highs/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton3" x="103" y="242" width="53" height="52" id="16" state="241" group="1" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton3/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,14,14" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton4" x="156" y="242" width="53" height="52" id="17" state="241" group="1" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton4/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,15,15" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton5" x="210" y="242" width="53" height="52" id="18" state="241" group="1" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton5/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,16,16" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton5/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Pads" text="Pads2" x="705" y="0" width="95" height="399" id="19" state="1" group="0" font="tahoma,10,0" send="1" label="0" column="1" row="6" color="98,122" capture="1">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Pads2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,1,6" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0.1" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="Container2" x="455" y="399" width="345" height="201" id="20" state="1" group="0" font="tahoma,10,0" send="1" label="1" color="150">
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton6" x="624" y="409" width="165" height="90" id="21" state="241" group="0" font="tahoma,20,0" send="1" outline="1" label_on="Repeating" label_off="Repeat Toggle" color="160,36" bitmap="0,2" capture="1" behavior="0">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton6/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,21,21" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton6/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton7" x="624" y="499" width="165" height="90" id="22" state="241" group="0" font="tahoma,20,0" send="1" outline="1" label_on="Repeating" label_off="Repeat Hold" color="160,36" bitmap="0,3" capture="1" behavior="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton7/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,24,24" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton7/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="EQ2" x="527" y="-1" width="178" height="303" id="23" state="1" group="2" font="tahoma,10,0" send="1" label="1" color="162">
+</WINDOW>
+<WINDOW class="Fader" text="Lows2" x="535" y="6" width="53" height="234" id="24" state="1" group="2" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="164" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Lows2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,11,11" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Lows2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Lows2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Mids2" x="588" y="6" width="53" height="234" id="25" state="1" group="2" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="166" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.999910" send="17" osc_target="0" osc_trigger="1" osc_message="/Mids2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,12,12" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Mids2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Mids2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Highs2" x="641" y="6" width="53" height="234" id="26" state="1" group="2" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" color="168" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Highs2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,13,13" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Highs2/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Highs2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton8" x="535" y="241" width="53" height="52" id="27" state="241" group="2" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton8/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,14,14" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton8/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton9" x="588" y="241" width="53" height="52" id="28" state="241" group="2" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton9/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,15,15" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton9/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton10" x="642" y="241" width="53" height="52" id="29" state="241" group="2" font="tahoma,20,0" send="1" outline="1" label_on="" label_off="" color="216,156" bitmap="13,13" capture="1" behavior="0">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton10/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,16,16" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton10/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="GridTog2" x="535" y="409" width="64" height="90" id="30" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="16" label="1" value="1" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.333333" send="17" osc_target="0" osc_trigger="1" osc_message="/GridTog2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,22,22" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridTog2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="GridHold2" x="535" y="499" width="64" height="90" id="31" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="16" label="1" value="1" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.600000" send="17" osc_target="0" osc_trigger="1" osc_message="/GridHold2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,25,25" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/GridHold2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="PitchDecayTog2" x="464" y="409" width="64" height="90" id="32" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="1" unit="%" precision="1" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,23,23" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x*100" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayTog2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="PitchDecayHold2" x="464" y="499" width="64" height="90" id="33" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="1" unit="%" precision="1" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.568709" send="17" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold2/x" midi_target="0" midi_trigger="1" midi_message="0xB1,0xB1,26,26" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x*100" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold2/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/PitchDecayHold2/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Multiball" text="Multiball" x="273" y="1" width="254" height="209" id="34" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1, 1" label="0" nbr="1" color="160" capture="1" ephemere="0" cursor="1" polyphony="0" physic="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Multiball/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,1,1" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="y=" value="1.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Multiball/y" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,2,2" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Multiball/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.6" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="holdX=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/holdX" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="holdY=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Multiball/holdY" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Fader" x="95" y="303" width="610" height="96" id="35" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="10" label="0" value="0" unit="" precision="3" color="60" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.558956" send="17" osc_target="0" osc_trigger="1" osc_message="/Fader/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,11,11" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Fader/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Fader/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Fader/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Fader/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Fader/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="Envelope" x="281" y="216" width="64" height="78" id="36" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.502967" send="17" osc_target="0" osc_trigger="1" osc_message="/Envelope/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Envelope/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Envelope/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Envelope/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Envelope/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="LFO" x="367" y="216" width="64" height="78" id="37" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="0" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/LFO/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/LFO/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/LFO/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/LFO/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/LFO/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Knob" text="FilterType" x="455" y="216" width="64" height="78" id="38" state="1" group="0" font="tahoma,10,0" send="1" grid="1" grid_steps="4" label="1" value="0" unit="" precision="3" mode="1" color="150,10" cursor="0" physic="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/FilterType/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,5,5" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/FilterType/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/FilterType/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/FilterType/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/FilterType/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Fader" text="Tempo" x="345" y="399" width="60" height="200" id="39" state="1" group="0" font="tahoma,10,0" send="1" grid="0" grid_steps="1" label="1" value="1" unit=" BPM" precision="2" color="60" capture="1" cursor="0" physic="1">
+<PARAM name="x=" value="0.547810" send="17" osc_target="0" osc_trigger="1" osc_message="/Tempo/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,21,21" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Tempo/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="value=range(x, 60, 200)" send="0" osc_target="0" osc_trigger="1" osc_message="/Tempo/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Tempo/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Tempo/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Tempo/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="Container" text="ClockLeds" x="403" y="390" width="57" height="40" id="40" state="5" group="0" font="tahoma,10,0" send="1" label="1" color="146">
+<WINDOW class="Leds" text="Leds" x="0" y="0" width="39" height="24" id="1" state="5" group="0" font="tahoma,10,0" send="0" label="0" bargraph="1" column="2" row="1" color="158,254">
+<VARIABLE name="value=0" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/Leds/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="light=set(stretch(-0.6, 8), 0.4, floor((sixteenth+1)/4)%2)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/Leds/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<VARIABLE name="continuesong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/continuesong" midi_target="0" midi_trigger="5" midi_message="0xFB,0xFB,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_continue=continuesong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_continue" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_start=startsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_start" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="last_stop=stopsong" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/last_stop" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+<VARIABLE name="songpos=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/songpos" midi_target="0" midi_trigger="1" midi_message="0xF2,0xF2,0,0" midi_scale="0,16383"/>
+<VARIABLE name="startsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/startsong" midi_target="0" midi_trigger="5" midi_message="0xFA,0xFA,0,0" midi_scale="0,16383"/>
+<VARIABLE name="stopsong=" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/stopsong" midi_target="0" midi_trigger="1" midi_message="0xFC,0xFC,0,0" midi_scale="0,16383"/>
+<VARIABLE name="tick=startsong>last_start?0:(continuesong>last_continue?0:tick)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/tick" midi_target="0" midi_trigger="5" midi_message="0xF8,0xF8,0,0" midi_scale="0,16383"/>
+<VARIABLE name="sixteenth=songpos+floor(tick/6)" send="0" osc_target="0" osc_trigger="1" osc_message="/ClockLeds/sixteenth" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="CustomButton11" x="405" y="425" width="50" height="174" id="41" state="241" group="0" font="tahoma,16,0" send="1" outline="1" label_on="Tap" label_off="Tap" color="56,104" bitmap="0,0" capture="1" behavior="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/CustomButton11/x" midi_target="0" midi_trigger="1" midi_message="0xB2,0xB2,22,22" midi_scale="0,16383" osc_scale="0.000000,1.000000"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/CustomButton11/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383"/>
+</WINDOW>
+</WINDOW>
+</JZML>

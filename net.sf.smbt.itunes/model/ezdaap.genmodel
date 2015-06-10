@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.itunes/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.itunes" modelName="Ezdaap" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>ezdaap.ecore</foreignModel>
+  <genPackages prefix="Ezdaap" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezdaap.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezdaap.ecore#//DAAP_COMM_CST">
+      <genEnumLiterals ecoreEnumLiteral="ezdaap.ecore#//DAAP_COMM_CST/MAX_SIMULTATNEOUS_CONNECTIONS"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdaap.ecore#//DAAP_COMM_CST/MAX_USER_CONNECTIONS_PER_SESSION"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdaap.ecore#//DAAP_COMM_CST/MAX_USER_SIMULTANEOUS_CONNECTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezdaap.ecore#//DAAP_CONNECTION_KIND">
+      <genEnumLiterals ecoreEnumLiteral="ezdaap.ecore#//DAAP_CONNECTION_KIND/USER"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdaap.ecore#//DAAP_CONNECTION_KIND/DB"/>
+    </genEnums>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapITunesInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapITunesInstance/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapITunesInstance/libraries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapITunesInstance/palylists"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapITunesInstance/songs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapITunesInstance/Albums"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapITunesInstance/artists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapITunesInstance/revID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapITunesInstance/sessionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapITunesInstance/serverName"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapDictionary"/>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapManager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapManager/iTunes"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapSong"/>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapArtist"/>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapAlbum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapAlbum/songs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ezdaap.ecore#//EZDaapLibraryUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapLibraryUnit/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapPlayList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapPlayList/songs"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapLibrary">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapLibrary/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapElem"/>
+    <genClasses ecoreClass="ezdaap.ecore#//EZDaapIntelPropertyElem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezdaap.ecore#//EZDaapIntelPropertyElem/artists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdaap.ecore#//EZDaapIntelPropertyElem/license"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

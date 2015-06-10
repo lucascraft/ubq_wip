@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>xml</string>
+				<string>jzml</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>jzml.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Lemur Project</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>text</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>InMemory</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>jzlib</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>jzlib.icns</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>text</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Lemur Library</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>text</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>InMemory</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>JazzEditor</string>
+	<key>CFBundleGetInfoString</key>
+	<string>JazzEditor v2.0.3</string>
+	<key>CFBundleIconFile</key>
+	<string>Lemur_Icon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.jazzmutant.jazzeditor</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>JAZM</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.3</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>

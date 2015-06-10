@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jzmui:LemurLiveApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jzmui="http://jzmui/1.0">
+  <elements xsi:type="jzmui:JZJazzInterface" bounds="Rectangle(0, 0, 800, 600)" fontName="tahoma" fontSize="11" width="800" height="600">
+    <children xsi:type="jzmui:JZContainer" bounds="Rectangle(18, 29, 200, 200)" fontName="tahoma" fontSize="10">
+      <children xsi:type="jzmui:JZBreakPoint" bounds="Rectangle(22, 23, 128, 128)" fontName="tahoma" fontSize="10" label="0"/>
+    </children>
+    <children xsi:type="jzmui:JZLemurMonitor" bounds="Rectangle(18, 246, 160, 60)" fontName="tahoma" fontSize="20" label="1" value="1.0" unit="" precision="3"/>
+    <children xsi:type="jzmui:JZMultiBalls" bounds="Rectangle(18, 323, 200, 200)" fontName="tahoma" fontSize="10"/>
+    <children xsi:type="jzmui:JZmultiSlider" bounds="Rectangle(252, 323, 120, 120)" fontName="tahoma" fontSize="10" horizontal="true" label="0" slider="1" gradient="1"/>
+    <children xsi:type="jzmui:JZSurfaceLCD" bounds="Rectangle(252, 229, 477, 60)" fontName="tahoma" fontSize="17" transparent="true" target="0" display="0"/>
+    <children xsi:type="jzmui:JZSwitches" bounds="Rectangle(350, 105, 60, 60)" fontName="tahoma" fontSize="10" columns="1" rows="1"/>
+    <children xsi:type="jzmui:JZRange" bounds="Rectangle(252, 22, 40, 120)" fontName="tahoma" fontSize="10" label="0"/>
+    <children xsi:type="jzmui:JZSignalScope" bounds="Rectangle(420, 428, 180, 120)" fontName="tahoma" fontSize="10" label="1" modeXY="0" transparent="true"/>
+    <children xsi:type="jzmui:JZSwitches" bounds="Rectangle(540, 22, 60, 60)" fontName="tahoma" fontSize="10" columns="1" rows="1"/>
+    <children xsi:type="jzmui:JZCustomButton" bounds="Rectangle(405, 378, 65, 52)" fontName="tahoma" fontSize="20"/>
+    <children xsi:type="jzmui:JZFader" bounds="Rectangle(640, 323, 60, 200)" fontName="tahoma" fontSize="10" unit="" precision="3"/>
+  </elements>
+</jzmui:LemurLiveApp>
