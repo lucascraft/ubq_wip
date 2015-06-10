@@ -1,0 +1,22 @@
+In the 0.5 version there is a change in the way the serial port is configured in icommand.
+--------------------------------------------------------------------------------------------
+In the releases up to 0.4 the serial port was configured by setting the environment variable
+NXTCOMM, e.g. NXTCOMM=COM4. Starting from release 0.5 the configuration is done by using a
+properies file 'icommand.properties'.
+
+Contents of file 'icommand.properties':
+
+# Set the value of the nxtcomm property to the value of ->your<- serial port,
+# e.g. COM4 (on Windows), /dev/tty.NXT_1 (on Mac OSX), /dev/rfcomm0 (on Linux)
+nxtcomm=COM4
+
+1. In  the file 'icommand.properties' set the value of 'nxtcomm' property to the value of your serial port.
+2. Put the file 'icommand.properties' into your home directory, or your working directory.
+3. To check the location and contents of the file, execute the command: java -jar icommand.jar
+
+C:\>java -jar icommand.jar
+Looking for 'icommand.properties' in working directory: C:\
+Looking for 'icommand.properties' in home directory: C:\Documents and Settings\peter
+Your serial port is: COM4
+
+The reason for this change is the deprecation of the use of environment variables by Java.

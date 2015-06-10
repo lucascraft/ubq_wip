@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ezmppt/1.0"
+            class="net.sf.smbt.mppt.ezmppt.EzmpptPackage"
+            genModel="model/ezmppt.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+            ID="net.sf.smbt.mppt"
+            alias="mppt"
+            cmdInterpreterID="net.sf.smbt.mppt.cmdInterpreter"
+            desc="MPPT Solar charger monitoring"
+            eventHandler="net.sf.smbt.mppt.cmdHandler"
+            frameInterpreter="net.sf.smbt.mppt.frameInterpreter"
+            transports="USB">
+      </engine>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.mppt.cmdHandler"
+            handler="net.sf.smbt.mppt.cmd.MpptCmdEventHandler">
+      </cmdHandler>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.mppt.frameInterpreter"
+            interpreter="net.sf.smbt.mppt.cmd.MpptFrameHandler">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.mppt.cmdInterpreter"
+            interpreter="net.sf.smbt.mppt.cmd.MpptCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+
+</plugin>

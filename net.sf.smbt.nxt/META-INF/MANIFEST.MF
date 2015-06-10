@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - Lego Nxt
+Bundle-SymbolicName: net.sf.smbt.nxt
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.sf.smbt.nxt.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.smbt.comm;bundle-version="1.0.0",
+ org.aopalliance;bundle-version="1.0.0",
+ org.rxtx;bundle-version="2.1.72"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: icommand.navigation,
+ icommand.nxt,
+ icommand.nxt.comm,
+ net.sf.smbt.nxt,
+ rcxcomm
+Bundle-ClassPath: lib/rcxcomm.jar,
+ .
+Bundle-Vendor: www.ubqt.tv

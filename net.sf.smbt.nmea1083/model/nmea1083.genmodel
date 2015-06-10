@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.nmea1083/src-model"
+    editDirectory="" editorDirectory="" modelPluginID="net.sf.smbt.nmea1083" modelName="Nmea1083"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory=""
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>nmea1083.ecore</foreignModel>
+  <genPackages prefix="Nmea1083" basePackage="net.sf.smbt.gps" disposableProviderFactory="true"
+      ecorePackage="nmea1083.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nmea1083.ecore#//NmeaTalker">
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/AG"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/AP"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CD"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CR"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CS"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CT"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CV"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/CX"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/DF"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/EC"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/EP"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/ER"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/GP"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/HC"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/HE"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/HN"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/II"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/IN"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/LC"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/P"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/RA"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/SD"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/SN"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/SS"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/TI"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/VD"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/DM"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/VW"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/WI"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/YX"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/ZA"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/ZC"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/ZQ"/>
+      <genEnumLiterals ecoreEnumLiteral="nmea1083.ecore#//NmeaTalker/ZV"/>
+    </genEnums>
+    <genClasses ecoreClass="nmea1083.ecore#//NmeaCmd"/>
+    <genClasses ecoreClass="nmea1083.ecore#//AAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/arrivalCircleEntered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/perpendicularPassedAtWaypoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/arrivalCircleRadius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/unitOfRadiusInMiles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/waypointID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nmea1083.ecore#//AAM/chechksum"/>
+    </genClasses>
+    <genClasses ecoreClass="nmea1083.ecore#//ALM"/>
+    <genClasses ecoreClass="nmea1083.ecore#//APA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//APB"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ASD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//BEC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//BOD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//BWC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//BWR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//BWW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DBK"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DBS"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DBT"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DPT"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DSC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DSE"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DSI"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DSR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//DTM"/>
+    <genClasses ecoreClass="nmea1083.ecore#//FSI"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GBS"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GGA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GLC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GLL"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GRS"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GST"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GSA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GSV"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GTD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//GXA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//HDG"/>
+    <genClasses ecoreClass="nmea1083.ecore#//HDM"/>
+    <genClasses ecoreClass="nmea1083.ecore#//HDT"/>
+    <genClasses ecoreClass="nmea1083.ecore#//HSC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//LCD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//MSK"/>
+    <genClasses ecoreClass="nmea1083.ecore#//MSS"/>
+    <genClasses ecoreClass="nmea1083.ecore#//MWD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//MTW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//MWW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//OLN"/>
+    <genClasses ecoreClass="nmea1083.ecore#//OSD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ROO"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RMA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RMB"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RMC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ROT"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RPM"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RSA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RSD"/>
+    <genClasses ecoreClass="nmea1083.ecore#//RTE"/>
+    <genClasses ecoreClass="nmea1083.ecore#//SFI"/>
+    <genClasses ecoreClass="nmea1083.ecore#//STN"/>
+    <genClasses ecoreClass="nmea1083.ecore#//TLL"/>
+    <genClasses ecoreClass="nmea1083.ecore#//TRF"/>
+    <genClasses ecoreClass="nmea1083.ecore#//TTM"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VBW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VDR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VHW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VLW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VPW"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VTG"/>
+    <genClasses ecoreClass="nmea1083.ecore#//VWR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//WCV"/>
+    <genClasses ecoreClass="nmea1083.ecore#//WDC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//WDR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//WNC"/>
+    <genClasses ecoreClass="nmea1083.ecore#//WPL"/>
+    <genClasses ecoreClass="nmea1083.ecore#//XDR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//XTE"/>
+    <genClasses ecoreClass="nmea1083.ecore#//XTR"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ZDA"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ZDL"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ZFO"/>
+    <genClasses ecoreClass="nmea1083.ecore#//ZTG"/>
+  </genPackages>
+</genmodel:GenModel>

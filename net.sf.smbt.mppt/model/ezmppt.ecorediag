@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_OxFkAd3IEeOUaeXtj6WwNg" type="EcoreTools" name="ezmppt" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_YROdgN3IEeOUaeXtj6WwNg" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YS0Y8N3IEeOUaeXtj6WwNg" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YS1AAN3IEeOUaeXtj6WwNg" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_YRT9EN3IEeOUaeXtj6WwNg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_YRVyQN3IEeOUaeXtj6WwNg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YRVyQd3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YRVyQt3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YRVyQ93IEeOUaeXtj6WwNg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YRWZUN3IEeOUaeXtj6WwNg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_YRWZUd3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_YRWZUt3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_YRWZU93IEeOUaeXtj6WwNg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_YROdgd3IEeOUaeXtj6WwNg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/net.sf.xqz.engine/model/cmd.ecore#//XCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YROdgt3IEeOUaeXtj6WwNg" x="348" y="119"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ZaxfgN3IEeOUaeXtj6WwNg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ZayGkN3IEeOUaeXtj6WwNg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ZayGkd3IEeOUaeXtj6WwNg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZayGkt3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZayGk93IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZayGlN3IEeOUaeXtj6WwNg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ZayGld3IEeOUaeXtj6WwNg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ZayGlt3IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ZayGl93IEeOUaeXtj6WwNg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ZayGmN3IEeOUaeXtj6WwNg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Zaxfgd3IEeOUaeXtj6WwNg" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ezmppt.ecore#//MpptCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zaxfgt3IEeOUaeXtj6WwNg" x="360" y="290"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_OxGLEN3IEeOUaeXtj6WwNg"/>
+  <element xmi:type="ecore:EPackage" href="ezmppt.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_anGIsN3IEeOUaeXtj6WwNg" type="3003" source="_ZaxfgN3IEeOUaeXtj6WwNg" target="_YROdgN3IEeOUaeXtj6WwNg">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_anGIsd3IEeOUaeXtj6WwNg" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_anGIst3IEeOUaeXtj6WwNg" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_anGIs93IEeOUaeXtj6WwNg" points="[11, -4, -4, 138]$[11, -109, -4, 33]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_anZqsN3IEeOUaeXtj6WwNg" id="(0.38235294117647056,0.11627906976744186)"/>
+  </edges>
+</notation:Diagram>

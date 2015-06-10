@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_roEmAMfiEd-4nJyZfad9RQ" type="EcoreTools" name="xbeecfg" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_u5pEcMfiEd-4nJyZfad9RQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_u5prgMfiEd-4nJyZfad9RQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_u5prgcfiEd-4nJyZfad9RQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wpIsIMfiEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbeecfg.ecore#//XBeeFirmwareConfiguration/series"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wpIsIcfiEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_yjxM0MfiEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbeecfg.ecore#//XBeeFirmwareConfiguration/label"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_yjxM0cfiEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_u5prgsfiEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_u5prg8fiEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_u5prhMfiEd-4nJyZfad9RQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_u5prhcfiEd-4nJyZfad9RQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_u5prhsfiEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_u5prh8fiEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_u5priMfiEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_u5pEccfiEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="xbeecfg.ecore#//XBeeFirmwareConfiguration"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u5pEcsfiEd-4nJyZfad9RQ" x="152" y="24"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SCYzAMfnEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_SCaBIMfnEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_SCaBIcfnEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_WwIUgMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/AT_COMMANDS_OPTIONS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WwIUgcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ayTwgMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/DIAGNOSTIC_COMMANDS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ayTwgcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_cdVH4MfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/NETWORKING"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cdVH4cfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ekBuoMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/SERIAL_INTERFACING"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ekBuocfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gi2LwMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/SLEEP_LOW_POWER"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gi2LwcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_koKbUMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/NETWORK_AND_SECURITY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_koKbUcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pmFG0MfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/DIAGNOSTICS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pmFG0cfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_sGP9gMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/COMMANDS_MODE_OPTIONS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_sGP9gcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zF7FYMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/ADDRESSING"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zF7FYcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_z5hFgMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/SECURITY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_z5hFgcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1rxGQMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/IO_SETTINGS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1rxGQcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_8DcaAMfnEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/SERIAL_INTERFACING_OPTIONS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8DcaAcfnEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_IKPzwMfoEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/RF_INTERFACING"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IKPzwcfoEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_hVpFMMfoEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/IO_LINE_PASSING"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hVpFMcfoEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_mu-hYMfoEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY/SLEEP_MODES_NONBEACON"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mu-hYcfoEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SCaBIsfnEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SCaBI8fnEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SCaBJMfnEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SCYzAcfnEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_CATEGORY"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SCYzAsfnEd-4nJyZfad9RQ" x="400" y="32"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Pv46AMfpEd-4nJyZfad9RQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Pv5hEMfpEd-4nJyZfad9RQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Pv5hEcfpEd-4nJyZfad9RQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_cB3B8MfpEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbeecfg.ecore#//XBeeFirmwareCfgCategory/kind"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cB3B8cfpEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_SVEk0MfvEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbeecfg.ecore#//XBeeFirmwareCfgCategory/label"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_SVEk0cfvEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Pv5hEsfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Pv5hE8fpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Pv5hFMfpEd-4nJyZfad9RQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Pv6IIMfpEd-4nJyZfad9RQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Pv6IIcfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Pv6IIsfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Pv6II8fpEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Pv46AcfpEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="xbeecfg.ecore#//XBeeFirmwareCfgCategory"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pv46AsfpEd-4nJyZfad9RQ" x="116" y="182"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_eIhzgMfpEd-4nJyZfad9RQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_eIiakMfpEd-4nJyZfad9RQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_eIiakcfpEd-4nJyZfad9RQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_Ochl8MfvEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_AT_FIELD/atCmd"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ochl8cfvEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_eIiaksfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eIiak8fpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eIialMfpEd-4nJyZfad9RQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_eIjBoMfpEd-4nJyZfad9RQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_eIjBocfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eIjBosfpEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eIjBo8fpEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_eIhzgcfpEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="xbeecfg.ecore#//XBEE_FIRMWARE_CONF_AT_FIELD"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eIhzgsfpEd-4nJyZfad9RQ" x="44" y="286"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_roEmAcfiEd-4nJyZfad9RQ"/>
+  <element xmi:type="ecore:EPackage" href="xbeecfg.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_TVnDgMfpEd-4nJyZfad9RQ" type="3002" source="_u5pEcMfiEd-4nJyZfad9RQ" target="_Pv46AMfpEd-4nJyZfad9RQ">
+    <children xmi:type="notation:Node" xmi:id="_TVoRoMfpEd-4nJyZfad9RQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TVoRocfpEd-4nJyZfad9RQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TVo4sMfpEd-4nJyZfad9RQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TVo4scfpEd-4nJyZfad9RQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_TVnDgcfpEd-4nJyZfad9RQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TVnDgsfpEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="xbeecfg.ecore#//XBeeFirmwareConfiguration/categories"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TVnDg8fpEd-4nJyZfad9RQ" points="[-13, 32, 49, -116]$[-60, 128, 2, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_XGqTQMfpEd-4nJyZfad9RQ" type="3002" source="_Pv46AMfpEd-4nJyZfad9RQ" target="_Pv46AMfpEd-4nJyZfad9RQ">
+    <children xmi:type="notation:Node" xmi:id="_XGq6UMfpEd-4nJyZfad9RQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_XGq6UcfpEd-4nJyZfad9RQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_XGq6UsfpEd-4nJyZfad9RQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_XGq6U8fpEd-4nJyZfad9RQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_XGqTQcfpEd-4nJyZfad9RQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_XGqTQsfpEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="xbeecfg.ecore#//XBeeFirmwareCfgCategory/subCategories"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XGqTQ8fpEd-4nJyZfad9RQ" points="[5, 0, 58, -9]$[24, 0, 77, -9]$[24, 70, 77, 61]$[-53, 70, 0, 61]$[-53, 15, 0, 6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XGsvgMfpEd-4nJyZfad9RQ" id="(0.9783549783549783,0.6938775510204082)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XGsvgcfpEd-4nJyZfad9RQ" id="(0.7489177489177489,0.8775510204081632)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_h4YJYMfpEd-4nJyZfad9RQ" type="3002" source="_Pv46AMfpEd-4nJyZfad9RQ" target="_eIhzgMfpEd-4nJyZfad9RQ">
+    <children xmi:type="notation:Node" xmi:id="_h4YwcMfpEd-4nJyZfad9RQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_h4YwccfpEd-4nJyZfad9RQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_h4YwcsfpEd-4nJyZfad9RQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_h4Ywc8fpEd-4nJyZfad9RQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_h4YJYcfpEd-4nJyZfad9RQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_h4YJYsfpEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="xbeecfg.ecore#//XBeeFirmwareCfgCategory/fields"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_h4YJY8fpEd-4nJyZfad9RQ" points="[-30, 24, 85, -65]$[-114, 81, 1, -8]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_h4aloMfpEd-4nJyZfad9RQ" id="(0.3956043956043956,0.21428571428571427)"/>
+  </edges>
+</notation:Diagram>

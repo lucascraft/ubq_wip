@@ -1,0 +1,82 @@
+The default installation of icommand makes use of RXTX to setup a bluetooth link with the NXT brick (http://www.rxtx.org).
+For the Linux platform there is an alternative installation method that makes use of a native library to interface directly
+with the Linux BlueZ bluetooth protocol stack (http://www.bluez.org).
+
+1) Your Linux platform must have the required packages installed to support the BlueZ bluetooth protocol stack. Please
+consult the documentation of your Linux distribution how the install BlueZ. In general, this means installing bluez-utils,
+bluez-libs, bluez-gnome, and a kernel with bluetooth support and the bleutooth kernel modules.
+
+Remark: This alternative icommand installation method has been tested with the default Ubuntu 6.10 (Edgy Eft) desktop install.
+This Ubuntu install already contain all the required Bluez packages, except for the bluez-passkey-gnome package. This package
+is required to exchange a passkey while pairing the NXT brick with the Linux platform. Please install 'bluez-passkey-gnome'.
+
+2) The native library 'libicmdbluez.so' to interface with BlueZ is provided with the icommand distribution.
+Copy the library into the Java Development Kit (JDK): cp libicmdbluez.so $JAVA_HOME/jre/lib/i386, where $JAVA_HOME is
+a placeholder for the JDK installation directory; e.g.: cp libicmdbluez.so /usr/lib/jvm/java-1.5.0-sun/jre/lib/i386
+
+3) Install the icommand java library 'icommand.jar'.
+Copy the java library 'icommand.jar' into the JDK: cp icommand.jar $JAVA_HOME/jre/lib/ext, where $JAVA_HOME is
+a placeholder for the JDK installation directory; e.g.: cp icommand.jar /usr/lib/jvm/java-1.5.0-sun/jre/lib/ext
+
+4) Insert your Bluetooth dongle into the USB port. Better is to (re)boot Linux will the Bluetooth dongle already inserted.
+
+5) Pair your NXT brick an Linux PC. Initiate the pairing process from the NXT brick. Send the default passkey '1234' from
+the NXT brick. On your Linux PC, answer the incoming pairing request with the same passkey '1234'.
+
+6) The bluetooth address of your NXT brick.
+Scan the enviroment for bluetooth devices. Perform the command: hcitool scan
+Sample outout of the command:
+
+	Scanning ...
+        00:14:A7:6D:C6:AA       Nokia 6230i
+        00:16:53:01:EC:04       NXT
+
+The output shows the bluetooth address and the friendly name of the discovered bluetooth devices.
+Note the bluetooth address of your NXT brick. In the sample output this is: 00:16:53:01:EC:04
+
+
+7) Configure icommand. In the file icommand.properties:
+1. set the property nxtcomm.type to the value 'bluez': nxtcomm.type=bluez
+2. set the property nxt.btaddress to the bluetooth address of your NXT brick; e.g. nxt.btaddress=00:16:53:01:EC:04
+3. comment out all other lines (the line should start with the character #).
+4. place the file icommand.properties in the home directory of your unix account.
+
+++ Sample icommand.properties file:
+
+# Set the value of the nxtcomm property to the value of ->your<- serial port,
+# e.g. COM4 (on Windows), dev/tty.NXT_1 (on Mac OSX), /dev/rfcomm0 (on Linux)
+# nxtcomm=COM4
+
+# Communication implementation type: rxtx, bluez; defaults to rxtx.
+nxtcomm.type=bluez
+# The bluetooth address of ->your<- NXT, e.g. 00:16:53:01:EC:04
+nxt.btaddress=00:16:53:01:EC:04
+
+# Communication implementation type: rxtx, bluez; defaults to rxtx.
+# nxtcomm.type=rxtx
+# The name of ->your<- serial port for bluetooth
+# rxtx.port=COM4
+
+++ You may also remove all comments. This will result in a icommand.properties file with only 2 lines; e.g.
+nxtcomm.type=bluez
+nxt.btaddress=00:16:53:01:EC:04
+
+8) Test drive the installation.
+
+a. Compile the program 'Beep': javac Beep.java
+
+file: Beep.java
+
+import icommand.nxt.Sound;
+import icommand.nxt.comm.NXTCommand;
+
+public class Beep {
+	public static void main(String [] args) throws Exception {
+		NXTCommand.open();
+		Sound.playTone(1000, 1000);
+		NXTCommand.close();
+	}
+}
+
+b. Run the 'Beep' program: java Beep
+If the speaker of the NXT brick produces a 'beep' sound, the you are in business.

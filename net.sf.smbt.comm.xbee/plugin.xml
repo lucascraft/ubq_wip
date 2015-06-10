@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://xbee/1.0"
+            class="net.sf.smbt.xbee.XbeePackage"
+            genModel="model/xbee.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.comm.xbee.eventHandler"
+            handler="net.sf.smbt.comm.xbee.cmd.XBeeQxEventHandler">
+      </cmdHandler>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.comm.xbee.cmdInterpreter"
+            interpreter="net.sf.smbt.comm.xbee.cmd.XBeeCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.comm.xbee.frameInterpreter"
+            interpreter="net.sf.smbt.comm.xbee.cmd.XBeeFrameInterpreter">
+      </frameInterpreter>
+   </extension>
+
+</plugin>

@@ -1,0 +1,124 @@
+
+You need to be the super-user to do some, or all of this.
+
+
+1) Go to http://www.rxtx.org and download 
+
+   rxtx-2.1-7-bins-r2.zip (Final)
+
+   You want the version that uses the namespace (gnu.io).
+   Unzip the file and follow the instructions in the
+   INSTALL file for Linux. For SuSE Linux:
+
+   # mv rxtx-2.1-7-bins-r2/RXTXcomm.jar /usr/lib/java/jre/lib/ext
+   # mv rxtx-2.1-7-bins-r2/Linux/i686-unknown-linux-gnu/librxtxSerial.so /usr/lib/java/jre/lib/i386
+
+   does the job.
+
+2) Go to http://lejos.sourceforge.net and download
+
+   icommand_0.4.zip
+
+   Put it in a new directory --- mindstorms, say --- and
+   unzip it. In the mindstorms directory, do 
+
+   # CLASSPATH=`pwd`/icommand.jar:.
+   # export CLASSPATH
+
+3) In the mindstorms/samples directory, save this test program
+
+   import java.util.*;
+   import gnu.io.*;
+   public class Test {
+     public static void main(String[] args) {
+       Enumeration en = CommPortIdentifier.getPortIdentifiers();
+       while (en.hasMoreElements()) {
+         CommPortIdentifier cpi = (CommPortIdentifier) en.nextElement();
+         System.out.println("name=" + cpi.getName());
+       }
+     }
+   }
+  
+   and compile it with
+
+   # javac Test.java
+
+4) Insert your Bluetooth dongle into the USB port. Linux will
+   detect the new hardware. Say yes to the dialog inviting you 
+   to configure it, check "Enable Bluetooth Services", set the
+   four-digit Local PIN for Incoming Connections to "1234", and
+   then "Finish".
+
+5) Switch on your Lego NXT brick. Press the left arrow until
+   you reach the Bluetooth symbol. Press the orange button.
+   Press the left arrow until you reach On/Off. Press the 
+   orange button to turn Bluetooth on. A Bluetooth symbol
+   should appear in the top left-hand corner of the display.
+   Press the orange button again to return to "main menu"
+   level.
+
+6) Run the command
+
+   # hcitool scan
+
+   On my machine, this returns
+
+	Scanning ...
+        00:15:A0:58:8D:8F       Sirbastian
+        00:14:A7:6D:C6:AA       Nokia 6230i
+        00:16:53:02:31:7C       NXT
+
+   One of the visible Bluetooth devices should be your NXT brick,
+   with its unique number (mine is 00:16:53:02:31:7C).
+
+7) Run the command
+
+   # rfcomm bind /dev/rfcomm0 00:16:53:02:31:7C
+
+   with the unique number obtained above.
+
+8) Set the value of your serial port in the file icommand.properties
+
+    In  the file icommand.properties set the value of nxtcomm to the value
+    of your serial port, /dev/rfcomm0  Put the file icommand.properties
+    into your home directory, or your working directory. To check the location
+    and contents of the file, execute the command: java -jar icommand.jar
+
+9) Run the test program you compiled earlier with
+
+   # java -Dgnu.io.rxtx.SerialPorts=/dev/rfcomm0 Test
+
+   The output should be
+
+	Experimental:  JNI_OnLoad called.
+	Stable Library
+	=========================================
+	Native lib Version = RXTX-2.1-7
+	Java lib Version   = RXTX-2.1-7
+	name=/dev/rfcomm0
+
+10) Connect a motor to port A of the NXT brick.
+
+11) Compile the program
+
+    import icommand.platform.nxt.*;
+    import icommand.nxtcomm.*;
+
+    public class Wheel {
+      public static void main(String[] args) {
+        Motor.A.forward(30);
+        NXTCommand.close();
+      }
+    }
+
+    with
+
+    # javac Wheel.java
+
+    and run it with
+
+    # java -Dgnu.io.rxtx.SerialPorts=/dev/rfcomm0 Wheel 
+
+    This should cause the motor to run for a short time.
+ 
+12) If that works, you are in business!
