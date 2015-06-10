@@ -1,0 +1,100 @@
+/*********************************************************************************************************/
+/*	Page elements that shold not be printed
+/*********************************************************************************************************/
+.noprint,.hdn,ul.menublock,ul.submenublock,#nav-global,#nav-main,#footer,#breadcrumb,td#left
+{
+	display:			none;
+}
+
+/*********************************************************************************************************/
+/*	Hide select edit elements
+/*********************************************************************************************************/
+a.selectedit,a.selectedit_preview,input.selectedit,input.siteeditbutton,input.selectedit_preview,#selectedit_list
+{
+	display:			none;
+}
+
+/*********************************************************************************************************/
+/*	Print-specific styling
+/*********************************************************************************************************/
+body
+{
+	margin:				0in 0.5in;
+	background-color:	white;
+	background-image:	none;
+}
+
+h1
+{
+	margin:				18pt 0pt 10pt;
+	font-family:		times new roman,times,serif;
+	font-weight:		bold;
+	font-size:			16pt;
+	color:				black;
+}
+
+h2
+{
+	page-break-after:	avoid;
+
+	margin:				0pt;
+	font-family:		times new roman,times,serif;
+	font-weight:		bold;
+	font-size:			12pt;
+	color:				black;
+}
+
+.bodytext
+{
+	margin:				0pt 0pt 16pt;
+	text-align:			justify;
+	line-height:		16pt;
+	font-family:		times new roman,times,serif;
+	font-size:			10pt;
+	color:				black;
+}
+
+.bodytext2
+{
+	line-height:		12pt;
+}
+
+a
+{
+	text-decoration:	none;
+	color:				rgb(153,51,51);
+}
+
+
+
+
+
+/*=========================================================================================================
+//---------------------------------------------------------------------------------------------------------
+//	MISCELLANEOUS DEFAULTS
+//---------------------------------------------------------------------------------------------------------
+//=======================================================================================================*/
+/*	Used so that non-CSS browsers deliniate footer block from body content	*/
+hr
+{
+	display:				none;
+}
+
+/*	because HTML should have this as the default	*/
+td
+{
+	vertical-align:			top;
+	padding:				0px;
+}
+
+/*	prevent ugly purple borders around linked images	*/
+img
+{
+	border:					0px;
+}
+
+h1,h2,h3
+{
+	page-break-after:		avoid;
+}
+
