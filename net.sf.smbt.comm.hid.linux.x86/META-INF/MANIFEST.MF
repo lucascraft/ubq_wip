@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense HID Comm Linux X86
+Bundle-SymbolicName: net.sf.smbt.comm.hid.linux.x86
+Bundle-Version: 0.5.0.qualifier
+Bundle-Vendor: ubiquisense.com
+Fragment-Host: net.sf.smbt.comm.hid;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/,\
+ .
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86))
+Bundle-NativeCode: lib/linux/Ubuntu-11.10/hidraw/libhidapi-jni.so,\
+ lib/linux/Ubuntu-11.10/libusb/libhidapi-jni.so

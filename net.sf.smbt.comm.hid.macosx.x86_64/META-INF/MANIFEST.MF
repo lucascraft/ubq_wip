@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense HID Comm Mac OSX X86_64
+Bundle-SymbolicName: net.sf.smbt.comm.hid.macosx.x86_64
+Bundle-Version: 0.5.0.qualifier
+Bundle-Vendor: ubiquisense.com
+Fragment-Host: net.sf.smbt.comm.hid;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (|(osgi.arch=x86_64) (osgi.arch=ppc)))
+Bundle-ClassPath: lib/
+Bundle-NativeCode: lib/mac/libhidapi-jni.jnilib

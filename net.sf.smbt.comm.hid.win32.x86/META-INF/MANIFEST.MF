@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense HID Comm Win32 X86
+Bundle-SymbolicName: net.sf.smbt.comm.hid.win32.x86
+Bundle-Version: 0.5.0.qualifier
+Bundle-Vendor: ubiquisense.com
+Fragment-Host: net.sf.smbt.comm.hid;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86))
+Bundle-ClassPath: lib/
+Bundle-NativeCode: lib/win32/hidapi-jni.dll
