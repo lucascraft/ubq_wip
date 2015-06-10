@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.osc.ableton/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.osc.ableton" modelName="Ezabletonctrl"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" rootImplementsInterface=""
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="ezableton.genmodel#//ezableton ../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd ../../net.sf.xqz.engine/model/temporal.genmodel#//engine platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>ezabletonctrl.ecore</foreignModel>
+  <genPackages prefix="Ezabletonctrl" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezabletonctrl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezabletonctrl.ecore#//MASTER_CTRL">
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/PLAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/PAUSE"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/STOP"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/RECORD"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/PREC"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/NEXT"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/CONTINUE"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/UNDO"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//MASTER_CTRL/REDO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezabletonctrl.ecore#//TRACK_CONTROL">
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//TRACK_CONTROL/PLAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ezabletonctrl.ecore#//TRACK_CONTROL/STOP"/>
+    </genEnums>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//AbletonLive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/ver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/masterTrack"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/tracks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/scenes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/clips"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/currentScene"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/overdub"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/tempo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbletonLive/ubqtNotificationOn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbletonLive/controlSurfaces"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveTrack">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/pan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/solo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/arm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/mute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/delay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/coarse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/fine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/beats"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveTrack/devices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveTrack/clips"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/trackName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/leftMeter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/rightMeter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveTrack/lastSeen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveTrack/view"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveScene">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveScene/sceneID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveScene/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveScene/sceneName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveScene/lastSeen"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveMaster">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveMaster/masterDevices"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveClip">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/clipID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/clipName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/clipState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/sizeX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/sizeY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/coarse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/fine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/loopStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/loopEnd"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveClip/track"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/lastSeen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/isAudioClip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/isMidiClip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/isTriggered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/playingStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/signature_denominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/signature_numerator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/warping"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveClip/will_recording_on_start"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ezabletonctrl.ecore#//AbstractLiveDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbstractLiveDevice/deviceName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbstractLiveDevice/deviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//AbstractLiveDevice/lastSeen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbstractLiveDevice/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveSamplerDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveEBassSubDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveEQEightDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//KitMinimumOperatorDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//CompressorDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//VintageMastering2Device"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//MultibandsDynamicsDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//SaturatorDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LimiterDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//PlaceHolderDevice"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveParam/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezabletonctrl.ecore#//LiveParam/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//AbstractMixerDevice">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbstractMixerDevice/volume"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbstractMixerDevice/panning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//AbstractMixerDevice/sends"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//LiveTrackView">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezabletonctrl.ecore#//LiveTrackView/device"/>
+    </genClasses>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//ControlSurface"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//TransportComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//SessionComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//ClipSlotComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//ChannelStripComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//MixerComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//DeviceComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//ButtonComponent"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//ButtonMatrixElement"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//SliderElement"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//EncoderElement"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//RingedEcoderElement"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//PhysicalDisplayElement"/>
+    <genClasses ecoreClass="ezabletonctrl.ecore#//MidiMap"/>
+  </genPackages>
+</genmodel:GenModel>

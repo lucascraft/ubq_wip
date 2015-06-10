@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.osc.ableton/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.osc.ableton" modelName="Ezableton"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" reflectiveDelegation="true"
+    testsDirectory="" importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezableton.ecore</foreignModel>
+  <genPackages prefix="Ezableton" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezableton.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//TRACK_ARM_STATUS">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_ARM_STATUS/ARMED"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_ARM_STATUS/DISARMED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//TRACK_MUTE_STATUS">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_MUTE_STATUS/MUTE"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_MUTE_STATUS/UNMUTE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//TRACK_SOLO_STATUS">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_SOLO_STATUS/SOLO"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//TRACK_SOLO_STATUS/UNSOLO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//CLIP_STATE">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//CLIP_STATE/NO_CLIP"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//CLIP_STATE/HAS_CLIP"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//CLIP_STATE/PLAYING"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//CLIP_STATE/TRIGGERED"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//CLIP_STATE/STOP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//PLAY_STATUS">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//PLAY_STATUS/PLAY"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//PLAY_STATUS/STOP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezableton.ecore#//METER_INPUT">
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//METER_INPUT/LEFT_METER"/>
+      <genEnumLiterals ecoreEnumLiteral="ezableton.ecore#//METER_INPUT/RIGHT_METER"/>
+    </genEnums>
+    <genClasses ecoreClass="ezableton.ecore#//AbletonLiveSndCmd"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTempoReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTempoReq/tempo"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTempoRcv">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTempoRcv/tempo"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTimeReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTimeReq/time"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTimeRcv">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTimeRcv/time"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveOverdub">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveOverdub/state"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveStateReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveStateRcv">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveStateRcv/tempo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveStateRcv/overdub"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveUndoReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveRedoReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNextCueReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LivePrevCueReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlayReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlayContinueReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlayClipReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//livePlaySelectionReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlayClipSlotReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePlayClipSlotReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePlayClipSlotReq/clipID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlaySceneReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePlaySceneReq/sceneID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveStopReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveStopClipReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveStopClipReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveStopClipReq/clipID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveStopTrackReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveStopTrackReq/trackID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveScenesReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTracksReq"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveSceneReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveSceneReq/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveSceneReq/sceneID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameSceneBlockReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameSceneBlockReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameSceneBlockReq/size"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameTrackReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackReq/trackName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackReq/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackReq/trackID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameTrackblockReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackblockReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackblockReq/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameTrackblockReq/trackName"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameClipReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipReq/clipID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipReq/label"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameClipblockreq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipblockreq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipblockreq/clipID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipblockreq/sizeX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameClipblockreq/sizeY"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveArmReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveArmReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveArmReq/status"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMuteReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMuteReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMuteReq/status"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveVolumeSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveVolumeSet/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveVolumeSet/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LivePanSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePanSet/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePanSet/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveSendReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveSendReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveSendReq/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LivePitchSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePitchSet/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePitchSet/clip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePitchSet/coarse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePitchSet/fine"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnMuteReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnMuteReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnMuteReq/status"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnVolumeReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnVolumeReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnVolumeReq/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnPanReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnPanReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnPanReq/pan"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnSendReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSendReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSendReq/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSendReq/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMasterVolumeReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterVolumeReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterVolumeReq/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMasterPanReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterPanReq/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterPanReq/pan"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTrackJump">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackJump/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackJump/beats"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTrackInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackInfo/trackID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTrackDeviceView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackDeviceView/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackDeviceView/deviceID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnDeviceView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnDeviceView/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnDeviceView/deviceID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMasterDeviceView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterDeviceView/deviceID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveDetailView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDetailView/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveClipInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipInfo/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipInfo/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipInfo/clipID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveDevicelist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDevicelist/trackID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDevice/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDevice/deviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDevice/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDevice/s"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnDevicelist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnDevicelist/trackID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnVolume">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnVolume/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnVolume/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnPan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnPan/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnPan/pan"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnSend">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSend/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSend/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSend/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMasterVolume">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterVolume/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterVolume/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveReturnSolo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSolo/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveReturnSolo/status"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveDeviceView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDeviceView/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveDeviceView/deviceID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveMasterMeter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterMeter/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveMasterMeter/which"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveClipPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/clipID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/loopStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveClipPosition/loopEnd"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTrackMeter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackMeter/trackID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackMeter/which"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTrackMeter/level"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameTrackQ"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameSceneQ"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameClipQ"/>
+    <genClasses ecoreClass="ezableton.ecore#//LiveNameSceneReq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameSceneReq/sceneID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveNameSceneReq/sceneName"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveScenesQ">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveScenesQ/numScenes"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveTracksQ">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveTracksQ/numTracks"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LivePlay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LivePlay/status"/>
+    </genClasses>
+    <genClasses ecoreClass="ezableton.ecore#//LiveVolume">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveVolume/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezableton.ecore#//LiveVolume/trackID"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
