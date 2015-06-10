@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.ez.script/src-gen"
+    editDirectory="/net.sf.smbt.ez.script.edit/src" editorDirectory="/net.sf.smbt.ez.script.editor/src"
+    modelPluginID="net.sf.smbt.ez.script" forceOverwrite="true" modelName="EzDsl"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="net.sf.smbt.ez.script.edit"
+    editorPluginID="net.sf.smbt.ez.script.editor" runtimeVersion="2.7" usedGenPackages="../../../../../../../net.sf.smbt.osc.script/src-gen/net/sf/smbt/osc/OscDsl.genmodel#//oscDsl ../../../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types">
+  <genPackages prefix="EzDsl" basePackage="net.sf.smbt.ez.script" disposableProviderFactory="true"
+      ecorePackage="EzDsl.ecore#/">
+    <genClasses ecoreClass="EzDsl.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//Model/isTested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Model/usings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Model/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Model/functions"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//JvmVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//JvmVar/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//JvmVar/javaTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//MessageOut">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//MessageOut/osc"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Trigger">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Trigger/trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//MessageIn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//MessageIn/osc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//MessageIn/trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//DataType/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//DataType/javaType"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Using">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//Using/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Element"/>
+    <genClasses ecoreClass="EzDsl.ecore#//Symbol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//Symbol/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Assert">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Assert/actual"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Assert/expected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Assert/msg"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Return">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Return/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//EnumDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//EnumDecl/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//EnumDecl/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Type"/>
+    <genClasses ecoreClass="EzDsl.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="EzDsl.ecore#//ArrayType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//ArrayType/baseType"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//EnumType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//EnumType/enumRef"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//IntType"/>
+    <genClasses ecoreClass="EzDsl.ecore#//BoolType"/>
+    <genClasses ecoreClass="EzDsl.ecore#//FloatType"/>
+    <genClasses ecoreClass="EzDsl.ecore#//StringType"/>
+    <genClasses ecoreClass="EzDsl.ecore#//Expr"/>
+    <genClasses ecoreClass="EzDsl.ecore#//Expression"/>
+    <genClasses ecoreClass="EzDsl.ecore#//FunctionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//FunctionDeclaration/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//FunctionDeclaration/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//FunctionDeclaration/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Parameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//EnumLiteral"/>
+    <genClasses ecoreClass="EzDsl.ecore#//VarDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//VarDecl/readonly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//VarDecl/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//VarDecl/init"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Formula">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Formula/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Formula/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Equals">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Equals/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Equals/right"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Plus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Plus/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Plus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//Multi">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Multi/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//Multi/right"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//ArrayAccess">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//ArrayAccess/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//ArrayAccess/index"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//SymbolRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EzDsl.ecore#//SymbolRef/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//SymbolRef/actuals"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//NumberLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EzDsl.ecore#//NumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="EzDsl.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EzDsl.ecore#//StringLiteral/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

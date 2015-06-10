@@ -1,0 +1,177 @@
+/***********************************************************************************
+ * Ubiquisense - A smart ambient utilities framework 
+ * 
+ * Copyright (c) 2012, Lucas Bigeardel
+ * 
+ * The library is released under:
+ * 
+ * A) LGPL
+ * 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General
+ * Public License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301 USA
+ * 
+ * B) EPL
+ * 
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Lucas Bigeardel <lucas.bigeardel@gmail.com> - Initial API and implementation
+ ***********************************************************************************/
+
+module net.sf.smbt.ez.script.GenerateEzDsl
+
+import org.eclipse.emf.mwe.utils.*
+import org.eclipse.xtext.generator.*
+import org.eclipse.xtext.ui.generator.*
+
+var grammarURI = "classpath:/net/sf/smbt/ez/script/EzDsl.xtext"
+var file.extensions = "ez"
+var projectName = "net.sf.smbt.ez.script"
+var runtimeProject = "../${projectName}"
+
+Workflow {
+    bean = StandaloneSetup {
+        scanClassPath = true
+        platformUri = "${runtimeProject}/.."
+        // The following two lines can be removed, if Xbase is not used.
+        registerGeneratedEPackage = "org.eclipse.xtext.xbase.XbasePackage"
+        registerGeneratedEPackage = "net.sf.smbt.osc.oscDsl.OscDslPackage"
+        registerGeneratedEPackage = "net.sf.smbt.osccmd.OsccmdPackage"
+        registerGeneratedEPackage = "net.sf.smbt.osc.OscPackage"
+        registerGenModelFile = "platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel"
+        registerGenModelFile = "platform:/resource/net.sf.smbt.osc.script/src-gen/net/sf/smbt/osc/OscDsl.genmodel"
+        registerGenModelFile = "platform:/resource/net.sf.smbt.osc/model/osccmd.genmodel"
+    }
+
+    component = DirectoryCleaner {
+        directory = "${runtimeProject}/src-gen"
+    }
+
+    component = DirectoryCleaner {
+        directory = "${runtimeProject}.ui/src-gen"
+    }
+
+    component = Generator {
+        pathRtProject = runtimeProject
+        pathUiProject = "${runtimeProject}.ui"
+        pathTestProject = "${runtimeProject}.tests"
+        projectNameRt = projectName
+        projectNameUi = "${projectName}.ui"
+        language = {
+            uri = grammarURI
+            fileExtensions = file.extensions
+
+            // Java API to access grammar elements (required by several other fragments)
+            fragment = grammarAccess.GrammarAccessFragment {}
+
+            // generates Java API for the generated EPackages
+            fragment = ecore.EcoreGeneratorFragment {
+	            // referencedGenModels = "
+	            //  platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel,
+	            //  platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel
+	            // "
+            }
+
+            // Serializer 2.0
+            fragment = serializer.SerializerFragment {
+            	generateStub = false
+            }
+            
+            // the serialization component (1.0)
+            // fragment = parseTreeConstructor.ParseTreeConstructorFragment {}
+
+            // a custom ResourceFactory for use with EMF
+            fragment = resourceFactory.ResourceFactoryFragment {
+                fileExtensions = file.extensions
+            }
+
+            // The antlr parser generator fragment.
+            fragment = parser.antlr.XtextAntlrGeneratorFragment {
+            //  options = {
+            //      backtrack = true
+            //  }
+            }
+
+            // java-based API for validation
+            fragment = validation.JavaValidatorFragment {
+            //    composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
+            //    composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+            }
+
+            // scoping and exporting API
+            // fragment = scoping.ImportURIScopingFragment {}
+            // fragment = exporting.SimpleNamesFragment {}
+
+            // scoping and exporting API
+            fragment = scoping.ImportNamespacesScopingFragment {}
+            fragment = exporting.QualifiedNamesFragment {}
+            fragment = builder.BuilderIntegrationFragment {}
+
+            // generates the required bindings only if the grammar inherits from Xbase
+            fragment = xbase.XbaseGeneratorFragment {}
+
+            // generator API
+            fragment = generator.GeneratorFragment {
+                generateMwe = false
+                generateJavaMain = false
+            }
+
+            // formatter API
+            fragment = formatting.FormatterFragment {}
+
+            // labeling API
+            fragment = labeling.LabelProviderFragment {}
+
+            // outline API
+            fragment = outline.OutlineTreeProviderFragment {}
+            fragment = outline.QuickOutlineFragment {}
+
+            // quickfix API
+            fragment = quickfix.QuickfixProviderFragment {}
+
+            // content assist API
+            fragment = contentAssist.JavaBasedContentAssistFragment {}
+
+            // generates a more lightweight Antlr parser and lexer tailored for content assist
+            fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
+
+            // generates junit test support classes into Generator#pathTestProject
+            fragment = junit.Junit4Fragment {}
+
+            // project wizard (optional)
+            // fragment = projectWizard.SimpleProjectWizardFragment {
+            //      generatorProjectName = "${projectName}"
+            //      modelFileExtension = file.extensions
+            // }
+
+            // rename refactoring
+            fragment = refactoring.RefactorElementNameFragment {}
+
+            // provides the necessary bindings for java types integration
+            fragment = types.TypesGeneratorFragment {}
+
+            // provides a preference page for template proposals
+            fragment = templates.CodetemplatesGeneratorFragment {}
+
+            // provides a compare view
+            fragment = compare.CompareFragment {
+                 fileExtensions = file.extensions
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ecore
+Bundle-SymbolicName: net.sf.smbt.ecore
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ecore.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ net.sf.smbt.osc;bundle-version="0.5.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

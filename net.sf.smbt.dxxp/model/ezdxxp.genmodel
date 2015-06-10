@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.dxxp/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.dxxp" modelName="Ezdxxp" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezdxxp.ecore</foreignModel>
+  <genPackages prefix="Ezdxxp" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezdxxp.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezdxxp.ecore#//DAAP_HTTP_CONST">
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DAAP_HTTP_CONST/DEFAULT_PORT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezdxxp.ecore#//DaapRequestTag">
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/SERVER_INFO"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/CONTENT_CODES"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/LOGIN"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/UPDATE_SESSION"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/DB_LIST"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/SONG_LIST"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/PLAYLIST_LIST"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/PLAYLIST"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/STREAM_SONG"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//DaapRequestTag/LOGOUT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezdxxp.ecore#//ServerInfoStatus">
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//ServerInfoStatus/OK_200"/>
+      <genEnumLiterals ecoreEnumLiteral="ezdxxp.ecore#//ServerInfoStatus/NOT_FOUND_404"/>
+    </genEnums>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapCmdChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapCmdChunk/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapCmdChunk/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapCmdChunk/req"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapListCmd"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapServerInfoRequest"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapServerInfoResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/daapProtocolVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/indexingSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/extensionSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/updateSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/autologoutSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/timeoutInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/loginRequired"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/queriesSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/serverName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/resolveSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/browsingSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/persitenceSupport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapServerInfoResponse/dmapProtocolVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapRequestForContentCodes"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapContentCodesResponse"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapLogin"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapLoginResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapLoginResponse/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapLoginResponse/sessionID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapUpdateRequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapUpdateRequest/sessionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapUpdateRequest/revisionID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapDatabaseRequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDatabaseRequest/sessionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDatabaseRequest/revisionID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapDatabseResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDatabseResponse/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDatabseResponse/matchingRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDatabseResponse/recordsReturned"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdxxp.ecore#//DaapDatabseResponse/records"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapRequestSongs"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapListOfSongsInDB"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapRequestPlaylists"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapListOfPlaylistsInDB"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapRequestPlaylist"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapListOfSongsInPlaylist"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapRequestMediaStream"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapStreamResponse"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapQueryCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapQueryCmd/query"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapMsrvCmd"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapMccr"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapMlog"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapMupd"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapAvdb"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapApsoRet"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapAply"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapCmd/tag"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezdxxp.ecore#//DaapCmd/httpProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapUpdateResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapUpdateResponse/revisionID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//Chunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//Chunk/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//Chunk/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//Chunk/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//Chunk/size"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapCmdResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezdxxp.ecore#//DaapCmdResponse/chunks"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapContentCodesRequest"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapDictionnaryEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDictionnaryEntry/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDictionnaryEntry/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapDictionnaryEntry/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapDBRecords"/>
+    <genClasses ecoreClass="ezdxxp.ecore#//DaapLogout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//DaapLogout/sessionID"/>
+    </genClasses>
+    <genClasses ecoreClass="ezdxxp.ecore#//HttpProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//HttpProperty/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezdxxp.ecore#//HttpProperty/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
