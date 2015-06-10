@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="device" name="Device Widget" schema="schema/device.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.ableton.views.AbletonLiveView"
+            icon="icons/ableton_live.gif"
+            id="net.sf.smbt.ui.ableton.LiveView"
+            name="Ableton Live 8+"
+            restorable="true">
+         <description>
+            Ableton Live View enbale to connect and control Live and Live4Max 8+ application w/ possibly a most complete possible synchronization of its state for ubiquitous cross domain usages
+         </description>
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sf.smbt.ui.ableton.preferences.AbletonLivePreferencePage"
+            id="net.sf.smbt.ui.ableton.preferences.AbletonLivePreferencePage"
+            name="Ableton Live Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.sf.smbt.ui.ableton.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.ableton.perspective">
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.ableton.LiveView"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+   <!--
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.view.ez"
+               minimized="true"
+               moveable="true"
+               relationship="right"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+         <view
+               closeable="false"
+               id="net.sf.smbt.ui.views.EZQTopologyView"
+               minimized="true"
+               moveable="true"
+               ratio="0.3"
+               relationship="right"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+   -->
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="net.sf.smbt.quantic.targetConfig">
+      <target
+            addr="192.168.0.10:9001"
+            desc="Distant Ableton Live  over LAN Wifi"
+            protocol="osc"
+            transport="udp">
+      </target>
+      <target
+            addr="192.168.0.11:9001"
+            desc="Distant Ableton Live  over LAN Wifi"
+            protocol="osc"
+            transport="udp">
+      </target>
+      <target
+            addr="192.168.0.12:9001"
+            desc="Distant Ableton Live  over LAN Wifi"
+            protocol="osc"
+            transport="udp">
+      </target>
+      <target
+            addr="192.168.0.13:9001"
+            desc="Distant Ableton Live  over LAN Wifi"
+            protocol="osc"
+            transport="udp">
+      </target>
+      <target
+            addr="192.168.0.14:9001"
+            desc="Distant Ableton Live  over LAN Wifi"
+            protocol="osc"
+            transport="udp">
+      </target>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.ableton.views.AbletonLivePerspective"
+            fixed="true"
+            icon="icons/ableton_live_s.gif"
+            id="net.sf.smbt.ui.ableton.perspective"
+            name="Ableton">
+      </perspective>
+   </extension>
+   -->
+   <extension
+         point="net.sf.smbt.ui.ableton.device">
+      <device
+            ID="EQ Eight"
+            widget="net.sf.smbt.ui.ableton.widgets.EQAbletonWidget">
+      </device>
+      <!--
+      <device
+            ID="Ambience"
+            widget="net.sf.smbt.ui.ableton.widgets.AmbienceAbletonWidget">
+      </device>
+      <device
+            ID="PingPong"
+            widget="net.sf.smbt.ui.ableton.widgets.PingPongAbletonWidget">
+      </device>
+      <device
+            ID="Dark Small Room"
+            widget="net.sf.smbt.ui.ableton.widgets.DarkSmallRoomAbletonWidget">
+      </device>
+      <device
+            ID="Reverb"
+            widget="net.sf.smbt.ui.ableton.widgets.ReverbAbletonWidget">
+      </device>
+      <device
+            ID="Gate"
+            widget="net.sf.smbt.ui.ableton.widgets.GateAbletonWidget">
+      </device>
+      <device
+            ID="Compressor"
+            widget="net.sf.smbt.ui.ableton.widgets.CompressorAbletonWidget">
+      </device>
+      <device
+            ID="GrainDelay"
+            widget="net.sf.smbt.ui.ableton.widgets.GrainDelayAbletonWidget">
+      </device>
+      <device
+            ID="Auto Pan"
+            widget="net.sf.smbt.ui.ableton.widgets.AutoPanAbletonWidget">
+      </device>
+      -->
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+
+</plugin>
