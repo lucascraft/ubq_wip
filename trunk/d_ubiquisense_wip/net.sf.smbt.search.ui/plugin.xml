@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="net.sf.smbt.search.genModelPlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="1"
+            label="Text"
+            queryCompositeAreaFactory="org.eclipse.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="net.sf.smbt.search.touchosc.ui.pages.GenModelSearchPage"
+            tooltip="TouchOSC">
+      </queryTab>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchParticipantTab">
+      <participantTab
+            id="net.sf.smbt.search.genModelParticipantTab"
+            image="icons/full/obj16/genmodel.gif"
+            index="2"
+            label="TouchOsc"
+            participantCompositeAreaFactory="net.sf.smbt.search.touchosc.ui.factories.TouchOSCControlSearchParticipantAreaFactory"
+            elementModelEditorSelectionHandler="net.sf.smbt.search.touchosc.ui.handlers.TouchOSCControlEditorSelectionHandler"
+            elementComposeableAdapterFactory="net.sf.smbt.touchosc.ui.touchoscgui.provider.TouchoscguiItemProviderAdapterFactory"
+            targetSearchPageID="net.sf.smbt.search.touchosc.ui.pages.GenModelSearchPage"
+            tooltip="Touch Osc Control">
+      </participantTab>
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="net.sf.smbt.search.touchosc.ui.pages.TouchOSCControlSearchPage"
+            icon="icons/full/obj16/gsearch.gif"
+            id="net.sf.smbt.search.touchosc.ui.pages.GenModelSearchPage"
+            enabled="true"
+            label="OSC"
+            showScopeSection="true"
+            tabPosition="1">
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchEngineMapping">
+      <mapping
+            engineID="net.sf.smbt.search.genModelSearchEngine"
+            id="net.sf.smbt.search.text4genmodel"
+            participantsTabID="net.sf.smbt.search.genModelParticipantTab"
+            queryTabID="net.sf.smbt.search.genModelPlainTextSearchID">
+      </mapping>
+   </extension>
+
+</plugin>

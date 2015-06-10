@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense Search
+Bundle-SymbolicName: net.sf.smbt.search;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.search.Activator
+Bundle-Vendor: ubiquisense.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.search;bundle-version="0.7.1",
+ org.eclipse.emf.search.common;bundle-version="0.7.1",
+ org.eclipse.emf.search.ecore;bundle-version="0.7.1",
+ org.eclipse.search;bundle-version="3.7.0",
+ org.eclipse.emf.ecore;bundle-version="2.7.0",
+ net.sf.smbt.touchosc;bundle-version="0.5.0",
+ net.sf.smbt.touchosc.diagram;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.smbt.search,
+ net.sf.smbt.search.touchosc,
+ net.sf.smbt.search.touchosc.builder,
+ net.sf.smbt.search.touchosc.engine,
+ net.sf.smbt.search.touchosc.evaluators,
+ net.sf.smbt.search.touchosc.factories,
+ net.sf.smbt.search.touchosc.l10n,
+ net.sf.smbt.search.touchosc.launcher,
+ net.sf.smbt.search.touchosc.provisional

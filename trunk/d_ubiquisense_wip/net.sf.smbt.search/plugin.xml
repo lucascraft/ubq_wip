@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.modelSearchEngine">
+      <modelSearchEngine
+            id="net.sf.smbt.search.touchOscSearchEngine"
+            label="%GenModelSearchEngine.Label"
+            modelResourceValidator="net.sf.smbt.search.touchosc.engine.GenModelResourceValidator"
+            queryParametersFactory="net.sf.smbt.search.touchosc.factories.GenModelSearchQueryParametersFactory"
+            searchQueryFactory="net.sf.smbt.search.touchosc.factories.GenModelSearchQueryFactory">
+      </modelSearchEngine>
+   </extension>
+</plugin>

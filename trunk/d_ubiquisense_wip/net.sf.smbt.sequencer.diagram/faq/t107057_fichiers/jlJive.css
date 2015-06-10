@@ -1,0 +1,410 @@
+/* CSS Document */
+
+#leftColumn {
+	padding: 10px 10px 10px 10px;
+	/*margin: 0px 33% 0px 0px; */
+	margin: 0px 312px 0px 0px;
+}
+
+#rightColumn {
+	float: right;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+	width: 305px;
+	/*width: 30%; */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	/* width: 30%; */
+	width: 305px;
+	}
+html>body #rightColumn {
+	width: 305px; /* ie5win fudge ends */
+	} /* Opera5.02 shows a 2px gap between. N6.01Win sometimes does.
+	Depends on amount of fill and window size and wind direction. */
+
+
+/* Styles for individual messages */
+#comments {
+  margin:0 0 0 0;
+	font: normal 11px/130% Verdana, Arial, Helvetica, sans-serif;
+  }
+#comments .rootmsg {
+  font:normal 9pt/1.5em Verdana,Sans-serif;
+  margin:0 0 1.25em 0.0em;
+	border-top: 2px solid #ddd;
+	border-left: 1.0em solid #ddd;
+	padding: 0.3em 1.0em 0.0em 1.0em;
+	background-color: #fff;
+	overflow:auto;
+}
+#comments .rootmsg .rm_header h1 {
+  font-size: 22px;
+	line-height: 100%;
+	color: #359;
+	margin: 0;
+}
+#comments .rootmsg .rm_header h4 {
+  font:normal 9pt/1.5em Verdana,Sans-serif;
+	color: #599;
+	margin: 0 0 0.25em 0;
+	padding-bottom: 0.25em;
+  border-bottom: 1px solid #ccc;
+}
+#comments .rootmsg .rm_footer h3 {
+  font:normal 12pt Georgia,Serif;
+	color: #575;
+	margin: 0 0 0.25em 0;
+	padding-bottom: 0.25em;
+}
+
+#comments .rootmsg .rm_footer .postyours {
+  font: normal 8pt/1.5em Verdana,Sans-serif;
+	color: #776;
+  }
+#comments .rootmsg .rm_footer a {
+  font: bold 8pt/1.5em Verdana,Sans-serif;
+	color: #933;
+  text-decoration: none;
+  border-bottom:1px dotted #469;
+  }
+#comments .rootmsg .rm_footer a:hover {
+  border-bottom:1px solid #933;
+  }
+#comments .rootmsg .rm_footer img {
+	border: none;
+	vertical-align: middle;
+}
+#comments .rootmsg .rm_footer a img{
+	border: none;
+	border-bottom: none;
+}
+
+#comments dt {
+  font:normal 9pt/1.5em Verdana,Sans-serif;
+	color:#888;
+  padding:0.5em 1.0em 0.25em 0.5em;
+  background:#e2eae2;
+  }
+#comments dd {
+  padding:2px 1.0em 8px 20px;
+  background: #e2eae2;
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+  margin:0 0em 1.25em 0;
+  }
+#comments dd pre {
+	padding: 0.5em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	overflow: auto;
+}
+#comments dd.withSig {
+	padding-bottom: 2px;
+	margin-bottom: 0;
+}
+#comments dd.signature {
+  background: #e2eae2 url("/images/std/sig.gif") no-repeat 4px 2px;
+	border-top: 1px solid #CAD8CA;
+	padding-bottom: 4px;
+	color: #888;
+}
+
+#comments h3 {
+	font: normal 11pt Georgia,Serif;
+	color:#358;
+	margin: 0 0 0 0;
+	padding: 4px 0 0 0;
+	}
+#comments p {
+	margin: 0 0 0.75em 0;
+	}
+#comments dt.alt {
+  background:#F3F3EB;
+  }
+#comments dd.alt {
+  background-color:#F3F3EB;
+	border-top-color: #E2E2CF;
+  }
+#comments .postno {
+  background:url("/images/std/icon_comment.gif") no-repeat 0 55%;
+  border-width:0;
+  padding:0 5px 0 14px;
+  border-right:1px solid #ccc;
+  margin-right:2px;
+  font: normal 160% Georgia,Serif;
+  color:#358;
+  }
+#comments .alt .postno {
+  border-color:#bbb;
+  }
+#comments .msgControls {
+  float: right;
+  }
+#comments .msgControls a {
+  font: bold 8pt/1.5em Verdana,Sans-serif;
+	color: #933;
+  text-decoration: none;
+	border-bottom: none;
+  }
+
+
+/* Styles for gliding layers  */
+#glideDiv0, #glideDiv1, #glideDiv2, #glideDiv3 { 
+	position:fixed;
+  left:0;
+	top:120;
+	z-index:200; 
+  width:28px;
+	height:180px;
+  background-color:#E6EEE7;
+	padding-top: 2px;
+	}
+* html #glideDiv0 /* Override above rule for IE */ 
+{ 
+ position: absolute; 
+ top: expression(offsetParent.scrollTop + 120); 
+} 
+#glideDiv0 img,
+#glideDiv1 img,
+#glideDiv2 img,
+#glideDiv3 img { 
+	clear: both;
+	margin: 0px 1px 2px 0;
+	}
+
+#glideDiv0 a { 
+	border: none;
+	}
+
+#glideDiv0 a img,
+#glideDiv1 a img,
+#glideDiv2 a img,
+#glideDiv3 a img { 
+	border: none;
+	}
+
+#rightColumn div.textAd {
+	margin: 0.5em 1.0em 1.0em 0;
+	padding-top: 0.25em;
+}
+#rightColumn div.textAd div.sponsored {
+	display: none;
+}
+#rightColumn div.textAd h3 {
+	font: normal 130%/120% Georgia,Serif;
+}
+#rightColumn div.textAd p a:link,
+#rightColumn div.textAd p a:visited,
+#rightColumn div.textAd p a:hover,
+#rightColumn div.textAd p a:active {
+	color: black;
+	text-decoration: none;
+	border-bottom: none;
+}
+#rightColumn div.textAd h4 a:link,
+#rightColumn div.textAd h4 a:visited,
+#rightColumn div.textAd h4 a:hover,
+#rightColumn div.textAd h4 a:active {
+	color: #337F00;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+#leftColumn div.textAd {
+	margin: 0 3.0em 1.0em 3.0em;
+}
+
+#leftColumn div.textAd p a:link,
+#leftColumn div.textAd p a:visited,
+#leftColumn div.textAd p a:hover,
+#leftColumn div.textAd p a:active {
+	color: black;
+	text-decoration: none;
+	border-bottom: none;
+}
+#leftColumn div.textAd h4 a:link,
+#leftColumn div.textAd h4 a:visited,
+#leftColumn div.textAd h4 a:hover,
+#leftColumn div.textAd h4 a:active {
+	color: #337F00;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+/* JL Forum styles */
+div.jljive-portlet {
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+	margin: 0 1em 1em 0;
+	border: 1px solid #ccc;
+	width: auto;
+}
+.jljive-portlet .header {
+  font:bold 8pt/1.5em Verdana,Sans-serif;
+	background-color: #d8e3d8;
+	color: black;
+	border-bottom: 1px solid #ccc;
+	padding: 2px;
+}
+.jljive-portlet .footer {
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+	background-color: #eee;
+	color: black;
+	border-top: 1px solid #ccc;
+	padding: 4px;
+}
+.jljive-portlet .notice {
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+	background-color: #eee;
+	color: black;
+	border-bottom: 1px solid #ccc;
+	padding: 0.25em;
+}
+.jljive-portlet h1 {
+    color: #666;
+    margin: 0px 4px 0px 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+.jljive-portlet ul.dzone {
+	font: normal 1.0em/1.6em Verdana, Arial, Helvetica, sans-serif;
+	clear: left;
+	margin: 0.25em 0px 0px 2.25em;
+	padding: 0px 0px 4px 0px;
+	list-style-position: outside;
+    list-style-image:url("/images/std/icons/link_arrow.gif");
+    color: #999;
+}
+.jljive-portlet .sponsored,
+.jljive-portlet .sponsored a:link {
+	font-weight: bold;
+}
+.jljive-portlet ul {
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+	list-style: none;
+	margin: 0;
+	padding: 4px;
+}
+.jljive-portlet ul.dzone li {
+	margin: auto;
+	padding: 0px;
+}
+
+.jljive-portlet li {
+	margin: 0;
+	padding: 0;
+}
+.jljive-portlet li a.noBorder {
+	border-bottom: none;
+}
+.jljive-portlet li img {
+	vertical-align: middle;
+}
+.jljive-portlet li:hover {
+	background-color: #eee;
+}
+
+.jljive-table {
+  font:normal 8pt/1.5em Verdana,Sans-serif;
+    margin: 0 1em 0em 1em;
+    border: 1px solid #ccc;
+}
+.jljive-table thead {
+    background-color:#3c8ac8;
+    color: #ddd;
+    text-align: left;
+}
+.jljive-table .jljive-odd {
+    background-color:#E2EAE2;
+    border-bottom: 1px solid #fff;
+}
+.jljive-table .jljive-even {
+    background-color:#F3F3EB;
+}
+.jljive-table td {
+    border-bottom: 1px solid #fff;
+    padding: 2px 3px 3px 3px;
+}
+
+.jljive-table .jive-thread-name {
+    font-weight: bold;
+}
+
+.jljive-table .jive-category-name {
+    background-color: #d8e3d8;
+}
+
+.jljive-table .jive-category-name  a {
+    color: #000;
+    font-weight: bold;
+}
+
+.jljive-paginator {
+  font:normal 8.5pt/1.5em Verdana,Sans-serif;
+	margin: 0 1em 2em 1em;
+}
+.jljive-paginator .jljive-current {
+	background-color: #358;
+	color: #fff;
+}
+
+div.jljive-pageheader {
+    font: normal 11px/130% Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 1em 1em 1em;
+}
+.jljive-pageheader h1 {
+    color: #666;
+    margin-top: 0px;
+    margin-bottom: 0em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+/* Features in the sidebar */
+.jljive-portlet .spotlight {
+	font:normal 8pt/1.5em Verdana,Sans-serif;
+	padding-top: 1em;
+}
+
+.jljive-portlet .spotlight .feature {
+	clear: left;
+	text-align: left;
+	padding: 0;
+	margin: 0 0 10px 2%;
+	width: auto;
+	min-height: 60px;
+}
+.jljive-portlet .spotlight h1 {
+	margin-top: 0px;
+	margin-bottom: 0em;
+	padding-top: 0px;
+	padding-bottom: 8px;
+}
+.jljive-portlet .spotlight h3 {
+	font-size: 125%;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0.1em;
+	line-height: 1.1em;
+}
+.jljive-portlet .spotlight .featureText {
+	margin-left: 85px;
+	padding: 0;
+}
+.jljive-portlet .spotlight img {
+	float: left;
+	width: 80px;
+	height: 60px;
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+
+#mpu {
+	margin-bottom: 10px;
+}
+
+#mpu a {
+	text-decoration: none;
+    border-bottom: none;
+	border: none;
+}

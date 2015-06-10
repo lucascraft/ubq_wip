@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <allMenus
+      xsi:type="gmftool:Toolbar">
+    <items
+        xsi:type="gmftool:PredefinedMenu">
+      <items
+          xsi:type="gmftool:PredefinedItem"/>
+    </items>
+  </allMenus>
+  <palette
+      title="Toolbar"
+      description="Timed Elements"
+      default="//@palette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Boxes"
+        description="Timed Boxes"
+        active="//@palette">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Timed Box"
+          description="Timed Box"/>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Events"
+        description="Timed Events"
+        active="//@palette/@tools.1">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Events"
+          description="Timed Events"/>
+    </tools>
+    <tools
+        xsi:type="gmftool:PaletteSeparator"
+        title=""/>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Connections"
+        description="Timed Connections">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link"
+          description="Create Link"/>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Trigger"
+          description="Timed Event Trigger"/>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

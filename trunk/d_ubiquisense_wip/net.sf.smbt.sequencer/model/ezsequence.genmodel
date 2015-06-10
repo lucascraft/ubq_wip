@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.sequencer/src-model"
+    editorDirectory="/net.sf.smbt.sequencer.editor/src" modelPluginID="net.sf.smbt.sequencer"
+    modelName="Ezsequence" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//temporal ../..//net.sf.smbt.midi/model/ezmidi.genmodel#//ezmidi ../../net.sf.smbt.dmx/model/ezdmxctrl.genmodel#//ezdmxctrl ../../net.sf.smbt.dmx/src-utils/net/sf/smbt/dmx/utils/fixture/qxf.genmodel#//qxf ../../net.sf.smbt.dmx/model/ezdmx.genmodel#//ezdmx ../../net.sf.smbt.osc.ezmojo/model/ezmojo.genmodel#//ezmojo ../../net.sf.smbt.xcp/model/xcp.genmodel#//xcp ../../net.sf.xqz.engine/model/temporal.genmodel#//engine ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/net.sf.smbt.motion/model/ezmotion.genmodel#//ezmotion ../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd platform:/plugin/net.sf.smbt.osc.tuio/model/eztuioX2.genmodel#//eztuio2">
+  <foreignModel>ezsequence.ecore</foreignModel>
+  <genPackages prefix="Ezsequence" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezsequence.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezsequence.ecore#//SEQ_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//SEQ_TYPE/LOOP"/>
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//SEQ_TYPE/PING_PONG"/>
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//SEQ_TYPE/ONCE"/>
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//SEQ_TYPE/INVERSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ezsequence.ecore#//CUE_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//CUE_TYPE/TO_PREV"/>
+      <genEnumLiterals ecoreEnumLiteral="ezsequence.ecore#//CUE_TYPE/TO_FIRST"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="ezsequence.ecore#//Point"/>
+    <genDataTypes ecoreDataType="ezsequence.ecore#//Rectangle"/>
+    <genDataTypes ecoreDataType="ezsequence.ecore#//Color"/>
+    <genDataTypes ecoreDataType="ezsequence.ecore#//Polyline"/>
+    <genClasses ecoreClass="ezsequence.ecore#//Sequencer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Sequencer/ID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/timelines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/timebar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/boxes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/triggers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/timeCursors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/commands"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/listeners"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/cmdTypeCache"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Sequencer/zoomFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Sequencer/surface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Sequencer/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Sequencer/currentActionMode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//Sequencer/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimeBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBox/ID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/out"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBox/duration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/events"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/timeline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBox/dist"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/onEnter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBox/onExit"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimedEvent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimedEvent/script"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimedEvent/trigger"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimedEvent/command"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimeCursor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeCursor/completion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeCursor/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeCursor/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeCursor/accel"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimeBar">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBar/timecursor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBar/slots"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBar/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeBar/nodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBar/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBar/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeBar/seqKind"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//AbstractPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//AbstractPort/label"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//PortIn"/>
+    <genClasses ecoreClass="ezsequence.ecore#//PortOut"/>
+    <genClasses ecoreClass="ezsequence.ecore#//TimedObj">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedObj/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedObj/label"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//Script">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Script/body"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimeSlot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeSlot/triggerLink"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimedLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimedLink/before"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimedLink/after"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//EventTrigger">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTrigger/emits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventTrigger/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTrigger/after"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTrigger/before"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTrigger/targets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventTrigger/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventTrigger/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventTrigger/bang"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//EventListener">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventListener/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//EventListener/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventListener/targets"/>
+      <genOperations ecoreOperation="ezsequence.ecore#//EventListener/match"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//EventTarget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTarget/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ezsequence.ecore#//EventTarget/triggers"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimedLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/finish"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimedLine/speed"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//TimeNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeNode/point"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ezsequence.ecore#//TimeNode/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//TimeNode/completion"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//NodeFloatParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//NodeFloatParam/val"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ezsequence.ecore#//NodeParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//NodeParam/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//NodeParam/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//NodeIntegerParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//NodeIntegerParam/val"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//NodeDoubleParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//NodeDoubleParam/val"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//Circle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Circle/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Circle/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//Star">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Star/center"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Star/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//Square">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Square/topLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Square/topRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Square/bottomRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Square/bottomLeft"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//Track">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//Track/polyline"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//CueNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//CueNode/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="ezsequence.ecore#//UIElem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//UIElem/bounds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//UIElem/fg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ezsequence.ecore#//UIElem/bg"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

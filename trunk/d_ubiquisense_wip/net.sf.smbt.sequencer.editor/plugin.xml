@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="net.sf.smbt.ui"
+            name="Ubiquisense"/>
+      <wizard
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ezsequence.presentation.EzsequenceModelWizard"
+            finalPerspective="net.sf.smbt.ui.sequencer.groovix"
+            icon="icons/loop2.gif"
+            id="net.sf.smbt.ezsequence.presentation.EzsequenceModelWizardID"
+            name="OSC Sequencer">
+         <description>%_UI_EzsequenceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+<!--
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.smbt.ezsequence.presentation.EzsequenceEditorID"
+            name="%_UI_EzsequenceEditor_label"
+            icon="icons/full/obj16/EzsequenceModelFile.gif"
+            extensions="ezsequence"
+            class="net.sf.smbt.ezsequence.presentation.EzsequenceEditor"
+            contributorClass="net.sf.smbt.ezsequence.presentation.EzsequenceActionBarContributor">
+      </editor>
+   </extension>
+-->
+
+
+</plugin>
