@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_6sBaURXYEeKQZ6tBDDDaPw" type="EcoreTools" name="nikeplus" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_xg-KkBXZEeKQZ6tBDDDaPw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_xhAm0BXZEeKQZ6tBDDDaPw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_xhDDEBXZEeKQZ6tBDDDaPw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_QShSkBXiEeKQZ6tBDDDaPw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="nikeplus.ecore#//NikeplusCmd/json"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_QShSkRXiEeKQZ6tBDDDaPw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_xhDDERXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xhDDEhXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xhDDExXZEeKQZ6tBDDDaPw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_xhDqIBXZEeKQZ6tBDDDaPw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_xhDqIRXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xhDqIhXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xhDqIxXZEeKQZ6tBDDDaPw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_xg-KkRXZEeKQZ6tBDDDaPw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="nikeplus.ecore#//NikeplusCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xg-KkhXZEeKQZ6tBDDDaPw" x="268" y="224"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_4alGsBXZEeKQZ6tBDDDaPw" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4bKVgBXZEeKQZ6tBDDDaPw" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4bKVgRXZEeKQZ6tBDDDaPw" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_4altwBXZEeKQZ6tBDDDaPw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_4altwRXZEeKQZ6tBDDDaPw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_4altwhXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_4altwxXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_4altxBXZEeKQZ6tBDDDaPw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_4amU0BXZEeKQZ6tBDDDaPw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_4amU0RXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_4amU0hXZEeKQZ6tBDDDaPw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_4amU0xXZEeKQZ6tBDDDaPw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_4alGsRXZEeKQZ6tBDDDaPw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/net.sf.smbt.comm.http/model/httpcmd.ecore#//HttpCommCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4alGshXZEeKQZ6tBDDDaPw" x="257" y="30"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SDBm4BXiEeKQZ6tBDDDaPw" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_SDC1ABXiEeKQZ6tBDDDaPw" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_SDC1ARXiEeKQZ6tBDDDaPw" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SDBm4RXiEeKQZ6tBDDDaPw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="nikeplus.ecore#//JsonElement"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SDBm4hXiEeKQZ6tBDDDaPw" x="124" y="320"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_6sCBYBXYEeKQZ6tBDDDaPw"/>
+  <element xmi:type="ecore:EPackage" href="nikeplus.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_6pVdQBXZEeKQZ6tBDDDaPw" type="3003" source="_xg-KkBXZEeKQZ6tBDDDaPw" target="_4alGsBXZEeKQZ6tBDDDaPw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_6pVdQRXZEeKQZ6tBDDDaPw" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_6pVdQhXZEeKQZ6tBDDDaPw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6pVdQxXZEeKQZ6tBDDDaPw" points="[5, -8, 2, 157]$[5, -202, 2, -37]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6pnxIBXZEeKQZ6tBDDDaPw" id="(0.5392156862745098,0.21428571428571427)"/>
+  </edges>
+</notation:Diagram>

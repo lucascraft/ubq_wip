@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ezmqtt/1.0"
+            class="net.sf.smbt.ezmqtt.EzmqttPackage"
+            genModel="model/ezmqtt.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.mqtt.cmdInterpreter"
+            interpreter="net.sf.smbt.mqtt.client.cmd.MqttCmdHandler">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.mqtt.frameInterpreter"
+            interpreter="net.sf.smbt.mqtt.client.cmd.MqttFrameHandler">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+            ID="mqtt"
+            alias="net.sf.smbt.mqtt.engine"
+            cmdInterpreterID="net.sf.smbt.mqtt.cmdInterpreter"
+            desc="Mqtt protocol"
+            frameInterpreter="net.sf.smbt.mqtt.frameInterpreter"
+            instance="0"
+            transports="TCP">
+      </engine>
+   </extension>
+
+</plugin>

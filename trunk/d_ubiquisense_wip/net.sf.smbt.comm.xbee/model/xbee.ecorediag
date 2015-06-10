@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_iPeL0MfKEd-4nJyZfad9RQ" type="EcoreTools" name="xbee" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_7aSeYMfeEd-4nJyZfad9RQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_7aUTkMfeEd-4nJyZfad9RQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_7aU6oMfeEd-4nJyZfad9RQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_B6GvkMfhEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbee.ecore#//Xbee/firmaware"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B6GvkcfhEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_YGoHAMffEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbee.ecore#//Xbee/modes"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YGoHAcffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_XnMZAMffEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbee.ecore#//Xbee/freq"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XnMZAcffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_RjLoIMffEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbee.ecore#//Xbee/label"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RjMPMMffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_VtMxgMffEd-4nJyZfad9RQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="xbee.ecore#//Xbee/series"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VtMxgcffEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_7aU6ocfeEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7aU6osfeEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7aU6o8feEd-4nJyZfad9RQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_7aU6pMfeEd-4nJyZfad9RQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_7aU6pcfeEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7aU6psfeEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7aU6p8feEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_7aSeYcfeEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="xbee.ecore#//Xbee"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7aSeYsfeEd-4nJyZfad9RQ" x="196" y="20"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BmSGkMffEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_BmStoMffEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_BmTUsMffEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_pyWTIMflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XTEND"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pyWTIcflEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pItgQMflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XCITE"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pItgQcflEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_FeqtYMffEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XBEE"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FeqtYcffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Gr0dAMffEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XBEE_PRO"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Gr0dAcffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_IgaAEMffEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XBEE_XSC_900"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IgaAEcffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_LI_L4MffEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XBEE_ZNET_25"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LI_L4cffEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_lcEPYMflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_SERIES/XSTREAM"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lcEPYcflEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_BmTUscffEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BmTUssffEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BmTUs8ffEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_BmSGkcffEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbee.ecore#//XBEE_SERIES"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BmSGksffEd-4nJyZfad9RQ" x="64" y="20"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_DWY80MfgEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_DWaK8MfgEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_DWaK8cfgEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_FaQSAMfgEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_COMM_MODE/POINT_TO_MULTIPOINTS"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FaQSAcfgEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_HBf8oMfgEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_COMM_MODE/DIGIMESH"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HBf8ocfgEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_P5G2gMfgEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_COMM_MODE/ZIGBEE"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P5G2gcfgEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_DWaK8sfgEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_DWaK88fgEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_DWaK9MfgEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_DWY80cfgEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbee.ecore#//XBEE_COMM_MODE"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DWY80sfgEd-4nJyZfad9RQ" x="54" y="208"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_TnoWsMfgEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_Tno9wMfgEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_Tno9wcfgEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_YfQM8MfgEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FREQ/RF_2400_MHZ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YfQM8cfgEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bvEX4MfgEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FREQ/RF_900_MHZ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bvEX4cfgEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Tno9wsfgEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Tno9w8fgEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Tno9xMfgEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_TnoWscfgEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbee.ecore#//XBEE_FREQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TnoWssfgEd-4nJyZfad9RQ" x="56" y="312"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_AeMyQMfhEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_AeNZUMfhEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_AeOAYMfhEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_vu4jAMflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/X09_009"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vu4jAcflEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BjKc8MfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/X09_019"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BjKc8cfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_DVD4YMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/X24_009"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_DVD4YcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ESIkoMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/X24_019"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ESIkocfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GIVRQMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XB24"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_GIVRQcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_G_8OsMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XB24_B"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_G_8OscfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_H36_kMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XB24_ZB"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_H36_kcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_LUhCQMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP09_DM"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LUhCQcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Ri9hgMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP09_XSC"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ri9hgcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_VEkAAMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP09_DP"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VEkAAcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZD3HIMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP24"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZD3HIcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Z9zm4MfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP24_B"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Z9zm4cfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_a-QXQMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XBP24_ZB"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_a-QXQcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_c5QrYMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XC09_009"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_c5QrYcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_esHwIMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XC09_038"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_esHwIcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_g_I7oMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XH09_009"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_g_I7ocfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_jDgnIMfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XH09_019"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_jDgnIcfmEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_lfjy0MfmEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_FIRMAWARE/XT09"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lfjy0cfmEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_AeOAYcfhEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AeOAYsfhEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AeOAY8fhEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_AeMyQcfhEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbee.ecore#//XBEE_FIRMAWARE"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AeMyQsfhEd-4nJyZfad9RQ" x="392" y="24"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_gAyScMflEd-4nJyZfad9RQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_gAySc8flEd-4nJyZfad9RQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_gAySdMflEd-4nJyZfad9RQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_glZbYMflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_MANUFACTURER_ID/XSTREAM"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_glZbYcflEd-4nJyZfad9RQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_kkJI4MflEd-4nJyZfad9RQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="xbee.ecore#//XBEE_MANUFACTURER_ID/XBEE"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kkJI4cflEd-4nJyZfad9RQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gAySdcflEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gAy5gMflEd-4nJyZfad9RQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gAy5gcflEd-4nJyZfad9RQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gAySccflEd-4nJyZfad9RQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="xbee.ecore#//XBEE_MANUFACTURER_ID"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAyScsflEd-4nJyZfad9RQ" x="220" y="192"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_iPeL0cfKEd-4nJyZfad9RQ"/>
+  <element xmi:type="ecore:EPackage" href="xbee.ecore#/"/>
+</notation:Diagram>

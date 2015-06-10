@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+<!-- InstanceBegin template="/Templates/make/xbee/xbee-user.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog
+  RSS Feed" href="http://www.ladyada.net/feed/">
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="configure_fichiers/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="configure_fichiers/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="configure_fichiers/make.css" 
+type="text/css">
+<link rel="stylesheet" href="configure_fichiers/skeleton.css" 
+type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Xbee Adapter - Connecting, Configuring and Upgrading</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head><body>
+
+    <div id="overDiv" style="position: absolute; visibility: hidden; 
+z-index: 1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader"><img src="configure_fichiers/topheaderbadge.gif" 
+height="190" width="171"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->XBee
+ radios<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Connecting,
+ Configuring &amp; Upgrading<!-- InstanceEndEditable --></span>
+
+<ul id="menu">
+	<li class="first"></li> 
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/index.html">Overview</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/make.html">Make it!</a></div>
+      
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://www.ladyada.net/">Use 
+it!</a></div>
+      
+      <ul>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/modules.html">Modules</a></div>
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/wiring.html">Wiring</a></div>
+	  </li>
+      	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/configure.html">Connect</a></div>
+	    
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/point2point.html">Point2Point</a></div>
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/arduino.html">Arduino link</a></div>
+	  </li>
+      	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/midibee.html">MIDI link</a></div>
+	  </li>
+   	    <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/tweetawatt/index.html">Tweetawatt</a></div>
+	  </li>
+            	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/ref.html">Reference</a></div>
+	  </li>
+	  </ul>
+      
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/resources.html">Resources</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/download.html">Download</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.adafruit.com/index.php?main_page=index&amp;cPath=29">Buy
+ Kit</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://forums.ladyada.net/">Forums</a></div>
+    </li>
+  
+	<li class="last"></li>
+</ul>
+
+<ul id="nav">
+
+<li><a href="http://www.ladyada.net/">Home</a></li>
+
+<li><a href="http://www.ladyada.net/about.html">About<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/about.html">ladyada.net</a></li>
+	<li><a href="http://www.ladyada.net/portfolio/2007/index.html">Portfolio</a></li>
+	<li><a href="http://www.ladyada.net/pub/research.html">Research</a></li>
+	<li><a href="http://www.ladyada.net/pub/press.html">Press</a></li>
+	<li><a href="http://www.ladyada.net/pub/pub.html">Publication &amp; 
+Presentation</a></li>
+	<li><a href="http://www.flickr.com/photos/ladyada/">Photos</a></li>
+	<li><a href="http://www.ladyada.net/wiki">Wiki (backend)</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/make/">Projects<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="#nogo">Arduino �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/make/logshield/">Datalogger&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/eshield/">Ethernet&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/gpsshield/">GPS&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/pshield/">Proto&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/mshield/">Motor&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/waveshield/">Wave&nbsp;Shield</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li><li><a href="http://www.ladyada.net/make/bbpsup/">Adj.&nbsp;power&nbsp;supply</a></li>
+	<li><a href="http://www.ladyada.net/make/boarduino/">BoArduino</a></li>
+	<li><a href="http://www.ladyada.net/make/digg/">DIGG&nbsp;Button</a></li>
+	<li><a href="http://www.ladyada.net/make/drawdio/">Drawdio</a></li>
+    <li><a href="http://www.ladyada.net/make/fuzebox/">Fuzebox</a></li>
+    <li><a href="http://www.ladyada.net/make/gamegrrl/">Game&nbsp;Grrl</a></li>
+	<li><a href="http://www.ladyada.net/make/conway/">Game&nbsp;of&nbsp;Life</a></li>
+	<li><a href="http://www.ladyada.net/make/icetube/">Ice&nbsp;Tube&nbsp;clock</a></li>
+    <li><a href="http://www.ladyada.net/make/midisense/">MIDIsense</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov2/">MiniPOV2</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov3/">MiniPOV3</a></li>
+	<li><a href="http://www.ladyada.net/make/minty/">MintyMP3</a></li>
+	<li><a href="http://www.ladyada.net/make/mintyboost/">MintyBoost</a></li>
+    <li><a href="http://www.ladyada.net/make/monochron/">MONOCHRON</a></li>
+    <li><a href="http://www.ladyada.net/make/simreader/">SIM&nbsp;Reader</a></li>
+	<li><a href="http://www.ladyada.net/make/spokepov/">SpokePOV</a></li>
+	<li><a href="http://www.ladyada.net/make/tvbgone/">TV-B-Gone</a></li>
+	<li><a href="http://www.ladyada.net/make/tweetawatt/">Tweet-a-Watt</a></li>
+    <li><a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a></li>
+	<li><a href="http://www.ladyada.net/make/wavebubble/">Wave&nbsp;Bubble</a></li>
+	<li><a href="http://www.ladyada.net/make/x0xb0x/">x0xb0x</a></li>
+	<li><a href="http://www.ladyada.net/make/xbee/">XBee</a></li>
+	<li><a href="http://www.ladyada.net/make/ybox2/">YBox2</a></li>
+	<li><a href="#nogo">Quickies �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    <li><a href="http://www.ladyada.net/make/usbgamepad/index.html">USB&nbsp;Gamepad</a></li>
+	    <li><a href="http://www.ladyada.net/make/pumpkin/pumpkin.html">Halloween&nbsp;Pumpkin</a></li>
+	    <li><a href="http://www.ladyada.net/make/vintagelight/index.html">Vintage&nbsp;Bike&nbsp;Lite</a></li>
+	  	<li><a href="http://www.ladyada.net/make/sudc4kap/index.html">Kite&nbsp;Arial&nbsp;Photo</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikestand/index.html">Bike&nbsp;Stand</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikelite/index.html">LiIon&nbsp;Bike&nbsp;Lite</a></li>
+     	<li><a href="http://www.ladyada.net/make/pogojig/index.html">Pogo&nbsp;Jib</a></li>
+	  	<li><a href="http://www.ladyada.net/make/massprog/index.html">Mass&nbsp;Programming</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlipo/index.html">Solar&nbsp;LiPo&nbsp;Charging</a></li>
+	  	<li><a href="http://www.ladyada.net/make/magstripe/index.html">Magstripe&nbsp;Reader</a></li>
+
+	  </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+   	<li><a href="http://www.ladyada.net/make/">More...</a></li>
+	<li><a href="http://www.instructables.com/member/ladyada/">-&gt;Instructables</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/learn/">Learn<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/learn/arduino/">Arduino&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/avr/">AVR&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/lcd/">LCDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/multimeter/">Multimeter&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/sensors/">Sensors �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/sensors/fsr.html">FSR</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/cds.html">CdS&nbsp;Photocell</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/tmp36.html">Temperature</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/tilt.html">Tilt</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/pir.html">PIR</a></li>
+        <li><a 
+href="http://www.ladyada.net/learn/sensors/thermocouple.html">Thermocouple</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+        <li><a href="http://www.ladyada.net/learn/breakoutplus/">Breakout
+ boards �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a 
+href="http://www.ladyada.net/learn/breakoutplus/ds1307rtc.html">DS1307&nbsp;RTC</a></li>
+        <li><a 
+href="http://www.ladyada.net/learn/sensors/thermocouple.html">MAX6675</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+	<li><a href="http://www.ladyada.net/learn/soldering/">Soldering&nbsp;tutorial</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+	
+<li><a href="http://www.ladyada.net/library/">Library<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>	
+	<li><a href="http://www.ladyada.net/library/arduino/">Arduino&nbsp;Hacks</a></li>
+    <li><a href="http://www.ladyada.net/library/batteries.html">Batteries</a></li>
+	<li><a href="http://www.ladyada.net/library/diyboostcalc.html">Boost&nbsp;Calc</a></li>
+    <li><a href="http://www.ladyada.net/library/equipt/">E.E.&nbsp;Tools</a></li>
+	<li><a href="http://www.ladyada.net/library/hackcomputer.html">E.E.&nbsp;Computer</a></li>
+    <li><a href="http://www.ladyada.net/library/procure/">Find&nbsp;Parts</a></li>
+	<li><a href="http://www.ladyada.net/library/kits/">Kits</a></li>
+	<li><a href="http://www.ladyada.net/library/laser/">Laser</a></li>
+	<li><a href="http://www.ladyada.net/library/ucannoyances.html">uC 
+Annoyances</a></li>
+	<li><a href="http://www.ladyada.net/library/openhardware/">Open Source 
+Hardware</a></li>
+	<li><a href="http://www.ladyada.net/library/pcb/">PCB&nbsp;Design&nbsp;&amp;&nbsp;Tips</a></li>
+	<li><a href="http://www.ladyada.net/library/picvsavr.html">PIC&nbsp;vs.&nbsp;AVR</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.adafruit.com/blog/">Blog</a></li>
+
+<li><a href="http://www.adafruit.com/" target="_blank">Store</a></li>
+
+<li><a href="http://forums.adafruit.com/" target="_blank">Forums</a></li>
+
+</ul>
+
+<div id="searchbox">
+<!-- Google CSE Search Box Begins -->
+<form id="searchbox_012941403977924873237:omv8mprm6ek" 
+action="http://www.google.com/cse" target="_top"> <input name="cx" 
+value="012941403977924873237:omv8mprm6ek" type="hidden"> <input 
+style="background: 
+url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;)
+ no-repeat scroll left center rgb(255, 255, 255);" name="q" size="23" 
+type="text"><br> <span class="style1">ladyada.net</span> <input 
+name="sa" value="Search" type="submit"> <input name="cof" 
+value="FORID:0" type="hidden"> <input 
+value="www.ladyada.net/make/xbee/configure.html" name="siteurl" 
+type="hidden"></form><script type="text/javascript" src="configure_fichiers/brand.js"></script>
+<!-- Google CSE Search Box Ends -->
+</div>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+ </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>Once you have the XBee connected to a computer, you can 
+experiment with connecting, configuring and upgrading the modules to the
+ latest firmware.</p>
+    <p><strong>PLEASE NOTE! These instructions are for the Adafruit XBee
+ adapter kit and the Series 1 XBees that are sold in the Adafruit Shop. 
+They may not work for ANY OTHER KIND OF XBEE OR ADAPTER KIT!</strong></p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Connecting<!-- InstanceEndEditable -->
+ </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>First, follow the wiring information in the previous section to 
+connect up the XBee module. Note that if the module has correct power, 
+the green LED should be blinking. If it isn't, check the wiring and 
+verify that the XBee is getting power. Some versions or XBees the green 
+LED doesnt blink, but it is on.</p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/ftdipowered.jpg"><img 
+src="configure_fichiers/ftdipowered_t.jpg" border="1" height="264" 
+width="500"></a></p>
+    <p>You'll need to figure out which serial port (COM) you are using. 
+Plug in the FTDI cable, USB adapter, Arduino, etc. Under windows, check 
+the device manager, look for "USB Serial Port" </p>
+    <p align="center"><img src="configure_fichiers/devicemanager.jpg" 
+height="520" width="470"> </p>
+    <p align="left">Next you'll need to open up a terminal program. 
+Windows comes with Hyperterminal, so just use that. Its under <strong>Start-&gt;Programs-&gt;Accessories-&gt;Communications-&gt;HyperTerminal</strong>.
+ If you are running a different operating system just use whatever 
+terminal program is available for it, such as ZTerm, minicom, etc. Make 
+sure you understand how those work since a confusion could cause a big 
+headache</p>
+    <p align="left">When you open it up, it should ask you for a new 
+connection. Lets name it "xbee" </p>
+    <p align="center"><img src="configure_fichiers/hyperxbee.gif" 
+height="300" width="337"></p>
+    <p align="left">Next You will select the COM port from the drop down
+ menu, in my case its COM4. </p>
+    <p align="center"><img src="configure_fichiers/comselect.gif" 
+height="304" width="301"></p>
+    <p align="left">Next, set the properties. Make sure you select <strong>9600
+ bps, 8 bit, No parity, 1 stop bit and no flow control. </strong>Some 
+programs may call this (9600 8N1). If the XBee has been configured for a
+ different baud rate, of course, you should use that. </p>
+    <p align="center"><img src="configure_fichiers/comprops.jpg" 
+height="407" width="344"></p>
+    <p align="left">You will get a blank screen that says "Connected" in
+ the bottom left corner. Now, change the setup by selecting <strong>File-&gt;Properties</strong>
+ and then going to the <strong>Settings</strong> tab and clicking the <strong>ASCII
+ Setup</strong> button. Make sure you are sending line ends with line 
+feeds and also echoing local characters</p>
+    <p align="center"><img src="configure_fichiers/hypersetup.gif" 
+height="316" width="263"></p>
+    <p align="left">Now type in <strong>+++</strong> (three plus signs) 
+in quick succession. If the XBee is connected up properly you will get 
+an <strong>OK</strong> in response</p>
+    <p align="center"><img src="configure_fichiers/xbeeok.gif" 
+height="349" width="571"></p>
+    <p align="left">If you got an OK that means the XBee is powered and 
+wired up correctly! If its not working, check:</p>
+    <ul>
+      <li>Try again, be sure to wait 10 seconds between each attempt at 
+typing in +++ and type the +'s quickly</li>
+      <li>Is the module powered? Green LED should be blinking</li>
+      <li>Are RX &amp; TX swapped?</li>
+      <li>Do you have the correct baud rate? By default it should be 
+9600 baud 8N1 no hardware handshake but if it has been used for 
+something else the baud rate might be different.</li>
+    </ul>
+    <p align="center"><img src="configure_fichiers/xbeeatok.gif" 
+height="349" width="569"></p>
+    <p align="left">Next try typing in +++ (receive <strong>OK</strong>)
+ and then <strong>AT</strong> and press return to get another <strong>OK</strong>
+ This is basically how we can configure the XBee, by sending it AT 
+commands (they all start with AT for ATtention). After a while, the XBee
+ times out of configuration mode and goes back to pass-through 
+connection mode. So if you want to get back to config mode, just type in
+ +++ and it will start responding again.</p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Configuring
+ with terminal<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>XBee's can be configured directly using a terminal program, or 
+via a program such as Digi's XCTU program - which is specifically 
+designed to make configuration easy.</p>
+    <p>For example, here are two examples of how configure the module's 
+baud rate.</p>
+    <p>Using a terminal, you can change the baud rate using the <strong>ATBD</strong>
+ command with a number afterwards that selects which baud rate to use:</p>
+    <ul>
+      <li>0 = 1200</li>
+      <li>1 = 2400</li>
+      <li>2 = 4800</li>
+      <li>3 = 9600</li>
+      <li>4 = 19200</li>
+      <li>5 = 38400</li>
+      <li>6 = 57600</li>
+      <li>7 = 115200</li>
+    </ul>
+    <blockquote>
+      <p><strong>-&gt; +++</strong> (get into AT mode)<strong><br>
+        &lt;- OK</strong><br>
+        -&gt; <strong>AT</strong> (check if xbee modem is responding)<br>
+&lt;- <strong>OK</strong><br>
+-&gt; <strong>ATBD</strong> (get current baud rate as above)<br>
+&lt;- <strong>3</strong> (9600)<br>
+-&gt; <strong>ATBD 4</strong> (set baud rate to 19200)<br>
+&lt;- <strong>OK</strong><br>
+-&gt; <strong>ATBD</strong> (check again)<br>
+&lt;- <strong>4</strong><br>
+-&gt; <strong>ATWR</strong> (write the baud rate change to flash)<br>
+&lt;- <strong>OK</strong></p>
+    </blockquote>
+    <p align="center"><img src="configure_fichiers/terminalatbd.gif" 
+height="367" width="568"></p>
+    <p align="left">Then reset the module, either by pulling the reset 
+pin low for a second or removing power (unplugging cable, etc) To 
+connect now, set the terminal to use 19200 baud, otherwise the module 
+will not respond! You can set it back to 9600 baud by giving it the 
+command <strong>ATBD 3</strong> and then <strong>ATWR</strong>iting it 
+to the flash</p>
+    <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Configuring
+ with X-CTU<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>Digi/Maxstream wrote a little program to help configure XBees, 
+its also the only way I know of to upgrade them to the latest firmware. 
+Unfortunately it only runs on Windows</p>
+    <p>After installing and starting the program, select the COM port 
+(COM4 here) and baud rate (9600 is default). No flow control, 8N1</p>
+    <p align="center"><img src="configure_fichiers/xctustart.gif" 
+height="575" width="455"></p>
+    <p align="left">To verify, click <strong>Test / Query</strong><br>
+    </p>
+    <p align="center"><img src="configure_fichiers/xctutestok.gif" 
+height="184" width="350"></p>
+    <p align="left">Hopefully the test will succeed. If you are having 
+problems: check that the XBee is powered, wired correctly, the right COM
+ port &amp; baud rate is selected, etc. </p>
+    <p align="left">The test will respond with the firmware version. Now
+ we will change the baud rate for the modem using X-CTU</p>
+    <p align="left">Go to the Modem Configuration tab. This is where the
+ modem is configured and updated</p>
+    <p align="center"><img src="configure_fichiers/xctumodemconfig.gif" 
+height="575" width="455"></p>
+    <p align="left">Click on <strong>Modem Parameters</strong> -&gt; <strong>"Read"</strong>
+ to read in the current version and settings</p>
+    <p align="center"><img src="configure_fichiers/xctureadparam.gif" 
+height="575" width="455"></p>
+    <p align="left">You may want to skip ahead and upgrade the modem 
+now, since it can be confusing if you dont have the latest firmware on 
+it</p>
+    <p align="left">Scroll down in the settings pane until you find the <strong>Serial
+ Interfacing -&gt; Interface Data Rate</strong> setting. Click on the 
+setting and select <strong>4</strong> for 19200 baud.</p>
+    <p align="center"><img src="configure_fichiers/xctusetbaud.gif" 
+border="1" height="262" width="455"></p>
+    <p align="left">Once that is selected, click on <strong>Write</strong>
+ to program that setting in place. Don't forget to 'reboot' the module 
+by power-cycling it or pulling the Reset pin low. Next time you want to 
+connect, make sure to change the COM port setup to 19200 or you wont be 
+able to talk to the module!</p>
+    <p align="center"><img src="configure_fichiers/xctubaudupdate.gif" 
+border="1" height="256" width="455"></p>
+    <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Upgrading
+ with X-CTU<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" --><p 
+align="left">Theres a good chance your XBee is not running the latest 
+firmware &amp; there's a lot of features added, so next up is upgrading!</p>
+    <p align="left">Go to the Modem Configuration tab. This is where the
+ modem is configured and updated</p>
+    <p align="center"><img src="configure_fichiers/xctumodemconfig.gif" 
+height="575" width="455"></p>
+    <p align="center">Click <strong>Download new versions...</strong> 
+and select to download the latest firmwares from the Web</p>
+    <p align="center"><img src="configure_fichiers/xctugetnewvers.gif" 
+height="177" width="231">-&gt; <img 
+src="configure_fichiers/xctudownloadingnewvers.gif" height="177" 
+width="231"></p>
+    <p align="center"><img 
+src="configure_fichiers/xctuupgradesummary.gif" height="276" width="680"></p>
+    <p align="center"><img 
+src="configure_fichiers/xctudownloadcomplete.gif" height="177" 
+width="231"></p>
+    <p align="left">Once you have downloaded the newest firmware, its 
+time to upgrade!</p>
+    <p align="left">Click on <strong>Modem Parameters</strong> -&gt; <strong>"Read"</strong>
+ to read in the current version and settings</p>
+    <p align="center"><img src="configure_fichiers/xctureadparam.gif" 
+height="575" width="455"></p>
+    <p align="left">Now you will know for sure what function set, 
+version and settings are stored in the modem</p>
+    <p>Select from the <strong>Version</strong> dropdown the latest 
+version available</p>
+    <p align="center"><img 
+src="configure_fichiers/xctuselectnewvers.gif" border="1" height="304" 
+width="455"></p>
+    <p align="left">Check the <strong>Always update firmware</strong> 
+checkbox</p>
+    <p align="center"><img src="configure_fichiers/xctualwaysupdate.gif"
+ border="1" height="198" width="455"></p>
+    <p align="left">And click <strong>Write</strong> to initialize and 
+program the new firmware in!</p>
+    <p align="center"><img src="configure_fichiers/xctuinitmodel.gif" 
+height="112" width="455"></p>
+    <p align="center"><img src="configure_fichiers/xctuprogramming.gif" 
+height="115" width="455"></p>
+    <p align="center"><img src="configure_fichiers/xctupgraded.gif" 
+height="109" width="455"></p>
+    <p align="left">Thats it, now you have the most recent firmware for 
+your modem. You should now uncheck the <strong>Always update firmware</strong>
+ checkbox. If you have problems, like for example timing out or not 
+being able to communicate, make sure the RTS pin is wired up correctly 
+as this pin is necessary for upgrading. FTDI cables are already set up 
+for this so you shouldn't have a problem</p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->July 23, 2010  23:39<!-- #EndDate --></div>
+
+<!-- InstanceEnd --></body></html>

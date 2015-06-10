@@ -1,0 +1,992 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+ 
+
+
+ 
+ 
+ 
+
+
+ <link rel="icon" type="image/vnd.microsoft.icon" 
+href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "1bc4cd6e86a25aa197263773e7a904b1";
+ 
+ 
+ var logged_in_user_email = "lucas.bigeardel@gmail.com";
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>XBeePins - 
+ xbee-api -
+ 
+ Simplifies the configuration of XBee I/O pins - Project Hosting on 
+Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="XBeePins_fichiers/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="XBeePins_fichiers/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" 
+href="http://code.google.com/feeds/p/xbee-api/svnchanges/basic?path=/wiki/XBeePins.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16517148615437166380/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ </style>
+<script src="XBeePins_fichiers/ga.js" async="" type="text/javascript"></script></head><body
+ class="t6">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-4047422-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+ <div id="gaia">
+ 
+ <span>
+ 
+ 
+ <b>lucas.bigeardel@gmail.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and 
+Settings"><u>Profile</u></a>
+ | <a 
+href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fxbee-api%2Fwiki%2FXBeePins"
+ onclick="_CS_click('/gb/ph/signout');"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px;"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding: 0px; margin: 20px 0px 0px; width: 100%;" 
+cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ <td style="width: 55px; text-align: center;">
+ <a href="http://code.google.com/p/xbee-api/">
+ 
+ <img src="XBeePins_fichiers/defaultlogo.png" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em;">
+ 
+ <div id="pname" style="margin: 0px 0px -3px;">
+ <a href="http://code.google.com/p/xbee-api/" style="text-decoration: 
+none; color: rgb(0, 0, 0);">xbee-api</a>
+ 
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" 
+href="http://code.google.com/p/xbee-api/" style="text-decoration: none; 
+color: rgb(0, 0, 0);">A Java API for Digi XBee/XBee-Pro OEM RF Modules</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space: nowrap; text-align: right;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q">
+ <input name="projectsearch" value="Search projects" type="submit">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+
+ 
+<table id="mt" width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/w/list');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/source/checkout');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/source/checkout">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</tbody></table>
+<table class="st" width="100%" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+ <tbody><tr>
+ 
+ 
+ 
+ <td>
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/xbee-api/w/list" method="GET" style="display: inline;">
+ <select id="can" name="can" style="font-size: 92%;">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input size="38" id="searchq" name="q" autocomplete="off"
+ style="font-size: 92%;" type="text"></span>
+ 
+ 
+ <input value="Search" style="font-size: 92%;" type="submit">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="bevel-right" height="4" valign="top" align="right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</tbody></table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol">
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+
+ <style type="text/css">
+ .artifactcomment {
+ margin: .5em 0 0 0;
+ padding: .3em 0 .3em .3em;
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentlist {
+ border-bottom: 3px solid #c3d9ff;
+ }
+ #commentform { padding-top: 1em; }
+ .delcom { background: #e8e8e8 }
+ .commentcontent { margin: 1em 0;}
+ </style>
+
+
+ <div id="wikicontent">
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ 
+ <td class="vt" id="wikimaincol" width="100%">
+ 
+ <div style="float: right; width: 18em;" id="wikimeta">
+ <div class="pmeta_bubble_bg">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <table style="padding: 5px;">
+ <tbody><tr><td colspan="2" style="padding-bottom: 5px;">Updated <span 
+title="Tue Aug 18 19:37:58 2009">Aug 18, 2009</span>
+ 
+ by <a style="white-space: nowrap;" 
+href="http://code.google.com/u/andrew.rapp/">andrew.rapp</a>
+ </td></tr>
+ 
+ <tr><th class="vt">Labels:</th>
+ <td>
+ 
+ <a href="http://code.google.com/p/xbee-api/w/list?q=label:Featured" 
+title="Listed on project home page">Featured</a>
+ 
+ </td>
+ </tr>
+ 
+ 
+ </tbody></table>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ 
+ <div id="wikiheader" style="margin-bottom: 1em;">
+ 
+ <img id="star_img" src="XBeePins_fichiers/star_off.gif" style="cursor: 
+pointer;" onclick="_CS_toggleStar(this,
+ '',
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 'xbee-api:XBeePins',
+ 'token': codesite_token
+ });" height="15" width="15">
+ 
+ &nbsp;
+ <span style="font-size: 120%; font-weight: bold;">XBeePins</span>
+ &nbsp;
+ 
+ 
+ <div style="font-style: italic; margin-top: 3px;">Simplifies the 
+configuration of XBee I/O pins</div>
+ 
+ </div>
+ <p>Configuring an XBee for I/O samples can be a frustrating experience.
+  First you have to look in the Digi command reference table to find out
+ what pins support Digital or Analog, then determine the location of the
+ physical pin, and finally determine the API method to call to get the 
+value.  This guide attempts to simply the process. </p><p>The following 
+image shows the physical layout of pins 1 through 20 of an XBee.  
+Although this is a series 2 XBee, the pin layout is identical to series 1
+ (805.15.4), both Pro and standard. </p><p><img 
+src="XBeePins_fichiers/xbee-series2-pin-layout.dms"> </p><p>If you are 
+using the XBee Explorer, remember it has two extra pins, GND and 5V, as 
+shown </p><p><img src="XBeePins_fichiers/xbee-explorer.dms"> </p><h2><a 
+name="802.15.4_(Series_1)_Pin_Assignments">802.15.4 (Series 1) Pin 
+Assignments</a><a href="#802.15.4_%28Series_1%29_Pin_Assignments" 
+class="section_anchor">¶</a></h2><p></p><table><tbody><tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Pin
+ #</strong></td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> <strong>AT Command</strong></td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> <strong>Description</strong></td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Default
+ Configuration</strong></td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> <strong>Supported Configurations (Value)</strong></td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Analog
+ I/O Method</strong></td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> <strong>Digital I/O Method</strong></td></tr> <tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 1</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Power 
+Supply</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> 2</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> UART Data Out</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 3</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> UART Data 
+In</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;">
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;">
+ n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> 4</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170);
+ padding: 5px;"> Digital Output 8 (not supported as of 2/28/09)</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 5</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Module 
+Reset (reset pulse must be at least 200 ns)</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 6</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> P0</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> PWM Output 0
+ / RX Signal Strength Indicator</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> RSSI_PWM</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> DISABLED (0x0), RSSI_PWM 
+(0x1), PWM_OUTPUT (0x2)</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> n/a</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 7</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> P1</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> PWM Output 1</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), RSSI_PWM (0x1), PWM_OUTPUT (0x2)</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 8</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Do not 
+connect</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> 9</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> D8</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DTR / Pin Sleep Control Line or Digital Input 8</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), DIGITAL_INPUT (0x3)</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> isD8On()</td></tr> <tr><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> 10</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border:
+ 1px solid rgb(170, 170, 170); padding: 5px;"> Ground</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 11</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D4</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Analog 
+Input 4 or Digital I/O 4</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DISABLED</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> DISABLED (0x0), ANALOG_INPUT (0x2), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog4()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD4On()</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 12</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> D7</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Clear-to-Send Flow Control or 
+Digital I/O 7</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> CTS_FLOW_CTRL</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> DISABLED (0x0), CTS_FLOW_CTRL (0x1), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> isD7On()</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 13</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Module 
+Status Indicator</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170);
+ padding: 5px;"> </td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170);
+ padding: 5px;"> n/a</td></tr> <tr><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> 14</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Voltage Reference for A/D Inputs</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 15</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D5</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Associated
+ Indicator, Analog Input 5 or Digital I/O 5</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> ASSOC_LED</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), ASSOC_LED (0x1), ANALOG_INPUT (0x2), DIGITAL_INPUT (0x3), 
+DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog5()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD5On()</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 16</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> D6</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Request-to-Send Flow Control, Analog
+ Input 6 or Digital I/O 6</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> DISABLED</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> DISABLED (0x0), RTS_FLOW_CTRL (0x1),
+ DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH 
+(0x5)</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> isD6On()</td></tr> <tr><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> 17</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> D3</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Analog Input 3 or Digital I/O 3</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), ANALOG_INPUT (0x2), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> getAnalog3()</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> isD3On()</td></tr> <tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 18</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D2</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Analog 
+Input 2 or Digital I/O 2</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DISABLED</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> DISABLED (0x0), ANALOG_INPUT (0x2), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog2()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD2On()</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 19</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> D1</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Analog Input 1 or Digital I/O 1</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), ANALOG_INPUT (0x2), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> getAnalog1()</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> isD1On()</td></tr> <tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 20</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D0</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Analog 
+Input 0 or Digital I/O 0</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DISABLED</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> DISABLED (0x0), ANALOG_INPUT (0x2), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog0()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD0On()</td></tr> </tbody></table><p>Example: You want 
+to read an analog sensor on a remote XBee end device.  Look in the table
+ for an available pin that supports ANALOG_INPUT; let's use 11.  In the 
+table we can see that the AT Command for pin 11 is D4 and the 
+ANALOG_INPUT parameter value is 0x2.  Now plug your end device into your
+ computer and open X-CTU.   Select enable API mode and use escape 
+characters.  On the Modem Configuration tab and click "Read".  Find D4 
+in and set to "2 - ADC".  Now enable I/O samples by setting IR to "1388"
+ (every five seconds) and click "Write" to save the configuration.  Now 
+connect the XBee coordinator to your PC and start receiving the samples 
+with the getAnalog4() method in the IoSample.java class. </p><h2><a 
+name="ZNet/ZB_Pro_(Series_2)_Pin_Assignments">ZNet/ZB Pro (Series 2) Pin
+ Assignments</a><a href="#ZNet/ZB_Pro_%28Series_2%29_Pin_Assignments" 
+class="section_anchor">¶</a></h2><p></p><table><tbody><tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Pin
+ #</strong></td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> <strong>AT Command</strong></td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> <strong>Description</strong></td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Default
+ Configuration</strong></td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> <strong>Supported Configurations (Value)</strong></td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Analog
+ I/O Method</strong></td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> <strong>Digital I/O Method</strong></td></tr> <tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 1</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Power 
+Supply</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> 2</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> UART Data Out</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 3</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> UART Data 
+In</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;">
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;">
+ n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> 4</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> P2</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> Digital I/O 12</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> UNMONITORED_INPUT</td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> UNMONITORED_INPUT (0x0), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> isD2On()</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 5</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Module 
+Reset (reset pulse must be at least 200 ns)</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 6</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> P0</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> PWM Output 0
+ / RX Signal Strength Indicator / Digital IO</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> RSSI_PWM</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), RSSI_PWM (0x1), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), 
+DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> isD10On()</td></tr> <tr><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> 7</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> P1</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> Digital I/O 11</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+UNMONITORED_INPUT</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> UNMONITORED_INPUT (0x0), DIGITAL_INPUT (0x3), 
+DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> isD1On()</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 8</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Do not 
+connect</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> n/a</td></tr> <tr><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> 9</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170, 170,
+ 170); padding: 5px;"> DTR / Pin Sleep Control Line</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 10</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Ground</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 11</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D4</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Digital 
+I/O 4</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> DISABLED</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> DISABLED (0x0), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> isD4On()</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 12</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D7</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+Clear-to-Send Flow Control or Digital I/O 7</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> CTS_FLOW_CTRL</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), CTS_FLOW_CTRL (0x1), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5), RS485_TX_LOW (0x6), RS485_TX_HIGH 
+(0x7)</td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> n/a</td><td style="border: 1px solid rgb(170, 170, 170); padding:
+ 5px;"> isD7On()</td></tr> <tr><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> 13</td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> Module Status Indicator</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 14</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Not used 
+on this module. For compatibility with other XBee modules, we recommend 
+connecting this pin to a voltage reference if Analog sampling is 
+desired. Otherwise, connect to GND</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> n/a</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 15</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D5</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Associated 
+Indicator, Digital I/O 5</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> ASSOC_LED</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> DISABLED (0x0), ASSOC_LED (0x1), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> n/a</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> isD5On()</td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 16</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D6</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+Request-to-Send Flow Control, Digital I/O 6</td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), RTS_FLOW_CTRL (0x1), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> n/a</td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> isD6On()</td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 17</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D3</td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Analog 
+Input 3 or Digital I/O 3</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DISABLED</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> DISABLED (0x0), ANALOG_INPUT (0x2), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog3()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD3On()</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 18</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> D2</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Analog Input 2 or Digital I/O 2</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> DISABLED 
+(0x0), ANALOG_INPUT (0x2), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> getAnalog2()</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> isD2On()</td></tr> <tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 19</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> D1</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Analog 
+Input 1 or Digital I/O 1</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> DISABLED</td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> DISABLED (0x0), ANALOG_INPUT (0x2), 
+DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW (0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+getAnalog1()</td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> isD1On()</td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> 20</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> D0</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Analog Input 0, Digital IO 0, or 
+Commissioning Button</td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> NODE_ID_ENABLED</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> DISABLED (0x0), NODE_ID_ENABLED 
+(0x1), ANALOG_INPUT (0x2), DIGITAL_INPUT (0x3), DIGITAL_OUTPUT_LOW 
+(0x4), DIGITAL_OUTPUT_HIGH (0x5)</td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> getAnalog0()</td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> isD0On()</td></tr> </tbody></table><p>Example:
+ You want to read an digital sensor on a remote XBee end device.  Look 
+in the table for an available pin that supports DIGITAL_INPUT; let's use
+ pin 20.  In the table we can see that the AT Command for pin 20 is D0 
+and the DIGITAL_INPUT parameter value is 0x3.  Now plug your end device 
+into your computer and open X-CTU.   Select enable API mode and use 
+escape characters.  On the Modem Configuration tab and click "Read".  
+Find D0 in and set to "3 - DIGITAL INPUT".  Now enable I/O samples by 
+setting IR to "1388" (every five seconds) and click "Write" to save the 
+configuration.  Now connect the XBee coordinator to your PC and start 
+receiving the samples with the isD0On() method in the 
+ZNetRxIoSampleResponse.java class.   </p><p>Note: Both these tables were
+ generated by the <i>printAll</i> method in <a 
+href="http://code.google.com/p/xbee-api/source/browse/trunk/src/com/rapplogic/xbee/XBeePin.java"
+ rel="nofollow">XBeePin.java</a>  You may find this class useful for 
+programmatically determining the capabilities of XBee pins. </p>
+ </td> 
+ </tr>
+ </tbody></table>
+ </div>
+
+
+ 
+ <br>
+ 
+
+
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ <a style="white-space: nowrap;" 
+href="http://code.google.com/u/roy.vanegas/">roy.vanegas</a>,
+ 
+ </span>
+ <span class="date" title="Sun Jul  5 12:33:43 2009">Jul 05, 2009</span>
+ <div>
+<div class="commentcontent">
+<p>Pin 9 is also DTR, or Data Terminal Ready, on all XBees. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="../w/detail.do" method="post">
+ <table>
+ <tbody><tr><td class="vt">
+ <input name="pagename" value="XBeePins" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="80"></textarea><br><br>
+ <input name="submit" value="Submit" type="submit">
+ </td>
+ <td class="vt">
+ <div id="whb" class="tip" style="width: 15em;">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner opened" id="entrybubble">
+ <a class="ifClosed" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='opened'">show</a>
+ <a class="ifOpened" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='closed'">hide</a>
+ <b>Wiki markup help</b>
+ <div class="ifOpened">
+ <div style="padding: 2px; font-size: 96%;">
+ =Heading1=<br>
+ ==Heading2==<br>
+ ===Heading3===<br>
+ <br>
+ *bold* &nbsp; &nbsp;
+ _italic_<br>
+ `inline code`<br>
+ escape: `*`<br>
+ <br>
+ Indent lists 2 spaces:<br>
+ &nbsp;&nbsp;* bullet item<br>
+ &nbsp;&nbsp;# numbered list<br>
+ <br>
+ {{{<br>
+ verbatim code block<br>
+ }}}<br>
+ <br>
+ Horizontal rule<br>
+ ----
+ <br>
+ <br>
+ WikiWordLink<br>
+ [http://domain/page&nbsp;label]<br>
+ http://domain/page<br>
+ <br>
+ || table || cells ||<br>
+ 
+ </div><br>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new">More
+
+ examples</a>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new"><img
+ src="XBeePins_fichiers/tearoff_icon.gif" height="16" width="16"></a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+</div>
+<input name="wikihelp" id="wikihelp" value="opened" type="hidden">
+
+ </td></tr>
+ </tbody></table>
+ </form>
+ </div>
+ 
+ 
+ 
+
+<form name="delcom" action="../w/delComment.do" method="POST">
+ <input name="sequence_num" value="" type="hidden">
+ <input name="create_time" value="" type="hidden">
+ <input name="mode" value="" type="hidden">
+ <input name="pagename" value="XBeePins" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+</form>
+
+
+
+ <script src="XBeePins_fichiers/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="XBeePins_fichiers/dit_scripts.js"></script>
+
+
+
+  
+ 
+ <script type="text/javascript" src="XBeePins_fichiers/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="XBeePins_fichiers/codesite_product_dictionary_ph.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ ©2010 Google -
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a 
+href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ <div style="position: absolute; display: none; top: 19px; left: 
+1081px;" id="menuDiv-projects-dropdown" class="menuDiv instance0"><b 
+style="display: block;" class="categoryTitle projects">Projects</b><div 
+class="menuCategory projects first"><a 
+href="http://code.google.com/p/ofx3nity/" style="display: block;" 
+class="menuItem">ofx3nity</a><a href="http://code.google.com/p/tuism/" 
+style="display: block;" class="menuItem">tuism</a></div><div 
+class="menuCategory controls"><hr class="menuSeparator"><a 
+href="http://code.google.com/more/" style="display: block;" 
+class="menuItem">Find developer products...</a><a 
+href="http://code.google.com/hosting/" style="display: block;" 
+class="menuItem">Find open source projects...</a></div></div></body></html>

@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+<!-- InstanceBegin template="/Templates/make/xbee/xbee-user.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog
+  RSS Feed" href="http://www.ladyada.net/feed/">
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="arduino_fichiers/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="arduino_fichiers/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="arduino_fichiers/make.css" type="text/css">
+<link rel="stylesheet" href="arduino_fichiers/skeleton.css" 
+type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Xbee Adapter - wireless Arduino programming</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head><body>
+
+    <div id="overDiv" style="position: absolute; visibility: hidden; 
+z-index: 1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader"><img src="arduino_fichiers/topheaderbadge.gif" 
+height="190" width="171"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->XBee
+ radios<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Wireless
+ Arduino programming/serial link<!-- InstanceEndEditable --></span>
+
+<ul id="menu">
+	<li class="first"></li> 
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/index.html">Overview</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/make.html">Make it!</a></div>
+      
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://www.ladyada.net/">Use 
+it!</a></div>
+      
+      <ul>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/modules.html">Modules</a></div>
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/wiring.html">Wiring</a></div>
+	  </li>
+      	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/configure.html">Connect</a></div>
+	    
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/point2point.html">Point2Point</a></div>
+	  </li>
+	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/arduino.html">Arduino link</a></div>
+	  </li>
+      	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/midibee.html">MIDI link</a></div>
+	  </li>
+   	    <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/tweetawatt/index.html">Tweetawatt</a></div>
+	  </li>
+            	  <li>
+	    <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/ref.html">Reference</a></div>
+	  </li>
+	  </ul>
+      
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/resources.html">Resources</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.ladyada.net/make/xbee/download.html">Download</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a 
+href="http://www.adafruit.com/index.php?main_page=index&amp;cPath=29">Buy
+ Kit</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://forums.ladyada.net/">Forums</a></div>
+    </li>
+  
+	<li class="last"></li>
+</ul>
+
+<ul id="nav">
+
+<li><a href="http://www.ladyada.net/">Home</a></li>
+
+<li><a href="http://www.ladyada.net/about.html">About<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/about.html">ladyada.net</a></li>
+	<li><a href="http://www.ladyada.net/portfolio/2007/index.html">Portfolio</a></li>
+	<li><a href="http://www.ladyada.net/pub/research.html">Research</a></li>
+	<li><a href="http://www.ladyada.net/pub/press.html">Press</a></li>
+	<li><a href="http://www.ladyada.net/pub/pub.html">Publication &amp; 
+Presentation</a></li>
+	<li><a href="http://www.flickr.com/photos/ladyada/">Photos</a></li>
+	<li><a href="http://www.ladyada.net/wiki">Wiki (backend)</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/make/">Projects<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="#nogo">Arduino �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/make/logshield/">Datalogger&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/eshield/">Ethernet&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/gpsshield/">GPS&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/pshield/">Proto&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/mshield/">Motor&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/waveshield/">Wave&nbsp;Shield</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li><li><a href="http://www.ladyada.net/make/bbpsup/">Adj.&nbsp;power&nbsp;supply</a></li>
+	<li><a href="http://www.ladyada.net/make/boarduino/">BoArduino</a></li>
+	<li><a href="http://www.ladyada.net/make/digg/">DIGG&nbsp;Button</a></li>
+	<li><a href="http://www.ladyada.net/make/drawdio/">Drawdio</a></li>
+    <li><a href="http://www.ladyada.net/make/fuzebox/">Fuzebox</a></li>
+    <li><a href="http://www.ladyada.net/make/gamegrrl/">Game&nbsp;Grrl</a></li>
+	<li><a href="http://www.ladyada.net/make/conway/">Game&nbsp;of&nbsp;Life</a></li>
+	<li><a href="http://www.ladyada.net/make/icetube/">Ice&nbsp;Tube&nbsp;clock</a></li>
+    <li><a href="http://www.ladyada.net/make/midisense/">MIDIsense</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov2/">MiniPOV2</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov3/">MiniPOV3</a></li>
+	<li><a href="http://www.ladyada.net/make/minty/">MintyMP3</a></li>
+	<li><a href="http://www.ladyada.net/make/mintyboost/">MintyBoost</a></li>
+    <li><a href="http://www.ladyada.net/make/monochron/">MONOCHRON</a></li>
+    <li><a href="http://www.ladyada.net/make/simreader/">SIM&nbsp;Reader</a></li>
+	<li><a href="http://www.ladyada.net/make/spokepov/">SpokePOV</a></li>
+	<li><a href="http://www.ladyada.net/make/tvbgone/">TV-B-Gone</a></li>
+	<li><a href="http://www.ladyada.net/make/tweetawatt/">Tweet-a-Watt</a></li>
+    <li><a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a></li>
+	<li><a href="http://www.ladyada.net/make/wavebubble/">Wave&nbsp;Bubble</a></li>
+	<li><a href="http://www.ladyada.net/make/x0xb0x/">x0xb0x</a></li>
+	<li><a href="http://www.ladyada.net/make/xbee/">XBee</a></li>
+	<li><a href="http://www.ladyada.net/make/ybox2/">YBox2</a></li>
+	<li><a href="#nogo">Quickies �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    <li><a href="http://www.ladyada.net/make/usbgamepad/index.html">USB&nbsp;Gamepad</a></li>
+	    <li><a href="http://www.ladyada.net/make/pumpkin/pumpkin.html">Halloween&nbsp;Pumpkin</a></li>
+	    <li><a href="http://www.ladyada.net/make/vintagelight/index.html">Vintage&nbsp;Bike&nbsp;Lite</a></li>
+	  	<li><a href="http://www.ladyada.net/make/sudc4kap/index.html">Kite&nbsp;Arial&nbsp;Photo</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikestand/index.html">Bike&nbsp;Stand</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikelite/index.html">LiIon&nbsp;Bike&nbsp;Lite</a></li>
+     	<li><a href="http://www.ladyada.net/make/pogojig/index.html">Pogo&nbsp;Jib</a></li>
+	  	<li><a href="http://www.ladyada.net/make/massprog/index.html">Mass&nbsp;Programming</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlipo/index.html">Solar&nbsp;LiPo&nbsp;Charging</a></li>
+	  	<li><a href="http://www.ladyada.net/make/magstripe/index.html">Magstripe&nbsp;Reader</a></li>
+
+	  </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+   	<li><a href="http://www.ladyada.net/make/">More...</a></li>
+	<li><a href="http://www.instructables.com/member/ladyada/">-&gt;Instructables</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/learn/">Learn<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/learn/arduino/">Arduino&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/avr/">AVR&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/lcd/">LCDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/multimeter/">Multimeter&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/sensors/">Sensors �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/sensors/fsr.html">FSR</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/cds.html">CdS&nbsp;Photocell</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/tmp36.html">Temperature</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/tilt.html">Tilt</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/pir.html">PIR</a></li>
+        <li><a 
+href="http://www.ladyada.net/learn/sensors/thermocouple.html">Thermocouple</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+        <li><a href="http://www.ladyada.net/learn/breakoutplus/">Breakout
+ boards �<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a 
+href="http://www.ladyada.net/learn/breakoutplus/ds1307rtc.html">DS1307&nbsp;RTC</a></li>
+        <li><a 
+href="http://www.ladyada.net/learn/sensors/thermocouple.html">MAX6675</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+	<li><a href="http://www.ladyada.net/learn/soldering/">Soldering&nbsp;tutorial</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+	
+<li><a href="http://www.ladyada.net/library/">Library<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>	
+	<li><a href="http://www.ladyada.net/library/arduino/">Arduino&nbsp;Hacks</a></li>
+    <li><a href="http://www.ladyada.net/library/batteries.html">Batteries</a></li>
+	<li><a href="http://www.ladyada.net/library/diyboostcalc.html">Boost&nbsp;Calc</a></li>
+    <li><a href="http://www.ladyada.net/library/equipt/">E.E.&nbsp;Tools</a></li>
+	<li><a href="http://www.ladyada.net/library/hackcomputer.html">E.E.&nbsp;Computer</a></li>
+    <li><a href="http://www.ladyada.net/library/procure/">Find&nbsp;Parts</a></li>
+	<li><a href="http://www.ladyada.net/library/kits/">Kits</a></li>
+	<li><a href="http://www.ladyada.net/library/laser/">Laser</a></li>
+	<li><a href="http://www.ladyada.net/library/ucannoyances.html">uC 
+Annoyances</a></li>
+	<li><a href="http://www.ladyada.net/library/openhardware/">Open Source 
+Hardware</a></li>
+	<li><a href="http://www.ladyada.net/library/pcb/">PCB&nbsp;Design&nbsp;&amp;&nbsp;Tips</a></li>
+	<li><a href="http://www.ladyada.net/library/picvsavr.html">PIC&nbsp;vs.&nbsp;AVR</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.adafruit.com/blog/">Blog</a></li>
+
+<li><a href="http://www.adafruit.com/" target="_blank">Store</a></li>
+
+<li><a href="http://forums.adafruit.com/" target="_blank">Forums</a></li>
+
+</ul>
+
+<div id="searchbox">
+<!-- Google CSE Search Box Begins -->
+<form id="searchbox_012941403977924873237:omv8mprm6ek" 
+action="http://www.google.com/cse" target="_top"> <input name="cx" 
+value="012941403977924873237:omv8mprm6ek" type="hidden"> <input 
+style="background: 
+url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;)
+ no-repeat scroll left center rgb(255, 255, 255);" name="q" size="23" 
+type="text"><br> <span class="style1">ladyada.net</span> <input 
+name="sa" value="Search" type="submit"> <input name="cof" 
+value="FORID:0" type="hidden"> <input 
+value="www.ladyada.net/make/xbee/arduino.html" name="siteurl" 
+type="hidden"></form><script type="text/javascript" src="arduino_fichiers/brand.js"></script>
+<!-- Google CSE Search Box Ends -->
+</div>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+ </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>If you have an Arduino project where the dev board is stuck 
+inside a machine, or attached to the rafters or is inaccessable in some 
+other way, a wireless programming/debugging link will save you tons of 
+time. This tutorial is an extension on <a 
+href="http://itp.nyu.edu/%7Eraf275/meshnetworking/XBee/XBee_program_Arduino_wireless.html">Rob's
+ version</a>. In this tutorial, no extra firmware or hardware (other 
+than a capacitor) is necessary. Just use the default bootloader. I use a
+ 'classic' Arduino but of course this can be easily adapted to any 
+version or clone.</p>
+    <p>You will need <a 
+href="http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=29&amp;products_id=126">2
+ XBee adapter kits</a>, 2 matching-protocol <a 
+href="http://ladyada.net/make/xbee/modules.html">XBee modules</a>, an <a
+ 
+href="http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=18&amp;products_id=70">FTDI
+ cable</a> (or other FTDI breakout board, if you can wire it up 
+correctly) as well as a 0.1uF ceramic capacitor, 10Kohm resistor and NPN
+ transistor. The resistor and capacitor can vary quite a bit if you dont
+ have exact values</p>
+    <p align="center"><img src="arduino_fichiers/xbeediagram.png" 
+height="334" width="650"><br>
+    Check out this diagram, can you tell I spent 5 minutes on it?</p>
+    <p align="center">&nbsp;</p>
+    <p align="left">This tutorial was updated Feb 22, 2009 to make it 
+more robust...it seems to work a lot better with the fixes!</p>
+    <p align="left"><strong>PLEASE NOTE! These instructions are for the 
+Adafruit XBee adapter kit and the Series 1 XBees that are sold in the 
+Adafruit Shop. They may not work for ANY OTHER KIND OF XBEE OR ADAPTER 
+KIT!</strong><br>
+    </p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Step
+ 1. Configure the transmitter<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>One XBee will act as the 'reset transmitter', it will be attached
+ to the computer via an FTDI cable and wireless send programming 
+commands to the receiver. Lets set this one up first</p>
+    <p>Connect up the transmitter adapter with XBee modem to your 
+computer using the FTDI cable</p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/ftdipowered.jpg"><img 
+src="arduino_fichiers/ftdipowered_t.jpg" border="1" height="264" 
+width="500"></a></p>
+    <p>And start X-CTU, just like on the <a 
+href="http://www.ladyada.net/make/xbee/configure.html">configure </a>page.</p>
+    <p align="center"><img src="arduino_fichiers/xctustart.gif" 
+height="575" width="455"></p>
+    <p align="left">Once you've connected/tested that you can 
+communicate with the modem, go to the configure tab and read in the 
+current setup</p>
+    <p align="left">Then set the following:</p>
+    <p align="left">The PAN ID should be some 4 digit hex number that 
+will only be used by these two modems - to prevent confusion</p>
+    <p align="center"><img src="arduino_fichiers/ardsetpan.gif" 
+border="1" height="252" width="455"></p>
+    <p align="left">Set the baud rate to 19200 if you're using an 
+Arduino with a 168 chip or older '328p chip. You can check your Arduino 
+documentation to figure out which baud rate to use</p>
+    <p align="center"><img src="arduino_fichiers/ardsetbaud.gif" 
+border="1" height="232" width="455"></p>
+    <p align="left">Or 57600 if you're using a more recent Arduino with 
+'328p chip</p>
+    <p align="center"><img src="arduino_fichiers/xbeelink576.gif" 
+border="1" height="239" width="455"></p>
+    <p align="left">Next we'll set the Packetization Timeout. This is 
+what determines how long to wait before sending the characters over. 
+We're doing some 'bulk transfer' when sending 10K programs over, so 
+you'll probably want this number high like 10</p>
+    <p align="center"><img src="arduino_fichiers/xbeelinkRO.gif" 
+border="1" height="201" width="455"></p>
+    <p align="left">Set pin D3 to be a digital input</p>
+    <p align="center"><img src="arduino_fichiers/ardsetd3in.gif" 
+border="1" height="263" width="455"></p>
+    <p align="left">And set the Digital IO change detect to FF. 
+Technically  you can set it to 0x08, which is the mask to listen for 
+only D3 but this certainly works fine.</p>
+    <p align="center"><img src="arduino_fichiers/ardsetdio.gif" 
+border="1" height="254" width="455"></p>
+    <p align="left">Now the transmitter is set up to send the current 
+status of pin D3 to any listening modems. </p>
+    <p align="left">Now solder in a tiny jumper between the RTS pin and 
+D3. This will tie the status of D3 to the status of the RTS pin which is
+ can be configured to be used as the 'arduino reset pin'</p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/ad3jumper.jpg"><img 
+src="arduino_fichiers/ad3jumper_t.jpg" border="1" height="415" 
+width="500"></a></p>
+    <p align="left">Finally setup the FTDI cable so that the RTS pin 
+will reset the Arduino. For Mac/Linux it will already be done but if 
+you're using Windows you'll need to make a slight change to the driver 
+preferences. In the <strong>Device Manager</strong>, select the USB COM 
+port</p>
+    <p align="center"><img src="arduino_fichiers/devicemanager.jpg" 
+height="520" width="470"></p>
+    <p align="left">Then right click and select <strong>Properties</strong></p>
+    <p align="center"><img src="arduino_fichiers/portsettings.jpg" 
+height="455" width="412"></p>
+    <p align="left">Click on the <strong>Port Settings</strong> tab, and
+ click on <strong>Advanced...</strong></p>
+    <p align="center"><img src="arduino_fichiers/advancedsettings.jpg" 
+height="455" width="636"></p>
+    <p align="left">Make sure <strong>Set RTS On Close</strong> is 
+selected. Click OK.</p>
+    <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Step
+ 2. Configure the receiver<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>Now we will set up the other XBee so that it will listen to 
+changes on pin D3. Connect it to the FTDI cable and read in the current 
+configuration just like the first one.</p>
+    <p align="left">The PAN ID should match the transmitter's</p>
+    <p align="center"><img src="arduino_fichiers/ardsetpan.gif" 
+border="1" height="252" width="455"></p>
+    <p align="left">Set the baud rate to 19200 or 57600 to match the 
+transmitter, again</p>
+    <p align="center"><br>
+        <img src="arduino_fichiers/ardsetbaud.gif" border="1" 
+height="232" width="455"></p>
+    <p align="center">OR</p>
+    <p align="center"><img src="arduino_fichiers/xbeelink576.gif" 
+border="1" height="239" width="455"></p>
+    <p align="left">Next we'll set the Packetization Timeout. This is 
+what determines how long to wait before sending the characters over. 
+We're doing some 'bulk transfer' when sending 10K programs over, so 
+you'll probably want this number high like 10</p>
+    <p align="center"><img src="arduino_fichiers/xbeelinkRO.gif" 
+border="1" height="201" width="455"></p>
+    <p align="center">&nbsp;</p>
+    <p align="left">Set pin D3 to be a digital output, default high.</p>
+    <p align="center"><img src="arduino_fichiers/ardd3out.gif" 
+border="1" height="256" width="455"></p>
+    <p align="left">Set the I/O Output to Disabled. This will prevent 
+the receiver from displaying the status update in the serial line and 
+instead just toggle the matching pin.</p>
+    <p align="center"><img src="arduino_fichiers/ardiodisable.gif" 
+border="1" height="206" width="455"></p>
+    <p align="left">Finally, set I/O line passing input address to FFFF.
+ If you set up unique addresses for the receiver and transmitter xbees, 
+of course you should change this to match but FFFF will match all 
+addresses.</p>
+    <p align="center"><img src="arduino_fichiers/ardiopassing.gif" 
+border="1" height="184" width="455"></p>
+    <p align="center"><img src="arduino_fichiers/ardsethexffff.gif" 
+height="138" width="516"></p>
+    <p align="left">Now write the changes to the receiver XBee.</p>
+    <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Step
+ 3. Wire up the receiver<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>The transmitter XBee connects directly to the FTDI cable/computer
+ and the receiver is wired to the target Arduino. Here I use a 
+half-sized breadboard and rubber band since not much space is necessary.
+ Solder a wire from pin D3 on the receiver XBee adapter, so that you can
+ plug it into the breadboard. This is the mirrored reset line from the 
+transmitter Xbee. </p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/ardd3wire.jpg"><img 
+src="arduino_fichiers/ardd3wire_t.jpg" border="1" height="313" 
+width="500"></a></p>
+    <p align="left">Xbee's are pretty weak and dont have the oomph to 
+reset an Arduino on their own, so we need to wire it up to a transistor 
+which will do the heavy lifting of pulling the reset line down. Pretty 
+much any small NPN transistor will work just fine here. Put a 0.01uF to 
+0.1uF capacitor in series with the wire from the XBee, and connect the 
+other side to the NPN transistor base. The emitter of the transistor 
+connects to ground. Put a resistor around 10K between the base and 
+emitter. This will pull down the base to keep the Arduino from resetting
+ accidentally. </p>
+    <p align="center"><img src="arduino_fichiers/xbeewiring.png" 
+height="188" width="562"></p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/xbeelinkarduinocloseup.jpg"><img
+ src="arduino_fichiers/xbeelinkarduinocloseup_t.jpg" border="1" 
+height="233" width="500"></a></p>
+    <p align="left">The collector then goes the Arduino's reset line. 
+Make sure the grounds are all connected, and that the XBee is wired from
+ the Arduino's 5V line</p>
+    <p align="center"><a 
+href="http://www.ladyada.net/images/xbee/xbeelinkarduino.jpg"><img 
+src="arduino_fichiers/xbeelinkarduino_t.jpg" border="1" height="375" 
+width="500"></a></p>
+    <p>Now power the Arduino either through the USB cable or from a DC 
+supply. That's it! Now you can reprogram it and also watch the serial 
+monitor from more than 100 feet away. Don't forget the serial monitor 
+-must- be at the same baud rate as programming because the XBees can 
+only talk at their configured baud rate.You can also use AVRdude 'out of
+ the box' which I prefer because you get a nice little progress bar. 
+Simply go to the directory where your sketch is stored and look for the <strong>.hex</strong>
+ file in the <strong>applet</strong> subfolder</p>
+    <p align="center"><img src="arduino_fichiers/xbeeavrdude.gif" 
+height="458" width="669"></p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->July 23, 2010  23:39<!-- #EndDate --></div>
+
+<!-- InstanceEnd --></body></html>

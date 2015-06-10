@@ -1,0 +1,948 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+ 
+
+
+ 
+ 
+ 
+
+
+ <link rel="icon" type="image/vnd.microsoft.icon" 
+href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "1bc4cd6e86a25aa197263773e7a904b1";
+ 
+ 
+ var logged_in_user_email = "lucas.bigeardel@gmail.com";
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>DevelopersGuide - 
+ xbee-api -
+ 
+ Developer's Guide - Project Hosting on Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="DevelopersGuide_fichiers/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="DevelopersGuide_fichiers/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" 
+href="http://code.google.com/feeds/p/xbee-api/svnchanges/basic?path=/wiki/DevelopersGuide.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16517148615437166380/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ </style>
+<script src="DevelopersGuide_fichiers/ga.js" async="" type="text/javascript"></script></head><body
+ class="t6">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-4047422-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+ <div id="gaia">
+ 
+ <span>
+ 
+ 
+ <b>lucas.bigeardel@gmail.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and 
+Settings"><u>Profile</u></a>
+ | <a 
+href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fxbee-api%2Fwiki%2FDevelopersGuide"
+ onclick="_CS_click('/gb/ph/signout');"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px;"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding: 0px; margin: 20px 0px 0px; width: 100%;" 
+cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ <td style="width: 55px; text-align: center;">
+ <a href="http://code.google.com/p/xbee-api/">
+ 
+ <img src="DevelopersGuide_fichiers/defaultlogo.png" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em;">
+ 
+ <div id="pname" style="margin: 0px 0px -3px;">
+ <a href="http://code.google.com/p/xbee-api/" style="text-decoration: 
+none; color: rgb(0, 0, 0);">xbee-api</a>
+ 
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" 
+href="http://code.google.com/p/xbee-api/" style="text-decoration: none; 
+color: rgb(0, 0, 0);">A Java API for Digi XBee/XBee-Pro OEM RF Modules</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space: nowrap; text-align: right;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q">
+ <input name="projectsearch" value="Search projects" type="submit">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+
+ 
+<table id="mt" width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/w/list');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/source/checkout');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/source/checkout">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</tbody></table>
+<table class="st" width="100%" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+ <tbody><tr>
+ 
+ 
+ 
+ <td>
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/xbee-api/w/list" method="GET" style="display: inline;">
+ <select id="can" name="can" style="font-size: 92%;">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input size="38" id="searchq" name="q" autocomplete="off"
+ style="font-size: 92%;" type="text"></span>
+ 
+ 
+ <input value="Search" style="font-size: 92%;" type="submit">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="bevel-right" height="4" valign="top" align="right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</tbody></table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol">
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+
+ <style type="text/css">
+ .artifactcomment {
+ margin: .5em 0 0 0;
+ padding: .3em 0 .3em .3em;
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentlist {
+ border-bottom: 3px solid #c3d9ff;
+ }
+ #commentform { padding-top: 1em; }
+ .delcom { background: #e8e8e8 }
+ .commentcontent { margin: 1em 0;}
+ </style>
+
+
+ <div id="wikicontent">
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ 
+ <td class="vt" id="wikimaincol" width="100%">
+ 
+ <div style="float: right; width: 18em;" id="wikimeta">
+ <div class="pmeta_bubble_bg">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <table style="padding: 5px;">
+ <tbody><tr><td colspan="2" style="padding-bottom: 5px;">Updated <span 
+title="Wed Mar 17 09:51:25 2010">Mar 17, 2010</span>
+ 
+ by <a style="white-space: nowrap;" 
+href="http://code.google.com/u/andrew.rapp/">andrew.rapp</a>
+ </td></tr>
+ 
+ <tr><th class="vt">Labels:</th>
+ <td>
+ 
+ <a href="http://code.google.com/p/xbee-api/w/list?q=label:Featured" 
+title="Listed on project home page">Featured</a>
+ 
+ </td>
+ </tr>
+ 
+ 
+ </tbody></table>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ 
+ <div id="wikiheader" style="margin-bottom: 1em;">
+ 
+ <img id="star_img" src="DevelopersGuide_fichiers/star_off.gif" 
+style="cursor: pointer;" onclick="_CS_toggleStar(this,
+ '',
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 'xbee-api:DevelopersGuide',
+ 'token': codesite_token
+ });" height="15" width="15">
+ 
+ &nbsp;
+ <span style="font-size: 120%; font-weight: bold;">DevelopersGuide</span>
+ &nbsp;
+ 
+ 
+ <div style="font-style: italic; margin-top: 3px;">Developer's Guide</div>
+ 
+ </div>
+ <p>The <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/XBee.html"
+ rel="nofollow">XBee</a> class is the primary interface for 
+communicating with an XBee radio and a gateway to the wireless network. 
+The XBee class coordinates sending and receiving data, via packets.  An 
+instance of the XBee class is created as follows: </p><pre class="prettyprint"><span class="typ">XBee</span><span class="pln"> xbee </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBee</span><span class="pun">();</span></pre><p>This
+ software communicates with XBee radios through serial communication, so
+ you will need to connect an XBee radio (typically a coordinator) to 
+your computer's serial port.  Since most computers don't have serial 
+ports these days, a USB-serial adapter is a popular choice for 
+interfacing with XBees. </p><p>The open() method must be called to 
+establish a serial connection to the radio. The arguments are COM port 
+and baud rate. The COM port depends on the operating system. The default
+ baud rate is 9600, unless it was changed it.  For example, this opens a
+ connection to the XBee on the COM1 serial port at 9600 baud: </p><pre class="prettyprint"><span class="pln">xbee</span><span class="pun">.</span><span class="pln">open</span><span class="pun">(</span><span class="str">"COM1"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9600</span><span class="pun">);</span></pre><p><i>At
+ this time the open method may only be called once.  If you want to 
+connect to another port, first call close, then create a new XBee 
+instance.</i> </p><p>The COM port varies depending on the operating 
+system: </p><p></p><table><tbody><tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <strong>Operating System</strong> </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>How
+ to Find COM Port</strong> </td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Windows </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> Select Start-&gt;My 
+Computer-&gt;Manage, then select Device Manager and expand "Ports". If 
+you have more than one XBee attached you may need to unplug the others 
+first.  </td></tr> <tr><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> Mac OS </td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> The COM port appears under "/dev/tty.usbserial" 
+(e.g /dev/tty.usbserial-A6005v5M). Open a terminal and run ls -l 
+/dev/tty.u (hit tab twice to see all entries) </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Linux </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;">  I found 
+my COM port to be "/dev/ttyUSB0" on Ubuntu but I think it could easily 
+be different for other distros. </td></tr> </tbody></table><h2><a 
+name="API_Mode">API Mode</a><a href="#API_Mode" class="section_anchor">¶</a></h2><p>In
+ API mode, we communicate with XBee radios by sending and receiving 
+packets.  The types of packets that can be sent and received depend on 
+the type of XBee radio you are using: Series 1 or Series 2, and the 
+firmware version.  In general, there are two types of packets: Transmit 
+and Receive.  Transmit packets are sent to the XBee radio, and Receive 
+packets are received from the XBee radio.  All Transmit packets extend 
+the <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/XBeeRequest.html"
+ rel="nofollow">XBeeRequest</a> class, and similarly all Receive packets
+ extend the <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/XBeeResponse.html"
+ rel="nofollow">XBeeResponse</a> class, either directly or through 
+intermediate classes.  Each Transmit and Receive packet is identified by
+ a unique API ID.  (In hindsight it would have been better to name the 
+receive packet classes XxxReceive and transmit packets XxxTransmit, 
+instead of XxxResponse and XxxRequest). </p><h2><a 
+name="Transmit_Packets">Transmit Packets</a><a href="#Transmit_Packets" 
+class="section_anchor">¶</a></h2><p></p><table><tbody><tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Class</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Description</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Series</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>API
+ ID Enum</strong> </td></tr> <tr><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/AtCommand.html"
+ rel="nofollow">AtCommand</a> </td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> For executing/querying AT commands a local 
+XBee </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> Both </td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#AT_COMMAND"
+ rel="nofollow">ApiId.AT_COMMAND</a> </td></tr> <tr><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetRemoteAtRequest.html"
+ rel="nofollow">ZNetRemoteAtRequest</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> For executing/querying AT 
+commands on a remote XBee.  Although this is named ZNet, it works now 
+with Series 1 XBees (10C8 firmware and later) </td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> Both </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_REMOTE_AT_REQUEST"
+ rel="nofollow">ApiId.ZNET_REMOTE_AT_REQUEST</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/TxRequest16.html"
+ rel="nofollow">TxRequest16</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> For sending data to a remote XBee, 
+via a 16-bit Address </td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> Series 1 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#TX_REQUEST_16"
+ rel="nofollow">ApiId.TX_REQUEST_16</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/TxRequest64.html"
+ rel="nofollow">TxRequest64</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> For sending data to a remote Series 1
+ XBee, via a 64-bit Address </td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Series 1 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#TX_REQUEST_64"
+ rel="nofollow">ApiId.TX_REQUEST_64</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetTxRequest.html"
+ rel="nofollow">ZNetTxRequest</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> For sending data to a remote Series 2
+ XBee </td><td style="border: 1px solid rgb(170, 170, 170); padding: 
+5px;"> Series 2 </td><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_TX_REQUEST"
+ rel="nofollow">ApiId.ZNET_TX_REQUEST</a> </td></tr> </tbody></table><h2><a
+ name="Receive_Packets">Receive Packets</a><a href="#Receive_Packets" 
+class="section_anchor">¶</a></h2><p></p><table><tbody><tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Class</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Description</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Series</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>API
+ ID Enum</strong> </td></tr> <tr><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/AtCommandResponse.html"
+ rel="nofollow">AtCommandResponse</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Sent in response to an AtCommand and
+ indicates if the command was successful.  If the command was a query, 
+it will contain the configuration value </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> Both </td><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#AT_RESPONSE"
+ rel="nofollow">ApiId.AT_RESPONSE</a> </td></tr> <tr><td style="border: 
+1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ModemStatusResponse.html"
+ rel="nofollow">ModemStatusResponse</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> Sent by the local XBee on 
+certains events, such as Association, Disassociation </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Both </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#MODEM_STATUS_RESPONSE"
+ rel="nofollow">ApiId.MODEM_STATUS_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetRemoteAtResponse.html"
+ rel="nofollow">ZNetRemoteAtResponse</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> Sent in response to a 
+ZNetRemoteAtRequest </td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> Both (requires 10C8 firmware for Series 1) </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_REMOTE_AT_REQUEST"
+ rel="nofollow">ApiId.ZNET_REMOTE_AT_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/TxStatusResponse.html"
+ rel="nofollow">TxStatusResponse</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Sent after a TxRequest16 or 
+TxRequest64 packet.  Indicates if transmission was successful </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Series 1 </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#TX_STATUS_RESPONSE"
+ rel="nofollow">ApiId.TX_STATUS_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/RxResponse16.html"
+ rel="nofollow">RxResponse16</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Received on the remote radio after a
+ TxRequest16 packet is sent </td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Series 1 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#RX_16_RESPONSE"
+ rel="nofollow">ApiId.RX_16_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/RxResponse64.html"
+ rel="nofollow">RxResponse64</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Received on the remote radio after a
+ TxRequest64 packet is sent </td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Series 1 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#RX_64_RESPONSE"
+ rel="nofollow">ApiId.RX_64_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/wpan/RxResponseIoSample.html"
+ rel="nofollow">RxResponseIoSample</a> </td><td style="border: 1px solid
+ rgb(170, 170, 170); padding: 5px;"> Sent by a remote XBee, configured 
+to send I/O Samples.  Note: getSourceAddress() returns either a 
+XBeeAddress16 or XBeeAddress64 depending on if the packet is configured 
+for 16 or 64 bit addressing  </td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Series 1 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Either <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#RX_16_IO_RESPONSE"
+ rel="nofollow">ApiId.RX_16_IO_RESPONSE</a> or <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#RX_64_IO_RESPONSE"
+ rel="nofollow">ApiId.RX_64_IO_RESPONSE</a> (depending on 16 or 64 bit 
+address configuration) </td></tr> <tr><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html"
+ rel="nofollow">ZNetTxStatusResponse</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;">  Sent after a ZNetTxRequest 
+packet.  Indicates if transmission was successful </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Series 2 </td><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_TX_STATUS_RESPONSE"
+ rel="nofollow">ApiId.ZNET_TX_STATUS_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html"
+ rel="nofollow">ZNetRxResponse</a> </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Received on the remote radio after a
+ ZNetTxRequest packet is sent </td><td style="border: 1px solid rgb(170,
+ 170, 170); padding: 5px;"> Series 2 </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_RX_RESPONSE"
+ rel="nofollow">ApiId.ZNET_RX_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html"
+ rel="nofollow">ZNetExplicitRxResponse</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> Received on the remote radio a
+ ZNetExplicitTxRequest packet is sent </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;">Series 2 </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_EXPLICIT_RX_RESPONSE"
+ rel="nofollow">ApiId.ZNET_EXPLICIT_RX_RESPONSE</a> </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html"
+ rel="nofollow">ZNetRxIoSampleResponse</a> </td><td style="border: 1px 
+solid rgb(170, 170, 170); padding: 5px;">  Sent by a remote XBee, 
+configured to send I/O Samples </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Series 2 </td><td style="border: 1px
+ solid rgb(170, 170, 170); padding: 5px;"> <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/ApiId.html#ZNET_IO_SAMPLE_RESPONSE"
+ rel="nofollow">ApiId.ZNET_IO_SAMPLE_RESPONSE</a> </td></tr> </tbody></table><h2><a
+ name="Sending_Packets">Sending Packets</a><a href="#Sending_Packets" 
+class="section_anchor">¶</a></h2><p>The XBee class provides two methods 
+for sending packets: sendAsynchronous and sendSynchronous.  As its name 
+suggests, the sendAsynchronous method sends packets asynchronously.  
+This means that the method returns immediately, after sending the packet
+ to the XBee over the serial line, but does not return anything.  The 
+sendAsynchronous is capable of sending any class that extends 
+XBeeRequest).  Here's an example of sending a Node Timeout query: </p><pre class="prettyprint"><span class="pln">xbee</span><span class="pun">.</span><span class="pln">sendAsynchronous</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"NT"</span><span class="pun">));</span></pre><p>As
+ an alternative, the <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/XBee.html#sendSynchronous%28com.rapplogic.xbee.api.XBeeRequest,%20int%29"
+ rel="nofollow">sendSynchronous</a> method sends the packet but then 
+waits for a response, up to the timeout.  </p><pre class="prettyprint"><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// send a request and wait up to 10 seconds for the response</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">sendSynchronous</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"NT"</span><span class="pun">),</span><span class="pln"> </span><span class="lit">10</span><span class="pun">*</span><span class="lit">1000</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">XBeeTimeoutException</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// no response was received in the allotted time</span><span class="pln"><br></span><span class="pun">}</span></pre><p>The
+ sendSynchronous method matches a response to the request with the frame
+ id.  For that reason is a good idea to chose a unique frame id when 
+using this method.  Additionally this method is only allowed for 
+requests that return a response.  As a validation, the method checks the
+ frame id of the request.  If the frame id is not greater than zero, the
+ request will not return a response and an exception is thrown.  Keep in
+ mind that some requests, such as Remote AT, will not return a response 
+if the remote radio is off or out of range, so it's a good idea to use a
+ timeout. </p><h2><a name="Receiving_Packets">Receiving Packets</a><a 
+href="#Receiving_Packets" class="section_anchor">¶</a></h2><p>There are 
+two methods for receiving packets: getResponse() and the PacketListener.
+  The getResponse() method is only recomended for simple, 
+single-threaded apps, while the PacketListener is suitable for more 
+complex multithreaded applications. </p><p>The following code receives 
+packets with the getResponse() method. </p><pre class="prettyprint"><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">getResponse</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// no do something with the response</span><span class="pln"><br></span><span class="pun">}</span></pre><p>The
+ method call to getResponse() will block (wait) indefinitely until a 
+response is received.  For this reason, it is sometimes a good idea to 
+use a timeout because if a packet is never received, you would be 
+waiting forever. This example will wait for up to 10 seconds for a 
+response (multiple seconds x 1000 to get milliseconds).  If a response 
+is not received a XBeeTimeoutException will be thrown. </p><pre class="prettyprint"><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">getResponse</span><span class="pun">(</span><span class="lit">10000</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// we got a response!</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">XBeeTimeoutException</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// we timed out without a response</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre><p>The
+ PacketListener is added by calling the addPacketListener() method with a
+ class that implements the PacketListener interface: </p><pre class="prettyprint"><span class="pln">xbee</span><span class="pun">.</span><span class="pln">addPacketListener</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">PacketListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> processResponse</span><span class="pun">(</span><span class="typ">XBeeResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// handle the response</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">});</span></pre><p>//
+ main thread continues on here! </p><p>Because the PacketListener is 
+invoked by a separate thread, your code will not wait/block on the 
+addPacketListener(), or processResponse() methods. </p><h2><a 
+name="Casting_the_Response">Casting the Response</a><a 
+href="#Casting_the_Response" class="section_anchor">¶</a></h2><p>All 
+methods for receiving packets return an instance of <a 
+href="http://xbee-api.googlecode.com/svn/trunk/docs/api/com/rapplogic/xbee/api/XBeeResponse.html"
+ rel="nofollow">XBeeResponse</a>, the super class of all Receive 
+packets.  This class must be "cast" into the appropriate subclass in 
+order to access the response data.  To do this you can check the API ID 
+to determine the appropriate class: </p><pre class="prettyprint"><span class="pln">xbee</span><span class="pun">.</span><span class="pln">sendAsynchronous</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"NT"</span><span class="pun">));</span><span class="pln"><br><br></span><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">getResponse</span><span class="pun">();</span><span class="pln"><br><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">getApiId</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ApiId</span><span class="pun">.</span><span class="pln">AT_RESPONSE</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;</span><span class="com">// since this API ID is AT_RESPONSE, we know to cast to AtCommandResponse</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">AtCommandResponse</span><span class="pln"> atResponse </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">AtCommandResponse</span><span class="pun">)</span><span class="pln"> response</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">atResponse</span><span class="pun">.</span><span class="pln">isOk</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// command was successful</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Command returned "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">ByteUtils</span><span class="pun">.</span><span class="pln">toBase16</span><span class="pun">(</span><span class="pln">atResponse</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">()));</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// command failed!</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre><h2><a
+ name="Packet_Delivery_Acknowledgement_(ACK)">Packet Delivery 
+Acknowledgement (ACK)</a><a 
+href="#Packet_Delivery_Acknowledgement_%28ACK%29" class="section_anchor">¶</a></h2><p>XBees
+ provide a delivery confirmation, or ACK feature, that indicates if a 
+packet was received by a remote XBee.  This feature only works with 
+unicast packets, not broadcast.  To enable ACK, you must specify a frame
+ ID greater than zero (1-255).  By default, this software uses a frame 
+id of 1.  Secondly you must specify the packet as unicast (default 
+setting).  </p><p>Here's an example of sending a Series 1 packet and 
+receiving the ACK: </p><pre class="prettyprint"><span class="com">// create a unicast packet to be delivered to remote radio with 16-bit address: B071, with payload "Hi"</span><span class="pln"><br></span><span class="typ">TxRequest16</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">TxRequest16</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBeeAddress16</span><span class="pun">(</span><span class="lit">0xb0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0x71</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">int</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">{</span><span class="str">'H'</span><span class="pun">,</span><span class="str">'i'</span><span class="pun">});</span><span class="pln"><br><br></span><span class="com">// send the packet and wait up to 12 seconds for the transmit status reply (you should really catch a timeout exception)</span><span class="pln"><br></span><span class="typ">TxStatusResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">TxStatusResponse</span><span class="pun">)</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">sendSynchronous</span><span class="pun">(</span><span class="pln">request</span><span class="pun">,</span><span class="pln"> </span><span class="lit">12000</span><span class="pun">);</span><span class="pln"><br><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">isSuccess</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// packet was delivered successfully</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// packet was not delivered</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Packet was not delivered. &nbsp;status: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">getStatus</span><span class="pun">());</span><span class="pln"><br></span><span class="pun">}</span></pre><p>Note:
+ While receiving a successful ACK response is a guarantee the packet was
+ delivered, not receiving a succcessful ACK does not always indicate the
+ remote radio did not receive the packet.  There is a possibility that 
+the remote radio received the packet, but the ACK response to the 
+originating radio was not successful.  This situation is unlikely 
+however is more likely to occur when the radio is operating at the edge 
+of it's range.  It can also occur if you are transmitting from a XBee 
+Pro and the receiving radio is a less powerful non-Pro XBee.  </p><h2><a
+ name="AT_Command">AT Command</a><a href="#AT_Command" 
+class="section_anchor">¶</a></h2><p>The AT command allows you to query 
+and set  the configuration of the XBee connected to your serial port. AT
+ commands are defined by two characters and are supported by both series
+ 1 and series 2 XBees .  You can query the value of a command by sending
+ the command without a value.  For example: </p><pre class="prettyprint"><span class="com">// query the Serial Low Address</span><span class="pln"><br></span><span class="typ">AtCommand</span><span class="pln"> &nbsp;at </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"SL"</span><span class="pun">)</span></pre><p>To
+ set the value of a command, specify the value as the second argument.  
+The value must be either an int: </p><pre class="prettyprint"><span class="com">// set D2 digital input</span><span class="pln"><br></span><span class="typ">AtCommand</span><span class="pln"> &nbsp;at </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"D2"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">);</span></pre><p>or
+ int<a href=""></a> (array): </p><pre class="prettyprint"><span class="com">// set PAN ID:</span><span class="pln"><br></span><span class="typ">AtCommand</span><span class="pln"> &nbsp;at </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"ID"</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">int</span><span class="pun">[]</span><span class="pln"> </span><span class="pun">{</span><span class="lit">0x1a</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0xaa</span><span class="pun">}));</span></pre><p>To
+ execute the command and get a response, send the request to the radio: </p><pre class="prettyprint"><span class="com">// I choose 5 seconds as an arbitrary value for the timeout. &nbsp;AT commands usually respond very quickly.</span><span class="pln"><br></span><span class="typ">AtCommandResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">AtCommandResponse</span><span class="pun">)</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">sendSynchronous</span><span class="pun">(</span><span class="pln">command</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">);</span><span class="pln"> &nbsp;</span></pre><p>The
+ isOK() method will return true if the command was successful. </p><pre class="prettyprint"><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">isOk</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br></span><span class="com">// success</span><span class="pln"><br></span><span class="pun">}</span></pre><p>For
+ query commands, the value of the command can be accessed by calling the
+ getValue() method.   This method returns an int<a href=""></a> (array),
+ so you will need to know the size of the response. </p><p>In the case 
+of the "CH" (Channel) command, the value is 1 byte.  Here's how to query
+ the current channel. </p><pre class="prettyprint"><span class="typ">AtCommand</span><span class="pln"> &nbsp;at </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AtCommand</span><span class="pun">(</span><span class="str">"CH"</span><span class="pun">);</span><span class="pln"><br><br></span><span class="typ">AtCommandResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">AtCommandResponse</span><span class="pun">)</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">sendSynchronous</span><span class="pun">(</span><span class="pln">at</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">);</span><span class="pln"><br><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">isOk</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// success</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"The channel is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">()[</span><span class="lit">0</span><span class="pun">]);</span><span class="pln"><br></span><span class="pun">}</span></pre><p>Refer
+ to the manual for the complete listting of commands that apply to your 
+radio/firmware.  Keep in mind that some commands are read-only, and some
+ represent actions, such as FR (software reset), and WR (write). </p><h2><a
+ name="Remote_AT">Remote AT</a><a href="#Remote_AT" 
+class="section_anchor">¶</a></h2><p>The Remote AT command allows you to 
+send an AT Command to a remote radio; where "remote" means a radio that 
+has joined the network (same PAN ID and channel) of the serially 
+connected XBee. </p><p>The Remote AT command is identical to the AT 
+Command, except for three additional parameters: 64-bit address of 
+remote radio, 16-bit address of the remote radio and Apply Changes.  
+When setting AT commands, the changes do not become effective until 
+either the Apply Changes parameter is set to true, or the AC (Apply 
+Changes) or WR (write) and FR (reboot) commands are sent.    </p><p>Originally,
+ the Remote AT packet was only supported by Series 2 radios, but 
+recently it has been supported by series 1 XBees, starting with firmware
+ 10c8.  For this reason, the class includes the ZNet prefix.  At a later
+ time I may rename the class and move it to the common package. </p><h3><a
+ name="Series_1">Series 1</a><a href="#Series_1" class="section_anchor">¶</a></h3><p>To
+ send a Remote AT command to a series 1 radio (10c8 or higher firmware),
+ you must either specify the 64-bit address (SH + SL), or the 16-bit 
+address (MY).  If you use the 64-bit address, you must set the 16-bit 
+address to the broadcast address.  For example: </p><pre class="prettyprint"><span class="com">// this is the SH + SL address of the remote radio</span><span class="pln"><br></span><span class="typ">XBeeAddress64</span><span class="pln"> remoteAddress </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBeeAddress64</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">ZNetRemoteAtRequest</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ZNetRemoteAtRequest</span><span class="pun">(</span><span class="typ">XBeeRequest</span><span class="pun">.</span><span class="pln">DEFAULT_FRAME_ID</span><span class="pun">,</span><span class="pln"> remoteAddress</span><span class="pun">,</span><span class="pln"> </span><span class="typ">XBeeAddress16</span><span class="pun">.</span><span class="pln">BROADCAST</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NI"</span><span class="pun">);</span></pre><p>To
+ address the remote radio with the 16-bit address, use the 64-bit 
+broadcast address: </p><pre class="prettyprint"><span class="com">// this is the MY address of the remote radio</span><span class="pln"><br></span><span class="typ">XBeeAddress16</span><span class="pln"> remoteAddress </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBeeAddress16</span><span class="pun">(</span><span class="lit">0xaa</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0xbb</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">ZNetRemoteAtRequest</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ZNetRemoteAtRequest</span><span class="pun">(</span><span class="typ">XBeeRequest</span><span class="pun">.</span><span class="pln">DEFAULT_FRAME_ID</span><span class="pun">,</span><span class="pln"> </span><span class="typ">XBeeAddress64</span><span class="pun">.</span><span class="pln">BROADCAST</span><span class="pun">,</span><span class="pln"> remoteAddress</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NI"</span><span class="pun">);</span></pre><h3><a
+ name="Series_2">Series 2</a><a href="#Series_2" class="section_anchor">¶</a></h3><p>For
+ series 2 radios, the MY address is read-only, as it is determined by 
+the radio, so you only need to provide the 64-bit address of the remote 
+radio. </p><pre class="prettyprint"><span class="com">// this is the SH + SL address of the remote radio</span><span class="pln"><br></span><span class="typ">XBeeAddress64</span><span class="pln"> remoteAddress </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBeeAddress64</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln"> <br></span><span class="typ">ZNetRemoteAtRequest</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ZNetRemoteAtRequest</span><span class="pun">(</span><span class="pln">remoteAddress</span><span class="pun">,</span><span class="pln"> </span><span class="str">"NI"</span><span class="pun">);</span></pre><h2><a
+ name="I/O_Samples">I/O Samples</a><a href="#I/O_Samples" 
+class="section_anchor">¶</a></h2><p>I/O Samples or I/O line monitoring 
+is a feature of XBee radios for receiving I/O data from a remote XBee.  
+Enabling this feature requires a few configuration changes on the remote
+ radio. </p><p>First specify the sample rate, in milliseconds.  This is a
+ two byte value.  For example: </p><pre class="prettyprint"><span class="pln">IR</span><span class="pun">=</span><span class="pln">ffff</span></pre><p>This
+ sets the sample rate to the maximum of 1 sample every ffff 
+milliseconds, or 65535/1000 -&gt; 65 seconds.  Note: when using X-CTU 
+for configuration, the "0x" must not be used for hexadecimal numbers, 
+but it is required in Java. </p><p>For series 1 radios only, you can 
+specify the number of I/O readings per packet with the IT command.  
+Series 2 radios always send 1 sample per packet.   </p><pre class="prettyprint"><span class="pln">IT</span><span class="pun">=</span><span class="lit">5</span></pre><p>This
+ value affects the sample rate, so multiple IT*IR to get the effective 
+sample rate. In this case since IR is 65 seconds, we would receive a 
+sample every 65*5 -&gt;325 seconds. </p><p>Now enable an I/O pin: </p><pre class="prettyprint"><span class="pln">D0</span><span class="pun">=</span><span class="lit">2</span></pre><p>This
+ configures D0 (pin 20) as an analog input.  Pins may also be configured
+ for digital input.  Refer to this <a 
+href="http://code.google.com/p/xbee-api/wiki/XBeePins" rel="nofollow">wiki</a>
+ for available analog and digital pins for your radio  </p><pre class="prettyprint"><span class="pln">D4</span><span class="pun">=</span><span class="lit">3</span></pre><p>This
+ sets D4 (pin 11) as a digital input. </p><p>Series 2 radios will 
+automatically send I/O sample data to the coordinator but series 1 
+radios require you to specify the address of the coordinator.  If you 
+are using 16-bit address, set DL to the coordinator's MY address. For 
+example: </p><pre class="prettyprint"><span class="pln">DL</span><span class="pun">=</span><span class="lit">1874</span><span class="pln"> </span></pre><p>For
+ 64-bit addressing, set DL to the coordinator's SL address, and DH to 
+the coordinator's SH address. </p><p>Remember to send the WR command to 
+save the configuration, if you want it to remain after the device is 
+powered off. </p><p>Now your coordinator should start receiving I/O 
+packets.  For series 1, you receives samples as follows: </p><pre class="prettyprint"><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">getResponse</span><span class="pun">();</span><span class="pln"><br><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">getApiId</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ApiId</span><span class="pun">.</span><span class="pln">RX_16_IO_RESPONSE </span><span class="pun">||</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">getApiId</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ApiId</span><span class="pun">.</span><span class="pln">RX_64_RESPONSE</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">RxResponseIoSample</span><span class="pln"> ioSample </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">RxResponseIoSample</span><span class="pun">)</span><span class="pln">response</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Received a sample from "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getSourceAddress</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"RSSI is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getRssi</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// loops IT times</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">IoSample</span><span class="pln"> sample</span><span class="pun">:</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getSamples</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Analog D0 (pin 20) 10-bit reading is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> sample</span><span class="pun">.</span><span class="pln">getAnalog0</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Digital D4 (pin 11) is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="pun">(</span><span class="pln">sample</span><span class="pun">.</span><span class="pln">isD4On</span><span class="pun">()</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">"on"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"off"</span><span class="pun">));</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre><p>For
+ series 2: </p><pre class="prettyprint"><span class="typ">XBeeResponse</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> xbee</span><span class="pun">.</span><span class="pln">getResponse</span><span class="pun">();</span><span class="pln"><br><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">getApiId</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ApiId</span><span class="pun">.</span><span class="pln">ZNET_IO_SAMPLE_RESPONSE</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">ZNetRxIoSampleResponse</span><span class="pln"> ioSample </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">ZNetRxIoSampleResponse</span><span class="pun">)</span><span class="pln"> response</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; <br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Received a sample from "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getRemoteAddress64</span><span class="pun">());</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Analog D0 (pin 20) 10-bit reading is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getAnalog0</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Digital D4 (pin 11) is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ioSample</span><span class="pun">.</span><span class="pln">isD4On</span><span class="pun">()</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">"on"</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">"off"</span><span class="pun">));</span><span class="pln"><br></span><span class="pun">}</span></pre><p>Change
+ Detect is a feature for sending I/O data when a digital input changes. 
+ Change Detect is enabled with the IC command.  The value of this 
+command is a bitmask that corresponds to Digital inputs 0-n.  For 
+example, to enable Change Detect for inputs D3 and D4, set IC to 2<tt>^</tt>3
+ + 2<tt>^</tt>4 = 24 (or 0x18).   </p><pre class="prettyprint"><span class="pln">IC</span><span class="pun">=</span><span class="lit">18</span></pre><p>The
+ XBee will now send a I/O sample packet when either D3 (pin 17) or D4 
+(pin 11) go to 0V.  If you are also receiving analog samples, you may 
+want to distinguish between a periodic sample and a change detect 
+sample.  Unfortunately the packet does not contain a change detect 
+indicator, however if you have analog inputs enabled, you can call 
+"containsAnalog()": </p><pre class="prettyprint"><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">ioSample</span><span class="pun">.</span><span class="pln">containsAnalog</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br></span><span class="com">// this is a change detect packet</span><span class="pln"><br></span><span class="pun">}</span></pre><p>If
+ the packet doesn't contain analog, and analog is enabled, you know this
+ must be a Change Detect packet.  So enable at least one analog pin if 
+you want to use this method. </p><h2><a name="Force_Sample">Force Sample</a><a
+ href="#Force_Sample" class="section_anchor">¶</a></h2><p>An alternative
+ to periodic I/O samples is to request a I/O sample, using the "Force 
+Sample" command. </p><p>TODO </p><h2><a name="ZDO_Commands">ZDO Commands</a><a
+ href="#ZDO_Commands" class="section_anchor">¶</a></h2><p>TODO </p><h2><a
+ name="Package_Structure">Package Structure</a><a 
+href="#Package_Structure" class="section_anchor">¶</a></h2><p>The 
+library is organized into the following packages: </p><p></p><table><tbody><tr><td
+ style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Package</strong>
+ </td><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> <strong>Description</strong>
+ </td></tr> <tr><td style="border: 1px solid rgb(170, 170, 170); 
+padding: 5px;"> com.rapplogic.xbee </td><td style="border: 1px solid 
+rgb(170, 170, 170); padding: 5px;"> Contains classes that are common to 
+all XBee radios </td></tr> <tr><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> com.rapplogic.xbee.api </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Contains 
+classes that are common to all XBee radios, configured in API mode </td></tr>
+ <tr><td style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+com.rapplogic.xbee.wpan </td><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> Contains classes that are common to Series 1 XBee 
+radios. The "wpan" designation refers to Wireless Personal Area Network,
+ the IEEE 802.15.4 standard for Series 1 XBee. </td></tr> <tr><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> 
+com.rapplogic.xbee.zigbee </td><td style="border: 1px solid rgb(170, 
+170, 170); padding: 5px;"> Contains classes that are common to Series 2 
+XBee radios. This refers to ZigBee radios with either ZNet 2.5 or ZB Pro
+ firmware. </td></tr> <tr><td style="border: 1px solid rgb(170, 170, 
+170); padding: 5px;"> com.rapplogic.xbee.examples </td><td 
+style="border: 1px solid rgb(170, 170, 170); padding: 5px;"> Contains 
+examples of using the API </td></tr> </tbody></table><p>Note on class 
+naming:  The ZNetXxx classes are applicable to Series 2 radios.  They 
+were naming prior to the existing of the ZB Pro firmware, and renaming 
+them now would break existing code, although I may need to do this at 
+some point in the future. </p><h2><a name="Logging">Logging</a><a 
+href="#Logging" class="section_anchor">¶</a></h2><p>Logging is provided 
+by the <a href="http://logging.apache.org/log4j/1.2/index.html" 
+rel="nofollow">Log4J</a> library. The log settings are defined in 
+"log4j.properties", located in the project root folder. The default log 
+configuration sends log messages to a file (XBee.log) and the console. 
+If you are using Eclipse, you will see log messages in the "Console" 
+window. </p><p>You can alter the amount of logging by changing the log 
+levels. For example, to see more log messages, set the log level to 
+INFO: </p><p>log4j.logger.com.rapplogic.xbee=INFO, main-appender, 
+console-appender </p><p>THE INFO level will show all log messages at 
+INFO, WARN, ERROR and FATAL levels. At this level. all packet data sent 
+and received from the radio will be logged. </p><p>You can set the log 
+level to DEBUG to see even more log messages but this is not recommended
+ unless you are troubleshooting a problem. </p><p>Log4j is heirarchical,
+ so that the following configuration  </p><p>log4j.logger.com.rapplogic.xbee=WARN,
+ main-appender, console-appender </p><p>will log all statements in 
+com.rapplogic.xbee. packages; this includes the entire library. You can 
+override the default log setting for any package, or class. For example,
+ this line sets all classes under the xbee/examples to the DEBUG log 
+level. </p><p>log4j.logger.com.rapplogic.xbee.examples=DEBUG </p><p>The 
+RXTX library (serial communication) is a native C application (not Java)
+ and therefore does not log to Log4j.  Instead, it logs messages to the 
+console. </p><p>You may add your custom log messages by.... 
+log.debug(..) </p><p>When you log an object, (e.g. log.debug(response)),
+ it calls the toString() method of that object.  All request/response 
+classes have implemented the toString method to output the contents of 
+the object. This can be especially helpful when developing/testing. </p>
+ </td> 
+ </tr>
+ </tbody></table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="../w/detail.do" method="post">
+ <table>
+ <tbody><tr><td class="vt">
+ <input name="pagename" value="DevelopersGuide" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="80"></textarea><br><br>
+ <input name="submit" value="Submit" type="submit">
+ </td>
+ <td class="vt">
+ <div id="whb" class="tip" style="width: 15em;">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner opened" id="entrybubble">
+ <a class="ifClosed" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='opened'">show</a>
+ <a class="ifOpened" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='closed'">hide</a>
+ <b>Wiki markup help</b>
+ <div class="ifOpened">
+ <div style="padding: 2px; font-size: 96%;">
+ =Heading1=<br>
+ ==Heading2==<br>
+ ===Heading3===<br>
+ <br>
+ *bold* &nbsp; &nbsp;
+ _italic_<br>
+ `inline code`<br>
+ escape: `*`<br>
+ <br>
+ Indent lists 2 spaces:<br>
+ &nbsp;&nbsp;* bullet item<br>
+ &nbsp;&nbsp;# numbered list<br>
+ <br>
+ {{{<br>
+ verbatim code block<br>
+ }}}<br>
+ <br>
+ Horizontal rule<br>
+ ----
+ <br>
+ <br>
+ WikiWordLink<br>
+ [http://domain/page&nbsp;label]<br>
+ http://domain/page<br>
+ <br>
+ || table || cells ||<br>
+ 
+ </div><br>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new">More
+
+ examples</a>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new"><img
+ src="DevelopersGuide_fichiers/tearoff_icon.gif" height="16" width="16"></a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+</div>
+<input name="wikihelp" id="wikihelp" value="opened" type="hidden">
+
+ </td></tr>
+ </tbody></table>
+ </form>
+ </div>
+ 
+ 
+ 
+
+<form name="delcom" action="../w/delComment.do" method="POST">
+ <input name="sequence_num" value="" type="hidden">
+ <input name="create_time" value="" type="hidden">
+ <input name="mode" value="" type="hidden">
+ <input name="pagename" value="DevelopersGuide" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+</form>
+
+
+
+ <script src="DevelopersGuide_fichiers/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="DevelopersGuide_fichiers/dit_scripts.js"></script>
+
+
+
+  
+ 
+ <script type="text/javascript" src="DevelopersGuide_fichiers/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="DevelopersGuide_fichiers/codesite_product_dictionary_ph.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ ©2010 Google -
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a 
+href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ <div style="display: none;" id="menuDiv-projects-dropdown" 
+class="menuDiv instance0"><b style="display: block;" 
+class="categoryTitle projects">Projects</b><div class="menuCategory 
+projects"><a href="http://code.google.com/p/ofx3nity/" style="display: 
+block;" class="menuItem">ofx3nity</a><a 
+href="http://code.google.com/p/tuism/" style="display: block;" 
+class="menuItem">tuism</a></div><div class="menuCategory controls"><hr 
+class="menuSeparator"><a href="http://code.google.com/more/" 
+style="display: block;" class="menuItem">Find developer products...</a><a
+ href="http://code.google.com/hosting/" style="display: block;" 
+class="menuItem">Find open source projects...</a></div></div></body></html>

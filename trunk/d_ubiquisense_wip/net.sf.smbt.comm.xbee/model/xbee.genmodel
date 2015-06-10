@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.comm.xbee/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.comm.xbee" modelName="Xbee" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    reflectiveDelegation="true" testsDirectory="" booleanFlagsField="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>xbee.ecore</foreignModel>
+  <genPackages prefix="Xbee" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="xbee.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xbee.ecore#//XBEE_SERIES">
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XBEE"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XBEE_PRO"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XBEE_XSC_900"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XBEE_ZNET_25"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XSTREAM"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XCITE"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_SERIES/XTEND"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xbee.ecore#//XBEE_COMM_MODE">
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_COMM_MODE/POINT_TO_MULTIPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_COMM_MODE/DIGIMESH"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_COMM_MODE/ZIGBEE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xbee.ecore#//XBEE_FREQ">
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FREQ/RF_2400_MHZ"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FREQ/RF_900_MHZ"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xbee.ecore#//XBEE_FIRMAWARE">
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/X09_009"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/X09_019"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/X24_009"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/X24_019"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XB24"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XB24_B"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XB24_ZB"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP09_DM"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP09_XSC"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP09_DP"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP24"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP24_B"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XBP24_ZB"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XC09_009"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XC09_038"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XH09_009"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XH09_019"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_FIRMAWARE/XT09"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xbee.ecore#//XBEE_MANUFACTURER_ID">
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_MANUFACTURER_ID/XSTREAM"/>
+      <genEnumLiterals ecoreEnumLiteral="xbee.ecore#//XBEE_MANUFACTURER_ID/XBEE"/>
+    </genEnums>
+    <genClasses ecoreClass="xbee.ecore#//Xbee">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xbee.ecore#//Xbee/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xbee.ecore#//Xbee/series"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xbee.ecore#//Xbee/freq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xbee.ecore#//Xbee/modes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xbee.ecore#//Xbee/firmaware"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

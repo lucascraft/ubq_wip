@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/net.sf.smbt.mppt/src-model" editDirectory="" editorDirectory=""
+    modelPluginID="net.sf.smbt.mppt" modelName="Ezmppt" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" booleanFlagsField="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezmppt.ecore</foreignModel>
+  <genPackages prefix="Ezmppt" basePackage="net.sf.smbt.mppt" disposableProviderFactory="true"
+      ecorePackage="ezmppt.ecore#/">
+    <genClasses ecoreClass="ezmppt.ecore#//MpptCmd"/>
+  </genPackages>
+</genmodel:GenModel>

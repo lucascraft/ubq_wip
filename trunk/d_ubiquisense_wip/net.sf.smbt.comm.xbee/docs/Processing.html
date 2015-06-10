@@ -1,0 +1,554 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+ 
+
+
+ 
+ 
+ 
+
+
+ <link rel="icon" type="image/vnd.microsoft.icon" 
+href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "1bc4cd6e86a25aa197263773e7a904b1";
+ 
+ 
+ var logged_in_user_email = "lucas.bigeardel@gmail.com";
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>Processing - 
+ xbee-api -
+ 
+ How to use XBee-API with Processing - Project Hosting on Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="Processing_fichiers/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" 
+href="Processing_fichiers/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" 
+href="http://code.google.com/feeds/p/xbee-api/svnchanges/basic?path=/wiki/Processing.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16517148615437166380/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ </style>
+<script src="Processing_fichiers/ga.js" async="" type="text/javascript"></script></head><body
+ class="t6">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-4047422-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+ <div id="gaia">
+ 
+ <span>
+ 
+ 
+ <b>lucas.bigeardel@gmail.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/lucas.bigeardel/" 
+onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and 
+Settings"><u>Profile</u></a>
+ | <a 
+href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fxbee-api%2Fwiki%2FProcessing"
+ onclick="_CS_click('/gb/ph/signout');"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px;"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding: 0px; margin: 20px 0px 0px; width: 100%;" 
+cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ <td style="width: 55px; text-align: center;">
+ <a href="http://code.google.com/p/xbee-api/">
+ 
+ <img src="Processing_fichiers/defaultlogo.png" alt="Logo">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em;">
+ 
+ <div id="pname" style="margin: 0px 0px -3px;">
+ <a href="http://code.google.com/p/xbee-api/" style="text-decoration: 
+none; color: rgb(0, 0, 0);">xbee-api</a>
+ 
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" 
+href="http://code.google.com/p/xbee-api/" style="text-decoration: none; 
+color: rgb(0, 0, 0);">A Java API for Digi XBee/XBee-Pro OEM RF Modules</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space: nowrap; text-align: right;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q">
+ <input name="projectsearch" value="Search projects" type="submit">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+
+ 
+<table id="mt" width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/w/list');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/xbee-api/source/checkout');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" 
+href="http://code.google.com/p/xbee-api/source/checkout">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</tbody></table>
+<table class="st" width="100%" align="center" border="0" cellpadding="0"
+ cellspacing="0">
+ <tbody><tr>
+ 
+ 
+ 
+ <td>
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/xbee-api/w/list" method="GET" style="display: inline;">
+ <select id="can" name="can" style="font-size: 92%;">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input size="38" id="searchq" name="q" autocomplete="off"
+ style="font-size: 92%;" type="text"></span>
+ 
+ 
+ <input value="Search" style="font-size: 92%;" type="submit">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="bevel-right" height="4" valign="top" align="right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</tbody></table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol">
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+
+ <style type="text/css">
+ .artifactcomment {
+ margin: .5em 0 0 0;
+ padding: .3em 0 .3em .3em;
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentlist {
+ border-bottom: 3px solid #c3d9ff;
+ }
+ #commentform { padding-top: 1em; }
+ .delcom { background: #e8e8e8 }
+ .commentcontent { margin: 1em 0;}
+ </style>
+
+
+ <div id="wikicontent">
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr>
+ 
+ <td class="vt" id="wikimaincol" width="100%">
+ 
+ <div style="float: right; width: 18em;" id="wikimeta">
+ <div class="pmeta_bubble_bg">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <table style="padding: 5px;">
+ <tbody><tr><td colspan="2" style="padding-bottom: 5px;">Updated <span 
+title="Thu Aug 19 09:40:29 2010">Aug 19, 2010</span>
+ 
+ by <a style="white-space: nowrap;" 
+href="http://code.google.com/u/andrew.rapp/">andrew.rapp</a>
+ </td></tr>
+ 
+ <tr><th class="vt">Labels:</th>
+ <td>
+ 
+ <a href="http://code.google.com/p/xbee-api/w/list?q=label:Featured" 
+title="Listed on project home page">Featured</a>
+ 
+ </td>
+ </tr>
+ 
+ 
+ </tbody></table>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ 
+ <div id="wikiheader" style="margin-bottom: 1em;">
+ 
+ <img id="star_img" src="Processing_fichiers/star_off.gif" 
+style="cursor: pointer;" onclick="_CS_toggleStar(this,
+ '',
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 'xbee-api:Processing',
+ 'token': codesite_token
+ });" height="15" width="15">
+ 
+ &nbsp;
+ <span style="font-size: 120%; font-weight: bold;">Processing</span>
+ &nbsp;
+ 
+ 
+ <div style="font-style: italic; margin-top: 3px;">How to use XBee-API 
+with Processing</div>
+ 
+ </div>
+ <h1><a name="Introduction">Introduction</a><a href="#Introduction" 
+class="section_anchor">¶</a></h1><p>Processing is a powerful tool for 
+visualizing physical computing projects.  Since both <a 
+href="http://processing.org/" rel="nofollow">Processing</a> and XBee-API
+ are written in Java, it's easy to use them together.  This entry 
+describes how.  </p><h1><a name="Setup">Setup</a><a href="#Setup" 
+class="section_anchor">¶</a></h1><p>After starting Processing, the first
+ thing we need to do is add the XBee-API JAR files.  The easiest way to 
+do this is to drag the JAR files into the Processing window.  The 
+required files are xbee-api-version-.jar and log4j.jar.  The RXTX 
+libraries are already included in Processing. </p><p>Now copy and paste 
+the code below into the Processing editor.  You will need to change the 
+com port to setting to the port of the XBee radio (See the <a 
+href="http://code.google.com/p/xbee-api/wiki/DevelopersGuide">DevelopersGuide</a>
+ for determining the com port).   </p><p>The logging setup is 
+recommended in the event things aren't working quite as planned.  You 
+just need to specify the path to log4j.properties (inlcuded in the 
+XBee-API download). </p><h1><a name="Explanation">Explanation</a><a 
+href="#Explanation" class="section_anchor">¶</a></h1><p>The <i>setup</i>
+ method creates an XBee object and connects to the radio.  Next, it adds
+ a <i>PacketListener</i> to collect the responses from the radio and add
+ to a queue for later retrieval.  If an error occurs during setup, the 
+program will exit and print an error message. </p><p>The <i>readPackets</i>
+ method will retrieve all packets that are waiting in the queue.  This 
+method does not block (wait), so it will not impact any other code in 
+the <i>draw</i> method.  This particular code is for receiving I/O 
+samples but you can replace with any code to suit your needs.  See the 
+examples folder in the download for ideas.  You can even send packets to
+ remote radios. </p><p>This example doesn't include any graphics code, 
+such as visualizing your data, but there are plenty of examples on the 
+Processing site for help there. </p><p>So that's it.  Please report any 
+issues on the <a href="http://groups.google.com/group/xbee-api" 
+rel="nofollow">XBee-API Group</a>. </p><h1><a name="Code">Code</a><a 
+href="#Code" class="section_anchor">¶</a></h1><pre class="prettyprint"><span class="kwd">import</span><span class="pln"> processing</span><span class="pun">.</span><span class="pln">serial</span><span class="pun">.*;</span><span class="pln"><br></span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.</span><span class="pln">concurrent</span><span class="pun">.*;</span><span class="pln"><br><br></span><span class="typ">XBee</span><span class="pln"> xbee</span><span class="pun">;</span><span class="pln"><br></span><span class="typ">Queue</span><span class="pun">&lt;</span><span class="typ">XBeeResponse</span><span class="pun">&gt;</span><span class="pln"> queue </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ConcurrentLinkedQueue</span><span class="pun">&lt;</span><span class="typ">XBeeResponse</span><span class="pun">&gt;();</span><span class="pln"><br></span><span class="kwd">boolean</span><span class="pln"> message</span><span class="pun">;</span><span class="pln"><br></span><span class="typ">XBeeResponse</span><span class="pln"> response</span><span class="pun">;</span><span class="pln"><br>&nbsp; <br></span><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="com">//optional. &nbsp;set up logging</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">PropertyConfigurator</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">(</span><span class="pln">dataPath</span><span class="pun">(</span><span class="str">""</span><span class="pun">)+</span><span class="str">"log4j.properties"</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; xbee </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">XBee</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// replace with your COM port</span><span class="pln"><br>&nbsp; &nbsp; xbee</span><span class="pun">.</span><span class="pln">open</span><span class="pun">(</span><span class="str">"/dev/tty.usbserial-A6005v5M"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9600</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; xbee</span><span class="pun">.</span><span class="pln">addPacketListener</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">PacketListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> processResponse</span><span class="pun">(</span><span class="typ">XBeeResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; queue</span><span class="pun">.</span><span class="pln">offer</span><span class="pun">(</span><span class="pln">response</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"> <br>&nbsp; </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Exception</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"XBee failed to initialize"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; e</span><span class="pun">.</span><span class="pln">printStackTrace</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">void</span><span class="pln"> draw</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; readPackets</span><span class="pun">();</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"> <br>&nbsp; </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Exception</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; e</span><span class="pun">.</span><span class="pln">printStackTrace</span><span class="pun">();</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">void</span><span class="pln"> readPackets</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">Exception</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br><br>&nbsp; </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">((</span><span class="pln">response </span><span class="pun">=</span><span class="pln"> queue</span><span class="pun">.</span><span class="pln">poll</span><span class="pun">())</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">// we got something!</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="typ">RxResponseIoSample</span><span class="pln"> ioSample </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="typ">RxResponseIoSample</span><span class="pun">)</span><span class="pln"> response</span><span class="pun">;</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; println</span><span class="pun">(</span><span class="str">"We received a sample from "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> ioSample</span><span class="pun">.</span><span class="pln">getSourceAddress</span><span class="pun">());</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ioSample</span><span class="pun">.</span><span class="pln">containsAnalog</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; println</span><span class="pun">(</span><span class="str">"10-bit temp reading (pin 19) is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ioSample</span><span class="pun">.</span><span class="pln">getSamples</span><span class="pun">()[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">getAnalog1</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> <br>&nbsp; &nbsp; </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">ClassCastException</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// not an IO Sample</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+ </td> 
+ </tr>
+ </tbody></table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="../w/detail.do" method="post">
+ <table>
+ <tbody><tr><td class="vt">
+ <input name="pagename" value="Processing" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="80"></textarea><br><br>
+ <input name="submit" value="Submit" type="submit">
+ </td>
+ <td class="vt">
+ <div id="whb" class="tip" style="width: 15em;">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner opened" id="entrybubble">
+ <a class="ifClosed" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='opened'">show</a>
+ <a class="ifOpened" href="#whb" style="float: right;" 
+onclick="_toggleHidden(this); 
+document.getElementById('wikihelp').value='closed'">hide</a>
+ <b>Wiki markup help</b>
+ <div class="ifOpened">
+ <div style="padding: 2px; font-size: 96%;">
+ =Heading1=<br>
+ ==Heading2==<br>
+ ===Heading3===<br>
+ <br>
+ *bold* &nbsp; &nbsp;
+ _italic_<br>
+ `inline code`<br>
+ escape: `*`<br>
+ <br>
+ Indent lists 2 spaces:<br>
+ &nbsp;&nbsp;* bullet item<br>
+ &nbsp;&nbsp;# numbered list<br>
+ <br>
+ {{{<br>
+ verbatim code block<br>
+ }}}<br>
+ <br>
+ Horizontal rule<br>
+ ----
+ <br>
+ <br>
+ WikiWordLink<br>
+ [http://domain/page&nbsp;label]<br>
+ http://domain/page<br>
+ <br>
+ || table || cells ||<br>
+ 
+ </div><br>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new">More
+
+ examples</a>
+ <a href="http://code.google.com/p/support/wiki/WikiSyntax" target="new"><img
+ src="Processing_fichiers/tearoff_icon.gif" height="16" width="16"></a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+</div>
+<input name="wikihelp" id="wikihelp" value="opened" type="hidden">
+
+ </td></tr>
+ </tbody></table>
+ </form>
+ </div>
+ 
+ 
+ 
+
+<form name="delcom" action="../w/delComment.do" method="POST">
+ <input name="sequence_num" value="" type="hidden">
+ <input name="create_time" value="" type="hidden">
+ <input name="mode" value="" type="hidden">
+ <input name="pagename" value="Processing" type="hidden">
+ <input name="token" value="1bc4cd6e86a25aa197263773e7a904b1" 
+type="hidden">
+</form>
+
+
+
+ <script src="Processing_fichiers/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="Processing_fichiers/dit_scripts.js"></script>
+
+
+
+  
+ 
+ <script type="text/javascript" src="Processing_fichiers/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="Processing_fichiers/codesite_product_dictionary_ph.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ ©2010 Google -
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a 
+href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ <div style="display: none;" id="menuDiv-projects-dropdown" 
+class="menuDiv instance0"><b style="display: block;" 
+class="categoryTitle projects">Projects</b><div class="menuCategory 
+projects"><a href="http://code.google.com/p/ofx3nity/" style="display: 
+block;" class="menuItem">ofx3nity</a><a 
+href="http://code.google.com/p/tuism/" style="display: block;" 
+class="menuItem">tuism</a></div><div class="menuCategory controls"><hr 
+class="menuSeparator"><a href="http://code.google.com/more/" 
+style="display: block;" class="menuItem">Find developer products...</a><a
+ href="http://code.google.com/hosting/" style="display: block;" 
+class="menuItem">Find open source projects...</a></div></div></body></html>

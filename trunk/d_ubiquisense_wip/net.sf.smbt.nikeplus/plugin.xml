@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://nikeplus/1.0"
+            class="net.sf.smbt.nikeplus.NikeplusPackage"
+            genModel="model/nikeplus.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.nikeplus.cmdHandler"
+            handler="net.sf.smbt.nikeplus.cmd.NikePlusEventHandler">
+      </cmdHandler>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.nikeplus.cmdInterpreter"
+            interpreter="net.sf.smbt.nikeplus.cmd.NikePlusCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.nikeplus.frameInterpreter"
+            interpreter="net.sf.smbt.nikeplus.cmd.NikePlusFrameInterpreter">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+            ID="net.sf.smbt.nikeplus.engine"
+            alias="nikeplus"
+            cmdInterpreterID="net.sf.smbt.nikeplus.cmdInterpreter"
+            desc="NikePlus REST API"
+            eventHandler="net.sf.smbt.nikeplus.cmdHandler"
+            frameInterpreter="net.sf.smbt.nikeplus.frameInterpreter"
+            instance="0"
+            transports="HTTP">
+      </engine>
+   </extension>
+
+</plugin>

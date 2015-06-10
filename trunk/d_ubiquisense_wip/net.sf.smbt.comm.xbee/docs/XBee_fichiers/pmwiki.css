@@ -1,0 +1,147 @@
+/***********************************************************************
+** pmwiki.css
+**  Copyright 2004-2006 Patrick R. Michaud (pmichaud@pobox.com)
+**  Copyright 2006 Hagan Fox
+**  This file is part of PmWiki; you can redistribute it and/or modify
+**  it under the terms of the GNU General Public License as published
+**  by the Free Software Foundation; either version 2 of the License, or
+**  (at your option) any later version.  See pmwiki.php for full details.
+***********************************************************************/
+
+/* This sets the overall frame for the site */
+body {
+	margin:0px; 
+	background-color: #FEFEFE;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+a:link          { text-decoration:none;color: #000667; }
+a:active        { text-decoration:underline;color: #000667; }
+a:visited       { text-decoration:none;color: #990099; }
+a:hover         { text-decoration:underline;color: #000667; }
+
+/* These control the fixed-width text elements of the page */
+textarea, pre, code { font-size:0.9em; }
+pre, code { font-family:'Lucida Console','Andale Mono','Courier New',Courier; }
+pre { line-height:1.2em; }
+pre code, code code, pre pre { font-size:100%; }
+
+/* These primarily adjust the size and spacing of heading elements,
+** most browsers have atrocious defaults for these. */
+h1, h2, h3, h4, h5, h6 { margin-top:1.0em; margin-bottom:0.6em; }
+h1, h2, h3, h6 { font-weight:normal; }
+h4, h5 { font-weight:bold; }
+h1 code, h2 code, h3 code, h4 code { font-size:1em; }
+h1 { font-size:1.8em; }
+h2 { font-size:1.44em; }
+h3 { font-size:1.22em; }
+h4 { font-size:1.07em; }
+h5 { font-size:1.0em; }
+h6 { font-size:1.0em; }
+
+/* The #wikilogo element is the logo from $PageLogoFmt */
+#wikilogo { 
+	margin:0px; 
+	padding:0px; 
+ 	width:940px; 
+	height=34px;
+ }
+
+#pagetitle {                  
+  position:absolute;
+  left:170px;           
+  top:0px;             
+  font-size:150%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight:Bold;
+  color: #000667; /* #D5A4FF;                 */	
+}
+
+/* This controls the rest of the heading (primarily the search box) */
+#wikihead { 
+  position:absolute; right:10px; top:10px; 
+  color: #D5A4FF;
+  font-family:Verdana,Arial,Helvetica,sans-serif; 
+  font-size:85%; 
+}
+#wikihead input { font-size:85%; } 
+
+/* These are for the left-sidebar. */
+#wikileft { 
+  width:155px; 
+  padding:4px; 
+  line-height:1.25em;
+  border-right:1px #cccccc solid; 
+  font-size:10px; 
+  font-family:Verdana,Arial,Helvetica,sans-serif;
+  color:#101010; 
+}
+#wikileft .vspace { margin-top:1.125em; }
+#wikileft a { text-decoration:none; color:#101010;}
+#wikileft a:hover { text-decoration:underline; color:#000667; } 
+#wikileft ul { list-style:none; padding-left:4px; margin:0px; }
+#wikileft li { margin:0px; padding-left: 6px; }
+/* The "#wikileft h1" and "#wikileft h5" settings are for
+** backwards compatibility with previous releases of PmWiki.
+** They are deprecated (replaced with the .sidehead class),
+** and may be removed in a future release. */
+#wikileft h1, #wikileft h5, .sidehead {
+  margin:0px; 
+  padding:8px 2px 2px 2px;
+  font-size:11px; 
+  font-weight:bold; 
+  font-style:normal; 
+}
+#wikileft h1 a, #wikileft h5 a, .sidehead a 
+  { color:#505050; font-weight:bold; font-style:normal; }
+
+/* These affect the main content area. */
+#wikibody { 
+  padding:0px 10px 10px 10px;
+  background-color: #FEFEFE;
+  font-size:13px; 
+}
+#wikicmds { 
+  float:right; 
+  white-space:nowrap; 
+  font-family:Verdana,Arial,Helvetica,sans-serif; 
+  font-size:80%; 
+}
+#wikicmds ul { list-style:none; margin:0px; padding:0px; }
+#wwikifoot ul { display:inline; margin:2px; padding:2px; }
+#wikicmds li, #wikifoot li { display:inline; margin:0px 5px; }
+#wikicmds li a, #wikifoot li a { text-decoration:none; color:#000000; border:none; }
+#wikicmds li a.createlink, #wikifoot li a.createlink  { display:none; }
+#wikicmds li a:hover, #wikifoot li a:hover { text-decoration:underline; color:#000667; }
+.pagegroup { margin-top:8px; margin-bottom:2px; }
+.pagetitle { line-height:1em; margin:0px; font-size:1.6em; font-weight:normal; }
+.wikiaction { margin-top:4px; margin-bottom:4px; }
+#wikitext { margin-top:12px; line-height:1.33em; margin-right:25px; }
+#wikitext table { font-size:100%; line-height:1.33em; } /* For MSIE 5.5 */
+
+/* These are for the edit form. */
+#wikiedit form { margin:0px; width:100%; }
+#wikiedit textarea { width:100%; }
+.wikimessage { margin-top:4px; margin-bottom:4px; font-style:italic; }
+
+/* These affect the lines at the very bottom. */
+#wikifoot { 
+  padding-left:10px; padding-bottom:4px; border-top:1px #cccccc solid;
+  font-family:Verdana,Arial,Helvetica,sans-serif; 
+  font-size:80%; 
+}
+
+/* These affect the printed appearance of the web view (not the separate
+** print view) of pages.  The sidebar and action links aren't printed. */
+@media print {
+  body { width:auto; margin:0px; padding:0.5em; }
+  #wikihead, #wikileft, #wikicmds, .footnav { display:none; }
+  #wikifoot { padding:2px; }
+}
+
+/* to start out hiding div */
+.hidediv {display:none;}
+
+table.hatch { background-color:#ffffcc; }
+

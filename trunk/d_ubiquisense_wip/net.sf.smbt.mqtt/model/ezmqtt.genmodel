@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.mqtt/src-model"
+    modelPluginID="net.sf.smbt.mqtt" modelName="Ezmqtt" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    booleanFlagsField="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>ezmqtt.ecore</foreignModel>
+  <genPackages prefix="Ezmqtt" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="ezmqtt.ecore#/">
+    <genClasses ecoreClass="ezmqtt.ecore#//MqttCmd"/>
+    <genClasses ecoreClass="ezmqtt.ecore#//MqttMessageCmd"/>
+  </genPackages>
+</genmodel:GenModel>
