@@ -1,0 +1,7 @@
+# Tracing options for the net.sf.smbt.touchosc.diagram plug-in
+
+# Common issues
+net.sf.smbt.touchosc.diagram/debug=false
+
+# Visual IDs
+net.sf.smbt.touchosc.diagram/debug/visualID=false

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///net.sf.smbt.touchosc/src/net/sf/smbt/touchosc/model/touchosc.xsd"
+            class="net.sf.smbt.touchosc.touchosc.TouchoscPackage"
+            genModel="src/net/sf/smbt/touchosc/model/touchosc-xsd.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="touchosc"
+            class="net.sf.smbt.touchosc.touchosc.util.TouchoscResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="net.sf.smbt.quantic.bonjour">
+      <DnsService
+            id="net.sf.smbt.touchosc.bonjour"
+            manager="net.sf.smbt.touchosc.utils.TouchOscBonjourSync">
+      </DnsService>
+   </extension>
+</plugin>

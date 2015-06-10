@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http:///net.sf.smbt.touchosc/src/net/sf/smbt/touchosc/model/touchosc.xsd" targetNamespace="http:///net.sf.smbt.touchosc/src/net/sf/smbt/touchosc/model/touchosc.xsd">
+  <complexType name="TOP">
+    <sequence>
+      <element maxOccurs="1" name="layout" type="tns:layout"/>
+    </sequence>
+  </complexType>
+	
+  <complexType name="layout">
+    <sequence>
+    <element maxOccurs="unbounded" name="tabpage" type="tns:tabpage"/>
+    </sequence>
+    <attribute name="version" type="string"/>
+	<attribute name="mode" type="string"/>
+    <attribute name="orientation" type="string"/>
+  </complexType>
+
+  <complexType name="tabpage">
+    <sequence>
+      <element maxOccurs="unbounded" name="control" type="tns:control"/>
+    </sequence>
+    <attribute name="name" type="string"/>
+  </complexType>
+  
+    <complexType name="midi">
+        <attribute name="var" type="string"/>
+        <attribute name="type" type="string"/>
+        <attribute name="channel" type="string"/>
+        <attribute name="data1" type="string"/>
+        <attribute name="data2f" type="string"/>
+        <attribute name="data2t" type="string"/>
+  	</complexType>
+  	
+  	
+  <complexType name="control">
+    <sequence>
+      <element maxOccurs="1" name="midi" type="tns:midi"/>
+    </sequence>
+    <attribute name="name" type="string"/>
+    <attribute name="x" type="string"/>
+    <attribute name="y" type="string"/>
+    <attribute name="w" type="string"/>
+    <attribute name="h" type="string"/>
+    <attribute name="color" type="string"/>
+    <attribute name="type" type="string"/>
+    <attribute name="centered" type="string"/>
+    <attribute name="number" type="string"/>
+    <attribute name="inverted" type="string"/>
+    <attribute name="text" type="string"/>
+    <attribute name="outline" type="string"/>
+    <attribute name="background" type="string"/>
+    <attribute name="osc_cs" type="string"/>
+    <attribute name="size" type="string"/>
+    <attribute name="local_off" type="string"/>
+    <attribute name="number_x" type="string"/>
+    <attribute name="number_y" type="string"/>
+    <attribute name="scalef" type="string"/>
+    <attribute name="scalet" type="string"/>
+    <attribute name="response" type="string"/>
+    <attribute name="inverted_x" type="string"/>
+    <attribute name="inverted_y" type="string"/>
+    <attribute name="seconds" type="string"/>
+  </complexType>
+  
+</schema>

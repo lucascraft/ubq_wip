@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="10" mode="0" orientation="horizontal">
+<tabpage name="MQ==">
+<control name="bGVkMQ==" x="14" y="16" w="20" h="20" color="red" scalef="0.0" scalet="1.0" type="led" >
+</control>
+<control name="bGFiZWwx" x="37" y="90" w="25" h="80" color="red" type="labelv" text="bGFiZWwx" size="14" background="true" outline="false" >
+</control>
+<control name="dG9nZ2xlMQ==" x="129" y="139" w="45" h="45" color="red" scalef="0.0" scalet="1.0" type="toggle" local_off="false" >
+</control>
+<control name="cm90YXJ5MQ==" x="22" y="205" w="100" h="100" color="red" scalef="0.0" scalet="1.0" type="rotaryv" response="relative" inverted="false" centered="false" >
+</control>
+<control name="cm90YXJ5Mg==" x="163" y="222" w="100" h="100" color="red" scalef="0.0" scalet="13.0" type="rotaryh" response="relative" inverted="false" centered="false" >
+</control>
+<control name="ZW5jb2RlcjE=" x="11" y="320" w="100" h="100" color="red" scalef="0.0" scalet="1.0" type="encoder" >
+</control>
+<control name="bGFiZWwy" x="255" y="183" w="80" h="25" color="red" type="labelh" text="bGFiZWwy" size="14" background="true" outline="false" >
+</control>
+<control name="bXVsdGlwdXNoMQ==" x="75" y="10" w="200" h="200" color="red" scalef="0.0" scalet="1.0" type="multipush" number_x="5" number_y="5" local_off="false" >
+</control>
+<control name="dGltZTE=" x="160" y="337" w="25" h="80" color="red" type="timev" size="14" background="true" outline="true" seconds="false" >
+</control>
+<control name="YmF0dGVyeTE=" x="205" y="343" w="25" h="80" color="red" type="batteryv" size="14" background="true" outline="true" >
+</control>
+<control name="bXVsdGlmYWRlcjE=" x="32" y="148" w="200" h="200" color="red" scalef="0.0" scalet="1.0" type="multifaderv" inverted="false" centered="false" number="5" >
+</control>
+<control name="bXVsdGl0b2dnbGUx" x="86" y="226" w="200" h="200" color="red" scalef="0.0" scalet="1.0" type="multitoggle" number_x="5" number_y="5" local_off="false" >
+</control>
+</tabpage>
+</layout>

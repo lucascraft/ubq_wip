@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+  <layout version="10" mode="0" orientation="horizontal">
+    <tabpage name="xxx"/>
+    <tabpage name="yyy"/>
+  </layout>
+

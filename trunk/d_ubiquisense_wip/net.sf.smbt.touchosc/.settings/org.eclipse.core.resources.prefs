@@ -1,0 +1,10 @@
+#Wed Sep 28 19:44:20 CEST 2011
+eclipse.preferences.version=1
+encoding//src/net/sf/smbt/touchosc/model/touchosc.ecore=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchosc.xsd=UTF8
+encoding//src/net/sf/smbt/touchosc/model/touchoscapp.ecore=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchoscapp.ecorediag=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchosccmd.ecore=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchosccmd.ecorediag=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchoscgui.ecore=UTF-8
+encoding//src/net/sf/smbt/touchosc/model/touchoscgui.ecorediag=UTF-8

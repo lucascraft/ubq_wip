@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="10" mode="0" orientation="horizontal">
+<tabpage name="MQ==">
+<control name="ZmFkZXIx" x="10" y="8" w="50" h="200" color="red" scalef="0.0" scalet="1.0" type="faderv" response="absolute" inverted="false" centered="false" >
+</control>
+<control name="cm90YXJ5MQ==" x="214" y="10" w="100" h="100" color="red" scalef="0.0" scalet="1.0" type="rotaryh" response="absolute" inverted="false" centered="false" >
+</control>
+<control name="bXVsdGlwdXNoMQ==" x="111" y="227" w="200" h="200" color="red" scalef="0.0" scalet="1.0" type="multipush" number_x="5" number_y="5" local_off="false" >
+</control>
+<control name="cHVzaDE=" x="11" y="386" w="45" h="45" color="red" scalef="0.0" scalet="1.0" type="push" local_off="false" >
+</control>
+</tabpage>
+</layout>

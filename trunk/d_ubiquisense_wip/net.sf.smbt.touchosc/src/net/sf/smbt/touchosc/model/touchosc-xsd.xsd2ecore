@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="touchosc.xsd#/"
+    outputs="touchosc.ecore#/" topToBottom="true">
+  <nested inputs="bundleentry://417.fwk363211825/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4" outputs="touchosc.ecore#//CONTROL">
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=7"
+        outputs="touchosc.ecore#//CONTROL/centered"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=5"
+        outputs="touchosc.ecore#//CONTROL/color"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=4"
+        outputs="touchosc.ecore#//CONTROL/h"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=8"
+        outputs="touchosc.ecore#//CONTROL/inverted"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse"
+        outputs="touchosc.ecore#//CONTROL/name"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=6"
+        outputs="touchosc.ecore#//CONTROL/type"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=3"
+        outputs="touchosc.ecore#//CONTROL/w"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=1"
+        outputs="touchosc.ecore#//CONTROL/x"/>
+    <nested inputs="touchosc.xsd#//CONTROL;XSDComplexTypeDefinition=4/XSDAttributeUse=2"
+        outputs="touchosc.ecore#//CONTROL/y"/>
+  </nested>
+  <nested inputs="touchosc.xsd#//TABPAGE;XSDComplexTypeDefinition=3" outputs="touchosc.ecore#//TABPAGE">
+    <nested inputs="touchosc.xsd#//TABPAGE;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="touchosc.ecore#//TABPAGE/cONTROL"/>
+    <nested inputs="touchosc.xsd#//TABPAGE;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="touchosc.ecore#//TABPAGE/name"/>
+  </nested>
+  <nested inputs="touchosc.xsd#//LAYOUT;XSDComplexTypeDefinition=2" outputs="touchosc.ecore#//LAYOUT">
+    <nested inputs="touchosc.xsd#//LAYOUT;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="touchosc.ecore#//LAYOUT/tABPAGE"/>
+    <nested inputs="touchosc.xsd#//LAYOUT;XSDComplexTypeDefinition=2/XSDAttributeUse=1"
+        outputs="touchosc.ecore#//LAYOUT/mode"/>
+    <nested inputs="touchosc.xsd#//LAYOUT;XSDComplexTypeDefinition=2/XSDAttributeUse=2"
+        outputs="touchosc.ecore#//LAYOUT/orientation"/>
+    <nested inputs="touchosc.xsd#//LAYOUT;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="touchosc.ecore#//LAYOUT/version"/>
+  </nested>
+  <nested inputs="touchosc.xsd#//TOUCHOSC;XSDComplexTypeDefinition=1" outputs="touchosc.ecore#//TOUCHOSC">
+    <nested inputs="touchosc.xsd#//TOUCHOSC;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="touchosc.ecore#//TOUCHOSC/lAYOUT"/>
+  </nested>
+  <nested inputs="touchosc.xsd#//TOP;XSDComplexTypeDefinition" outputs="touchosc.ecore#//TOP">
+    <nested inputs="touchosc.xsd#//TOP;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="touchosc.ecore#//TOP/tOUCHOSC"/>
+  </nested>
+</xsd2ecore:XSD2EcoreMappingRoot>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.touchosc/src-model"
+    editDirectory="" editorDirectory="" modelPluginID="net.sf.smbt.touchosc" modelName="Touchosc-app"
+    testsDirectory="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../../../../../../net.sf.xqz.engine/model/temporal.genmodel#//engine ../../../../../../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>touchoscapp.ecore</foreignModel>
+  <genPackages prefix="Touchoscapp" basePackage="net.sf.smbt.touchosc" disposableProviderFactory="true"
+      ecorePackage="touchoscapp.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="touchoscapp.ecore#//Orientation">
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//Orientation/HORIZONTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//Orientation/VERTICAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="touchoscapp.ecore#//ControlType">
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/LABEL_V"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/FADER_H"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/FADER_V"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/LED"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/ROTARY_H"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/ROTARY_V"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/XYPAD"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/LABEL_H"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/MULTI_TOGGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/MULTI_FADER_H"/>
+      <genEnumLiterals ecoreEnumLiteral="touchoscapp.ecore#//ControlType/MULTI_FADER_V"/>
+    </genEnums>
+    <genClasses ecoreClass="touchoscapp.ecore#//TouchOscApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscapp.ecore#//TouchOscApp/tabs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//TouchOscApp/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//TouchOscApp/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//TouchOscApp/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//TouchOscApp/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//TouchOscApp/height"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//FaderV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//FaderV/value"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//FaderH">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//FaderH/value"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//XYPad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//XYPad/xVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//XYPad/yVal"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//RotaryH">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//RotaryH/value"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//RotaryV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//RotaryV/value"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//LabelH">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//LabelH/text"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//LabelV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//LabelV/text"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//MultiToggle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiToggle/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiToggle/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiToggle/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//MultiFaderH">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiFaderH/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiFaderH/numFaders"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//MultiFaderV">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiFaderV/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//MultiFaderV/numFaders"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//LED">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//LED/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//LED/columns"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="touchoscapp.ecore#//Widget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/w"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/h"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/centered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Widget/inverted"/>
+    </genClasses>
+    <genClasses ecoreClass="touchoscapp.ecore#//Tab">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference touchoscapp.ecore#//Tab/widgets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute touchoscapp.ecore#//Tab/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

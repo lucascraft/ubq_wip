@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<!--
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.touchosc.gui.views.TouchOscView"
+            icon="icons/eqlzer.jpg"
+            id="net.sf.smbt.ui.touchosc.view"
+            name="Touch OSC"
+            restorable="true">
+      </view>
+   </extension>
+  -->
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.rcp.proximisense.perspective">
+            <!--
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.touchosc.view"
+               minimized="false"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView"
+               standalone="true"
+               visible="true">
+         </view>
+         <actionSet
+               id="net.sf.smbt.ui.touchosc.actionSet">
+         </actionSet>
+         	-->
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+   <extension
+         id="touchosc-sync-action"
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="net.sf.smbt.touchosc.bonjour.synchronize"
+            nameFilter="*.touchosc"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="net.sf.smbt.ui.touchosc.actions.TouchoscSynchroAction"
+               enablesFor="1"
+               icon="icons/on.jpg"
+               id="net.sf.smbt.touchosc.diagram.InitDiagramAction"
+               label="Synchronize With Device"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+            <!--
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="TouchOsc IPhone/Android Connectivity"
+            id="net.sf.smbt.ui.touchosc.actionSet"
+            label="TouchOsc Action Set"
+            visible="true">
+         <menu
+               id="touchOscMenu"
+               label="TouchOSCMenu">
+            <separator
+                  name="touchOscGroup">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.smbt.ui.touchosc.actions.ImportTouchOscConfigAction"
+               icon="icons/osc.jpg"
+               id="net.sf.smbt.ui.touchosc.actions.SampleAction"
+               label="&amp;Import TouchOSC Configtion"
+               menubarPath="touchOscMenu/touchOscGroup"
+               toolbarPath="touchOscGroup"
+               tooltip="Import TouchOSC Config">
+         </action>
+      </actionSet>
+   </extension>
+         	-->
+
+</plugin>
