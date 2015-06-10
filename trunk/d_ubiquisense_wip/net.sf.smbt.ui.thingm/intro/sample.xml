@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="netsfsmbtuithingm-introExtension" style="css/sample.css" name="Ubiquisense For ThingM" path="overview/@">
+		<group style-id="content-group" id="netsfsmbtuithingm-introLink-group">
+       		<link label="ThingM" url="http://www.ubiquisense.com" id="netsfsmbtuithingm-introLink" style-id="content-link">
+          		<text>Ubiquisense For ThingM</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

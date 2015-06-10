@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mqtt
+Bundle-SymbolicName: net.sf.smbt.ui.mqtt; singleton := true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.mqtt.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui;bundle-version="3.7.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

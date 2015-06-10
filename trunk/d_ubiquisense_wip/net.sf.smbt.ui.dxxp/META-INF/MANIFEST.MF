@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - DACP PRotocol UI
+Bundle-SymbolicName: net.sf.smbt.ui.dxxp;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.dxxp.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore.edit;bundle-version="2.6.0",
+ net.sf.smbt.dxxp;bundle-version="0.5.0",
+ net.sf.smbt.dxxp.edit;bundle-version="0.5.0",
+ net.sf.smbt.itunes;bundle-version="0.5.0",
+ net.sf.smbt.itunes.edit;bundle-version="0.5.0",
+ net.sf.smbt.quantic;bundle-version="0.5.0",
+ org.eclipse.emf.edit.ui;bundle-version="2.6.0",
+ net.sf.smbt.ui.logging;bundle-version="0.5.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.smbt.ui.dxxp,
+ net.sf.smbt.ui.dxxp.controller,
+ net.sf.smbt.ui.dxxp.views
+Bundle-Vendor: ubiquisense.com

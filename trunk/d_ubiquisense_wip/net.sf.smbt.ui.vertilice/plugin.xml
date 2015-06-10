@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<!--
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.vertilice.views.VertiliceView"
+            icon="icons/wind.png"
+            id="net.sf.smbt.ui.vertilice.views.VertiliceView"
+            name="Vertilice">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.vertilice.views.VertilicePerspective"
+            fixed="true"
+            icon="icons/wind.png"
+            id="net.sf.smbt.ui.vertilice.perspective"
+            name="Energy">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.vertilice.perspective">
+         <view
+               id="net.sf.smbt.ui.vertilice.views.VertiliceView"
+               minimized="false"
+               relationship="stack"
+               relative="org.eclipse.ui.console.ConsoleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+-->
+</plugin>

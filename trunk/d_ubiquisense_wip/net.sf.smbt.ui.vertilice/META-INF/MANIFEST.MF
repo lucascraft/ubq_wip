@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - Vertilice
+Bundle-SymbolicName: net.sf.smbt.ui.vertilice;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.vertilice.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.smbt.ui;bundle-version="0.5.0",
+ net.sf.smbt.vertilice;bundle-version="0.5.0",
+ org.eclipse.jface.text;bundle-version="3.7.1",
+ net.sf.smbt.comm.topology;bundle-version="0.5.0",
+ org.eclipse.ui.intro,
+ org.eclipse.ui.intro.universal
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.smbt.ui.vertilice,
+ net.sf.smbt.ui.vertilice.editor,
+ net.sf.smbt.ui.vertilice.views
+Bundle-Vendor: ubiquisense.com
