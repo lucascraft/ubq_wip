@@ -1,0 +1,379 @@
+/*
+ * This is an example model
+ */
+app modul8_V261_1105 {
+
+msg "Master Cross Fader" (
+SEND ['/md8key/ctrl_master_crossfader_slider/0', ',f', [0.0..1.0]]
+)
+
+msg "focus position in vj loop groups" (
+SEND ['/md8key/ctrl_layerStack_focusPosition/%loopID%', ',i', %position% in [0..10]]
+SEND ['/md8key/ctrl_layerStack_focusPosition/-1', ',i', %position% in [0..10]]
+) 
+
+msg "set given loo alpha" (
+SEND ['/md8key/ctrl_layer_alpha/%loopID%', ',f', %newAlphaFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_alpha/-1', ',iiiiififii', 1, 1, 1, 1, 1, %oldAlphaFactor%, 1, 0.23000000417232513, 1, 1]
+SEND ['/md8key/ctrl_layer_alpha/0', ',f', %newAlphaFactor% in [0.0..1.0]]
+)
+msg "Set speed of focused vj loop" (
+SEND ['/md8key/ctrl_layer_movie_speedFactor/%loopID%', ',f', %speedFactor% in [0.0..1.0]]
+PARTIAL SEND ['/md8key/ctrl_layer_movie_speedFactor/-1', ',ffffffffff', 0.25, 0.25, 0.25, 0.25, 0.25, %oldFactor% in [0.0..1.0], 0.25, 0.25, 0.25, 0.25]
+SEND ['/md8key/ctrl_layer_movie_speedFactor/0', ',f', %speedFactor% in [0.0..1.0]]
+)
+
+msg "set loop mode to LOOP" (
+SEND ['/md8key/ctrl_layer_movie_loopMode/%loopID%', ',i', %newMode% in enum{LOOP=0, FWD_RWD=1, NORMAL=2}]
+SEND ['/md8key/ctrl_layer_movie_loopMode/-1', ',iffffifffi', 1, 0.0, 0.0, 0.0, 0.0, %oldMode%, 0.0, 0.0, 0.0, 1]
+SEND ['/md8key/ctrl_layer_movie_loopMode/0', ',i', 0 in enum{LOOP=0, FWD_RWD=1, NORMAL=2}]
+)
+
+msg "scale x2" (
+SEND ['/md8key/ctrl_layer_scale_uniform/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_scale_uniform/-1', ',ffffffffff', %scaleFactor% in [0.0..1.0], 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, 0.62000000476837158]
+SEND ['/md8key/ctrl_layer_scale_uniform/0', ',f', %scaleFactor% in [0.0..1.0]]
+)
+
+msg "scale x10 on X" (
+SEND ['/md8key/ctrl_layer_scale_x/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_scale_x/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_scale_x/0', ',f', %scaleFactor% in [0.0..1.0]]
+)
+
+msg "scale x10 on Y" (
+SEND ['/md8key/ctrl_layer_scale_y/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_scale_y/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_scale_y/0', ',f', %scaleFactor% in [0.0..1.0]]
+)
+
+msg "scale x10 on Z" (
+SEND ['/md8key/ctrl_layer_scale_z/%loopID%', ',f', %scaleFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_scale_z/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_scale_z/0', ',f', %scaleFactor% in [0.0..1.0]]
+)
+
+msg "rotate on X" (
+SEND ['/md8key/ctrl_layer_rotation_x/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_x/-1', ',ffffffffff', 0.059999998658895493, 0.0, 0.0, 0.0, 0.0, 0.99500000476837158, 0.0, 0.0, 0.0, %oldRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_x/0', ',f', %newRotateFactor% in [0.0..1.0]]
+)
+
+msg "rotate on Y" (
+SEND ['/md8key/ctrl_layer_rotation_y/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_y/-1', ',ffffffffff', 0.059999998658895493, 0.0, 0.0, 0.0, 0.0, 0.99500000476837158, 0.0, 0.0, 0.0, %oldRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_y/0', ',f', %newRotateFactor% in [0.0..1.0]]
+)
+
+msg "rotate on Z" (
+SEND ['/md8key/ctrl_layer_rotation_z/%loopID%', ',f', %newRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_z/-1', ',ffffffffff', 0.059999998658895493, 0.0, 0.0, 0.0, 0.0, 0.99500000476837158, 0.0, 0.0, 0.0, %oldRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_rotation_z/0', ',f', %newRotateFactor% in [0.0..1.0]]
+)
+
+msg "rotate field of view" (
+SEND ['/md8key/ctrl_layer_fieldOfView/%loopID%', ',i', %newRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_fieldOfView/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldRotateFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_fieldOfView/0', ',i', %newRotateFactor% in [0.0..1.0]]
+)
+
+msg "set RGB R" (
+SEND ['/md8key/ctrl_layer_color_modulateR/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_modulateR/-1', ',iiiiiiiiii', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+SEND ['/md8key/ctrl_layer_color_modulateR/0', ',f', %factor% in [0.0..1.0]]
+)
+msg "set RGB G" (
+SEND ['/md8key/ctrl_layer_color_modulateG/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_modulateG/-1', ',iiiiiiiiii', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+SEND ['/md8key/ctrl_layer_color_modulateG/0', ',f', %factor% in [0.0..1.0]]
+)
+msg "set RGB B" (
+SEND ['/md8key/ctrl_layer_color_modulateB/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_modulateB/-1', ',iiiiiiiiii', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+SEND ['/md8key/ctrl_layer_color_modulateB/0', ',f', %factor% in [0.0..1.0]]
+)
+
+msg "set RGB additive B" (
+SEND ['/md8key/ctrl_layer_color_additiveR/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_additiveR/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_color_additiveR/0', ',f', %factor% in [0.0..1.0]]
+)
+
+msg "set RGB additive G" (
+SEND ['/md8key/ctrl_layer_color_additiveG/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_additiveG/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_color_additiveG/0', ',f', %factor% in [0.0..1.0]]
+)
+
+msg "set RGB additive B" (
+SEND ['/md8key/ctrl_layer_color_additiveB/%loopID%', ',f', %factor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_color_additiveB/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_color_additiveB/0', ',f', %factor% in [0.0..1.0]]
+)
+
+# SATURATION
+msg "toggle saturation layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_saturationOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationOn/0', ',i', 1 in enum{OFF=0, ON=1}]
+)
+
+msg "toggle saturation boost option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_saturationBoost/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationBoost/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationBoost/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "toggle saturation inverse option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_saturationInverse/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationInverse/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationInverse/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set saturation level factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_saturationLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_saturationLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# LIGHTNESS
+msg "toggle lightness layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set lightness type option : bright/light" (
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessType/%loopID%', ',i', %status% in enum{BRIGHT=0, LIGHT=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessType/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessType/0', ',i', %status% in enum{BRIGHT=0, LIGHT=1}]
+)
+
+msg "set lightness level factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# CONTRAST
+msg "toggle contrast layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_contrastOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastOn/0', ',i', 1 in enum{OFF=0, ON=1}]
+)
+
+msg "toggle contrast boost option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_contrastBoost/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastBoost/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastBoost/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "toggle contrast inverse option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_contrastInverse/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastInverse/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastInverse/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set contrast factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_contrastLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_contrastLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# LUMA KEY
+msg "toggle luma key layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_lumaOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set luma type option : luma k/luma k inverse/Red/Green/Blue" (
+SEND ['/md8key/ctrl_layer_pixelFX_lumaType/%loopID%', ',i', %status% in enum{LUMA_K=0, LUMA_K_INVERSE=1, RED=2, GREEN=3, BLUE=4}]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaType/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaType/0', ',i', %status% in enum{LUMA_K=0, LUMA_K_INVERSE=1, RED=2, GREEN=3, BLUE=4}]
+)
+msg "toggle luma option : preserve alpha" (
+SEND ['/md8key/ctrl_layer_pixelFX_lumaPreserveAlpha/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaPreserveAlpha/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_lumaPreserveAlpha/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+# NOISE
+msg "toggle noise layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_noiseOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseOn/0', ',i', 1 in enum{OFF=0, ON=1}]
+)
+
+msg "toggle noise colored option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_noiseColored/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseColored/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseColored/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "toggle noise to RGB option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_noiseRGBOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseRGBOn/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseRGBOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "toggle noise ALPHA option : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_noiseAlpha/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseAlpha/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseAlpha/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set noise level factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_noiseLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5,  %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_noiseLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# BLUR
+msg "toggle blur layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_pixelFX_blurOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_blurOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldStatus%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_blurOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set blur type option : bright/light" (
+SEND ['/md8key/ctrl_layer_pixelFX_blurType/%loopID%', ',i', %status% in enum{FAST_X=0, BOX=1}]
+SEND ['/md8key/ctrl_layer_pixelFX_blurType/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_pixelFX_blurType/0', ',i', %status% in enum{BRIGHT=0, LIGHT=1}]
+)
+
+msg "set blur factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_lightnessLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set blur level factor" (
+SEND ['/md8key/ctrl_layer_pixelFX_blurLevel/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_blurLevel/-1', ',ffffffffff', 0.5, 0.5, 0.5, 0.5, 0.5,  %oldFactor% in [0.0..1.0], 0.5, 0.5, 0.5, %oldFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_pixelFX_blurLevel/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+##### Animation FX
+
+# AUTO MOVE
+
+msg "toggle blur layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_auto_moveOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_auto_moveOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldStatus%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_moveOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set automove curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+SEND ['/md8key/ctrl_layer_auto_moveCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+SEND ['/md8key/ctrl_layer_auto_moveCurve/-1', ',iiiiiiiiii', 3, 3, 3, 3, 3, %loopID%, 3, 3, 3, 3]
+SEND ['/md8key/ctrl_layer_auto_moveCurve/0', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+)
+
+msg "set automove directions option : W_E/N_S/N_W_S_E" (
+SEND ['/md8key/ctrl_layer_auto_moveXY/%loopID%', ',i', %newDirections% in enum{W_E=0,N_S=1,N_W_S_E=2}]
+SEND ['/md8key/ctrl_layer_auto_moveXY/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, %lastDirections%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_moveXY/0', ',i', %newDirections% in enum{W_E=0,N_S=1,N_W_S_E=2}]
+)
+
+msg "set automove speed" (
+SEND ['/md8key/ctrl_layer_auto_moveSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_moveSpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_moveSpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set automove size" (
+SEND ['/md8key/ctrl_layer_auto_moveSize/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_moveSize/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_moveSize/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set automove strob" (
+SEND ['/md8key/ctrl_layer_auto_moveStrob/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_moveStrob/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_moveStrob/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# AUTO SCALE
+
+msg "toggle auto scale layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_auto_scaleOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_auto_scaleOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldStatus%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_scaleOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set autoscale curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+SEND ['/md8key/ctrl_layer_auto_scaleCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+SEND ['/md8key/ctrl_layer_auto_scaleCurve/-1', ',iiiiiiiiii', 3, 3, 3, 3, 3, %loopID%, 3, 3, 3, 3]
+SEND ['/md8key/ctrl_layer_auto_scaleCurve/0', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+)
+
+msg "set autoscale speed" (
+SEND ['/md8key/ctrl_layer_auto_scaleSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_scaleSpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_scaleSpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set autoscale size" (
+SEND ['/md8key/ctrl_layer_auto_scaleSize/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_scaleSize/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_scaleSize/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set automove strob" (
+SEND ['/md8key/ctrl_layer_auto_scaleStrob/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_scaleStrob/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_scaleStrob/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+# AUTO COLOR
+
+msg "toggle autocolor layer : ON/OFF" (
+SEND ['/md8key/ctrl_layer_auto_colorOn/%loopID%', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_auto_colorOn/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldStatus%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+)
+
+msg "set autocolor curve option : IN/OUT/LINEAR/SMOOTH/RANDOM/CUT/SOUND_LEVEL/SOUND_HI/SOUND_MID/SOUND_LO" (
+SEND ['/md8key/ctrl_layer_auto_colorCurve/%loopID%', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+SEND ['/md8key/ctrl_layer_auto_colorCurve/-1', ',iiiiiiiiii', 3, 3, 3, 3, 3, %loopID%, 3, 3, 3, 3]
+SEND ['/md8key/ctrl_layer_auto_colorCurve/0', ',i', %mode% in enum{IN=0,OUT=1,LINEAR=2,SMOOTH=3,RANDOM=4,CUT=5,SOUND_LEVEL=6,SOUND_HI=7,SOUND_MID=8,SOUND_LO=9}]
+)
+
+msg "set autocolor RED speed" (
+SEND ['/md8key/ctrl_layer_auto_colorRSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_colorRSpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorRSpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set autocolor GREEN size" (
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set autocolor BLUE " (
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorGSpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set autocolor BLUE " (
+SEND ['/md8key/ctrl_layer_auto_colorASpeed/%loopID%', ',f', %newFactor% in [0.0..1.0]]
+SEND ['/md8key/ctrl_layer_auto_colorASpeed/-1', ',ffffffffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldFactor% in [0.0..1.0], 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorASpeed/0', ',f', %newFactor% in [0.0..1.0]]
+)
+
+msg "set autocolor BLUE " (
+SEND ['/md8key/ctrl_layer_auto_colorAdditiveOn/6', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_auto_colorAdditiveOn/-1', ',iiiiiiiiii', 1, 1, 1, 1, 1, %oldStatus%, 1, 1, 1, 1]
+SEND ['/md8key/ctrl_layer_auto_colorAdditiveOn/0', ',i', %status%]
+)
+
+SEND ['/md8key/ctrl_layer_auto_colorModulateOn/6', ',i', %status% in enum{OFF=0, ON=1}]
+SEND ['/md8key/ctrl_layer_auto_colorModulateOn/-1', ',fffffiffff', 0.0, 0.0, 0.0, 0.0, 0.0, %oldStatus%, 0.0, 0.0, 0.0, 0.0]
+SEND ['/md8key/ctrl_layer_auto_colorModulateOn/0', ',i', %status% in enum{OFF=0, ON=1}]
+
+
+
+}

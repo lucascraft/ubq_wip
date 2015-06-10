@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.osc.script/src-gen"
+    editDirectory="/net.sf.smbt.osc.script.edit/src" editorDirectory="/net.sf.smbt.osc.script.editor/src"
+    modelPluginID="net.sf.smbt.osc.script" forceOverwrite="true" modelName="OscDsl"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="net.sf.smbt.osc.script.edit"
+    editorPluginID="net.sf.smbt.osc.script.editor" runtimeVersion="2.7" usedGenPackages="../../../../../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types">
+  <genPackages prefix="OscDsl" basePackage="net.sf.smbt.osc" disposableProviderFactory="true"
+      ecorePackage="OscDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="OscDsl.ecore#//EzFormats">
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/osc"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/midi"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/dmx"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/oscableton"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/oscwiimote"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/oscresolume"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/tuio"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/tuio2"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/thingm"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/firmata"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/i2cfirmata"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/pachube"/>
+      <genEnumLiterals ecoreEnumLiteral="OscDsl.ecore#//EzFormats/ubiquino"/>
+    </genEnums>
+    <genClasses ecoreClass="OscDsl.ecore#//EzModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzModel/cmd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzModel/msg"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzCmd/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzOpenCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzOpenCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzCloseCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzCloseCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzHookCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzHookCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzUnhookCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzUnhookCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzAliasCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzAliasCmd/alias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzAliasCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzStatusCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzStatusCmd/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzResetCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzResetCmd/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzResetCmd/verbose"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzHelpCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzHelpCmd/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzHelpCmd/verbose"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzClearCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzClearCmd/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzClearCmd/verbose"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzProtocolCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzProtocolCmd/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EzProtocolCmd/verbose"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzListCmd">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzListCmd/addr"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsg">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsg/msg"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgRemove">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgRemove/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgGet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgGet/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgBind">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgBind/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgListen">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgListen/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgService/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgUnlisten">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgUnlisten/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgCmd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgCmd/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgClock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgClock/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgToggle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgToggle/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgBang">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgBang/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgUnforward">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgUnforward/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgForward">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgForward/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgSet/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgLegacySet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgLegacySet/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgSelect">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgSelect/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgKinematics">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgKinematics/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EzMsgTrigger">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EzMsgTrigger/cmd"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCExpr/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCExpr/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//OSCExpr/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCSubDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//OSCSubDomain/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCUDPTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUDPTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUDPTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUDPTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCTCPTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCTCPTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCTCPTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCTCPTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCXBeeTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCXBeeTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCXBeeTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCXBeeTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCHttpTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCHttpTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCHttpTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCHttpTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCBluetoothTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCBluetoothTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCBluetoothTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCBluetoothTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCUSBTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUSBTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUSBTarget/addr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//OSCUSBTarget/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUSBTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//OSCUbqTarget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUbqTarget/proto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUbqTarget/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//OSCUbqTarget/format"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Speed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//Speed/speed"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//JvmVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//JvmVar/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OscDsl.ecore#//JvmVar/javaTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//ExprModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//ExprModel/isTested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//ExprModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ExprModel/usings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ExprModel/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ExprModel/functions"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Using">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//Using/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Element"/>
+    <genClasses ecoreClass="OscDsl.ecore#//Symbol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//Symbol/name"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Return">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Return/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EnumDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//EnumDecl/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EnumDecl/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Type"/>
+    <genClasses ecoreClass="OscDsl.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="OscDsl.ecore#//ArrayType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ArrayType/baseType"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EnumType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OscDsl.ecore#//EnumType/enumRef"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//IntType"/>
+    <genClasses ecoreClass="OscDsl.ecore#//BoolType"/>
+    <genClasses ecoreClass="OscDsl.ecore#//FloatType"/>
+    <genClasses ecoreClass="OscDsl.ecore#//StringType"/>
+    <genClasses ecoreClass="OscDsl.ecore#//Expr"/>
+    <genClasses ecoreClass="OscDsl.ecore#//Expression"/>
+    <genClasses ecoreClass="OscDsl.ecore#//FunctionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//FunctionDeclaration/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//FunctionDeclaration/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//FunctionDeclaration/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Parameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//EnumLiteral"/>
+    <genClasses ecoreClass="OscDsl.ecore#//VarDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//VarDecl/readonly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//VarDecl/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//VarDecl/init"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Formula">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Formula/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Formula/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Equals">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Equals/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Equals/right"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Plus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Plus/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Plus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//Multi">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Multi/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//Multi/right"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//ArrayAccess">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ArrayAccess/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//ArrayAccess/index"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//SymbolRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference OscDsl.ecore#//SymbolRef/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference OscDsl.ecore#//SymbolRef/actuals"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//NumberLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//NumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="OscDsl.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute OscDsl.ecore#//StringLiteral/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
