@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.osc.wiimote/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.osc.wiimote" modelName="Wiimote"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" featureMapWrapperClass=""
+    reflectiveDelegation="true" testsDirectory="" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Reflective" complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>wiimote.ecore</foreignModel>
+  <genPackages prefix="Wiimote" basePackage="net.sf.smbt.osc.wiimote.model" disposableProviderFactory="true"
+      ecorePackage="wiimote.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="wiimote.ecore#//WiimoteButtonKind">
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/ONE"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/TWO"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/A"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/B"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/C"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/Z"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/HOME"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/DOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/MINUS"/>
+      <genEnumLiterals ecoreEnumLiteral="wiimote.ecore#//WiimoteButtonKind/PLUS"/>
+    </genEnums>
+    <genClasses ecoreClass="wiimote.ecore#//WiimoteCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiimoteCmd/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiimoteCmd/wiiid"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiAccelXYZCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelXYZCmd/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelXYZCmd/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelXYZCmd/z"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiAccelPryCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelPryCmd/pitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelPryCmd/roll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelPryCmd/yaw"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAccelPryCmd/accel"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiButtonCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiButtonCmd/toggle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiButtonCmd/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiIrXYSpeedCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrXYSpeedCmd/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrXYSpeedCmd/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrXYSpeedCmd/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrXYSpeedCmd/wid"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiMotionAnglesCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionAnglesCmd/pitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionAnglesCmd/roll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionAnglesCmd/yaw"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiMotionVeloCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionVeloCmd/pitch_velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionVeloCmd/roll_velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiMotionVeloCmd/yaw_velocity"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiNunchukAccelPryCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelPryCmd/pitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelPryCmd/roll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelPryCmd/yaw"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelPryCmd/accel"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiNunchukButtonCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukButtonCmd/toggle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukButtonCmd/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiNunchukJoyCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukJoyCmd/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukJoyCmd/y"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiNunchukAccelXyzCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelXyzCmd/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelXyzCmd/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiNunchukAccelXyzCmd/z"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiIrCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrCmd/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiIrCmd/y"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiiAnglesCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAnglesCmd/pitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAnglesCmd/roll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiiAnglesCmd/yaw"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiimoteMonitor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteMonitor/wiimotes"/>
+    </genClasses>
+    <genClasses ecoreClass="wiimote.ecore#//WiimoteLiveSettings">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/accelXYZ"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/accelPRY"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/wiiButtons"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/nunchukButtons"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/motionVelocity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/motionAngles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/angles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/ir"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/nunchukAccelPRY"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/irXYSpeed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/nunchukAccelXYZ"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wiimote.ecore#//WiimoteLiveSettings/nunchukJoystickXY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimote.ecore#//WiimoteLiveSettings/wiiid"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

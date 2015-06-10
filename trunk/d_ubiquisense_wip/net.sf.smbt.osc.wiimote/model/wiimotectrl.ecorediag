@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_zqWp8K0qEeCAeIMsZFKoxw" type="EcoreTools" name="wiimotectrl" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_76PcgK0qEeCAeIMsZFKoxw" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_76svgK0qEeCAeIMsZFKoxw" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_76svga0qEeCAeIMsZFKoxw" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="_76WKMK0qEeCAeIMsZFKoxw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_76WxQK0qEeCAeIMsZFKoxw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_76WxQa0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_76WxQq0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_76WxQ60qEeCAeIMsZFKoxw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_76XYUK0qEeCAeIMsZFKoxw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_76XYUa0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_76XYUq0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_76XYU60qEeCAeIMsZFKoxw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_76Pcga0qEeCAeIMsZFKoxw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/net.sf.xqz.engine/model/engine.ecore#//IConnectedUnit"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_76Pcgq0qEeCAeIMsZFKoxw" x="236" y="48"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_8rt8wK0qEeCAeIMsZFKoxw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_8ruj0K0qEeCAeIMsZFKoxw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_8ruj0a0qEeCAeIMsZFKoxw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_G-J14K0rEeCAeIMsZFKoxw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="wiimotectrl.ecore#//WiimoteController/wiiid"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_G-J14a0rEeCAeIMsZFKoxw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_RPOdEK0rEeCAeIMsZFKoxw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="wiimotectrl.ecore#//WiimoteController/addr"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RPOdEa0rEeCAeIMsZFKoxw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_8ruj0q0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8ruj060qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8ruj1K0qEeCAeIMsZFKoxw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_8ruj1a0qEeCAeIMsZFKoxw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_8ruj1q0qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8ruj160qEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8ruj2K0qEeCAeIMsZFKoxw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_8rt8wa0qEeCAeIMsZFKoxw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="wiimotectrl.ecore#//WiimoteController"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8rt8wq0qEeCAeIMsZFKoxw" x="232" y="160"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="__N8zgK0rEeCAeIMsZFKoxw" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__PEN0K0rEeCAeIMsZFKoxw" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__PEN0a0rEeCAeIMsZFKoxw" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="__N_20K0rEeCAeIMsZFKoxw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="__N_20a0rEeCAeIMsZFKoxw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__N_20q0rEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__N_2060rEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__N_21K0rEeCAeIMsZFKoxw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__N_21a0rEeCAeIMsZFKoxw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__N_21q0rEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__N_2160rEeCAeIMsZFKoxw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__N_22K0rEeCAeIMsZFKoxw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="__N9akK0rEeCAeIMsZFKoxw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="wiimote.ecore#//WiimoteLiveSettings"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__N9aka0rEeCAeIMsZFKoxw" x="228" y="308"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_zqWp8a0qEeCAeIMsZFKoxw"/>
+  <element xmi:type="ecore:EPackage" href="wiimotectrl.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_AnsqIK0rEeCAeIMsZFKoxw" type="3003" source="_8rt8wK0qEeCAeIMsZFKoxw" target="_76PcgK0qEeCAeIMsZFKoxw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_AnsqIa0rEeCAeIMsZFKoxw" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_AnsqIq0rEeCAeIMsZFKoxw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AnsqI60rEeCAeIMsZFKoxw" points="[-1, -4, -2, 86]$[-14, -116, -15, -26]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AnvGYK0rEeCAeIMsZFKoxw" id="(0.4954128440366973,0.11904761904761904)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BNb_AK0sEeCAeIMsZFKoxw" type="3002" source="_8rt8wK0qEeCAeIMsZFKoxw" target="__N8zgK0rEeCAeIMsZFKoxw">
+    <children xmi:type="notation:Node" xmi:id="_BNcmEK0sEeCAeIMsZFKoxw" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BNcmEa0sEeCAeIMsZFKoxw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_BNcmEq0sEeCAeIMsZFKoxw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BNcmE60sEeCAeIMsZFKoxw" x="-1" y="34"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_BNb_Aa0sEeCAeIMsZFKoxw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BNb_Aq0sEeCAeIMsZFKoxw" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="wiimotectrl.ecore#//WiimoteController/properties"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BNb_A60sEeCAeIMsZFKoxw" points="[-1, 32, 1, -92]$[-1, 117, 1, -7]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BNfCUK0sEeCAeIMsZFKoxw" id="(0.4745762711864407,0.13114754098360656)"/>
+  </edges>
+</notation:Diagram>

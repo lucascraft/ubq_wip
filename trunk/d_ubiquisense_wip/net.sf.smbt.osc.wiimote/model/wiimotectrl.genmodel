@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.osc.wiimote/src-model"
+    editorDirectory="" modelPluginID="net.sf.smbt.osc.wiimote" modelName="Wiimotectrl"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" rootImplementsInterface=""
+    testsDirectory="" booleanFlagsField="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../net.sf.smbt.osc/model/osccmd.genmodel#//osccmd ../../net.sf.xqz.engine/model/temporal.genmodel#//engine ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd wiimote.genmodel#//wiimote">
+  <foreignModel>wiimotectrl.ecore</foreignModel>
+  <genPackages prefix="Wiimotectrl" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="wiimotectrl.ecore#/">
+    <genClasses ecoreClass="wiimotectrl.ecore#//WiimoteController">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimotectrl.ecore#//WiimoteController/wiiid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wiimotectrl.ecore#//WiimoteController/addr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wiimotectrl.ecore#//WiimoteController/properties"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
