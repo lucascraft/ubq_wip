@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="GarminDevicev2.xsd#/" outputs="v2.ecore#/"
+    topToBottom="true">
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//token;XSDSimpleTypeDefinition=29"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Token"/>
+  <nested inputs="GarminDevicev2.xsd#//PartNumber_t;XSDSimpleTypeDefinition=2" outputs="v2.ecore#//PartNumberT"/>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//unsignedShort;XSDSimpleTypeDefinition=50"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//UnsignedShort"/>
+  <nested inputs="GarminDevicev2.xsd#//NonZeroToken_t;XSDSimpleTypeDefinition=3" outputs="v2.ecore#//NonZeroTokenT"/>
+  <nested inputs="GarminDevicev2.xsd#//Extensions_t;XSDComplexTypeDefinition=7" outputs="v2.ecore#//ExtensionsT">
+    <nested inputs="GarminDevicev2.xsd#//Extensions_t;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//ExtensionsT/any"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Model_t;XSDComplexTypeDefinition=4" outputs="v2.ecore#//ModelT">
+    <nested inputs="GarminDevicev2.xsd#//Model_t;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//ModelT/partNumber"/>
+    <nested inputs="GarminDevicev2.xsd#//Model_t;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//ModelT/softwareVersion"/>
+    <nested inputs="GarminDevicev2.xsd#//Model_t;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//ModelT/description"/>
+    <nested inputs="GarminDevicev2.xsd#//Model_t;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="v2.ecore#//ModelT/extensions"/>
+  </nested>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//unsignedInt;XSDSimpleTypeDefinition=49"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//UnsignedInt"/>
+  <nested inputs="GarminDevicev2.xsd#//RegistrationCode_t;XSDSimpleTypeDefinition"
+      outputs="v2.ecore#//RegistrationCodeT"/>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="GarminDevicev2.xsd#//Code_t;XSDSimpleTypeDefinition=1" outputs="v2.ecore#//CodeT"/>
+  <nested inputs="GarminDevicev2.xsd#//UnlockCode_t;XSDComplexTypeDefinition=5" outputs="v2.ecore#//UnlockCodeT">
+    <nested inputs="GarminDevicev2.xsd#//UnlockCode_t;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//UnlockCodeT/code"/>
+    <nested inputs="GarminDevicev2.xsd#//UnlockCode_t;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//UnlockCodeT/comment"/>
+  </nested>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//anyURI;XSDSimpleTypeDefinition=25"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+  <nested inputs="GarminDevicev2.xsd#//Specification_t;XSDComplexTypeDefinition=15"
+      outputs="v2.ecore#//SpecificationT">
+    <nested inputs="GarminDevicev2.xsd#//Specification_t;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//SpecificationT/identifier"/>
+    <nested inputs="GarminDevicev2.xsd#//Specification_t;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//SpecificationT/documentation"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Location_t;XSDComplexTypeDefinition=16" outputs="v2.ecore#//LocationT">
+    <nested inputs="GarminDevicev2.xsd#//Location_t;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//LocationT/path"/>
+    <nested inputs="GarminDevicev2.xsd#//Location_t;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//LocationT/baseName"/>
+    <nested inputs="GarminDevicev2.xsd#//Location_t;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//LocationT/fileExtension"/>
+    <nested inputs="GarminDevicev2.xsd#//Location_t;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="v2.ecore#//LocationT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//TransferDirection_t;XSDSimpleTypeDefinition=4"
+      outputs="v2.ecore#//TransferDirectionT">
+    <nested inputs="GarminDevicev2.xsd#//TransferDirection_t;XSDSimpleTypeDefinition=4/XSDEnumerationFacet"
+        outputs="v2.ecore#//TransferDirectionT/InputOutput"/>
+    <nested inputs="GarminDevicev2.xsd#//TransferDirection_t;XSDSimpleTypeDefinition=4/XSDEnumerationFacet=1"
+        outputs="v2.ecore#//TransferDirectionT/InputToUnit"/>
+    <nested inputs="GarminDevicev2.xsd#//TransferDirection_t;XSDSimpleTypeDefinition=4/XSDEnumerationFacet=2"
+        outputs="v2.ecore#//TransferDirectionT/OutputFromUnit"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//File_t;XSDComplexTypeDefinition=12" outputs="v2.ecore#//FileT">
+    <nested inputs="GarminDevicev2.xsd#//File_t;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//FileT/specification"/>
+    <nested inputs="GarminDevicev2.xsd#//File_t;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//FileT/location"/>
+    <nested inputs="GarminDevicev2.xsd#//File_t;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//FileT/transferDirection"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//DataType_t;XSDComplexTypeDefinition=11" outputs="v2.ecore#//DataTypeT">
+    <nested inputs="GarminDevicev2.xsd#//DataType_t;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//DataTypeT/name"/>
+    <nested inputs="GarminDevicev2.xsd#//DataType_t;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//DataTypeT/file"/>
+    <nested inputs="GarminDevicev2.xsd#//DataType_t;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//DataTypeT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Version_t;XSDComplexTypeDefinition=6" outputs="v2.ecore#//VersionT">
+    <nested inputs="GarminDevicev2.xsd#//Version_t;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//VersionT/major"/>
+    <nested inputs="GarminDevicev2.xsd#//Version_t;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//VersionT/minor"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17" outputs="v2.ecore#//UpdateFileT">
+    <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//UpdateFileT/partNumber"/>
+    <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//UpdateFileT/version"/>
+    <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//UpdateFileT/description"/>
+    <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="v2.ecore#//UpdateFileT/path"/>
+    <nested inputs="GarminDevicev2.xsd#//UpdateFile_t;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="v2.ecore#//UpdateFileT/fileName"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//MassStorageMode_t;XSDComplexTypeDefinition=9"
+      outputs="v2.ecore#//MassStorageModeT">
+    <nested inputs="GarminDevicev2.xsd#//MassStorageMode_t;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//MassStorageModeT/dataType"/>
+    <nested inputs="GarminDevicev2.xsd#//MassStorageMode_t;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//MassStorageModeT/updateFile"/>
+    <nested inputs="GarminDevicev2.xsd#//MassStorageMode_t;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//MassStorageModeT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Protocol_t;XSDComplexTypeDefinition=2" outputs="v2.ecore#//ProtocolT">
+    <nested inputs="GarminDevicev2.xsd#//Protocol_t;XSDComplexTypeDefinition=2/XSDAttributeUse"
+        outputs="v2.ecore#//ProtocolT/id"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//AppProtocol_t;XSDComplexTypeDefinition=3" outputs="v2.ecore#//AppProtocolT">
+    <nested inputs="GarminDevicev2.xsd#//AppProtocol_t;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//AppProtocolT/dataType"/>
+    <nested inputs="GarminDevicev2.xsd#//AppProtocol_t;XSDComplexTypeDefinition=3/XSDAttributeUse"
+        outputs="v2.ecore#//AppProtocolT/id"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Protocols_t;XSDComplexTypeDefinition=1" outputs="v2.ecore#//ProtocolsT">
+    <nested inputs="GarminDevicev2.xsd#//Protocols_t;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//ProtocolsT/link"/>
+    <nested inputs="GarminDevicev2.xsd#//Protocols_t;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//ProtocolsT/application"/>
+    <nested inputs="GarminDevicev2.xsd#//Protocols_t;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//ProtocolsT/transport"/>
+  </nested>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//unsignedByte;XSDSimpleTypeDefinition=51"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//UnsignedByte"/>
+  <nested inputs="bundleentry://1558.fwk524518594/cache/www.w3.org/2001/XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=10"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+  <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10"
+      outputs="v2.ecore#//MemoryRegionT">
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//MemoryRegionT/id"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//MemoryRegionT/version"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//MemoryRegionT/description"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="v2.ecore#//MemoryRegionT/partNumber"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="v2.ecore#//MemoryRegionT/isErased"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="v2.ecore#//MemoryRegionT/isRemoved"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="v2.ecore#//MemoryRegionT/isUserUpdateable"/>
+    <nested inputs="GarminDevicev2.xsd#//MemoryRegion_t;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="v2.ecore#//MemoryRegionT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//GarminMode_t;XSDComplexTypeDefinition=8" outputs="v2.ecore#//GarminModeT">
+    <nested inputs="GarminDevicev2.xsd#//GarminMode_t;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//GarminModeT/protocols"/>
+    <nested inputs="GarminDevicev2.xsd#//GarminMode_t;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//GarminModeT/memoryRegion"/>
+    <nested inputs="GarminDevicev2.xsd#//GarminMode_t;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//GarminModeT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition" outputs="v2.ecore#//DeviceT">
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//DeviceT/model"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//DeviceT/id"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="v2.ecore#//DeviceT/registrationCode"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="v2.ecore#//DeviceT/unlock"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="v2.ecore#//DeviceT/displayName"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="v2.ecore#//DeviceT/massStorageMode"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="v2.ecore#//DeviceT/garminMode"/>
+    <nested inputs="GarminDevicev2.xsd#//Device_t;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="v2.ecore#//DeviceT/extensions"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//Device;XSDElementDeclaration" outputs="v2.ecore#//DocumentRoot/device"/>
+  <nested inputs="GarminDevicev2.xsd#//InputToUnit_t;XSDComplexTypeDefinition=13"
+      outputs="v2.ecore#//InputToUnitT">
+    <nested inputs="GarminDevicev2.xsd#//InputToUnit_t;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//InputToUnitT/specification"/>
+    <nested inputs="GarminDevicev2.xsd#//InputToUnit_t;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//InputToUnitT/file"/>
+  </nested>
+  <nested inputs="GarminDevicev2.xsd#//OutputFromUnit_t;XSDComplexTypeDefinition=14"
+      outputs="v2.ecore#//OutputFromUnitT">
+    <nested inputs="GarminDevicev2.xsd#//OutputFromUnit_t;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="v2.ecore#//OutputFromUnitT/specification"/>
+    <nested inputs="GarminDevicev2.xsd#//OutputFromUnit_t;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="v2.ecore#//OutputFromUnitT/file"/>
+  </nested>
+</xsd2ecore:XSD2EcoreMappingRoot>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.garmin.com/xmlschemas/GarminDevice/v2"
+            class="com.garmin.xmlschemas.garmin.device.v2.GarminDeviceV2Package"
+            genModel="src/net/sf/smbt/garmin/xsd/GarminDevicev2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="garmin2"
+            class="com.garmin.xmlschemas.garmin.device.v2.util.GarminDeviceV2ResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

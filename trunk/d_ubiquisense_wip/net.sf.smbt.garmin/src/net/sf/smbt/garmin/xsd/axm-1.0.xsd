@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Aaron Roller (MotionBased Technologies) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axm="http://developer.garmin.com/schemas/axm" targetNamespace="http://developer.garmin.com/schemas/axm" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:complexType name="Axm">
+		<xsd:sequence>
+			<xsd:element ref="axm:dictionary"/>
+			<xsd:element ref="axm:activity" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="axm:activityReport" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="author" type="xsd:IDREF" use="required">
+			<xsd:annotation>
+				<xsd:documentation>The author of this document that must reference an application definition.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="version" type="xsd:float" use="required">
+			<xsd:annotation>
+				<xsd:documentation>the required version number of the axm implementation of the author's version of AXM documents.  Helpful for understanding support for changes to the data regardless of changes to the XML Schema.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:element name="axm" type="axm:Axm">
+		<xsd:annotation>
+			<xsd:documentation>The root element of the Activity XML (axm) document. Usually an
+				activity or series of activities will be presented</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- Activity Information -->
+	<xsd:complexType name="Activity">
+		<xsd:annotation>
+			<xsd:documentation>base type for any individual session of effort that of similar
+				activity type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="axm:creationHistory" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="activityName" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="axm:display" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="activityDescription" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="axm:display" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="axm:summary"/>
+			<xsd:element ref="axm:series" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+		<xsd:attribute name="activityType" type="xsd:IDREF" use="optional"/>
+		<xsd:attribute name="eventType" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="activity" type="axm:Activity"/>
+	<xsd:complexType name="Series">
+		<xsd:annotation>
+			<xsd:documentation>A group of related samples usually maintaining
+			order.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="axm:sample" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+		<xsd:attribute name="type" type="xsd:token"/>
+	</xsd:complexType>
+	<xsd:element name="series" type="axm:Series"/>
+	<xsd:complexType name="Sections">
+		<xsd:annotation>
+			<xsd:documentation>an ordered series of segment (or sections) of an activity. Each
+				section may reference another element within the same document rather than trying to
+				provide all of the detail within. A good example is referencing the trackpoint in a
+				track rather than device triggered "laps" . The type attribute is used to identify
+				what type of Sections series it is (i.e. laps, splits, hills,
+			etc)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="axm:Series"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="sections" type="axm:Sections" substitutionGroup="axm:series"/>
+	<xsd:complexType name="Sample">
+		<xsd:annotation>
+			<xsd:documentation>A group of related measurements that represent a single
+			point.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="axm:measurement" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="axm:text" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+	</xsd:complexType>
+	<xsd:element name="sample" type="axm:Sample"/>
+	<xsd:complexType name="Section">
+		<xsd:annotation>
+			<xsd:documentation>A sample that summarizes a portion of detailed
+			series.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="axm:Sample">
+				<xsd:attribute name="seriesStart" type="xsd:IDREF" use="optional"/>
+				<xsd:attribute name="seriesFinish" type="xsd:IDREF" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="section" type="axm:Section" substitutionGroup="axm:sample">
+		<xsd:annotation>
+			<xsd:documentation>represents a section of an activity </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="summary">
+		<xsd:annotation>
+			<xsd:documentation>part of an activity a summary is a group of measurements that provide
+				totals and averages.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Sample"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="CreationHistory">
+		<xsd:annotation>
+			<xsd:documentation>The ancestry explaining the visits the containing object (activity, waypoint, etc).  The creation history has entries that reference the application installation that they visited.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="entry" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:attribute name="applicationInstallation" type="xsd:IDREF" use="required">
+						<xsd:annotation>
+							<xsd:documentation>Reference to the application installation that was visited.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="sequence" type="xsd:short" use="required">
+						<xsd:annotation>
+							<xsd:documentation>The order in which this entry appears in the creation history.  Starts at 1 and increases by 1 until it reaches the creator of this document.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="creationHistory" type="axm:CreationHistory">
+		<xsd:annotation>
+			<xsd:documentation>default element for CreationHistory.  See CreationHistory type.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--================================== Activity Report ===================================-->
+	<xsd:complexType name="ActivityReport">
+		<xsd:annotation>
+			<xsd:documentation>The cumulative and average values summarizing multiple activies often grouping on a particular subject like username, activity type, year, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="axm:series"/>
+			<xsd:element name="name" type="axm:Display"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+	</xsd:complexType>
+	<xsd:element name="activityReport" type="axm:ActivityReport"/>
+	<xsd:element name="aggregateSample" substitutionGroup="axm:sample">
+		<xsd:annotation>
+			<xsd:documentation>The extension of a sample providing the reference to a dictionary item that provides the grouping information related to that "row".</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Sample">
+					<xsd:sequence minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>some reports simply don't need grouping (total reports where there is only one sample).</xsd:documentation>
+						</xsd:annotation>
+						<xsd:element name="group" maxOccurs="unbounded"/>
+					</xsd:sequence>
+					<xsd:attribute name="count" type="xsd:int" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--====================== Measurement ==============================================-->
+	<xsd:complexType name="Measurement">
+		<xsd:annotation>
+			<xsd:documentation>The value of an observation of a hardware sensor and user input. The
+				content of the element should contain the "localized" display value for the
+				Measurement. The display value is optional, but the value attribute containing the
+				numeric representation is required.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="axm:Definition">
+				<xsd:attribute name="value" type="xsd:double" use="required">
+					<xsd:annotation>
+						<xsd:documentation>The normalized value based on the context.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="context" type="xsd:IDREF" use="required"/>
+				<xsd:attribute name="modifier" type="xsd:IDREF" use="required"/>
+				<xsd:attribute name="uom" type="xsd:IDREF" use="optional"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="measurement" type="axm:Measurement" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>See Measurement type.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="Timestamp">
+		<xsd:complexContent>
+			<xsd:extension base="axm:Measurement">
+				<xsd:attribute name="dateValue" type="xsd:dateTime" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="timestamp" type="axm:Measurement" substitutionGroup="axm:measurement">
+		<xsd:annotation>
+			<xsd:documentation>A measurement that requires the xsd:dateTime value to be
+			included.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="Date">
+		<xsd:complexContent>
+			<xsd:extension base="axm:Measurement">
+				<xsd:attribute name="dateValue" type="xsd:date" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="date" type="axm:Date" substitutionGroup="axm:measurement"/>
+	<xsd:complexType name="Time">
+		<xsd:complexContent>
+			<xsd:extension base="axm:Measurement">
+				<xsd:attribute name="timeValue" type="xsd:time" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="time" type="axm:Time" substitutionGroup="axm:measurement"/>
+	<xsd:element name="year" substitutionGroup="axm:measurement">
+		<xsd:annotation>
+			<xsd:documentation>A measurement representing a year.  The value of the measurement is the milliseconds from epoch truncated to the beginning of the year at midnight UTC.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Measurement"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="yearMonth" substitutionGroup="axm:measurement">
+		<xsd:annotation>
+			<xsd:documentation>A measurement representing a month of a paritcular year.  The value is the number of milliseconds from epoch truncated to the beginning of the month at midnight UTC.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Measurement">
+					<xsd:attribute name="yearMonth" type="xsd:gYearMonth" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="yearWeek" substitutionGroup="axm:measurement">
+		<xsd:annotation>
+			<xsd:documentation>A measurement representing a week of a particular year.  The value is the number of milliseconds from epoch truncated to the start of the week (Monday morning at midnight).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Measurement">
+					<xsd:attribute name="week" type="xsd:unsignedShort">
+						<xsd:annotation>
+							<xsd:documentation>The number of the week starting at Week 1 and counting up to week 52.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="year" type="xsd:gYear" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--====================== Dictionary ==============================================-->
+	<xsd:complexType name="Dictionary">
+		<xsd:annotation>
+			<xsd:documentation>collection of unit definitions to be referenced throughout this
+				document and/or others external</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<!--			<xsd:element ref="axm:property" maxOccurs="unbounded"/>-->
+			<xsd:element ref="axm:definition" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="dictionary" type="axm:Dictionary"/>
+	<xsd:complexType name="Definition">
+		<xsd:annotation>
+			<xsd:documentation>The single definition per document that describes objects by referencing the ID provided in the definition.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="axm:display" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+		<xsd:attribute name="class" type="xsd:IDREF" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>Reference to the type definition this "instance" or "individual" is made of. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="namespace" type="xsd:anyURI" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="definition" type="axm:Definition">
+		<xsd:annotation>
+			<xsd:documentation>The base element allowing a definition to entered in the dictionary.  Typically it is useful to substitute </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="month" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A definition representing a month not coupled with any paritcular year.  Examples are January, February, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="month" type="xsd:gMonth" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="dayOfWeek" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A day of the week without reference to any parituclar date.  Examples: Monday, Tuesday, Wednesday.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="day" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:unsignedByte">
+								<xsd:minInclusive value="1"/>
+								<xsd:maxInclusive value="7"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="context" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>The measurement description useful to categorize the type of measurement being reported.  Distance and elevation or both "length", but each have a different context.  Heart rate, temperate, speed are other examples of context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="uom" type="xsd:IDREF" use="required">
+						<xsd:annotation>
+							<xsd:documentation>Contexts have a default unit of measurement which allows a measurement to not specific the uom and just accept the default as defined by the context.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="unitFormat" type="xsd:IDREF" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>Contexts have a default format, think bpm vs. %Max, or to 2 decimal places.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="modifier" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>An attribute of measurement, this is an aggregate or other description of the measurement explaining how the measurement was observed, calculated or derived.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="derivedContext" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A modifier-context combination that describes a calculated or other type of measurement that is not "direct" or observed.  context=distance and modifier=sum then derivedContext=Total Distance</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="modifier" type="xsd:IDREF" use="required"/>
+					<xsd:attribute name="context" type="xsd:IDREF" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="application" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A device, website or software application that is used to identify the source of documents, activities, measurements, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="applicationVersion" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>The revision that describes a release of the application product.  May be software or hardware.  The version and build numbers can be used to run calculations if they are numerical.  Appended together it would typically look like majorVersion.minorVersion.majorBuild.minorBuild (2.3.2.1).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:sequence>
+						<xsd:element name="extraInformation" type="axm:Display" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Extra information that may apply to the version.   This may be beta, alpha or other specific information that pertains to the application.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="application" type="xsd:IDREF" use="required">
+						<xsd:annotation>
+							<xsd:documentation>Reference to the application that this version describes.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="major" type="xsd:short" use="required">
+						<xsd:annotation>
+							<xsd:documentation>The first in the sequence of build numbers. major.minor.buildMajor.buildMinor.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="minor" type="xsd:short" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>The second in the sequence of version numbers.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="buildMajor" type="xsd:short" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>The third in the sequence of version numbers.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="buildMinor" type="xsd:short" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>the fourth in the sequence of version numbers.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="applicationInstance" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a single copy of software, physical piece of hardware.  Must contain a unique identifier that describes the particular instance of an application (i.e. UnitID for Garmin Devices).  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:sequence>
+						<xsd:element name="key" type="xsd:anySimpleType">
+							<xsd:annotation>
+								<xsd:documentation>The unique identifier when coupled with the application will reference a particular "instance" of an application or device.  Example:  Unit ID in Garmin devices.  Urls for websites work well as unique identifiers for "instance" too.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="application" type="xsd:IDREF" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="applicationInstallation" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Some application that has a version and perhaps is an instance too.  All of this together is an installation.  So an EDGE 305 with a unit ID (instance) and a version (2.3) altogether is an installation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="application" type="xsd:IDREF" use="required"/>
+					<xsd:attribute name="instance" type="xsd:IDREF" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>Reference to the application instance defined in the dictionary.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="version" type="xsd:IDREF" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>the reference to application version defined in the dictionary.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="activityType" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Describes what the person was doing during the activity. (i.e. Cycling, Running, Swimming). Also see eventType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="parent" type="xsd:IDREF" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>Reference to another Activity Type that is the parent of this activity type. Example: Running is the parent of Trail Running.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="eventType" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Describes the reason the person performed the activity. (i.e. Training, Race, Recreation, etc) Also see activityType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="unit" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>A unit of measurement that describes a value and/or a format that is being represented. http://en.wikipedia.org/wiki/Units_of_measurement</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="measurementSystem" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>The general measurement system that describes the category of units chosen to display measurements.  Example: Metric, Statute U.S., Statute U.K., Nautical.  
+
+http://en.wikipedia.org/wiki/Systems_of_measurement
+</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="unitFormat" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Indicates a type of format to describe a measurement.  Think bpm, %max, 2 decimal places type of thing.  Differs from format in that it's not for describing a name</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="format" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Indicates a type of format to describe a name, description, or any text.  Examples normal, abbreviated, title, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="user" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Description of a user profile that may have performed an activity, added a comment, etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:sequence>
+						<xsd:element name="userId" type="axm:Identifier"/>
+						<xsd:element name="firstName" type="axm:Display" minOccurs="0"/>
+						<xsd:element name="surname" type="axm:Display" minOccurs="0"/>
+						<xsd:element name="fullName" type="axm:Display" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="applicationInstallation" type="xsd:IDREF" use="required">
+						<xsd:annotation>
+							<xsd:documentation>The reference to the specific application where this user is defined.  A user profile without an application has no global reference.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="timeZoneUnit" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Describes what the person was doing during the activity. (i.e. Cycling, Running, Swimming). Also see eventType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:attribute name="offset" type="xsd:duration" use="optional"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="zones" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>Describes what the person was doing during the activity. (i.e. Cycling, Running, Swimming). Also see eventType.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition">
+					<xsd:sequence>
+						<xsd:element ref="axm:series"/>
+					</xsd:sequence>
+					<xsd:attribute name="context" type="xsd:IDREF" use="required"/>
+					<xsd:attribute name="activityType" type="xsd:IDREF" use="required"/>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--====================== Text ==============================================-->
+	<xsd:complexType name="Text">
+		<xsd:annotation>
+			<xsd:documentation>Similar to a measurement, but used to relay textual information and
+				not just measurement values and their properties.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:complexType>
+	<xsd:element name="text"/>
+	<xsd:complexType name="Display">
+		<xsd:annotation>
+			<xsd:documentation>a standard way for a name to be provided that should satisfy most
+				objects</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attributeGroup ref="axm:localizable"/>
+				<xsd:attribute name="value" type="xsd:double" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>The value reported in the base SI unit or the derived unit combined with teh base unit determined by the context.  Example: meter, meter per second, second, watt, etc.
+
+http://en.wikipedia.org/wiki/SI_base_unit
+http://en.wikipedia.org/wiki/SI_derived_unit</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uom" type="xsd:IDREF" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>a reference to the Unit of Measurement the value represents. The
+					reference must always resolve to a definition.  The omission of this will automatically assume the default as
+					assigned to the context in the dictionary definition.
+
+http://en.wikipedia.org/wiki/SI_base_unit</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="format" type="xsd:IDREF" use="optional" default="normal"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="display" type="axm:Display"/>
+	<xsd:attributeGroup name="localizable">
+		<xsd:annotation>
+			<xsd:documentation>The group of attributes required to describe the language and country of the text.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="lang" use="optional" default="en">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:language">
+					<xsd:length value="2"/>
+					<xsd:whiteSpace value="collapse"/>
+					<xsd:enumeration value="en"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="country" use="optional" default="us">
+			<xsd:annotation>
+				<xsd:documentation>Identifies the country using two letter country codes.
+http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:length value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<!--========================= Identity =========================================-->
+	<xsd:attributeGroup name="identifiable">
+		<xsd:attribute name="id" type="xsd:ID" use="optional" form="unqualified">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">ID attribute is used to identify a unique element. Per the definition it must be unique within the scope of the document so that clients can reference the containing element using the findById method provided by their parser. Since xsd:ID requires an ID to start with an alphabetic character, not a number then most IDs will prefix the value with the "domain" of the ID they represent.  For example, the activity/@id attribute would probably have a value of activity/@id="activity_1234" and series/@id="series_3849", etc. 
+
+
+Other elements will reference this ID attribute by containing their own attribute as an xsd:IDREF type.  
+
+This id attribute is only for the document, not meant to reference the ID that a system provides.  Refer to the systemId global element to understand more about identifying the ID from a specific system or application.
+
+  
+
+NOTE: This is only optional to currently allow Measurement to extend definition.  Measurement currently does not require ID, but it probably should.  AR 11/2007</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attributeGroup ref="axm:systemIdentifiable"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="systemIdentifiable">
+		<xsd:attribute name="idValue" type="xsd:anySimpleType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>The id of the authoring system.  The @author attribute of this document references who built the document.  To make the use of AXM easier this idValue attribute is supplied so clients can easily reference ID values of the authoring system without having to iterate through creation histories.
+
+Unlike @id attributes, this does not use xsd:IDREF and will not resolve to a document definition in the dictionary.  Instead it is intended to be used by a client that is aware of how to use the author's IDs (a web application that works specifically with a web service like Garmin Connect and Connect API).
+</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+	<xsd:complexType name="Identifier">
+		<xsd:annotation>
+			<xsd:documentation>Identifies an object uniquely for an application, website, device, etc.  Often times the same object can be stored in multiple places and each system will have their own unique ID.  
+
+The system is identified by the applicationId that describes the containing system.  
+The value of the element is the ID that can be used to query a system for the object (if the system supports such capabilties).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="applicationInstallation" type="xsd:IDREF" use="required">
+			<xsd:annotation>
+				<xsd:documentation>an ID reference to a dictionary definition that describes the Application, website or device that has a reference to this object.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:element name="externalId" type="axm:Identifier">
+		<xsd:annotation>
+			<xsd:documentation>the element containined inside an object to provide the id as represented by an application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

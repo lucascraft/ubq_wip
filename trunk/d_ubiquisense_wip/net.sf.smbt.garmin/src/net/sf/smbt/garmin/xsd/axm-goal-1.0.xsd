@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Garmin International (Garmin International) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axm="http://developer.garmin.com/schemas/axm" targetNamespace="http://developer.garmin.com/schemas/axm" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:include schemaLocation="axm-1.0.xsd"/>
+	<xsd:complexType name="Goal">
+		<xsd:sequence>
+			<xsd:element name="name">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:restriction base="axm:Display">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="255"/>
+						</xsd:restriction>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="targetMeasurement" type="axm:Measurement"/>
+			<xsd:element name="startDateMeasurement" type="axm:Measurement"/>
+		</xsd:sequence>
+		<xsd:attribute name="goalType" type="xsd:IDREF" use="required"/>
+		<xsd:attribute name="user" type="xsd:IDREF" use="required"/>
+		<xsd:attribute name="activityType" type="xsd:IDREF" use="required"/>
+		<xsd:attribute name="accessControl" type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="trackingPeriodType" type="xsd:IDREF" use="required"/>
+		<xsd:attributeGroup ref="axm:identifiable"/>
+		<!--# AccessControl private - should be referenced?-->
+	</xsd:complexType>
+	<xsd:element name="goal" type="axm:Goal" substitutionGroup="axm:axmComponent"/>
+	<xsd:complexType name="Goals"/>
+	<xsd:element name="goalType" substitutionGroup="axm:definition">
+		<xsd:annotation>
+			<xsd:documentation>describes the type of goal. Eg. distance_accumulation</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="trackingPeriodType" substitutionGroup="axm:definition">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="axm:Definition"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="GoalProgress">
+		<xsd:sequence>
+			<xsd:element name="progress" type="axm:Measurement"/>
+		</xsd:sequence>
+		<xsd:attribute name="goal" type="xsd:IDREF" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="goalProgress" type="axm:GoalProgress"/>
+	<xsd:complexType name="GoalProgresses">
+		<xsd:sequence>
+			<xsd:element ref="axm:goalProgress" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
