@@ -1,0 +1,1 @@
+Get It Together is GPL thus it must be provisioned as separate archive

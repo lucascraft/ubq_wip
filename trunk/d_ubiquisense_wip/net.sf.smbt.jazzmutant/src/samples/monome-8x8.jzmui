@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jzmui:LemurLiveApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jzmui="http://jzmui/1.0">
+  <elements xsi:type="jzmui:JZJazzInterface" bounds="Rectangle(0, 0, 800, 600)" fontName="tahoma" fontSize="11" width="800" height="600">
+    <children xsi:type="jzmui:JZPads" bounds="Rectangle(0, 0, 500, 500)" fontName="tahoma" fontSize="10" columns="8" rows="8"/>
+    <children xsi:type="jzmui:JZKnob" bounds="Rectangle(511, 1, 64, 64)" fontName="tahoma" fontSize="10" label="0" unit="" precision="3.0"/>
+    <children xsi:type="jzmui:JZmultiSlider" bounds="Rectangle(500, 114, 300, 488)" fontName="tahoma" fontSize="10" label="0" slider="4" gradient="1"/>
+    <children xsi:type="jzmui:JZSignalScope" bounds="Rectangle(0, 500, 180, 100)" fontName="tahoma" fontSize="10" label="1" modeXY="0" transparent="true"/>
+    <children xsi:type="jzmui:JZLed" bounds="Rectangle(180, 500, 320, 100)" fontName="tahoma" fontSize="10" label="0" columns="8" rows="8" bargraph="true"/>
+    <children xsi:type="jzmui:JZKnob" bounds="Rectangle(586, 46, 64, 64)" fontName="tahoma" fontSize="10" label="0" unit="" precision="3.0"/>
+    <children xsi:type="jzmui:JZKnob" bounds="Rectangle(662, 1, 64, 64)" fontName="tahoma" fontSize="10" label="0" unit="" precision="3.0"/>
+    <children xsi:type="jzmui:JZKnob" bounds="Rectangle(736, 46, 64, 64)" fontName="tahoma" fontSize="10" label="0" unit="" precision="3.0"/>
+  </elements>
+</jzmui:LemurLiveApp>

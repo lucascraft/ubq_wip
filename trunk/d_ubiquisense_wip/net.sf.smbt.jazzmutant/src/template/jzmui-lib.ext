@@ -1,0 +1,7 @@
+import jzmui;
+import jzml;
+
+genWidget(JZUIElem this) :
+	"Undefined"	
+;
+		

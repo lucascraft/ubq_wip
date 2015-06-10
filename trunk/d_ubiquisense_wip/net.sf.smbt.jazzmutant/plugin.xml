@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:///net.sf.smbt.jazzmutant/model/jzml.xsd"
+            class="net.sf.smbt.jazzmutant.model.jzml.JzmlPackage"
+            genModel="model/jzml.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="jzml"
+            class="net.sf.smbt.jazzmutant.model.jzml.util.JzmlResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.sf.smbt.jazzmutant.prefs.JZMUIPreferenceInitializer">
+      </initializer>
+      <modifier
+            class="net.sf.smbt.jazzmutant.prefs.JZMUIPreferenceModifyListener">
+      </modifier>
+      <scope
+            class="net.sf.smbt.jazzmutant.prefs.JZMUIScope"
+            name="net.sf.smbt.jazzmutant.scope">
+      </scope>
+   </extension>
+
+</plugin>

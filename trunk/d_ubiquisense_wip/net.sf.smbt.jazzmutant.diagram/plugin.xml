@@ -1,0 +1,2774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="jzui"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="jzui"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/JzmuiDiagramFile.gif"
+         extensions="jzui"
+         default="true"
+         class="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditor"
+         matchingStrategy="net.sf.smbt.jzmui.diagram.part.JzmuiMatchingStrategy"
+         contributorClass="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="net.sf.smbt.jzmui.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/JzmuiDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="net.sf.smbt.jzmui.diagram.part.JzmuiCreationWizard"
+  	     id="net.sf.smbt.jzmui.diagram.part.JzmuiCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="net.sf.smbt.jazzmutant.diagram.InitDiagram"
+            nameFilter="*.jz"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="net.sf.smbt.jzmui.diagram.part.JzmuiInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="net.sf.smbt.jazzmutant.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="JzmuiPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="JzmuiPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="JzmuiRender">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="net.sf.smbt.jzmui.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="net.sf.smbt.jazzmutant.diagram.general"
+            name="%prefpage.net.sf.smbt.jazzmutant.diagram.general"
+            class="net.sf.smbt.jzmui.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="net.sf.smbt.jazzmutant.diagram.appearance"
+            name="%prefpage.net.sf.smbt.jazzmutant.diagram.appearance"
+            category="net.sf.smbt.jazzmutant.diagram.general"
+            class="net.sf.smbt.jzmui.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="net.sf.smbt.jazzmutant.diagram.connections"
+            name="%prefpage.net.sf.smbt.jazzmutant.diagram.connections"
+            category="net.sf.smbt.jazzmutant.diagram.general"
+            class="net.sf.smbt.jzmui.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="net.sf.smbt.jazzmutant.diagram.printing"
+            name="%prefpage.net.sf.smbt.jazzmutant.diagram.printing"
+            category="net.sf.smbt.jazzmutant.diagram.general"
+            class="net.sf.smbt.jzmui.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="net.sf.smbt.jazzmutant.diagram.rulersAndGrid"
+            name="%prefpage.net.sf.smbt.jazzmutant.diagram.rulersAndGrid"
+            category="net.sf.smbt.jazzmutant.diagram.general"
+            class="net.sf.smbt.jzmui.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="net.sf.smbt.jazzmutant.diagram"
+            labelProvider="net.sf.smbt.jzmui.diagram.sheet.JzmuiSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="false"?>
+      <!--   
+      <propertyTabs contributorId="net.sf.smbt.jazzmutant.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+      -->
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="net.sf.smbt.jazzmutant.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="net.sf.smbt.jzmui.diagram.sheet.JzmuiPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="net.sf.smbt.jzmui.diagram.providers.JzmuiViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Jzmui"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3035,3036,3037,3038"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="net.sf.smbt.jzmui.diagram.providers.JzmuiEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Jzmui"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3035,3036,3037,3038"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value=""/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value=""/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="net.sf.smbt.jzmui.diagram.providers.JzmuiModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterfaceEditPart" id="JZJazzInterface_1000"/>
+         <object class="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterface2EditPart" id="JZJazzInterface_2001"/>
+         <context elements="JZJazzInterface_1000,JZJazzInterface_2001"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="net.sf.smbt.jzmui.diagram.providers.JzmuiIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZJazzInterface_1000"
+               name="%metatype.name.JZJazzInterface_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZJazzInterface"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZJazzInterfaceEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZJazzInterface_2001"
+               name="%metatype.name.JZJazzInterface_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZJazzInterface_1000"/>
+            <param name="semanticHint" value="2001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZBreakPoint_3001"
+               name="%metatype.name.JZBreakPoint_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZBreakPoint"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZBreakPointEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZContainer_3002"
+               name="%metatype.name.JZContainer_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZContainer"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZContainerEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZBreakPoint_3003"
+               name="%metatype.name.JZBreakPoint_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZBreakPoint_3001"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZContainer_3004"
+               name="%metatype.name.JZContainer_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZContainer_3002"/>
+            <param name="semanticHint" value="3004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZCustomButton_3005"
+               name="%metatype.name.JZCustomButton_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZCustomButton"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZCustomButtonEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZFader_3006"
+               name="%metatype.name.JZFader_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZFader"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZFaderEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZGesture_3007"
+               name="%metatype.name.JZGesture_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZGesture"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZGestureEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZKnob_3008"
+               name="%metatype.name.JZKnob_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZKnob"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZKnobEditHelper">
+            <param name="semanticHint" value="3008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZLed_3009"
+               name="%metatype.name.JZLed_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZLed"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZLedEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZLemurMenu_3010"
+               name="%metatype.name.JZLemurMenu_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZLemurMenu"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZLemurMenuEditHelper">
+            <param name="semanticHint" value="3010"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZLemurMonitor_3011"
+               name="%metatype.name.JZLemurMonitor_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZLemurMonitor"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZLemurMonitorEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZMultiBalls_3012"
+               name="%metatype.name.JZMultiBalls_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZMultiBalls"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZMultiBallsEditHelper">
+            <param name="semanticHint" value="3012"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZPads_3013"
+               name="%metatype.name.JZPads_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZPads"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZPadsEditHelper">
+            <param name="semanticHint" value="3013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZRange_3014"
+               name="%metatype.name.JZRange_3014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZRange"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZRangeEditHelper">
+            <param name="semanticHint" value="3014"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZRingArea_3015"
+               name="%metatype.name.JZRingArea_3015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZRingArea"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZRingAreaEditHelper">
+            <param name="semanticHint" value="3015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZSignalScope_3016"
+               name="%metatype.name.JZSignalScope_3016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZSignalScope"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZSignalScopeEditHelper">
+            <param name="semanticHint" value="3016"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZSurfaceLCD_3017"
+               name="%metatype.name.JZSurfaceLCD_3017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZSurfaceLCD"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZSurfaceLCDEditHelper">
+            <param name="semanticHint" value="3017"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZSwitches_3018"
+               name="%metatype.name.JZSwitches_3018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZSwitches"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZSwitchesEditHelper">
+            <param name="semanticHint" value="3018"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZText_3019"
+               name="%metatype.name.JZText_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZText"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZTextEditHelper">
+            <param name="semanticHint" value="3019"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZTrack_3020"
+               name="%metatype.name.JZTrack_3020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZTrack"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZTrackEditHelper">
+            <param name="semanticHint" value="3020"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <metamodelType
+               id="net.sf.smbt.jazzmutant.diagram.JZmultiSlider_3021"
+               name="%metatype.name.JZmultiSlider_3021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JZmultiSlider"
+               edithelper="net.sf.smbt.jzmui.diagram.edit.helpers.JZmultiSliderEditHelper">
+            <param name="semanticHint" value="3021"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZCustomButton_3022"
+               name="%metatype.name.JZCustomButton_3022"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZCustomButton_3005"/>
+            <param name="semanticHint" value="3022"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZFader_3023"
+               name="%metatype.name.JZFader_3023"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZFader_3006"/>
+            <param name="semanticHint" value="3023"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZGesture_3024"
+               name="%metatype.name.JZGesture_3024"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZGesture_3007"/>
+            <param name="semanticHint" value="3024"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZKnob_3025"
+               name="%metatype.name.JZKnob_3025"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZKnob_3008"/>
+            <param name="semanticHint" value="3025"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZLed_3026"
+               name="%metatype.name.JZLed_3026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZLed_3009"/>
+            <param name="semanticHint" value="3026"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZLemurMenu_3027"
+               name="%metatype.name.JZLemurMenu_3027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZLemurMenu_3010"/>
+            <param name="semanticHint" value="3027"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZLemurMonitor_3028"
+               name="%metatype.name.JZLemurMonitor_3028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZLemurMonitor_3011"/>
+            <param name="semanticHint" value="3028"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZMultiBalls_3029"
+               name="%metatype.name.JZMultiBalls_3029"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZMultiBalls_3012"/>
+            <param name="semanticHint" value="3029"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZmultiSlider_3030"
+               name="%metatype.name.JZmultiSlider_3030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZmultiSlider_3021"/>
+            <param name="semanticHint" value="3030"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZPads_3031"
+               name="%metatype.name.JZPads_3031"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZPads_3013"/>
+            <param name="semanticHint" value="3031"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZRange_3032"
+               name="%metatype.name.JZRange_3032"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZRange_3014"/>
+            <param name="semanticHint" value="3032"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZRingArea_3033"
+               name="%metatype.name.JZRingArea_3033"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZRingArea_3015"/>
+            <param name="semanticHint" value="3033"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZSignalScope_3034"
+               name="%metatype.name.JZSignalScope_3034"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZSignalScope_3016"/>
+            <param name="semanticHint" value="3034"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZSurfaceLCD_3035"
+               name="%metatype.name.JZSurfaceLCD_3035"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZSurfaceLCD_3017"/>
+            <param name="semanticHint" value="3035"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZSwitches_3036"
+               name="%metatype.name.JZSwitches_3036"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZSwitches_3018"/>
+            <param name="semanticHint" value="3036"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZText_3037"
+               name="%metatype.name.JZText_3037"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZText_3019"/>
+            <param name="semanticHint" value="3037"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://jzmui/1.0">
+         <specializationType
+               id="net.sf.smbt.jazzmutant.diagram.JZTrack_3038"
+               name="%metatype.name.JZTrack_3038"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.smbt.jazzmutant.diagram.JZTrack_3020"/>
+            <param name="semanticHint" value="3038"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="net.sf.smbt.jazzmutant.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="net.sf.smbt.jazzmutant.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="net.sf.smbt.jazzmutant.diagram.TypeContext">
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZJazzInterface_1000"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZJazzInterface_2001"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZBreakPoint_3001"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZContainer_3002"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZBreakPoint_3003"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZContainer_3004"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZCustomButton_3005"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZFader_3006"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZGesture_3007"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZKnob_3008"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLed_3009"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLemurMenu_3010"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLemurMonitor_3011"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZMultiBalls_3012"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZPads_3013"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZRange_3014"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZRingArea_3015"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSignalScope_3016"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSurfaceLCD_3017"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSwitches_3018"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZText_3019"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZTrack_3020"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZmultiSlider_3021"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZCustomButton_3022"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZFader_3023"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZGesture_3024"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZKnob_3025"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLed_3026"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLemurMenu_3027"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZLemurMonitor_3028"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZMultiBalls_3029"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZmultiSlider_3030"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZPads_3031"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZRange_3032"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZRingArea_3033"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSignalScope_3034"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSurfaceLCD_3035"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZSwitches_3036"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZText_3037"/>
+         <elementType ref="net.sf.smbt.jazzmutant.diagram.JZTrack_3038"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.smbt.jazzmutant.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="net.sf.smbt.jazzmutant.diagram"
+           properties="isURIEditorInput"
+           class="net.sf.smbt.jzmui.diagram.part.JzmuiUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="net.sf.smbt.jazzmutant.diagram.resourceContent"/>
+			<contentExtension pattern="net.sf.smbt.jazzmutant.diagram.domainResourceContent"/>
+            <contentExtension pattern="net.sf.smbt.jazzmutant.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="net.sf.smbt.jazzmutant.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="net.sf.smbt.jazzmutant.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.smbt.jzmui.diagram.navigator.JzmuiNavigatorContentProvider" 
+            labelProvider="net.sf.smbt.jzmui.diagram.navigator.JzmuiNavigatorLabelProvider"
+            icon="icons/obj16/JzmuiDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="jzui"/>
+               </and>
+               <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="net.sf.smbt.jazzmutant.diagram.navigatorSorter" 
+               class="net.sf.smbt.jzmui.diagram.navigator.JzmuiNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="jzui"/>
+                  </and>
+                  <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="net.sf.smbt.jazzmutant.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.smbt.jzmui.diagram.navigator.JzmuiDomainNavigatorContentProvider" 
+            labelProvider="net.sf.smbt.jzmui.diagram.navigator.JzmuiDomainNavigatorLabelProvider"
+            icon="icons/obj16/JzmuiDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="jz"/>
+               </and>
+               <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="net.sf.smbt.jazzmutant.diagram.navigatorActionProvider"
+            class="net.sf.smbt.jzmui.diagram.navigator.JzmuiNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="net.sf.smbt.jazzmutant.diagram.navigatorLinkHelper"
+            class="net.sf.smbt.jzmui.diagram.navigator.JzmuiNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="net.sf.smbt.jazzmutant.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="net.sf.smbt.jzmui.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="net.sf.smbt.jzmui.diagram.updateDiagram"
+         contextId="net.sf.smbt.jzmui.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="false"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.smbt.jazzmutant.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterfaceEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+     <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.smbt.jazzmutant.diagram.ui.dump.osc">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"/></with>
+                  <or>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+	                  </iterate></with>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterfaceEditPart"/>
+	                  </iterate></with>
+	              </or>
+	           </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+     <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.smbt.jazzmutant.diagram.ui.save">
+         <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"/></with>
+                  <or>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+	                  </iterate></with>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterfaceEditPart"/>
+	                  </iterate></with>
+	              </or>
+	           </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+     <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.smbt.jazzmutant.diagram.ui.print.preview">
+         <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"/></with>
+                  <or>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+	                  </iterate></with>
+	                  <with variable="selection"><iterate ifEmpty="false"> 
+	                     <instanceof value="net.sf.smbt.jzmui.diagram.edit.parts.JZJazzInterfaceEditPart"/>
+	                  </iterate></with>
+	              </or>
+	           </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="false"?>
+      <category id="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="net.sf.smbt.jazzmutant.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"
+         defaultHandler="net.sf.smbt.jzmui.diagram.part.LoadResourceAction"/>
+      <command id="net.sf.smbt.jazzmutant.diagram.ui.dump.osc"
+         name="Dump Osc"
+         categoryId="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"
+         defaultHandler="net.sf.smbt.jazzmutant.diagram.actions.DumpDiagramAsOscHandler"/>
+      <command id="net.sf.smbt.jazzmutant.diagram.ui.save"
+         name="Save"
+         categoryId="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"
+         defaultHandler="net.sf.smbt.jazzmutant.diagram.actions.SaveDiagramHandler"/>
+      <command id="net.sf.smbt.jazzmutant.diagram.ui.print.preview"
+         name="Print Preview"
+         categoryId="net.sf.smbt.jzmui.diagram.part.JzmuiDiagramEditorID"
+         defaultHandler="net.sf.smbt.jazzmutant.diagram.actions.PrintPreviewHandler"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="false"?>   
+      <propertyTabs contributorId="net.sf.smbt.jazzmutant.diagram">
+          <propertyTab
+             category="domain"
+             id="property.tab.properties"
+             label="Properties"/>
+           <propertyTab
+             category="domain"
+             id="property.tab.behavior"
+             label="Behavior"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.osc"
+             label="OSC"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.midi"
+             label="MIDI"/>
+      </propertyTabs>
+   </extension>
+
+   
+      <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="false"?>   
+      <propertySections contributorId="net.sf.smbt.jazzmutant.diagram">
+      <!--
+        <propertySection
+            id="property.tab.properties" 
+            tab="property.tab.domain"
+            class="net.sf.smbt.jzmui.diagram.sheet.JzmuiPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </propertySection>
+      -->   
+        <propertySection
+            id="property.tab.behavior" 
+            tab="property.tab.domain"
+            class="net.sf.smbt.jzmui.diagram.sheet.JzmuiPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </propertySection>
+        
+        <propertySection
+            id="property.tab.osc" 
+            tab="property.tab.domain"
+            class="net.sf.smbt.jzmui.diagram.sheet.JzmuiPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </propertySection>
+        
+        <propertySection
+            id="property.tab.midi" 
+            tab="property.tab.domain"
+            class="net.sf.smbt.jzmui.diagram.sheet.JzmuiPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.smbt.jzmui.diagram.navigator.JzmuiAbstractNavigatorItem"/>
+         </propertySection>
+         
+        <propertySection
+            id="property.section.lemur.properties.jzuielem.name" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.JZUIElemNameSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.JZUIELemFilter"
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+        <propertySection
+            id="property.section.lemur.properties.breakpoint.background" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointBgColorSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.jzuielem.name"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+       <propertySection
+            id="property.section.lemur.properties.breakpoint.liveedit" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointLiveEditingSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.breakpoint.background"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+       <propertySection
+            id="property.section.lemur.properties.breakpoint.points" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointPointsSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.breakpoint.liveedit"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+        <propertySection
+            id="property.section.lemur.properties.breakpoint.coord" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointCoordinatesSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.breakpoint.points"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+        <propertySection
+            id="property.section.lemur.properties.breakpoint.firstpoint" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFirstPointColorSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.breakpoint.coord"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+         
+        
+        <propertySection
+            id="property.section.lemur.properties.breakpoint.light" 
+            tab="property.tab.properties"
+            class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointLightSection"
+            filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+            afterSection="property.section.lemur.properties.breakpoint.firstpoint"
+            
+        >
+            <input type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart"/>
+         </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZCustomButtomOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.custombutton"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZBreakPointOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.breakpoint"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZFaderOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.fader"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZKnobOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.knob"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZLedOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.led"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZMultiBallOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.multiball"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZMultiSliderOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.multislider"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZPadsOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.pads"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZRangeOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.range"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZRingAreaOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.ringarea"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZSignalScopeOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.signalscope"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.osc.JZSwitchesOscPropertySection"
+              id="property.section.lemur.properties.mappings.osc.switches"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+              tab="property.tab.osc">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZCustomButtomMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.custombutton"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZBreakPointMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.breakpoint"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZFaderMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.fader"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZKnobMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.knob"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZLedMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.led"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZMultiBallMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.multiball"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZMultiSliderMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.multislider"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZPadsMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.pads"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZRangeMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.range"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZRingAreaMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.ringarea"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZSignalScopeMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.signalscope"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              class="net.sf.smbt.jazzmutant.diagram.properties.mappings.midi.JZSwitchesMidiPropertySection"
+              id="property.section.lemur.properties.mappings.midi.switches"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+              tab="property.tab.midi">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.coloron"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonColorOffSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.coloroff"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.fontalign"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonColorOnSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.coloron"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonOutlineSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.outline"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.outline"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonStyleOnSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.styleon"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.styleon"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonStyleOffSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.styleoff"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.styleoff"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFontSizeOffSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.fontsize"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.fontsize"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFontAlignSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.fontalign"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.fontsize"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFontAlignSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.fontalign"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.custombutton.coloroff"
+              class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonLightSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.custombutton.JZUICustomButtonFilter"
+              id="property.section.lemur.properties.custombutton.light"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderIsLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              id="property.section.lemur.properties.fader.labelactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.fader.labelactive"
+              class="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderValueSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              id="property.section.lemur.properties.fader.valueactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.fader.valueactive"
+              class="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderUnitSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              id="property.section.lemur.properties.fader.unit"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.fader.unit"
+              class="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderPrecisionSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              id="property.section.lemur.properties.fader.precision"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.fader.precision"
+              class="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderColorSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+              id="property.section.lemur.properties.fader.color"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobIsLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.labelactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.knob.labelactive"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobValueSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.value"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.knob.value"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobUnitSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.unit"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.knob.unit"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobPrecisionSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.precision"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.knob.precision"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobBgColorSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.bg"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.knob.bg"
+              class="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFgColorSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+              id="property.section.lemur.properties.knob.fg"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedIsLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.labelactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.labelactive"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedIsTransparentSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.transparent"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.transparent"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedValueSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.value"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.value"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedGridColSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.cols"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.cols"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedGridRowSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.rows"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.rows"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedIsMulticolorSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.multicolor"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.multicolor"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedIsBarGraphSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.bargraph"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.bargraph"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedColorOffSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.coloroff"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.coloroff"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedColorOnSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.coloron"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.led.coloron"
+              class="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedLightSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.leds.JZUILedFilter"
+              id="property.section.lemur.properties.led.light"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsIsLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.labelactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multiballs.labelactive"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsIsNumberActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.number"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multiballs.number"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsIsMultiLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.multilabel"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multiballs.multilabel"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsIsMultiColorActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.multicolor"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multiballs.multicolor"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallBallsNumberSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.balls"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multiballs.balls"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallColorSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multiballs.color"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+        <propertySection
+              afterSection="property.section.lemur.properties.jzuielem.name"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderlsHorizontalSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multislider.horizontal"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.horizontal"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderlsBiPolarSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multislider.bipolar"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+              afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.bipolar"
+              class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderIsLabelActiveSection"
+              filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+              id="net.sf.smbt.jazzmutant.diagram.properties.multislider.labelactive"
+              tab="property.tab.properties">
+           <input
+                 type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+           </input>
+        </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderSliderNumberSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.multislider.slider"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.slider"
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderIsGradientSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.multislider.gradient"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.gradient"
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderIsMulticolorSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.multislider.multicolor"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.multicolor"
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderColorOnSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.multislider.color"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.multislider.color"
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderLightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.multislider.light"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsIsLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.labelactive"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsNumbersSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.numbers"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.numbers"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsGridRowSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.rows"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.rows"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsGridColSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.cols"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.cols"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsIsMultiLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.multilabel"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.multilabel"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsIsMultiColorActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.multicolor"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.multicolor"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadColorOffSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.coloroff"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.coloroff"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsColorOnSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.coloron"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.pads.coloron"
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsLightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.pads.light"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeIsHorizontalSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.range.horizontal"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.range.horizontal"
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeIsLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.range.labelactive"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.range.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeColorOnSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.range.color"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.range.color"
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeLightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.range.light"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaIsLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.ringarea.labelactive"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.ringarea.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaColorSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.ringarea.color"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeIsLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.signalscope.labelactive"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.signalscope.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeIsModeXYActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.signalscope.modexy"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.signalscope.modexy"
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeIsTransparentSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.signalscope.transparent"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.signalscope.transparent"
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeColorSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.signalscope.color"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesIsLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.labelactive"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.labelactive"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesIsNumberActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.numbers"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.numbers"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesIsRadioActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.radio"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.radio"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesGridColSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.cols"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.cols"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesGridRowSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.rows"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.rows"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesIsMultiLabelActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.multilabel"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.multilabel"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesIsMultiColorActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.multicolor"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.multicolor"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesColorOffSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.coloroff"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.coloroff"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesColorOnSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.coloron"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.switches.coloron"
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesLightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.switches.light"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="property.section.lemur.properties.jzuielem.name"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextIsTransparentSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.transparent"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+      <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.text.transparent"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextTextSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.text"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+      <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.text.text"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFontSizeSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.fontsize"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+      <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.text.fontsize"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFontAlignSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.fontalign"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+      <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.text.fontalign"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextColorSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.color"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.text.color"
+             class="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextLightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.text.JZUITextFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.text.light"
+             tab="property.tab.properties">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointGridSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointGridXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.gridx"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointGridYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.gridy"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointFreeFormSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.freeform"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointPhysicsSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.physics"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointAttractionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.attraction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointSpeedSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.speed"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointRestSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.rest"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointHoldXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.holdX"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.behaviors.JZUIBreakPointHoldYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.breakpoint.holdY"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.behaviors.JZUICustomButtonCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.custombutton.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.custombutton.behaviors.JZUICustomButtonModeSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.breakpoint.JZUIBreakPointFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.custombutton.mode"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderGridActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderGridValueSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.gridvalue"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderAttractionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.attraction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderCursorModeSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.cursor"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderPhysicsSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.physics"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderAttractionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.attraction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.fader.behavior.JZUIFaderSpeedSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.fader.JZUIFaderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.fader.speed"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobIsGridSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobGridValSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.grid"
+             afterSection="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobCursorModeSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.cursor"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobCursorControlSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.control"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobPhysicsSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.physics"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobAttractionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.attraction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.knob.behaviors.JZUIKnobSpeedSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.knob.JZUIKnobFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.knob.speed"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+        <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsGridActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsGridXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.gridx"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsGridYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.gridy"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsSpeedSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.speed"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsAttackSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.attack"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsDecaySection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.decay"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsSustainSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.sustain"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsReleaseSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.release"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsHoldSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.hold"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsHoldXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.holdx"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multiballs.behaviors.JZUIMultiBallsHoldYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multiballs.JZUIMultiBallsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multiballs.holdy"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderGridXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.grid"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderGridActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderPhysicsSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.physic"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderTensionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.tension"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.multislider.behaviors.JZUIMultiSliderHeightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.multislider.JZUIMultiSliderFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.multislider.height"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsAttackSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.attack"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsDecaySection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.decay"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsSustainSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.sustain"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsReleaseSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.release"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.pads.behaviors.JZUIPadsHoldSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.pads.JZUIPadsFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.pads.hold"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeGridActiveSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.gridactive"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeGridXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.grid"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangePhysicsSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.physic"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeTensionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.tension"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeMinHeightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.minheight"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeMaxHeightSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.maxheight"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.range.behaviors.JZUIRangeDragSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.range.JZUIRangeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.range.drag"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaAttractionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.attraction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaFrictionSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.friction"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaSpeedSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.speed"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaAttractorXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.attractorx"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.ringarea.behaviors.JZUIRingAreaAttractorYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.ringarea.JZUIRingAreaFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.ringarea.attractory"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.behaviors.JZUISignalScopeTimeBaseSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.signalscope.timebase"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.behaviors.JZUISignalScopeXSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.signalscope.x"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.signalscope.behaviors.JZUISignalScopeYSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.signalscope.JZUISignalScopeFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.signalscope.y"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.behaviors.JZUISwitchesCaptureSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.switches.capture"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.jazzmutant.diagram.properties.switches.behaviors.JZUISwitchesPaintSection"
+             filter="net.sf.smbt.jazzmutant.diagram.properties.switches.JZUISwitchesFilter"
+             id="net.sf.smbt.jazzmutant.diagram.properties.behavior.switches.paint"
+             tab="property.tab.behavior">
+          <input
+                type="net.sf.smbt.jazzmutant.diagram.parts.JZUIShapeNodeEditPart">
+          </input>
+       </propertySection>
+         
+         
+         
+      </propertySections>
+   </extension>
+      <extension
+            point="org.eclipse.ui.bindings">
+         <key
+               commandId="net.sf.smbt.jazzmutant.diagram.ui.save"
+               contextId="net.sf.smbt.jzmui.diagram.ui.diagramContext"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="M1+S">
+         </key>
+        <key
+               commandId="net.sf.smbt.jazzmutant.diagram.ui.dump.osc"
+               contextId="net.sf.smbt.jzmui.diagram.ui.diagramContext"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="M1+T">
+         </key>
+        <key
+               commandId="net.sf.smbt.jazzmutant.diagram.ui.print.preview"
+               contextId="net.sf.smbt.jzmui.diagram.ui.diagramContext"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="M1+P">
+         </key>
+      </extension>
+</plugin>

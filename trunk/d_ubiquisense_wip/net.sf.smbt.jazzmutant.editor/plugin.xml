@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+<!--
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="net.sf.smbt.ui"
+            name="Ubiquisense"/>
+      <wizard
+            id="net.sf.smbt.jazzmutant.model.jzml.presentation.JzmlModelWizardID"
+            name="Lemur Definition"
+            class="net.sf.smbt.jazzmutant.model.jzml.presentation.JzmlModelWizard"
+            category="net.sf.smbt.ui"
+            icon="icons/full/obj16/JzmlModelFile.gif">
+         <description>%_UI_JzmlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.smbt.jazzmutant.model.jzml.presentation.JzmlEditorID"
+            name="Lemur"
+            icon="icons/full/obj16/JzmlModelFile.gif"
+            extensions="jzml"
+            class="net.sf.smbt.jazzmutant.model.jzml.presentation.JzmlEditor"
+            contributorClass="net.sf.smbt.jazzmutant.model.jzml.presentation.JzmlActionBarContributor">
+      </editor>
+   </extension>
+-->
+
+</plugin>

@@ -1,0 +1,7 @@
+# Tracing options for the net.sf.smbt.jazzmutant.diagram plug-in
+
+# Common issues
+net.sf.smbt.jazzmutant.diagram/debug=false
+
+# Visual IDs
+net.sf.smbt.jazzmutant.diagram/debug/visualID=false

@@ -1,0 +1,435 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<style>
+
+body {
+	width: 880px;
+	font-family: tahoma, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:3em;
+	margin-bottom:3em;
+}
+
+a {
+	color: #00f;
+}
+
+p {
+	line-height: 130%;
+}
+
+.data, .out, .in {
+	white-space: pre;
+	font-family: monospace;
+	padding: 1em;
+}
+
+.data { background: #ddf; }
+.out { background: #dfd; }
+.in { background: #fdd; }
+
+.corner {
+	float: right;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+</style>
+
+
+<title>TunesRemote: Android DACP/iTunes Remote Control</title>
+</head><body>
+
+
+<img src="build_fichiers/tunes.png" class="corner">
+
+<h1>Android DACP Remote Control</h1>
+
+<p>The Digital Audio Control Protocol (DACP) was recently introduced by 
+Apple, and is built into all recent iTunes&#8482; versions. DACP is the 
+protocol used by <a 
+href="http://gizmodo.com/5023755/first-itunes-remote-app-for-iphone-hands+on">the
+ Remote app on the iPhone/iPod Touch</a> to remote control your desktop 
+or laptop iTunes player.
+
+</p><p>DACP is similar to the <a 
+href="http://en.wikipedia.org/wiki/Digital_Audio_Access_Protocol">well-known
+ DAAP</a>, using <a 
+href="http://en.wikipedia.org/wiki/Bonjour_%28software%29">Bonjour MDNS</a>
+ to find libraries, then using HTTP requests with binary responses to 
+transfer data.  After a few days in front of packet dumps, I have most 
+of DACP decoded.
+
+</p><p>With the protocol now reverse engineered, I wrote an Android 
+client in about a week.  Now you can remote control your iTunes from 
+your new Android phone when it arrives later this year.  This <b>works 
+out of the box</b> without installing any extra software on your PC or 
+Mac.  Here's a quick video in action on the emulator:
+
+</p><blockquote style="margin-top: 2em; margin-bottom: 2em;">
+<object height="442" width="506">
+<param name="allowfullscreen" value="true">
+<param name="allowscriptaccess" value="always">
+<param name="movie" 
+value="http://vimeo.com/moogaloop.swf?clip_id=1919916&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1">
+<embed src="build_fichiers/moogaloop.swf" 
+type="application/x-shockwave-flash" allowfullscreen="true" 
+allowscriptaccess="always" height="442" width="506">
+</object>
+</blockquote>
+
+<p>If you're interested in jumping right in, <a 
+href="http://dacp.jsharkey.org/TunesRemote-r2.apk"><b>here's an APK 
+ready to install</b></a>.  Also, the full source has been released 
+under a GPLv3 license, and you can grab it from Subversion on Google 
+Code:
+
+</p><blockquote class="data">svn checkout <a 
+href="http://code.google.com/p/android-cookbook/source/browse/#svn/trunk/TunesControl">http://android-cookbook.googlecode.com/svn/trunk/TunesControl/</a>
+ TunesControl</blockquote>
+
+<p>The Android app uses the <a href="http://jmdns.sourceforge.net/">MjDNS
+ Java library</a> for all Bonjour handshaking, and the icon is a mashup 
+of several icons from the <a 
+href="http://tango.freedesktop.org/Tango_Desktop_Project">Tango Desktop 
+Project</a>.  Here are some still screenshots:
+
+</p><blockquote style="margin-top: 2em; margin-bottom: 2em;"><table>
+<tbody><tr><td><img src="build_fichiers/shot1.png" width="240"></td><td><img
+ src="build_fichiers/shot2.png" width="240"></td><td><img 
+src="build_fichiers/search.png" width="240"></td></tr>
+</tbody></table></blockquote>
+
+
+
+
+<h2>Handy utilities</h2>
+
+<p>During this process I wrote a <a 
+href="http://dacp.jsharkey.org/decode.txt">Python script to help decode</a>
+ the binary messages that come back from HTTP requests.  This could also
+ have been done by extending the Wireshark DAAP plugin, but it's helpful
+ to pipe live curl requests to the script:
+
+</p><blockquote class="data">curl -vvv -H "Viewer-Only-Client: 1" 
+	
+"http://192.168.254.129:3689/ctrl-int/1/playstatusupdate?revision-number=1&amp;session-id=679896130"
+
+	| python decode.py</blockquote>
+
+<p>Which instantly gives us the tree-formatted output shown several 
+places below.
+
+
+
+</p><h2>Pairing with iTunes</h2>
+
+<p>When a remote client first arrives on the network, it needs to pair 
+itself with iTunes.  It does this by advertising a <kbd>_touch-remote._tcp.local</kbd>
+ with some TXT entries with information about the remote and a 64-bit <kbd>Pair</kbd>
+ hex string:
+
+</p><blockquote class="data">DvNm=Android remote
+RemV=10000
+DvTy=iPod
+RemN=Remote
+txtvers=1
+Pair=0000000000000001
+</blockquote>
+
+<p><a 
+href="http://blog.mycroes.nl/2008/08/pairing-itunes-remote-app-with-your-own.html">Michael
+ Croes observed this MDNS format</a> a few weeks ago.  In my experience 
+iTunes doesn't like working with all-0 values, so I threw one bit in 
+there to make it happy.  Once this service appears on the network, 
+iTunes shows it along the left-edge of its screen.  When you click, it 
+prompts you for a 4-digit PIN code.
+
+</p><p>iTunes combines this PIN code with the MDNS <kbd>Pair</kbd> value
+ above in what appears to be an MD5 sum.  It returns the MD5 to the 
+iPhone/iPod Touch asking "does this match?"  In our case, we don't need 
+to know anything about this MD5 because we can naïvely return back 
+saying "yep, it matches."  This also means we don't care what the user 
+enters for a PIN.
+
+</p><blockquote class="in">GET 
+/pair?pairingcode=75D809650423A40091193AA4944D1FBD&amp;servicename=D19BB75C3773B485</blockquote>
+
+<blockquote class="out"> cmpa  --+
+        cmnm   10     devicename
+        cmty   4      ipod
+        cmpg   8      0000000000000001 == 1
+</blockquote>
+
+<p>In the iPhone/iPod Touch acceptance response, we send back a magic 
+GUID (<kbd>cmpg</kbd>) that iTunes then stores internally.  Any future
+remotes that login using that GUID will be given library access.
+
+
+</p><h3>Pairing in the Emulator</h3>
+
+<p>The pairing process works great on <a 
+href="http://www.t-mobileg1.com/">actual Android hardware</a>, but the 
+emulator doesn't offer UDP tunneling.  This means the MDNS pairing 
+service can't reach iTunes.
+
+</p><p>However, we can easily <a href="http://avahi.org/">use Avahi</a> 
+to advertise a fake pairing service, then run a simple Python script to 
+accept pairing requests with a known GUID.  Here's the Avahi service 
+definition, <a 
+href="http://blog.mycroes.nl/2008/08/pairing-itunes-remote-app-with-your-own.html">borrowed
+ from Michael Croes</a>:
+
+</p><blockquote class="data">/etc/avahi/services/touch-remote.service
+
+&lt;?xml version="1.0" standalone='no'?&gt;&lt;!--*-nxml-*--&gt;
+&lt;!DOCTYPE service-group SYSTEM "avahi-service.dtd"&gt;
+&lt;service-group&gt;
+   &lt;name&gt;0000000000000000000000000000000000000001&lt;/name&gt;
+   &lt;service&gt;
+     &lt;type&gt;_touch-remote._tcp&lt;/type&gt;
+     &lt;port&gt;1024&lt;/port&gt;
+     &lt;txt-record&gt;DvNm=Android remote&lt;/txt-record&gt;
+     &lt;txt-record&gt;RemV=10000&lt;/txt-record&gt;
+     &lt;txt-record&gt;DvTy=iPod&lt;/txt-record&gt;
+     &lt;txt-record&gt;RemN=Remote&lt;/txt-record&gt;
+     &lt;txt-record&gt;txtvers=1&lt;/txt-record&gt;
+     &lt;txt-record&gt;Pair=0000000000000001&lt;/txt-record&gt;
+   &lt;/service&gt;
+&lt;/service-group&gt;
+</blockquote>
+
+
+<p>And the Python pairing script:
+
+
+</p><blockquote class="data">from BaseHTTPServer import 
+BaseHTTPRequestHandler, HTTPServer
+import struct
+
+class PairingHandler(BaseHTTPRequestHandler):
+	def do_GET(self):
+		# any incoming requests are just pairing code related
+		# return our guid regardless of input
+		
+		values = {
+			'cmpg': '\x00\x00\x00\x00\x00\x00\x00\x01',
+			'cmnm': 'devicename',
+			'cmty': 'ipod',
+			}
+		
+		encoded = ''
+		for key, value in values.iteritems():
+			encoded += '%s%s%s' % (key, struct.pack('&gt;i', len(value)), value)
+		header = 'cmpa%s' % (struct.pack('&gt;i', len(encoded)))
+		encoded = '%s%s' % (header, encoded)
+		
+		self.send_response(200)
+		self.end_headers()
+		self.wfile.write(encoded)
+
+		return
+
+try:
+	port = 1024
+	server = HTTPServer(('', port), PairingHandler)
+	print 'started server on port %s' % (port)
+	server.serve_forever()
+	
+except KeyboardInterrupt:
+	server.socket.close()
+</blockquote>
+
+
+<p>Then in the Android app, tap the Menu button when looking at the list
+ of libraries and select "Manual add."  Enter the IP address of your 
+computer running iTunes and the pairing code used in the script above.  
+(It's 15 0's followed by a 1.)  Remember that the loopback 127.0.0.1 has
+ a special meaning to the emulator, and you should use 10.0.2.2 if you 
+want to connect to the host computer's loopback adapter.
+
+
+
+
+</p><h2>Protocol and common tasks</h2>
+
+<p>Once we have a valid GUID from the pairing process above, we can 
+easily login and talk with iTunes, asking for status information and 
+modifying the current playlist.  First, we use our GUID to login and get
+ a temporary session ID (<kbd>mlid</kbd>) that is used for future 
+requests:
+
+</p><blockquote class="out">http://192.168.254.128:3689/login?pairing-guid=0x0000000000000001</blockquote>
+
+<blockquote class="in"> mlog  --+
+        mstt   4      000000c8 == 200
+        mlid   4      648a861f == 1686799903	# our new session-id
+</blockquote>
+
+
+
+<h3>Status and basic control</h3>
+
+<p>Next, let's use our session ID to see what the music player is doing 
+right now:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/playstatusupdate?revision-number=1&amp;session-id=1686799903</blockquote>
+
+<blockquote class="in"> cmst  --+
+        mstt   4      000000c8 == 200
+        cmsr   4      00000006 == 6		# revision-number
+        caps   1      04 == 4			# play status: 4=playing, 3=paused
+        cash   1      01 == 1			# shuffle status: 0=off, 1=on
+        carp   1      00 == 0			# repeat status: 0=none, 1=single, 2=all
+        cavc   1      01 == 1
+        caas   4      00000002 == 2
+        caar   4      00000006 == 6
+        canp   16     00000026000052200000530200000f68
+        cann   13     Secret Crowds		# track
+        cana   17     Angels &amp; Airwaves	# artist
+        canl   8      I-Empire			# album
+        cang   0      
+        asai   8      a0d34e8b82616ae8 == 11588692627249261288	# 
+album-id
+        cmmk   4      00000001 == 1
+        cant   4      0003a15f == 237919	# remaining track time in ms
+        cast   4      0004a287 == 303751	# total track length in ms
+</blockquote>
+
+<p>Something important to note is the <kbd>revision-number</kbd> field. 
+ By starting with <kbd>revision-number=1</kbd>, we know that we'll 
+always get a response.  However, a new <kbd>revision-number</kbd> is 
+returned in the <kbd>cmsr</kbd> field.  If we request that new <kbd>revision-number</kbd>,
+ our HTTP request hangs until the next server event happens, providing 
+push event notification.  For example, our request might hang until the 
+user manually changes tracks on the computer, or pauses the track, or 
+maybe a TCP timeout happens.
+
+</p><p>We can grab the currently-playing album art as a normal PNG:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/nowplayingartwork?mw=320&amp;mh=320&amp;session-id=1686799903</blockquote>
+
+<p>And here are some basic control commands--they are fairly 
+self-explanatory:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/playpause?session-id=1686799903</blockquote>
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/nextitem?session-id=1686799903</blockquote>
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/previtem?session-id=1686799903</blockquote>
+
+<p>We can control the repeat and shuffle states using the values 
+described above:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/setproperty?dacp.shufflestate=1&amp;session-id=1686799903</blockquote>
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/setproperty?dacp.repeatstate=2&amp;session-id=1686799903</blockquote>
+
+<p>And we can seek in the track, where <kbd>dacp.playingtime</kbd> is 
+the seek destination in milliseconds:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/setproperty?dacp.playingtime=82784&amp;session-id=1686799903</blockquote>
+
+<p>We can also control the volume on a scale 0-100, both by asking for 
+its value and setting it:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/getproperty?properties=dmcp.volume&amp;session-id=1686799903</blockquote>
+
+<blockquote class="in"> cmgt  --+
+        mstt   4      000000c8 == 200
+        cmvo   4      00000054 == 84	# current volume
+</blockquote>
+
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/setproperty?dmcp.volume=100.000000&amp;session-id=1686799903</blockquote>
+
+
+
+<h3>Loading metadata and playlist control</h3>
+
+
+<p>Doing simple controlling like volume and pausing is okay, but the 
+real power lies in searching and browsing through the library metadata. 
+ We can easily perform full-text searches, or list all albums matching a
+ query.
+
+</p><p>I've kept many of the details down in the source code, but here 
+is a quick example of search results:
+
+</p><blockquote class="out">http://192.168.254.128:3689/databases/36/containers/113/items?session-id=1686799903&amp;
+
+	
+revision-number=61&amp;meta=dmap.itemname,dmap.itemid,daap.songartist,daap.songalbum&amp;type=music&amp;
+
+	
+sort=name&amp;include-sort-headers=1&amp;query='dmap.itemname:*sea*'&amp;index=0-1</blockquote>
+
+<blockquote class="in"> apso  --+
+        mstt   4      000000c8 == 200
+        muty   1      00 == 0
+        mtco   4      00000004 == 4	# total items found
+        mrco   4      00000004 == 2	# number of items returned here
+        mlcl  --+
+                mlit  --+
+                        mikd   1      02 == 2
+                        asal   11     B Collision
+                        asar   18     David Crowder Band
+                        miid   4      00000d96 == 3478
+                        minm   59     Be Lifted Or Hope Rising (w/Shane 
+&amp; Shane/Robbie Seay Band)
+                mlit  --+
+                        mikd   1      02 == 2
+                        asal   3      X&amp;Y
+                        asar   8      Coldplay
+                        miid   4      00000d1e == 3358
+                        minm   20     Swallowed in the Sea
+</blockquote>
+
+
+<p>And to control the playlist to play a specific album, we clear the 
+existing playlist and build a new playlist using a simple query.  The 
+query interface is pretty flexible, letting us play everything by a 
+specific artist, or using a known <kbd>songalbumid</kbd>.  We can also 
+start in the middle of the playlist using an index:
+
+</p><blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/cue?command=clear&amp;session-id=1686799903</blockquote>
+
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/cue?command=play&amp;
+
+	
+query='daap.songartist:Family%20Force%205'&amp;index=0&amp;sort=album&amp;session-id=1686799903</blockquote>
+
+<blockquote class="out">http://192.168.254.128:3689/ctrl-int/1/cue?command=play&amp;
+
+	
+query='daap.songalbumid:16621530181618739404'&amp;index=11&amp;sort=album&amp;session-id=1686799903</blockquote>
+
+
+
+
+
+<h2>Disclaimer</h2>
+
+<p>iTunes is a trademark of Apple Inc., registered in the U.S. and other
+ countries.  This program makes no claim to be either authorized or 
+approved by Apple, Inc.  The reverse engineering of DACP doesn't appear 
+to circumvent any protection covered under the DMCA, and is similar to 
+the open-source efforts of the <a 
+href="http://en.wikipedia.org/wiki/Samba_software">Samba project</a>.  
+This project is simply interested in allowing interoperability.
+
+</p><p>All original material Copyright 2008 <a 
+href="http://www.jsharkey.org/">Jeffrey Sharkey</a> and released under <a
+ href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">Creative 
+Commons BY-NC-SA</a> license for documentation and <a 
+href="http://www.gnu.org/licenses/gpl-3.0.txt">GPLv3</a> for code.
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' 
+type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-305946-11");
+pageTracker._trackPageview();
+</script>
+
+</p></body></html>

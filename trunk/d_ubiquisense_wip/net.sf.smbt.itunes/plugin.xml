@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="net.sf.smbt.ezdaap.EzdaapPackage"
+            genModel="model/ezdaap.genmodel"
+            uri="http://www.sf.net/smbt/itunes/ezdaap/1.0.0">
+      </package>
+   </extension>
+
+http://www.sf.net/smbt/itunes/ezdaap/1.0.0
+
+</plugin>

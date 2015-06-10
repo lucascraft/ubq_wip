@@ -1,0 +1,14 @@
+«IMPORT jzmui»
+
+«DEFINE main FOR JZJazzInterface»
+«FILE "ui.ubqt"»
+«FOREACH children AS elem»
+	«EXPAND widget FOR this»
+«ENDFOREACH»
+«ENDFILE»
+«ENDDEFINE»
+
+
+«DEFINE widget FOR JZUIElem»
+
+«ENDDEFINE»

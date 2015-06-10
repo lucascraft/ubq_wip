@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.jazzmutant/src-model"
+    editorDirectory="/net.sf.smbt.jazzmutant.editor/src" modelPluginID="net.sf.smbt.jazzmutant"
+    modelName="Jzml" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" importerID="org.eclipse.xsd.ecore.importer" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>jzml.xsd</foreignModel>
+  <genPackages prefix="Jzml" basePackage="net.sf.smbt.jazzmutant.model" resource="XML"
+      disposableProviderFactory="true" ecorePackage="jzml.ecore#/">
+    <genClasses ecoreClass="jzml.ecore#//JZML">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//JZML/pROJECT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//JZML/wINDOW"/>
+    </genClasses>
+    <genClasses ecoreClass="jzml.ecore#//PARAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/kbmouseMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/kbmouseScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/kbmouseTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/kbmouseTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/meta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/midiMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/midiScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/midiTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/midiTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/oscMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/oscScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/oscTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/oscTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/tabbar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PARAM/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jzml.ecore#//PROJECT">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/kbmouseTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/midiTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/oscTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/startpage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/welcometext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//PROJECT/width"/>
+    </genClasses>
+    <genClasses ecoreClass="jzml.ecore#//TOP">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//TOP/jZML"/>
+    </genClasses>
+    <genClasses ecoreClass="jzml.ecore#//VARIABLE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/kbmouseMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/kbmouseScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/kbmouseTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/kbmouseTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/meta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/midiMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/midiScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/midiTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/midiTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/oscMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/oscScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/oscTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/oscTrigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/tabbar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//VARIABLE/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jzml.ecore#//WINDOW">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//WINDOW/wINDOW"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//WINDOW/pARAM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jzml.ecore#//WINDOW/vARIABLE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/acceleration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/attack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/attraction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/attractionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/attractionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/axis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/balls"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/bargraph"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/behavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/bipolar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/bitmap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/boundaries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/capture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/constrained"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/coordinates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/cursor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/decay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/display"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/edit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/editable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/ephemere"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/free"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/friction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/gradient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/grid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/gridSteps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/hold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/holdX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/holdY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/horizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/kbmouseTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/labelOff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/labelOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/light"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/meta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/midiTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/multicolor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/multilabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/nbr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/oscTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/outline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/paint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/pan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/physic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/pinch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/polyphony"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/radio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/release"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/rest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/row"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/send"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/sustain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/tabbar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/tension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/z"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jzml.ecore#//WINDOW/zoom"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
